@@ -44,8 +44,10 @@ class TopicController extends Controller
         try {
             $data = $request->all();
             $validatedData = $request->validate([
-                'title' => 'required',
-                'slug' => 'required',
+                'name' => 'required',
+                'duration' => 'required',
+                'subject_id' => 'required',
+                'status' => 'required',
             ]);
            
             if($data['topic_id'] <= 0){

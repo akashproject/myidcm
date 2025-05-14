@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Cache;
 use Spatie\Permission\Models\Permission;
 use App\Models\Setting;
 use App\Models\Course;
+use App\Models\Subject;
 
 if (! function_exists('check_device')) {
     function check_device($param = null){
@@ -83,6 +84,21 @@ if (! function_exists('get_courses')) {
         return (isset($value))?$value:"null";
     }
 }
+
+if (! function_exists('getSubjects')) {
+    function getSubjects(){
+        $value = Subject::where('status','1')->get();
+        return (isset($value))?$value:"null";
+    }
+}
+
+if (! function_exists('getSubjectsByCourseId')) {
+    function getSubjectsByCourseId($course_id){
+        $value = Subject::where('course_id',$course_id)->where('status','1')->get();
+        return (isset($value))?$value:"null";
+    }
+}
+
 
 if (! function_exists('getAllFaqs')) {
     function getAllFaqs(){

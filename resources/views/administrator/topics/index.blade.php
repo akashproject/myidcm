@@ -34,7 +34,7 @@
 						<thead>
 							<tr>
 								<th>Name</th>
-								<th>Slug</th>
+								<th>Duration</th>
 								<th>Status</th>
 								<th>Created At</th>
 								<th>Actions</th>
@@ -45,13 +45,13 @@
 							@foreach ($topics as $value)
 							<tr>
 								<td>{{ $value->name }}</td>													
-								<td>{{ $value->slug }}</td>									
+								<td>{{ $value->duration }}</td>									
 								<td>{{ ($value->status == "1")?'Active':'Deactive' }}</td>									
 								<td>{{ $value->created_at->format("d M, Y") }}</td>									
 								<td>
 									<div class="d-inline-block text-nowrap">
 										@can('update')
-										<a href="{{ route('admin-view-topic',$value->id) }}" class="btn btn-sm btn-icon">
+										<a href="{{ route('admin-show-topic',$value->id) }}" class="btn btn-sm btn-icon">
 											<i class="bx bx-edit"></i>
 										</a>
 										@endcan

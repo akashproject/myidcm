@@ -1,13 +1,7 @@
 @extends('administrator.layouts.admin')
-
-
-
 @section('content')
-
 <div class="col-12">
-
 	<div class="card">
-
 		<form class="form-horizontal" method="post" action="{{ route('admin-save-topic') }}" enctype="multipart/form-data">
 			@csrf
 			<div class="card-body">
@@ -26,7 +20,6 @@
 						{{ session()->get('message') }}
 					</div>
 				@endif
-
 				<div class="row mb-5">
 					<div class="col-md-7" >
 						<div class="mb-3 row">
@@ -36,28 +29,17 @@
 							</div>
 						</div>
 						<div class="mb-3 row">
-							<label for="name" class="col-sm-3 control-label col-form-label">Slug</label>
+							<label for="duration" class="col-sm-3 control-label col-form-label">Duration</label>
 							<div class="col-md-9">
-								<input name="slug" class="form-control" type="text" value="" id="name" placeholder="Enter Page Slug Here" >
-							</div>
-						</div>
-						<div class="mb-3 row">
-							<label for="description" class="col-sm-3 control-label col-form-label">Description</label>
-							<div class="col-sm-9">
-								<textarea class="form-control editor" name="description"  id="description" placeholder="Enter description Here" ></textarea>
-							</div>
-						</div>
-						<div class="mb-3 row">
-							<label for="excerpt" class="col-sm-3 control-label col-form-label">Excerpt</label>
-							<div class="col-sm-9">
-								<textarea class="form-control" name="excerpt" id="excerpt" placeholder="Enter excerpt Here" ></textarea>
+								<input name="duration" class="form-control" type="text" value="" id="name" placeholder="Enter Duration Here" >
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="course_id" class="col-sm-3 text-left control-label col-form-label">Courses</label>
+							<label for="subject_id" class="col-sm-3 text-left control-label col-form-label">Subjects</label>
 							<div class="col-sm-9">
-								<select name="course_id[]" id="course_id" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
-									@foreach (get_courses() as $value)
+								<select name="subject_id" id="subject_id" class="select2 form-control custom-select">	
+									<option value="" > Select Subject </option>
+									@foreach (getSubjects() as $value)
 									<option value="{{  $value->id }}" > {{  $value->name }} </option>
 									@endforeach
 								<select>
@@ -76,66 +58,6 @@
 								</select>
 							</div>
 						</div>
-
-						<div class="mb-2 row">
-							<label for="tags" class="col-sm-3 text-left control-label col-form-label">Banner</label>
-							<div class="col-sm-9">
-								<a href="#imageBox" class="image-profile open-popup-link">
-									<img src="https://dummyimage.com/550x300?text=Add%20Image" alt="" style="width:100%">
-									<input type="hidden" name="banner_image" id="banner_image" value="" >	
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<h4 class="card-title"> Search Engine Options </h4>
-				<div class="row">
-					<div class="col-md-7" >
-						<div class="mb-2 row">
-							<label for="title" class="col-sm-3 control-label col-form-label">Meta Title</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" name="title" id="title" placeholder="Enter Meta Title Here" >
-							</div>
-						</div>
-
-						<div class="mb-2 row">
-							<label for="meta_description" class="col-sm-3 control-label col-form-label">Meta Description</label>
-							<div class="col-sm-9">
-								<textarea class="form-control" name="meta_description" id="meta_description" placeholder="Enter Meta Description Here" ></textarea>
-							</div>
-						</div>
-
-						<div class="mb-2 row">
-							<label for="schema" class="col-sm-3 control-label col-form-label">Schema Code</label>
-							<div class="col-sm-9">
-								<textarea class="form-control" name="schema" id="schema" placeholder="Enter Schema Code" ></textarea>
-							</div>
-						</div>
-
-						<div class="mb-2 row">
-							<label for="utm_campaign" class="col-sm-3 control-label col-form-label">Campaign</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" name="utm_campaign" id="utm_campaign" placeholder="Enter Utm Campaign Here" >
-							</div>
-						</div>
-
-						<div class="mb-2 row">
-							<label for="utm_source" class="col-sm-3 control-label col-form-label">Source</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" name="utm_source" id="utm_source" placeholder="Enter Utm Source Here" >
-							</div>
-						</div>
-
-						<div class="mb-2 row">
-							<label for="robots" class="col-sm-3 control-label col-form-label">Robots Content</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" name="robots" id="robots" placeholder="Enter Page Pincode Here" value="index, follow" >
-							</div>
-						</div>
-					</div>
-					<div class="col-md-5" >
-
 					</div>
 				</div>
 			</div>
