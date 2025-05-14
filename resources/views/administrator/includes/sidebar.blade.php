@@ -48,10 +48,27 @@
             </a>
          </li>
          <li class="menu-item">
-            <a href="{{ route('admin-courses') }}" class="menu-link">
+            <a href="javascript:void(0)" class="menu-link menu-toggle">
                <i class="menu-icon tf-icons bx bx-book"></i>
                <div data-i18n="Courses">Courses</div>
             </a>
+            <ul class="menu-sub">
+               <li class="menu-item">
+                  <a href="{{ route('admin-courses') }}" class="menu-link">
+                     <div data-i18n="Notifications">Courses</div>
+                  </a>
+               </li>
+               <li class="menu-item">
+                  <a href="{{ route('admin-subjects') }}" class="menu-link">
+                     <div data-i18n="Notifications">Subjects</div>
+                  </a>
+               </li>
+               <li class="menu-item">
+                  <a href="{{ route('admin-topics') }}" class="menu-link">
+                     <div data-i18n="Notifications">Topics</div>
+                  </a>
+               </li>
+            </ul>
          </li>
          <li class="menu-item">
             <a href="{{ route('admin-institutes') }}" class="menu-link">

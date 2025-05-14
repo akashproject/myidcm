@@ -84,19 +84,6 @@
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="no_of_module" class="col-sm-3 text-left control-label col-form-label">Subjects</label>
-							<div class="col-sm-9">
-								<div class="course-content" >
-									@foreach($subjects as $subject)
-										<p> 
-											<input type="checkbox" name="subjects[]" value="{{$subject->id}}" id="admin-subject_{{$subject->id}}" {{ (($course->subjects !== null) && in_array($subject->id,$course->subjects))?'checked' : '' }} > 
-											<ladel for="admin-subject_{{$subject->id}}">{{$subject->name}} </label>
-										</p>
-									@endforeach
-								</div>
-							</div>
-						</div>
-						<div class="form-group row mb-2">
 							<label for="highlights" class="col-sm-3 text-right control-label col-form-label">Course highlights</label>
 							<div class="col-sm-9">
 								<textarea class="form-control editor" name="highlights" id="highlights" placeholder="Enter Highlights" >{{ $course->highlights }}</textarea>
@@ -106,12 +93,6 @@
 							<label for="criteria" class="col-sm-3 text-right control-label col-form-label">Course criteria</label>
 							<div class="col-sm-9">
 								<textarea class="form-control editor" name="criteria" id="criteria" placeholder="Enter Course Criteria" >{{ $course->criteria }}</textarea>
-							</div>
-						</div>	
-						<div class="form-group row mb-2">
-							<label for="syllabus" class="col-sm-3 text-right control-label col-form-label">Course Syllabus</label>
-							<div class="col-sm-9">
-								<textarea class="form-control editor" name="syllabus" id="syllabus" placeholder="Enter Course Syllabus" >{{ $course->syllabus }}</textarea>
 							</div>
 						</div>
 					</div>

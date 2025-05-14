@@ -203,12 +203,6 @@
 							<input type="text" class="form-control" name="robots" id="robots" placeholder="Enter Center Pincode Here" value="index, follow">
 							</div>
 						</div>
-						<div class="form-group row mb-2">
-							<label for="canonical" class="col-sm-3 text-right control-label col-form-label">Cronical Url</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" name="canonical" id="canonical" placeholder="Enter Canonical Url Here" >
-							</div>
-						</div>
 					</div>
 					<div class="col-md-4" >
 

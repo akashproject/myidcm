@@ -26,6 +26,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Slug</th>
+								<th>Status</th>
 								<th>Options</th>
 							</tr>
 						</thead>
@@ -34,6 +35,7 @@
 							<tr>
 								<td>{{ $value->name }}</td>													
 								<td>{{ $value->slug }}</td>													
+								<td>{{ $value->status }}</td>													
 								<td>
 									<div class="d-inline-block text-nowrap">
 										@can('update')

@@ -7,7 +7,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'administrator'], function () {
 
     Route::group(['middleware' => ['auth','role:super-admin|admin']], function () {
-
         Route::get('/', [App\Http\Controllers\Administrator\IndexController::class, 'dashboard'])->name('admin-dashboard');
         
         //Page
@@ -40,6 +39,20 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::post('/save-course', [App\Http\Controllers\Administrator\CourseController::class, 'save'])->name('admin-save-course');
         Route::get('/delete-course/{id}', [App\Http\Controllers\Administrator\CourseController::class, 'delete'])->name('admin-delete-course');
 
+        //Subjects
+        Route::get('/subjects', [App\Http\Controllers\Administrator\SubjectController::class, 'index'])->name('admin-subjects');
+        Route::get('/add-subject', [App\Http\Controllers\Administrator\SubjectController::class, 'Add'])->name('admin-add-subject');
+        Route::get('/view-subject/{id}', [App\Http\Controllers\Administrator\SubjectController::class, 'show'])->name('admin-show-subject');
+        Route::post('/save-subject', [App\Http\Controllers\Administrator\SubjectController::class, 'save'])->name('admin-save-subject');
+        Route::get('/delete-subject/{id}', [App\Http\Controllers\Administrator\SubjectController::class, 'delete'])->name('admin-delete-subject');
+
+        //Topics
+        Route::get('/topics', [App\Http\Controllers\Administrator\TopicController::class, 'index'])->name('admin-topics');
+        Route::get('/add-topic', [App\Http\Controllers\Administrator\TopicController::class, 'Add'])->name('admin-add-topic');
+        Route::get('/view-topic/{id}', [App\Http\Controllers\Administrator\TopicController::class, 'show'])->name('admin-show-topic');
+        Route::post('/save-topic', [App\Http\Controllers\Administrator\TopicController::class, 'save'])->name('admin-save-topic');
+        Route::get('/delete-topic/{id}', [App\Http\Controllers\Administrator\TopicController::class, 'delete'])->name('admin-delete-topic');
+
         //Page
         Route::get('/placements', [App\Http\Controllers\Administrator\PlacementController::class, 'index'])->name('admin-placements');
         Route::get('/add-placement', [App\Http\Controllers\Administrator\PlacementController::class, 'Add'])->name('admin-add-placement');
@@ -54,14 +67,13 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::post('/save-recruiter', [App\Http\Controllers\Administrator\RecruiterController::class, 'save'])->name('admin-save-recruiter');
         Route::get('/delete-recruiter/{id}', [App\Http\Controllers\Administrator\RecruiterController::class, 'delete'])->name('admin-delete-recruiter');
 
-        //Recruiters
+        //Testimonials
         Route::get('/testimonials', [App\Http\Controllers\Administrator\TestimonialController::class, 'index'])->name('admin-testimonials');
         Route::get('/add-testimonial', [App\Http\Controllers\Administrator\TestimonialController::class, 'add'])->name('admin-add-testimonial');
         Route::get('/view-testimonial/{id}', [App\Http\Controllers\Administrator\TestimonialController::class, 'show'])->name('admin-show-testimonial');
         Route::post('/save-testimonial', [App\Http\Controllers\Administrator\TestimonialController::class, 'save'])->name('admin-save-testimonial');
         Route::get('/delete-testimonial/{id}', [App\Http\Controllers\Administrator\TestimonialController::class, 'delete'])->name('admin-delete-testimonial');
 
-        
         // Media Module
         Route::get('/media', [App\Http\Controllers\Administrator\MediaController::class, 'index'])->name('admin-media');
         Route::get('/view-file/{id}', [App\Http\Controllers\Administrator\MediaController::class, 'view'])->name('admin-view-file');
