@@ -12,8 +12,6 @@ return new class extends Migration
             $table->id();
             $table->string('question');
             $table->longtext('answer');
-            $table->string('model')->nullable();
-            $table->string('model_id')->nullable();
             $table->enum('status', ['0', '1'])->default('1');
             $table->timestamps();
         });

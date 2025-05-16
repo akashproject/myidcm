@@ -54,17 +54,12 @@
 								<input name="no_of_topic" class="form-control" type="text" value="{{ $subject->no_of_topic }}" id="no_of_topic" placeholder="Enter Total Topic" >
 							</div>
 						</div>
-						<div class="form-group row">
-							<label for="course_id" class="col-sm-3 text-left control-label col-form-label">Courses</label>
-							<div class="col-sm-9">
-								<select name="course_id[]" id="course_id" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
-									@foreach (get_courses() as $value)
-									<option value="{{  $value->id }}" > {{  $value->name }} </option>
-									@endforeach
-								<select>
+						<div class="mb-3 row">
+							<label for="duration" class="col-sm-3 control-label col-form-label">Duration</label>
+							<div class="col-md-9">
+								<input name="duration" class="form-control" type="text" value="{{ $subject->duration }}" id="duration" placeholder="Enter Duration" >
 							</div>
 						</div>
-
 					</div>
 
 					<div class="col-md-5">

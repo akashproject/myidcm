@@ -13,6 +13,6 @@ class Subject extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'id','course_id','name','slug','description','excerpt','duration','no_of_topic','title','meta_description','schema','robots','utm_campaign','utm_source','enable_otp','status','created_at',
+        'id','name','slug','description','excerpt','duration','no_of_topic','title','meta_description','schema','robots','utm_campaign','utm_source','enable_otp','status','created_at',
     ];
 }

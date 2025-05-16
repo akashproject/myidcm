@@ -157,7 +157,8 @@
         </div><!-- /.main-slider-one__item -->
     </div><!-- /.main-slider-one__carousel -->
 </section><!-- /.main-slider-one -->
-<section class="courses-one section-space-top2" id="courses">
+
+<section class="courses-one pt-5" id="courses">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
             <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Most</span> <span>Popular</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
@@ -372,213 +373,12 @@
     </div><!-- /.container -->
 </section><!-- /.about-one section-space -->
 
-<section class="courses-one section-space-top2" id="courses">
-        <div class="container">
-            <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                <h6 class="sec-title__tagline">our courses</h6><!-- /.sec-title__tagline -->
-                <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Most</span> <span>Popular</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
-            </div><!-- /.sec-title -->
-        </div><!-- /.container -->
-    <div class="courses-one__container container">
-        <div class="courses-one__carousel eduhive-owl__carousel--with-shadow eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-                "items": 1,
-                "margin": 10,
-                "loop": true,
-                "smartSpeed": 700,
-                "rtl": true,
-                "nav": true,
-                "dots": false,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                "autoplay": true,
-                "responsive": {
-                    "0": {
-                        "items": 1,
-                        "margin": 10
-                    },
-                    "768": {
-                        "items": 2,
-                        "margin": 30
-                    },
-                    "992": {
-                        "items": 3,
-                        "margin": 30
-                    },
-                    "1200": {
-                        "items": 3.3,
-                        "margin": 30
-                    },
-                    "1400": {
-                        "items": 3.4,
-                        "margin": 30
-                    },
-                    "1536": {
-                        "items": 3.5,
-                        "margin": 30
-                    },
-                    "1600": {
-                        "items": 3.7,
-                        "margin": 30
-                    },
-                    "1800": {
-                        "items": 3.94,
-                        "margin": 30
-                    }
-                }
-            }'>
-            @foreach(get_courses() as $course)
-            <div class="item">
-                <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="course-card__image">
-                        <img src="assets/frontend/images/courses/course-1-2.jpg" alt="The Data Science Revolution: Upgrading Your Skills">
-                        
-                    </div><!-- /.course-card__image -->
-                    <div class="course-card__content">
-                        <div class="course-card__content__top">
-                            <div class="course-card__category">{{ $course->no_of_module }} lessons</div><!-- /.course-card__category -->
-                            <div class="course-card__duration">
-                                <span class="course-card__duration__icon">
-                                    <i class="icon-clock"></i>
-                                </span><!-- /.course-card__duration__icon -->
-                                {{ $course->duration }} Months
-                            </div><!-- /.course-card__duration -->
-                        </div><!-- /.course-card__content__top -->
-                        <h3 class="course-card__title"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
-                        <div class="course-card__info">
-                            <div class="course-card__lessons">
-                                <span class="course-card__lessons__icon">
-                                    <i class="icon-open-book"></i>
-                                </span><!-- /.course-card__lessons__icon -->
-                                {{ $course->no_of_module }} lessons
-                            </div><!-- /.course-card__lessons -->
-                            <div class="course-card__students">
-                                <span class="course-card__students__icon">
-                                    <i class="icon-multiple-users-silhouette"></i>
-                                </span><!-- /.course-card__lessons__icon -->
-                                {{ $course->number_of_enrolled }} Students
-                            </div><!-- /.course-card__students -->
-                        </div><!-- /.course-card__info -->
-                    </div><!-- /.course-card__content -->
-                    <div class="course-card__hover" style="background-image: url(assets/frontend/images/shapes/course-card-bg-1-1.png);">
-                        <div class="course-card__hover__content">
-                            <div class="course-card__content__top course-card__content__top--hover">
-                                <div class="course-card__category">Experts</div><!-- /.course-card__category -->
-                                <div class="course-card__duration">
-                                    <span class="course-card__duration__icon">
-                                        <i class="icon-clock"></i>
-                                    </span><!-- /.course-card__duration__icon -->
-                                    {{ $course->duration }} Months
-                                </div><!-- /.course-card__duration -->
-                            </div><!-- /.course-card__content__top -->
-                            <h3 class="course-card__title course-card__title--hover"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
-                            <p class="course-card__text">{{ substr($course->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
-                            <div class="course-card__ratings course-card__ratings--hover">
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                                <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
-                            </div><!-- /.course-card__ratings -->
-                            <a href="data-science.html" class="course-card__btn eduhive-btn eduhive-btn--border">
-                                <span>enroll now</span>
-                                <span class="eduhive-btn__icon">
-                                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                </span>
-                            </a><!-- /.course-card__btn eduhive-btn -->
-                            <div class="course-card__info course-card__info--hover">
-                                <div class="course-card__lessons">
-                                    <span class="course-card__lessons__icon">
-                                        <i class="icon-open-book"></i>
-                                    </span><!-- /.course-card__lessons__icon -->
-                                    20 lessons
-                                </div><!-- /.course-card__lessons -->
-                                <div class="course-card__students">
-                                    <span class="course-card__students__icon">
-                                        <i class="icon-multiple-users-silhouette"></i>
-                                    </span><!-- /.course-card__lessons__icon -->
-                                    {{ $course->number_of_enrolled }} Students
-                                </div><!-- /.course-card__students -->
-                            </div><!-- /.course-card__info -->
-                        </div><!-- /.course-card__hover__content -->
-                    </div><!-- /.course-card__hover -->
-                </div><!-- /.course-card -->
-            </div><!-- /.item -->
-            @endforeach
-        </div><!-- /.courses-one__carousel -->
-    </div><!-- /.courses-one__container container -->
-    <img src="assets/frontend/images/shapes/courses-shape-1-1.png" alt="shape" class="courses-one__shape">
-</section><!-- /.courses-one section-space-top2 -->
-
-
-<section class="funfact-one section-space-bottom funfact-one--home">
-    <div class="funfact-one__inner">
-        <div class="funfact-one__bg" style="background-image: url(assets/frontend/images/shapes/funfact-bg-1-1.png);"></div>
-    </div><!-- /.funfact-one__inner -->
-    <div class="container">
-        <div class="funfact-one__grid">
-            <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                <div class="funfact-one__icon">
-                    <span class="funfact-one__icon__inner"><i class="icon-connectibity"></i></span>
-                </div><!-- /.funfact-one__icon -->
-                <h3 class="funfact-one__title count-box">
-                    <span class="count-text" data-stop="30" data-speed="1500">0</span>
-                    <span>k+</span>
-                </h3><!-- /.funfact-one__title -->
-                <p class="funfact-one__text">Satisfied Student</p><!-- /.funfact-one__text -->
-            </div><!-- /.funfact-one__item -->
-            <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                <div class="funfact-one__icon">
-                    <span class="funfact-one__icon__inner"><i class="icon-batch-assign"></i></span>
-                </div><!-- /.funfact-one__icon -->
-                <h3 class="funfact-one__title count-box">
-                    <span class="count-text" data-stop="6500" data-speed="1500">0</span>
-                    <span>+</span>
-                </h3><!-- /.funfact-one__title -->
-                <p class="funfact-one__text">Class Completed</p><!-- /.funfact-one__text -->
-            </div><!-- /.funfact-one__item -->
-            <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                <div class="funfact-one__icon">
-                    <span class="funfact-one__icon__inner"><i class="icon-students"></i></span>
-                </div><!-- /.funfact-one__icon -->
-                <h3 class="funfact-one__title count-box">
-                    <span class="count-text" data-stop="6561" data-speed="1500">0</span>
-                    <span>+</span>
-                </h3><!-- /.funfact-one__title -->
-                <p class="funfact-one__text">Active Students</p><!-- /.funfact-one__text -->
-            </div><!-- /.funfact-one__item -->
-            <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                <div class="funfact-one__icon">
-                    <span class="funfact-one__icon__inner"><i class="icon-instructors"></i></span>
-                </div><!-- /.funfact-one__icon -->
-                <h3 class="funfact-one__title count-box">
-                    <span class="count-text" data-stop="400" data-speed="1500">0</span>
-                    <span>+</span>
-                </h3><!-- /.funfact-one__title -->
-                <p class="funfact-one__text">Experts Instructors</p><!-- /.funfact-one__text -->
-            </div><!-- /.funfact-one__item -->
-        </div><!-- /.rfunfact-one__grid -->
-    </div><!-- /.container -->
-</section><!-- /.funfact-one section-space-bottom -->
-
 <section class="faq-one section-space">
     <div class="container">
         <div class="row gutter-y-50">
             <div class="col-lg-6">
                 <div class="faq-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h6 class="sec-title__tagline">faq’s</h6><!-- /.sec-title__tagline -->
                         <h3 class="sec-title__title">We Are Always Ensure <span class="sec-title__title__text">Best <br> Course</span> For <span class="sec-title__title__shape">Your Learning</span></h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
                     <div class="faq-one__accordion">
@@ -1020,7 +820,7 @@
                 <div class="testimonials-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">peoples <span class="sec-title__title__shape">say about</span> <br> <span class="sec-title__title__text">eduhive</span></h3><!-- /.sec-title__title -->
+                        <h3 class="sec-title__title">what students <span class="sec-title__title__shape">say about</span> <span class="sec-title__title__text">idcm</span></h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
                     <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
                         <p class="testimonials-one__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue.</p><!-- /.testimonials-one__text -->
@@ -1071,108 +871,42 @@
                     }
                 }
                 }'>
-                        <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                            <div class="testimonial-card">
-                                <div class="testimonial-card__top">
-                                    <div class="testimonial-card__image">
-                                        <img src="assets/frontend/images/testimonials/testimonial-1-1.jpg" alt="Esther Howard">
-                                        <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
-                                    </div><!-- /.testimonial-card__image -->
-                                    <div class="testimonial-card__identity">
-                                        <h5 class="testimonial-card__name">Esther Howard</h5>
-                                        <p class="testimonial-card__designation">Ethical Hacker</p>
-                                    </div><!-- /.testimonial-card__identity -->
-                                </div><!-- /.testimonial-card__top -->
-                                <div class="testimonial-card__content">
-                                    <p class="testimonial-card__quote">I think this should be fairly easy so if you just want to have a look what you've given us is texty, we want sexy. Labrador you might wanna give it</p><!-- /.testimonial-card__quote -->
-                                    <div class="eduhive-ratings">
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                    </div><!-- /.product-ratings -->
-                                </div><!-- /.testimonial-card__content -->
-                            </div><!-- /.testimonial-card -->
-                        </div><!-- /.owl-slide-item-->
-                        <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <div class="testimonial-card">
-                                <div class="testimonial-card__top">
-                                    <div class="testimonial-card__image">
-                                        <img src="assets/frontend/images/testimonials/testimonial-1-2.jpg" alt="Sarah Albert">
-                                        <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
-                                    </div><!-- /.testimonial-card__image -->
-                                    <div class="testimonial-card__identity">
-                                        <h5 class="testimonial-card__name">Sarah Albert</h5>
-                                        <p class="testimonial-card__designation">managing director</p>
-                                    </div><!-- /.testimonial-card__identity -->
-                                </div><!-- /.testimonial-card__top -->
-                                <div class="testimonial-card__content">
-                                    <p class="testimonial-card__quote">Can you make pink a little more pinkish can you remove my double chin on my business card photo? i don't like the way it looks can you</p><!-- /.testimonial-card__quote -->
-                                    <div class="eduhive-ratings">
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                    </div><!-- /.product-ratings -->
-                                </div><!-- /.testimonial-card__content -->
-                            </div><!-- /.testimonial-card -->
-                        </div><!-- /.owl-slide-item-->
-                        <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                            <div class="testimonial-card">
-                                <div class="testimonial-card__top">
-                                    <div class="testimonial-card__image">
-                                        <img src="assets/frontend/images/testimonials/testimonial-1-3.jpg" alt="Kevin Martin">
-                                        <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
-                                    </div><!-- /.testimonial-card__image -->
-                                    <div class="testimonial-card__identity">
-                                        <h5 class="testimonial-card__name">Kevin Martin</h5>
-                                        <p class="testimonial-card__designation">managing director</p>
-                                    </div><!-- /.testimonial-card__identity -->
-                                </div><!-- /.testimonial-card__top -->
-                                <div class="testimonial-card__content">
-                                    <p class="testimonial-card__quote">I really like the colour but can you change it, yet is there a way we can make the page feel more introductory without being cheesy can't you</p><!-- /.testimonial-card__quote -->
-                                    <div class="eduhive-ratings">
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                        <span class="eduhive-ratings__icon">
-                                            <i class="fa fa-star"></i>
-                                        </span><!-- /.eduhive-ratings__icon -->
-                                    </div><!-- /.product-ratings -->
-                                </div><!-- /.testimonial-card__content -->
-                            </div><!-- /.testimonial-card -->
-                        </div><!-- /.owl-slide-item-->
+                        @foreach(getTestimonials() as $testimonial)
+                            <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-card__top">
+                                        <div class="testimonial-card__image">
+                                            <img src="assets/frontend/images/testimonials/testimonial-1-1.jpg" alt="Esther Howard">
+                                            <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
+                                        </div><!-- /.testimonial-card__image -->
+                                        <div class="testimonial-card__identity">
+                                            <h5 class="testimonial-card__name">{{ $testimonial->name }}</h5>
+                                            <p class="testimonial-card__designation">{{ $testimonial->dasignation }}</p>
+                                        </div><!-- /.testimonial-card__identity -->
+                                    </div><!-- /.testimonial-card__top -->
+                                    <div class="testimonial-card__content">
+                                        <p class="testimonial-card__quote">{!! $testimonial->comment !!}</p><!-- /.testimonial-card__quote -->
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                    </div><!-- /.testimonial-card__content -->
+                                </div><!-- /.testimonial-card -->
+                            </div><!-- /.owl-slide-item-->
+                        @endforeach
                     </div><!-- /.testimonials-one__carousel -->
                 </div><!-- /.eduhive-stretch-element-inside-column -->
             </div><!-- /.col-xl-8 -->
@@ -1221,30 +955,30 @@
             </div><!-- /.row gutter-y-50 align-items-center -->
         </div><!-- /.blog-one__top -->
         <div class="blog-one__carousel eduhive-owl__carousel owl-carousel owl-theme" data-owl-options='{
-    "items": 1,
-    "margin": 10,
-    "loop": true,
-    "smartSpeed": 700,
-    "nav": true,
-    "dots": false,
-    "navContainer": ".blog-one__custome-navs",
-    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-    "autoplay": true,
-    "responsive": {
-        "0": {
             "items": 1,
-            "margin": 10
-        },
-        "768": {
-            "items": 2,
-            "margin": 30
-        },
-        "992": {
-            "items": 3,
-            "margin": 30
-        }
-    }
-}'>
+            "margin": 10,
+            "loop": true,
+            "smartSpeed": 700,
+            "nav": true,
+            "dots": false,
+            "navContainer": ".blog-one__custome-navs",
+            "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+            "autoplay": true,
+            "responsive": {
+                "0": {
+                    "items": 1,
+                    "margin": 10
+                },
+                "768": {
+                    "items": 2,
+                    "margin": 30
+                },
+                "992": {
+                    "items": 3,
+                    "margin": 30
+                }
+            }
+        }'>
             <div class="item">
                 <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
                     <div class="blog-card__image">

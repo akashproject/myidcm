@@ -23,78 +23,98 @@
 				<div class="row">
 					<div class="col-md-8" >
 						<div class="form-group row mb-2">
-							<label for="name" class="col-sm-3 text-right control-label col-form-label">Name</label>
+							<label for="name" class="col-sm-3 control-label col-form-label">Name</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="name" id="name" placeholder="Enter Name Here" value="{{ $course->name }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="slug" class="col-sm-3 text-right control-label col-form-label">Slug</label>
+							<label for="slug" class="col-sm-3 control-label col-form-label">Slug</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="slug" id="slug" placeholder="Slug Here" value="{{ $course->slug }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="description" class="col-sm-3 text-right control-label col-form-label">Description</label>
+							<label for="description" class="col-sm-3 control-label col-form-label">Description</label>
 							<div class="col-sm-9">
 								<textarea class="form-control editor" name="description"  id="description" placeholder="Enter description Here" >{{ $course->description }}</textarea>
 							</div>
 						</div>
 
 						<div class="form-group row mb-2">
-							<label for="excerpt" class="col-sm-3 text-right control-label col-form-label">Exerpt</label>
+							<label for="excerpt" class="col-sm-3 control-label col-form-label">Exerpt</label>
 							<div class="col-sm-9">
 								<textarea class="form-control" name="excerpt" id="excerpt" placeholder="Enter excerpt Here" >{{ $course->excerpt }}</textarea>
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="course_video_title" class="col-sm-3 text-right control-label col-form-label">Video Title</label>
+							<label for="course_video_title" class="col-sm-3 control-label col-form-label">Video Title</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="course_video_title" id="course_video_title" placeholder="Enter Video Title Here" value="{{ $course->course_video_title }}">
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="course_video_link" class="col-sm-3 text-right control-label col-form-label">Video Link</label>
+							<label for="course_video_link" class="col-sm-3 control-label col-form-label">Video Link</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="course_video_link" id="course_video_link" placeholder="Enter Video Title Here" value="{{ $course->course_video_link }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="duration" class="col-sm-3 text-right control-label col-form-label">Course Duration</label>
+							<label for="duration" class="col-sm-3 control-label col-form-label">Course Duration</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="duration" id="duration" placeholder="Enter Course Duration" value="{{ $course->duration }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="number_of_enrolled" class="col-sm-3 text-right control-label col-form-label">No Of Enrolled</label>
+							<label for="number_of_enrolled" class="col-sm-3 control-label col-form-label">No Of Enrolled</label>
 							<div class="col-sm-9">
 								<input type="number" class="form-control" name="number_of_enrolled" id="number_of_enrolled" placeholder="Enter No Of Module" value="{{ $course->number_of_enrolled }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="number_of_rating" class="col-sm-3 text-right control-label col-form-label">No Of Rating</label>
+							<label for="number_of_rating" class="col-sm-3 control-label col-form-label">No Of Rating</label>
 							<div class="col-sm-9">
 								<input type="number" class="form-control" name="number_of_rating" id="number_of_rating" placeholder="Enter No Of Module" value="{{ $course->number_of_rating }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="no_of_module" class="col-sm-3 text-right control-label col-form-label">No Of Module</label>
+							<label for="no_of_module" class="col-sm-3 control-label col-form-label">No Of Module</label>
 							<div class="col-sm-9">
 								<input type="number" class="form-control" name="no_of_module" id="no_of_module" placeholder="Enter No Of Module" value="{{ $course->no_of_module }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="highlights" class="col-sm-3 text-right control-label col-form-label">Course highlights</label>
+							<label for="highlights" class="col-sm-3 control-label col-form-label">Course highlights</label>
 							<div class="col-sm-9">
 								<textarea class="form-control editor" name="highlights" id="highlights" placeholder="Enter Highlights" >{{ $course->highlights }}</textarea>
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="criteria" class="col-sm-3 text-right control-label col-form-label">Course criteria</label>
+							<label for="criteria" class="col-sm-3 control-label col-form-label">Course criteria</label>
 							<div class="col-sm-9">
 								<textarea class="form-control editor" name="criteria" id="criteria" placeholder="Enter Course Criteria" >{{ $course->criteria }}</textarea>
 							</div>
 						</div>
+						<div class="form-group row mb-2">
+							<label for="subjects" class="col-sm-3 text-left control-label col-form-label">Subjects</label>
+							<div class="col-sm-9">
+								<select name="subjects[]" id="subjects" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
+									@foreach (getSubjects() as $value)
+									<option value="{{  $value->id }}" {{ ($course->subjects != null && in_array($value->id,  $course->faqs))?'selected' : '' }}> {{  $value->name }} </option>
+									@endforeach
+								<select>
+							</div>
+						</div>	
+						<div class="form-group row mb-2">
+							<label for="faqs" class="col-sm-3 text-left control-label col-form-label">Faqs</label>
+							<div class="col-sm-9">
+								<select name="faqs[]" id="faqs" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
+									@foreach (getAllFaqs() as $faq)
+									<option value="{{ $faq->id }}" {{ ($course->faqs != null && in_array($faq->id,  $course->faqs))?'selected' : '' }}> {{  $faq->question }} </option>
+									@endforeach
+								<select>
+							</div>
+						</div>	
 					</div>
 
 					<div class="col-md-4">
@@ -125,47 +145,47 @@
 
 				<h4 class="card-title"> Search Engine Options </h4>
 				<div class="row">
-					<div class="col-md-7" >
+					<div class="col-md-8" >
 						<div class="form-group row mb-2">
-							<label for="title" class="col-sm-3 text-right control-label col-form-label">Title</label>
+							<label for="title" class="col-sm-3 control-label col-form-label">Title</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="title" id="title" placeholder="Title Here" value="{{ $course->title }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="meta_description" class="col-sm-3 text-right control-label col-form-label">Meta Description</label>
+							<label for="meta_description" class="col-sm-3 control-label col-form-label">Meta Description</label>
 							<div class="col-sm-9">
 								<textarea class="form-control" name="meta_description" id="meta_description" placeholder="Enter Meta Description Here" >{{ $course->meta_description }}</textarea>
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="schema" class="col-sm-3 text-right control-label col-form-label">Schema Code</label>
+							<label for="schema" class="col-sm-3 control-label col-form-label">Schema Code</label>
 							<div class="col-sm-9">
 								<textarea class="form-control" name="schema" id="schema" placeholder="Enter Schema Code" >{{ $course->schema }}</textarea>
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="utm_campaign" class="col-sm-3 text-right control-label col-form-label">Campaign</label>
+							<label for="utm_campaign" class="col-sm-3 control-label col-form-label">Campaign</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="utm_campaign" id="utm_campaign" placeholder="Enter Utm Campaign Here" value="{{ $course->utm_campaign }}">
 							</div>
 						</div>
 
 						<div class="form-group row mb-2">
-							<label for="utm_source" class="col-sm-3 text-right control-label col-form-label">Source</label>
+							<label for="utm_source" class="col-sm-3 control-label col-form-label">Source</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="utm_source" id="utm_source" placeholder="Enter Utm Source Here"  value="{{ $course->utm_source }}">
 							</div>
 						</div>
 
 						<div class="form-group row mb-2">
-							<label for="robots" class="col-sm-3 text-right control-label col-form-label">Robots Content</label>
+							<label for="robots" class="col-sm-3 control-label col-form-label">Robots Content</label>
 							<div class="col-sm-9">
 							<input type="text" class="form-control" name="robots" id="robots" placeholder="Enter Center Pincode Here" value="{{ $course->robots }}" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="canonical" class="col-sm-3 text-right control-label col-form-label">Cronical Url</label>
+							<label for="canonical" class="col-sm-3 control-label col-form-label">Cronical Url</label>
 							<div class="col-sm-9">
 							<input type="text" class="form-control" name="canonical" id="canonical" placeholder="Enter Center Pincode Here" value="{{ $course->canonical }}">
 							</div>

@@ -95,7 +95,17 @@
 							<div class="col-sm-9">
 								<textarea class="form-control editor" name="criteria" id="criteria" placeholder="Enter Course Criteria" ></textarea>
 							</div>
-						</div>			
+						</div>	
+						<div class="form-group row">
+							<label for="course_id" class="col-sm-3 text-left control-label col-form-label">Courses</label>
+							<div class="col-sm-9">
+								<select name="course_id[]" id="course_id" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
+									@foreach (getSubjects() as $value)
+									<option value="{{  $value->id }}" > {{  $value->name }} </option>
+									@endforeach
+								<select>
+							</div>
+						</div>		
 					</div>
 					<div class="col-md-4">
 						<div class="form-group row mb-2">

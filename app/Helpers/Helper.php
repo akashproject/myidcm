@@ -7,6 +7,7 @@ use Spatie\Permission\Models\Permission;
 use App\Models\Setting;
 use App\Models\Course;
 use App\Models\Subject;
+use App\Models\Topic;
 
 if (! function_exists('check_device')) {
     function check_device($param = null){
@@ -93,8 +94,15 @@ if (! function_exists('getSubjects')) {
 }
 
 if (! function_exists('getSubjectsByCourseId')) {
-    function getSubjectsByCourseId($course_id){
-        $value = Subject::where('course_id',$course_id)->where('status','1')->get();
+    function getSubjectsByCourseId($subjects){
+        $value = Subject::whereIn('id',json_decode($subjects))->where('status','1')->get();
+        return (isset($value))?$value:"null";
+    }
+}
+
+if (! function_exists('getTopicsBySubjectId')) {
+    function getSubjectsBySubjectId($subject_id){
+        $value = Topic::where('subject_id',$subject_id)->where('status','1')->get();
         return (isset($value))?$value:"null";
     }
 }
@@ -103,6 +111,20 @@ if (! function_exists('getSubjectsByCourseId')) {
 if (! function_exists('getAllFaqs')) {
     function getAllFaqs(){
         $faq = DB::table('faqs')->where('status',"1")->get();
+        return $faq;
+    }
+}
+
+if (! function_exists('getFaqsById')) {
+    function getFaqsById($faqs){
+        $faq = DB::table('faqs')->whereIn('id',json_decode($faqs))->where('status',"1")->get();
+        return $faq;
+    }
+}
+
+if (! function_exists('getTestimonials')) {
+    function getTestimonials(){
+        $faq = DB::table('testimonials')->where('status',"1")->get();
         return $faq;
     }
 }

@@ -26,32 +26,10 @@
                     </div>
                     <div class="row">
                         <div class="col-md-8">
-                            <ul class="page-header__list list-unstyled">
-                                <li class="page-header-list-item">
-                                    <span class="page-header__list__icon"><i class="icon-check-2"></i></span>
-                                    100% Placement Assurance
-                                </li><!-- /.page-header-list-item -->
-                                <li class="page-header-list-item">
-                                    <span class="page-header__list__icon"><i class="icon-check-2"></i></span>
-                                    3 Months Paid Internship
-                                </li><!-- /.page-header-list-item -->
-                                <li class="page-header-list-item">
-                                    <span class="page-header__list__icon"><i class="icon-check-2"></i></span>
-                                    28 Live Projects
-                                </li><!-- /.page-header-list-item -->
-                                <li class="page-header-list-item">
-                                    <span class="page-header__list__icon"><i class="icon-check-2"></i></span>
-                                    Learn 40 Digital Automation Tools
-                                </li><!-- /.page-header-list-item -->
-                                <li class="page-header-list-item">
-                                    <span class="page-header__list__icon"><i class="icon-check-2"></i></span>
-                                    6 Certifications
-                                </li><!-- /.page-header-list-item -->
-                                <li class="page-header-list-item">
-                                    <span class="page-header__list__icon"><i class="icon-check-2"></i></span>
-                                    Mock Interview Sessions
-                                </li><!-- /.page-header-list-item -->
-                            </ul>
+                            <div class="course_highlights">
+                                {!! $contentMain->highlights !!}
+                            </div>
+                            
                         </div>
                         <div class="col-md-4">
                             
@@ -65,7 +43,6 @@
             <div class="page-header__shape-three"></div>
             <div class="page-header__shape-four"></div>
         </section>
-
         <section class="course-details ">
             <div class="container position-relative">
                 <div class="course-video-section">
@@ -73,7 +50,6 @@
                         <div class="col-md-8">
 
                         </div>
-
                         <div class="col-md-4">
                             <div class="course-details__image">
                                 <img src="{{ url('/assets/frontend/images/courses/course-d-1-2.jpg')}}" alt="The Complete Data Science Course">
@@ -103,203 +79,39 @@
                                 </ul><!-- /.tab-buttons -->
                                 <div class="tabs-content">
                                     <div class="tab active-tab fadeInUp animated" data-wow-delay="200ms" id="overview" style="display: block;">
-                                        <div class="course-details__description wow fadeInUp" data-wow-duration="1500ms">
-                                            <h3 class="course-details__title course-details__title--description">Course Descriptions</h3><!-- /.course-details__title -->
-                                            <div class="course-details__description__inner">
-                                                <p class="course-details__description__text">Consectetur adipisicing elit, sed do eiusmod tempor is incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat. Duis aute irure and dolor in reprehenderit.</p><!-- /.course-details__requirements__text -->
-                                                <p class="course-details__description__text">The is ipsum dolor sit amet consectetur adipiscing elit. Fusce eleifend porta arcu In hac augu ehabitasse the is platea augue thelorem turpoi dictumst. In lacus libero faucibus at malesuada sagittis placerat eros sed istincidunt augue ac ante rutrum sed the is sodales augue consequat.</p><!-- /.course-details__requirements__text -->
-                                            </div><!-- /.course-details__description__inner -->
-                                        </div><!-- /.course-details__description -->
-                                        <div class="course-details__requirements wow fadeInUp" data-wow-duration="1500ms">
-                                            <h3 class="course-details__title course-details__title--requirements">Requirements for The Course</h3><!-- /.course-details__title -->
-                                            <p class="course-details__requirements__text">Nulla facilisi. Vestibulum tristique sem in eros eleifend imperdiet. Donec quis convallis neque. In id lacus pulvinar lacus, eget vulputate lectus. Ut viverra bibendum lorem, at tempus nibh mattis in. Sed a massa eget lacus consequat auctor.</p><!-- /.course-details__requirements__text -->
-                                            <ul class="course-details__requirements__list list-unstyled">
-                                                <li class="course-details__requirements__item">
-                                                    <span class="course-details__requirements__list__icon"><i class="icon-check-2"></i></span>
-                                                    Ut Viverra Bibendum Lorem, At Tempus Nibh Mattis
-                                                </li><!-- /.course-details__requirements__item -->
-                                                <li class="course-details__requirements__item">
-                                                    <span class="course-details__requirements__list__icon"><i class="icon-check-2"></i></span>
-                                                    Quis Nostrud Exercitation Ullamco Laboris Nisi
-                                                </li><!-- /.course-details__requirements__item -->
-                                                <li class="course-details__requirements__item">
-                                                    <span class="course-details__requirements__list__icon"><i class="icon-check-2"></i></span>
-                                                    Duis Aute Irure And Dolor In Reprehenderit.
-                                                </li><!-- /.course-details__requirements__item -->
-                                                <li class="course-details__requirements__item">
-                                                    <span class="course-details__requirements__list__icon"><i class="icon-check-2"></i></span>
-                                                    Ante Rutrum Sed The Is Sodales Augue Consequat.
-                                                </li><!-- /.course-details__requirements__item -->
-                                            </ul><!-- /.course-details__requirements__list -->
-                                        </div><!-- /.course-details__requirements -->
+                                        <div class="couse_description">
+                                            {!! $contentMain->description !!}
+                                        </div>
                                     </div><!-- /.overview-tab -->
                                     <div class="tab fadeInUp animated" data-wow-delay="200ms" id="curriculum" style="display: none;">
                                         <div class="course-details__accordion">
                                             <div class="eduhive-accordion" data-grp-name="eduhive-accordion">
-                                                <div class="accordion active">
+                                                @foreach(getSubjectsByCourseId($contentMain->subjects) as $key => $subject)
+                                                <div class="accordion {{ ($key == 0 )?'active':'' }}">
                                                     <div class="accordion-title">
-                                                        <h4>Introduction to Data Science</h4>
+                                                        <h4>{{ $subject->name }} </h4>
+                                                        <span class="accordion-time__duration"> {{ $subject->duration }} </span>
                                                         <span class="accordion-title__icon"></span>
                                                     </div><!-- /.accordion-title -->
                                                     <div class="accordion-content">
                                                         <div class="inner">
                                                             <div class="course-details__accordion__inner">
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
+                                                                @foreach(getSubjectsBySubjectId($subject->id) as $topic)
+                                                                <a href="javascript:void(0);" class="course-details__accordion__class">
                                                                     <span class="course-details__accordion__class__title">
                                                                         <span class="course-details__accordion__class__icon">
                                                                             <i class="icon-files"></i>
                                                                         </span>
-                                                                        Introduction to JavaScript, Run JavaScript in VSCode
+                                                                        {{ $topic->name }}
                                                                     </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">5.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check complete">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        What is variable, five things you need to declare a variable
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">13.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        Variable type, Numeric, String, Boolean
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">12.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        Simple Mathematical operations in JavaScript
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">15.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        (advanced) Mathematical operation shorthand
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">11.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                            </div><!-- /.course-details__accordion__inner -->
+                                                                </a>
+                                                                @endforeach
+                                                            </div>
                                                         </div><!-- /.inner -->
-                                                    </div><!-- /.accordion-content -->
-                                                </div><!-- /.accordion-item -->
-                                                <div class="accordion">
-                                                    <div class="accordion-title">
-                                                        <h4>Intermediate Data Science</h4>
-                                                        <span class="accordion-title__icon"></span>
-                                                    </div><!-- /.accordion-title -->
-                                                    <div class="accordion-content">
-                                                        <div class="inner">
-                                                            <div class="course-details__accordion__inner">
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        Introduction And What Is An Api
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">9.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check complete">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        Intro To Json, Json Structure, Parse, Stringify
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">14.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        Json Placeholder, Get Data, Display Data On UI
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">12.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        Load More Data, More API, Send Data To Function
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">15.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__accordion__class video-popup">
-                                                                    <span class="course-details__accordion__class__title">
-                                                                        <span class="course-details__accordion__class__icon">
-                                                                            <i class="icon-files"></i>
-                                                                        </span>
-                                                                        Dynamically Display Loaded Data On Your Website
-                                                                    </span>
-                                                                    <span class="course-details__accordion__class__right">
-                                                                        <span class="course-details__accordion__class__duration">12.00 Min</span>
-                                                                        <span class="course-details__accordion__class__check">
-                                                                            <i class="icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                </a><!-- /.course-details__accordion__class -->
-                                                            </div><!-- /.course-details__accordion__inner -->
-                                                        </div><!-- /.inner -->
-                                                    </div><!-- /.accordion-content -->
-                                                </div><!-- /.accordion-item -->
+                                                    </div>
+                                                </div>
+                                                @endforeach
+                                                
                                             </div><!-- /.faq-accordion -->
                                         </div><!-- /.course-details__accordion -->
                                     </div><!-- /.curriculum-tab -->
@@ -418,7 +230,7 @@
                                 </div><!-- /.tab-content -->
                             </div><!-- /.course-details__main-tab-box -->
                         </div><!-- /.course-details__inner -->
-                    </div><!-- /.col-xl-8 col-lg-7 -->
+                    </div>
                     <div class="col-xl-4 col-lg-5 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                         <div class="course-details__info">
                             <h3 class="course-details__info__title">Course includes:</h3><!-- /.course-details__info__title -->
@@ -430,7 +242,7 @@
                                             Level:
                                         </div>
                                         <span>Expert</span>
-                                    </div><!-- /.course-details__info__text -->
+                                    </div>
                                 </li>
                                 <li>
                                     <div class="course-details__info__text">
@@ -438,8 +250,8 @@
                                             <span class="course-details__info__icon"><i class="icon-clock-1"></i></span>
                                             Duration:
                                         </div>
-                                        <span>8h 30m</span>
-                                    </div><!-- /.course-details__info__text -->
+                                        <span>{{ $contentMain->duration }}</span>
+                                    </div>
                                 </li>
                                 <li>
                                     <div class="course-details__info__text">
@@ -447,8 +259,8 @@
                                             <span class="course-details__info__icon"><i class="icon-graduation"></i></span>
                                             Lessons:
                                         </div>
-                                        <span>15</span>
-                                    </div><!-- /.course-details__info__text -->
+                                        <span>{{ $contentMain->no_of_module }}</span>
+                                    </div>
                                 </li>
                                 <li>
                                     <div class="course-details__info__text">
@@ -456,7 +268,7 @@
                                             <span class="course-details__info__icon"><i class="icon-multiple-users"></i></span>
                                             Students:
                                         </div>
-                                        <span>120</span>
+                                        <span>{{ $contentMain->number_of_enrolled }}</span>
                                     </div><!-- /.course-details__info__text -->
                                 </li>
                                 <li>
@@ -478,13 +290,14 @@
                                     </div><!-- /.course-details__info__text -->
                                 </li>
                             </ul><!-- /.course-details__info__list -->
-                            <div class="course-details__info__price">This course Fee $49.00</div><!-- /.course-details__info__price -->
                             <a href="contact.html" class="course-details__info__btn eduhive-btn">
                                 <span class="eduhive-btn__text">Join This course</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
                                 </span>
                             </a><!-- /.eduhive-btn -->
+                            <div class="course-details__info__price">This course Fee $49.00</div><!-- /.course-details__info__price -->
+                            
                             <div class="course-details__social">
                                 <h3 class="course-details__social__title">Share:</h3><!-- /.course-details__social__title -->
                                 <div class="course-details__social__group social-links-two">
@@ -519,8 +332,206 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.course-details section-space -->
-
-        <section class="courses-four section-space2">
+        <section class="about-three mt-3" id="about">
+            <div class="container-fluid">
+                <div class="about-three__inner section-space">
+                    <div class="container">
+                        <div class="row gutter-y-50 align-items-center">
+                            <div class="col-lg-6 wow fadeInLeft animated" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInLeft;">
+                                <div class="about-three__image">
+                                    <div class="about-three__image__inner">
+                                        <img src="{{ url('assets/frontend/images/courses/certification.webp')}}" alt="about">
+                                        <div class="about-three__experience">
+                                            <span class="about-three__experience__icon">
+                                                <i class="icon-connectibity"></i>
+                                            </span><!-- /.about-three__experience__icon -->
+                                            <div class="about-three__experience__content">
+                                                <h3 class="about-three__experience__title">25+</h3><!-- /.experience__title -->
+                                                <p class="about-three__experience__text">Years of experience</p><!-- /.experience__text -->
+                                            </div><!-- /.about-three__experience__content -->
+                                        </div><!-- /.about-three__experience -->
+                                        
+                                        <div class="about-three__image__shape-one"></div><!-- /.about-three__image__shape-one -->
+                                        <div class="about-three__image__shape-two"></div><!-- /.about-three__image__shape-two -->
+                                    </div><!-- /.about-three__image__inner -->
+                                    <div class="about-three__image__box"></div><!-- /.about-three__image__box -->
+                                    <img src="{{ url('assets/frontend/images/shapes/about-shape-3-2.png')}}" alt="shape" class="about-three__image__shape-three">
+                                </div><!-- /.about-three__image -->
+                            </div><!-- /.col-lg-6 -->
+                            <div class="col-lg-6">
+                                <div class="about-three__content">
+                                    <div class="sec-title wow fadeInUp animated" data-wow-duration="1500ms" data-wow-delay="00ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                                        <h6 class="sec-title__tagline">global certifiate</h6><!-- /.sec-title__tagline -->
+                                        <h3 class="sec-title__title">Our <span class="sec-title__title__text">Certificate</span> Google <span class="sec-title__title__shape">Verified</span></h3><!-- /.sec-title__title -->
+                                    </div><!-- /.sec-title -->
+                                    <div class="about-three__description wow fadeInUp animated" data-wow-duration="1500ms" data-wow-delay="00ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                                        <p class="about-three__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue velit in cursus leo sodales the turpis euismod quis sapien euismod quis sapien the.</p><!-- /.about-three__text -->
+                                    </div><!-- /.about-three__description -->
+                                    
+                                    <div class="about-three__bottom wow fadeInUp animated" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInUp;">
+                                        <a href="about.html" class="eduhive-btn">
+                                            <span>Register Now</span>
+                                            <span class="eduhive-btn__icon">
+                                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                            </span>
+                                        </a><!-- /.eduhive-btn -->
+                                        <div class="about-three__call">
+                                            <span class="about-three__call__icon">
+                                                <i class="icon-telephone"></i>
+                                            </span><!-- /.about-three__call__icon -->
+                                            <div class="about-three__call__content">
+                                                <p class="about-three__call__title">Know More</p><!-- /.call__title -->
+                                                <h4 class="about-three__call__number">
+                                                    <a href="tel:+208-555-0112">+208-555-0112</a>
+                                                </h4><!-- /.about-three__call__number -->
+                                            </div><!-- /.about-three__call__content -->
+                                        </div><!-- /.about-three__call -->
+                                    </div><!-- /.about-three__bottom -->
+                                </div><!-- /.about-three__content -->
+                            </div><!-- /.col-lg-6 -->
+                        </div><!-- /.row gutter-y-50 -->
+                    </div><!-- /.container -->
+                    <img src="{{ url('assets/frontend/images/shapes/about-shape-3-1.png')}}" alt="shape" class="about-three__shape-one">
+                    <div class="about-three__circle-one"></div><!-- /.about-three__circle-one -->
+                    <div class="about-three__circle-two"></div><!-- /.about-three__circle-two -->
+                    <div class="about-three__circle-three"></div><!-- /.about-three__circle-three -->
+                </div><!-- /.about-three__inner section-space -->
+            </div><!-- /.container-fluid -->
+            <img src="{{ url('assets/frontend/images/shapes/about-shape-3-3.png')}}" alt="shape" class="about-three__shape-two">
+        </section>
+        <section class="course-category section-space">
+            <div class="container">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h6 class="sec-title__tagline">benefits</h6><!-- /.sec-title__tagline -->
+                    <h3 class="sec-title__title"><span class="sec-title__title__text">Course</span> <span class="sec-title__title__shape">Benefits</span></h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+                <div class="row gutter-y-30">
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="course-category__card course-category__card--1">
+                            <div class="course-category__card__inner">
+                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-1.jpg);"></div>
+                            </div><!-- /.course-category__card__inner -->
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-briefcase"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Business Management</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="course-category__card course-category__card--2">
+                            <div class="course-category__card__inner">
+                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-2.jpg);"></div>
+                            </div><!-- /.course-category__card__inner -->
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-art-studies"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Arts & Design</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="course-category__card course-category__card--3">
+                            <div class="course-category__card__inner">
+                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-3.jpg);"></div>
+                            </div><!-- /.course-category__card__inner -->
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-self-confidence"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Personal Development</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="course-category__card course-category__card--4">
+                            <div class="course-category__card__inner">
+                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-4.jpg);"></div>
+                            </div><!-- /.course-category__card__inner -->
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-setting"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">IT & Software</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="course-category__card course-category__card--5">
+                            <div class="course-category__card__inner">
+                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-5.jpg);"></div>
+                            </div><!-- /.course-category__card__inner -->
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-healthcare"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Health & Fitness</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="course-category__card course-category__card--6">
+                            <div class="course-category__card__inner">
+                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-6.jpg);"></div>
+                            </div><!-- /.course-category__card__inner -->
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-coding-1"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Computer Science</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="course-category__card course-category__card--7">
+                            <div class="course-category__card__inner">
+                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-7.jpg);"></div>
+                            </div><!-- /.course-category__card__inner -->
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-clapperboard"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">Video & Photography</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                    <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="course-category__card course-category__card--8">
+                            <div class="course-category__card__inner">
+                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-8.jpg);"></div>
+                            </div><!-- /.course-category__card__inner -->
+                            <div class="course-category__card__content">
+                                <div class="course-category__card__icon-box">
+                                    <span class="course-category__card__icon">
+                                        <i class="icon-megaphone"></i>
+                                    </span>
+                                </div><!-- /.course-category__card__icon-box -->
+                                <h4 class="course-category__card__title">digital Marketing</h4><!-- /.course-category__card__title -->
+                            </div><!-- /.course-category__card__content -->
+                        </div><!-- /.course-category__card -->
+                    </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+                </div><!-- /.row gutter-y-30 -->
+            </div><!-- /.container -->
+            <div class="course-category__shape-one"></div><!-- /.course-category__shape-one -->
+            <div class="course-category__shape-two"></div><!-- /.course-category__shape-two -->
+        </section><!-- /.course-category section-space -->
+        <section class="courses-four">
             <div class="container">
                 <div class="courses-four__top">
                     <div class="row gutter-y-50 align-items-center">
@@ -655,89 +666,39 @@
                 </div><!-- /.courses-four__carousel -->
             </div>
         </section>
-        <section class="instructors-one section-space2" id="instructors">
+        <section class="faq-one section-space">
             <div class="container">
-                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
-                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">expert</span> <span class="sec-title__title__shape">instructor</span></h3><!-- /.sec-title__title -->
-                </div><!-- /.sec-title -->
-                <div class="instructors-one__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-                        "items": 1,
-                        "margin": 10,
-                        "loop": true,
-                        "smartSpeed": 700,
-                        "nav": false,
-                        "dots": true,
-                        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                        "autoplay": true,
-                        "responsive": {
-                            "0": {
-                                "items": 1,
-                                "nav": true,
-                                "dots": false,
-                                "margin": 10
-                            },
-                            "576": {
-                                "items": 2,
-                                "margin": 30
-                            },
-                            "992": {
-                                "items": 3,
-                                "margin": 30
-                            },
-                            "1200": {
-                                "items": 4,
-                                "dots": false,
-                                "margin": 30
-                            }
-                        }
-                    }'>
-                    <div class="item">
-                        <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                            <div class="instructor-card__image">
-                                <img src="{{ url('/assets/frontend/images/instructors/instructor-1-1.jpg')}}" alt="Mike Hardson">
-                                <div class="instructor-card__hover">
-                                    <div class="instructor-card__info">
-                                        <div class="instructor-card__social">
-                                            <span class="instructor-card__social__share">
-                                                <i class="icon-share"></i>
-                                            </span><!-- /.instructor-card__social__share -->
-                                            <div class="instructor-card__social__list">
-                                                <a href="https://facebook.com">
-                                                    <span class="instructor-card__social__list__icon">
-                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="sr-only">Facebook</span>
-                                                </a>
-                                                <a href="https://facebook.com">
-                                                    <span class="instructor-card__social__list__icon">
-                                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="sr-only">Linkedin</span>
-                                                </a>
-                                                <a href="https://instagram.com">
-                                                    <span class="instructor-card__social__list__icon">
-                                                        <i class="fab fa-instagram" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="sr-only">Instagram</span>
-                                                </a>
-                                            </div><!-- /.instructor-card__social__list -->
-                                        </div><!-- /.instructor-card__social -->
-                                        <h3 class="instructor-card__name">
-                                            <a href="instructor-details.html">Mike Hardson</a>
-                                        </h3><!-- /.instructor-card__name -->
-                                        <h6 class="instructor-card__designation">data scientist</h6><!-- /.instructor-card__designation -->
-                                    </div><!-- /.instructor-card__info -->
-                                </div><!-- /.instructor-card__hover -->
-                            </div><!-- /.instructor-card__image -->
-                        </div><!-- /.instructor-card -->
-                    </div><!-- /.item -->
-                    
-                </div><!-- /.instructors-one__carousel -->
+                <div class="row gutter-y-50">
+                    <div class="col-lg-12">
+                        <div class="faq-one__content">
+                            <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <h6 class="sec-title__tagline">faq’s</h6><!-- /.sec-title__tagline -->
+                                <h3 class="sec-title__title">We Are Always Ensure <span class="sec-title__title__text">Best <br> Course</span> For <span class="sec-title__title__shape">Your Learning</span></h3><!-- /.sec-title__title -->
+                            </div><!-- /.sec-title -->
+                            <div class="faq-one__accordion">
+                                <div class="eduhive-accordion" data-grp-name="eduhive-accordion">
+                                    @foreach(getFaqsById($contentMain->faqs) as $faq)
+                                    <div class="accordion wow fadeInUp" data-wow-duration="1500ms">
+                                        <div class="accordion-title">
+                                            <h4>{{ $faq->question }}</h4>
+                                            <span class="accordion-title__icon">
+                                                <i class="icon-double-arrow"></i>
+                                            </span>
+                                        </div><!-- /.accordion-title -->
+                                        <div class="accordion-content">
+                                            <div class="inner">
+                                                {!! $faq->answer !!}
+                                            </div><!-- /.inner -->
+                                        </div><!-- /.accordion-content -->
+                                    </div>
+                                    @endforeach
+                                </div><!-- /.faq-accordion -->
+                            </div><!-- /.faq-one__accordion -->
+                        </div><!-- /.faq-one__content -->
+                    </div>
+                </div><!-- /.row gutter-y-50 -->
             </div><!-- /.container -->
-            <img src="{{ url('/assets/frontend/images/shapes/instructors-shape-1-1.png')}}" alt="shape" class="instructors-one__shape-one">
-            <img src="{{ url('/assets/frontend/images/shapes/instructors-shape-1-2.png')}}" alt="shape" class="instructors-one__shape-two">
-            <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
-            <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
-        </section><!-- /.instructors-one section-space2 -->
+            <img src="{{ url('assets/frontend/images/shapes/faq-shape-1-1.png')}}" alt="shape" class="faq-one__shape-one">
+            <img src="{{ url('assets/frontend/images/shapes/faq-shape-1-4.png')}}" alt="shape" class="faq-one__shape-two">
+        </section><!-- /.faq-one section-space -->
     @endsection 

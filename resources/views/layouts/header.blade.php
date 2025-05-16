@@ -8,7 +8,7 @@
 					<div class="main-header__left">
 						<div class="main-header__logo logo-retina">
 							<a href="{{ url('/') }}">
-								<img src="{{ url('assets/logo/logo.png') }}" alt="eduhive HTML" width="209">
+								<img src="{{ url('assets/logo/logo.gif') }}" alt="eduhive HTML" width="209">
 							</a>
 						</div><!-- /.main-header__logo -->
 						<div class="main-header__courses">

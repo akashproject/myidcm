@@ -5313,7 +5313,7 @@ body.megamenu-popup-active .mobile-nav__content {
   margin: 0;
 }
 
-.page-header__list li {
+.course_highlights li {
   display: flex;
   gap: 12px;
   font-size: 16px;
@@ -5322,23 +5322,27 @@ body.megamenu-popup-active .mobile-nav__content {
   width: 50%;
   float: left;
   margin-top: 10px;
+  position: relative;
+}
+.course_highlights li::before {
+  content: "\e92f";
+  font-family: 'icomoon' !important;
+  color: #20104b;
+  position: absolute;
+  left: -24px;
 }
 
-.page-header__list__icon {
-  position: relative;
-  top: -1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 25px;
-  height: 25px;
-  font-size: 16px;
-  color: var(--eduhive-base, #674CEF);
-  border: 1px solid var(--eduhive-base, #674CEF);
-  border-radius: 50%;
-  transition: all 500ms ease;
+.course_highlights li::after {
+    content: " ";
+    position: absolute;
+    left: -29px;
+    top: 1px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--eduhive-base, #674CEF);
+    border-radius: 50%;
 }
+
 .page-header__list__icon svg {
   width: 1em;
   height: 1em;
@@ -5373,6 +5377,9 @@ body.megamenu-popup-active .mobile-nav__content {
 @media (max-width: 767px) {
   .page-header__title {
     font-size: 30px;
+  }
+  .course_highlights li {
+    width: 100%;
   }
 }
 @media (max-width: 575px) {
@@ -8798,7 +8805,7 @@ li:hover .contact-page__info__icon__inner {
 .about-three__image__shape-one {
   position: relative;
   position: absolute;
-  right: -34px;
+  right: -14px;
   bottom: 140px;
   width: 20px;
   height: 138px;
@@ -8891,11 +8898,7 @@ li:hover .contact-page__info__icon__inner {
   border-radius: 50%;
   z-index: -1;
 }
-.about-three .total-student {
-  position: absolute;
-  top: 62px;
-  right: -87px;
-}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .about-three .total-student {
     top: 20px;
@@ -8913,16 +8916,16 @@ li:hover .contact-page__info__icon__inner {
   }
 }
 .about-three__experience {
-  padding: 20px 24px 19px;
-  position: relative;
-  position: absolute;
-  left: 0;
-  bottom: 29px;
-  background-color: var(--eduhive-white, #FFFFFF);
-  border-radius: 0 20px 20px 0;
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    padding: 20px 24px 19px;
+    position: relative;
+    position: absolute;
+    left: 0;
+    top: -70px;
+    background-color: #f9dddd;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 @media (max-width: 575px) {
   .about-three__experience {
@@ -9443,10 +9446,10 @@ li:hover .contact-page__info__icon__inner {
   border: 1px solid var(--eduhive-border-color, #DBD8E6);
 }
 .course-details__accordion .accordion + .accordion {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .course-details__accordion .accordion-title {
-  padding: 23.5px 30px;
+  padding: 13.5px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9468,6 +9471,7 @@ li:hover .contact-page__info__icon__inner {
   line-height: 1.5;
   text-transform: capitalize;
   transition: all 500ms ease;
+  width: 70%
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .course-details__accordion .accordion-title h4 {
@@ -9479,6 +9483,14 @@ li:hover .contact-page__info__icon__inner {
     font-size: 18px;
   }
 }
+.course-details__accordion .accordion-time__duration {
+    padding: 5px 30px;
+    border-radius: 3px;
+    background: RGBA(var(--eduhive-base-rgb, 103, 76, 239), 0.1);
+    color: #2a2929;
+    font-weight: 800;
+}
+
 .course-details__accordion .accordion-title__icon {
   position: relative;
   width: 30px;
@@ -9817,7 +9829,7 @@ li:hover .contact-page__info__icon__inner {
   color: var(--eduhive-black, #20104B);
 }
 .course-details__info__price {
-  margin-bottom: 22px;
+  margin-top: 22px;
   padding: 13px 14px;
   font-size: 16px;
   font-weight: 600;
@@ -9879,6 +9891,23 @@ li:hover .contact-page__info__icon__inner {
   grid-gap: 30px;
   border-radius: 12px;
   border: 1px solid var(--eduhive-border-color, #DBD8E6);
+}
+.couse_description {
+    color: #333;
+}
+
+.couse_description li {
+    list-style: none;
+    margin: 5px 0;
+    line-height: 1.5rem;
+    position: relative;
+}
+.couse_description li::before {
+    content: "\e92f";
+    font-family: 'icomoon' !important;
+    color: #20104b;
+    position: absolute;
+    left: -24px;
 }
 @media (max-width: 991px) {
   .course-instructor-details__inner {

@@ -30,6 +30,7 @@ class CourseController extends Controller
         try {
             $course = Course::find($id);
             $course->subjects = json_decode($course->subjects);
+            $course->faqs = json_decode($course->faqs);
             return view('administrator.courses.show',compact('course'));
         } catch(\Illuminate\Database\QueryException $e){
         }        
@@ -41,10 +42,11 @@ class CourseController extends Controller
             $validatedData = $request->validate([
                 'name' => 'required',
                 'slug' => 'required',
+                'subjects' => 'required',
                 'no_of_module' => 'required',
             ]);
             
-
+        $data['subjects'] = json_encode($data['subjects']);
             if($data['course_id'] <= 0){
                 $course = Course::create($data);
             } else {
