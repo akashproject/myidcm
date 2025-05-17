@@ -1,4 +1,4 @@
-@extends('administrator.layouts.app')
+@extends('administrator.layouts.admin')
 
 @section('content')
 
@@ -18,7 +18,6 @@
                 <div class="form-group row">
                     <div class="col-sm-6">
                         <select name="extension" id="extension" class="select2 form-control custom-select">	
-                            <option value=""> All Media </option>
                             <option value="1"> Images </option>
                             <option value="3"> Videos </option>
                             <option value="4" > Audios </option>
@@ -50,13 +49,14 @@
                     <a href="#imageDetailBox" class="image-thumbnail open-popup-link">
                     @switch($value->type)
                         @case("application/pdf")
-                        <img src="{{ url('assets/img/pdf.png') }}" alt="{{$value->alternative}}" style="width:100%">
-                        @break
-                        @default
-                        <img src="{{ getSizedImage($value->id,'thumb') }}" alt="{{$value->alternative}}" style="width:100%">                       
+							<img src="{{ url('assets/img/pdf.png') }}" alt="{{$value->alternative}}" style="width:100%">
+							@break
+							@default
+							<img src="{{ getSizedImage($value->id) }}" alt="{{$value->alternative}}" style="width:100%">                         
                     @endswitch
+                        <span > {{$value->filename}} </span>
                     </a>
-                    <a target="_blank" href="{{ route('admin-view-file',$value->id) }}" style="display:block">Edit</a>
+                    <a target="_blank" href="{{ url('administrator/view-file') }}/{{ $value->id }}" style="display:block">Edit</a>
                 </div>
 
                 @endforeach
