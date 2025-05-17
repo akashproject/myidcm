@@ -32,9 +32,16 @@
 					<div class="main-header__right">
 						<nav class="main-header__nav main-menu">
 							<ul class="main-menu__list">
-							@foreach ($primaryMenu as $key => $menuItem)
+							@foreach($primaryMenu as $key => $menuItem)
 								<li>
-									<a href="{{ url($key) }}">{{ $menuItem }}</a>
+									<a href="{{ url($menuItem['url']) }}">{{ $menuItem['name'] }}</a>
+									@if(isset($menuItem['menu']))
+										<ul>
+											@foreach($menuItem['menu'] as $key => $subMenu)
+											<li><a href="{{ $key }}"> {{ $subMenu }}</a></li>
+											@endforeach
+										</ul>
+									@endif
 								</li>
 							@endforeach
 							</ul>

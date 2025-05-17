@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Media;
+use App\Models\Institute;
 use View;
 
 
@@ -28,11 +29,29 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function($view)
         {
             // Header Menu
+            $institute = DB::table('institutes')->select('slug','name')->where("status","1")->get();
+            $instituteArray = array();
+            foreach ($institute as $key => $value) {
+                $instituteArray['/'.$value->slug] = $value->name;
+            }
             $primaryMenu = array(
-                '/centers' => "IDCM Institutes",                
-                '/about-us' => "About Us",                
-                '/placements' => "Placements",
-                '/contact-us' => "Contact Us",
+                array(
+                    'url'=>'/institute',
+                    'name' => "Institute",
+                    'menu' => $instituteArray,
+                ),
+                array(
+                    'url'=>'/about-us',
+                    'name' => "About Us",
+                ),
+                array(
+                    'url'=>'/placements',
+                    'name' => "Placements",
+                ),
+                array(
+                    'url'=>'/contact-us',
+                    'name' => "Contact Us",
+                ),
             );
             $view->with('primaryMenu', $primaryMenu);
 

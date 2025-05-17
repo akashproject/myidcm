@@ -962,7 +962,7 @@ h6 {
 
 .preloader {
   position: fixed;
-  background-color: var(--eduhive-black, #20104B);
+  background-color: #eae3ff;
   background-position: center center;
   background-repeat: no-repeat;
   top: 0;

@@ -141,12 +141,7 @@
 								</select>
 							</div>
 						</div>		
-						<div class="form-group row mb-2">
-							<label for="tags" class="col-sm-3 text-right control-label col-form-label">Tags</label>
-							<div class="col-sm-9">
-								<textarea class="form-control" name="tags" id="meta_description" placeholder="Enter Tags Here" ></textarea>
-							</div>
-						</div>				
+									
 						<div class="form-group row mb-2">
 							<label for="state" class="col-sm-3 text-right control-label col-form-label">Enable OTP</label>
 							<div class="col-sm-9">
@@ -222,12 +217,6 @@
 							<label for="robots" class="col-sm-3 text-right control-label col-form-label">Robots Content</label>
 							<div class="col-sm-9">
 							<input type="text" class="form-control" name="robots" id="robots" placeholder="Enter Center Pincode Here" >
-							</div>
-						</div>
-						<div class="form-group row mb-2">
-							<label for="canonical" class="col-sm-3 text-right control-label col-form-label">Cronical Url</label>
-							<div class="col-sm-9">
-							<input type="text" class="form-control" name="canonical" id="canonical" placeholder="Enter Canonical Url Here" >
 							</div>
 						</div>
 					</div>

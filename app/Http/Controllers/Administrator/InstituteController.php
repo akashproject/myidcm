@@ -34,10 +34,11 @@ class InstituteController extends Controller
     {
         try {
             $institute = Institute::find($id);
-            $institute->courses = json_decode($institute->courses);
+            //$institute->courses = json_decode($institute->courses);
+            //dd($institute);
             $states = State::all();
-            $cities = City::where('state_id', $institute->state)->orderBy('name', 'asc')->get();
-            return view('administrator.institutes.show',compact('institute','states','cities','courses'));
+            $cities = City::where('state_id', $institute->state_id)->orderBy('name', 'asc')->get();
+            return view('administrator.institutes.show',compact('institute','states','cities'));
         } catch(\Illuminate\Database\QueryException $e){
         }        
     }
@@ -50,11 +51,11 @@ class InstituteController extends Controller
                 'slug' => 'required',
             ]);
             $data['courses'] = isset($data['courses'])?json_encode($data['courses']):null;
-            if($data['center_id'] <= 0){
-                $course = Institute::create($data);
+            if($data['institute_id'] <= 0){
+                $institute = Institute::create($data);
             } else {
-                $course = Institute::findOrFail($data['institute_id']);
-                $course->update($data);
+                $institute = Institute::findOrFail($data['institute_id']);
+                $institute->update($data);
             }
 
             return redirect()->back()->with('message', 'Institute updated successfully!');

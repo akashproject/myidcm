@@ -8,6 +8,8 @@ use App\Models\Setting;
 use App\Models\Course;
 use App\Models\Subject;
 use App\Models\Topic;
+use App\Models\State;
+use App\Models\City;
 
 if (! function_exists('check_device')) {
     function check_device($param = null){
@@ -126,5 +128,136 @@ if (! function_exists('getTestimonials')) {
     function getTestimonials(){
         $faq = DB::table('testimonials')->where('status',"1")->get();
         return $faq;
+    }
+}
+
+if (! function_exists('getStates')) {
+    function getStates(){
+        try {
+            $states = State::where('status', 1)->orderBy("name","asc")->get();
+            return $states;
+        } catch(\Illuminate\Database\QueryException $e){
+            throw $e;
+        }
+    }
+}
+
+if (! function_exists('getStateById')) {
+    function getStateById($id){
+        try {
+            $state = State::findOrFail($id);
+            return $state;
+        } catch(\Illuminate\Database\QueryException $e){
+            throw $e;
+        }
+    }
+}
+
+if (! function_exists('getCityById')) {
+    function getCityById($id){
+        try {
+            $city = DB::table('cities')->where('id',$id)->first();
+            return $city;
+        } catch(\Illuminate\Database\QueryException $e){
+            throw $e;
+        }
+    }
+}
+
+if (! function_exists('getCitiesByStateName')) {
+    function getCitiesByStateName($state){
+        try {
+            $cities = DB::table('cities')
+            ->join('states', 'cities.state_id', '=', 'states.id')
+            ->where('states.name',$state)
+            ->select('cities.*')
+            ->get();
+            return $cities;
+        } catch(\Illuminate\Database\QueryException $e){
+            throw $e;
+        }
+    }
+}
+
+if (! function_exists('getCenters')) {
+    function getCenters($course_id=null, $center_id=null){    
+        $centers = Cache::rememberForever('centers', function () use ($course_id,$center_id){
+            $centers = DB::table('centers');
+            if($course_id){
+                $centers->where('courses','like', '%"' . $course_id . '"%');
+            } 
+            if($center_id){
+                $centers->where('id',$center_id);
+            } 
+            
+            if(isset($_COOKIE['lng']) && isset($_COOKIE['lat'])){
+                $centers->orderBy(DB::raw('POW((lng-'.$_COOKIE['lng'].'),2) + POW((lat-'.$_COOKIE['lat'].'),2)'));
+            } else {
+                $centers->orderBy("name","asc");
+            }
+            $centers = $centers->where('status',"1");
+            return $centers->get();     
+        });
+        return $centers;
+    }
+}
+
+if (!function_exists('getCenterByCityId')) {
+    function getCenterByCityId($city = null,$centername = null){
+        $center = DB::table('centers')
+                ->join('cities', 'cities.id', '=', 'centers.city_id')
+                ->select('centers.id','centers.name');
+        if($city){
+            $center->where('cities.name',$city);
+        }
+
+        if($centername){
+            $center->where('centers.name',$centername);
+        }
+
+        $center->where('centers.status','1');
+        $center = $center->get();       
+        return $center;
+    }
+}
+
+if (!function_exists('getCenterById')) {
+    function getCenterById($center_id = null){
+        $center = DB::table('centers');
+        if($center_id){
+            $center->where('id',$center_id);
+        }
+        $center = $center->first();       
+        return $center;
+    }
+}
+
+if (!function_exists('getCenterByStateId')) {
+    function getCenterByStateId($state = null,$centername = null){
+        $center = DB::table('centers')
+                ->join('states', 'states.id', '=', 'centers.state_id')
+                ->select('centers.id','centers.name');
+        if($state){
+            $center->where('states.name',$state);
+        }
+
+        if($centername){
+            $center->where('centers.name',$centername);
+        }
+
+        $center->where('centers.status','1');
+        $center = $center->orderBy('name', 'asc')->get();       
+        return $center;
+    }
+}
+
+if (! function_exists('getGallery')) {
+    function getGallery($course_id=null, $center_id=null){
+        $gallery = DB::table('gallery');
+        if($center_id){
+            $gallery->where("center_id",$center_id);
+        } 
+        $gallery = $gallery->get();       
+        return $gallery;
     }
 }

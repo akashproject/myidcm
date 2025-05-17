@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download Blob Video</title>
+</head>
+<body>
+  <button id="downloadBtn">Download Video</button>
+
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", async () => {
+      // Fetch the blob from a blob URL or create your own
+    const blob = new Blob(['blob:https://vimeo.com/3f139960-bc36-4415-9a05-de44778ae760'], { type: 'video/mp4' });
+    const blobUrl = URL.createObjectURL(blob);
+
+      try {
+        const response = await fetch(blobUrl);
+        const blob = await response.blob();
+
+        // Create download link
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "demo.mp4"; // Name of the downloaded file
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+      } catch (err) {
+        console.error("Failed to download blob:", err);
+      }
+    });
+  </script>
+</body>
+</html>
