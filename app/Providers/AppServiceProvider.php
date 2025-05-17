@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
             $institute = DB::table('institutes')->select('slug','name')->where("status","1")->get();
             $instituteArray = array();
             foreach ($institute as $key => $value) {
-                $instituteArray['/'.$value->slug] = $value->name;
+                $instituteArray['/institute/'.$value->slug] = $value->name;
             }
             $primaryMenu = array(
                 array(

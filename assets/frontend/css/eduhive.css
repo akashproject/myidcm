@@ -4096,9 +4096,6 @@ a:hover .instructor-card-two__social__icon {
 }
 .main-header--two {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: transparent;
   z-index: 999;
 }

@@ -96,3 +96,4 @@ Route::group(['prefix' => 'administrator'], function () {
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('website');
 Route::get('/{slug}', [App\Http\Controllers\PageController::class, 'index'])->where('slug', '([A-Za-z0-9\-]+)');
 Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'view'])->name('view-courses');
+Route::get('/institute/{slug}', [App\Http\Controllers\InstituteController::class, 'view'])->name('view-institute');

@@ -2,6 +2,50 @@
 <!-- Start of Header section
 	============================================= -->
 	<div class="home-main-header">
+		<div class="topbar">
+			<div class="container-fluid">
+				<div class="topbar__inner">
+					<ul class="list-unstyled topbar__info">
+						<li>
+							<span class="topbar__info__icon topbar__info__icon--email">
+								<i class="icon-email"></i>
+							</span>
+							<a href="mailto:needhelp@company.com">needhelp@company.com</a>
+						</li>
+						<li>
+							<span class="topbar__info__icon">
+								<i class="icon-telephone"></i>
+							</span>
+							<a href="tel:+6120320024">+61 2032 0024</a>
+						</li>
+						<li>
+							<span class="topbar__info__icon">
+								<i class="icon-location"></i>
+							</span>
+							<a href="https://www.google.com/maps">2683 Smith Street, Boston - 02110</a>
+						</li>
+					</ul><!-- /.list-unstyled topbar__info -->
+					<div class="topbar__social social-links">
+						<a href="https://facebook.com">
+							<i class="fab fa-facebook-f" aria-hidden="true"></i>
+							<span class="sr-only">Facebook</span>
+						</a>
+						<a href="https://twitter.com">
+							<i class="icon-twitter" aria-hidden="true"></i>
+							<span class="sr-only">Twitter</span>
+						</a>
+						<a href="https://linkedin.com">
+							<i class="fab fa-linkedin-in" aria-hidden="true"></i>
+							<span class="sr-only">Linkedin</span>
+						</a>
+						<a href="https://youtube.com">
+							<i class="fab fa-youtube" aria-hidden="true"></i>
+							<span class="sr-only">Youtube</span>
+						</a>
+					</div><!-- /.topbar__social social-links -->
+				</div><!-- /.topbar__inner -->
+			</div><!-- /.container-fluid -->
+		</div><!-- /.topbar -->
 		<header class="main-header main-header--two sticky-header sticky-header--normal">
 			<div class="container-fluid">
 				<div class="main-header__inner">
