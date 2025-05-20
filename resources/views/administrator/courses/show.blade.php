@@ -100,7 +100,7 @@
 							<div class="col-sm-9">
 								<select name="subjects[]" id="subjects" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
 									@foreach (getSubjects() as $value)
-									<option value="{{  $value->id }}" {{ ($course->subjects != null && in_array($value->id,  $course->faqs))?'selected' : '' }}> {{  $value->name }} </option>
+									<option value="{{  $value->id }}" {{ ($course->subjects != null && in_array($value->id,  $course->subjects))?'selected' : '' }}> {{  $value->name }} </option>
 									@endforeach
 								<select>
 							</div>

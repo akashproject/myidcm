@@ -95,10 +95,6 @@
 							<span></span>
 							<span></span>
 						</div><!-- /.mobile-nav__toggler -->
-						<a href="#" class="search-toggler main-header__search">
-							<i class="icon-search" aria-hidden="true"></i>
-							<span class="sr-only">Search</span>
-						</a><!-- /.search-toggler -->
 						<a href="contact.html" class="main-header__btn eduhive-btn eduhive-btn--border">
 							<span>Apply now</span>
 							<span class="eduhive-btn__icon">

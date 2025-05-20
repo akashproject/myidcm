@@ -250,29 +250,29 @@
                     <h3 class="sec-title__title">people <span class="sec-title__title__text">say about</span> <span class="sec-title__title__shape">eduhive</span></h3><!-- /.sec-title__title -->
                 </div><!-- /.sec-title -->
                 <div class="testimonials-three__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav eduhive-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
-            "items": 3,
-            "margin": 30,
-            "smartSpeed": 700,
-            "loop":true,
-            "autoplay": 6000,
-            "nav":true,
-            "dots":false,
-            "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-            "responsive":{
-                "0":{
-                    "items": 1,
-                    "margin": 10
-                },
-                "768":{
-                    "items": 2,
-                    "margin": 30
-                },
-                "1200":{
                     "items": 3,
-                    "margin": 30
-                }
-              }
-            }'>
+                    "margin": 30,
+                    "smartSpeed": 700,
+                    "loop":true,
+                    "autoplay": 6000,
+                    "nav":true,
+                    "dots":false,
+                    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                    "responsive":{
+                        "0":{
+                            "items": 1,
+                            "margin": 10
+                        },
+                        "768":{
+                            "items": 2,
+                            "margin": 30
+                        },
+                        "1200":{
+                            "items": 3,
+                            "margin": 30
+                        }
+                    }
+                    }'>
                     <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <div class="testimonial-card-three">
                             <div class="testimonial-card-three__image">
@@ -383,339 +383,209 @@
             <div class="testimonials-three__shape-box"></div><!-- /.testimonials-three__shape-box -->
         </section><!-- /.testimonials-three section-space2 -->
 
-        <section class="instructors-three section-space2" id="instructors">
-            <div class="container">
-                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
-                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">expert</span> <span class="sec-title__title__shape">instructor</span></h3><!-- /.sec-title__title -->
-                </div><!-- /.sec-title -->
-                <div class="instructors-three__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-            "items": 1,
-            "margin": 10,
-            "loop": true,
-            "smartSpeed": 700,
-            "nav": false,
-            "dots": true,
-            "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-            "autoplay": true,
-            "responsive": {
-                "0": {
-                    "items": 1,
-                    "nav": true,
-                    "dots": false,
-                    "margin": 10
-                },
-                "576": {
-                    "items": 2,
-                    "margin": 30
-                },
-                "992": {
-                    "items": 3,
-                    "margin": 30
-                },
-                "1200": {
-                    "items": 4,
-                    "margin": 30,
-                    "dots": false
+       <section class="instructors-one section-space2" id="instructors">
+    <div class="container">
+        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+            <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
+            <h3 class="sec-title__title">Our <span class="sec-title__title__text">management</span> <span class="sec-title__title__shape">Teams</span></h3><!-- /.sec-title__title -->
+        </div><!-- /.sec-title -->
+        <div class="instructors-one__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+                "items": 1,
+                "margin": 10,
+                "loop": true,
+                "smartSpeed": 700,
+                "nav": false,
+                "dots": true,
+                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                "autoplay": true,
+                "responsive": {
+                    "0": {
+                        "items": 1,
+                        "nav": true,
+                        "dots": false,
+                        "margin": 10
+                    },
+                    "576": {
+                        "items": 2,
+                        "margin": 30
+                    },
+                    "992": {
+                        "items": 3,
+                        "margin": 30
+                    },
+                    "1200": {
+                        "items": 4,
+                        "dots": false,
+                        "margin": 30
+                    }
                 }
-            }
-        }'>
-                    <div class="item">
-                        <div class="instructor-card-three instructor-card-three--top-identity wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                            <div class="instructor-card-three__image">
-                                <div class="instructor-card-three__image__inner">
-                                    <img src="assets/frontend/images/instructors/instructor-3-1.jpg" alt="Anthony B. Castillo">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://facebook.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Facebook</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://twitter.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Twitter</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://instagram.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Instagram</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://youtube.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Youtube</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
-                                </div><!-- /.instructor-card-three__image__inner -->
-                            </div><!-- /.instructor-card-three__image -->
-                            <div class="instructor-card-three__identity">
-                                <h3 class="instructor-card-three__name">
-                                    <a href="instructor-details.html">Anthony B. Castillo</a>
-                                </h3><!-- /.instructor-card-three__name -->
-                                <p class="instructor-card-three__designation">Digital marketer</p><!-- /.instructor-card-three__designation -->
-                            </div><!-- /.instructor-card-three__identity -->
-                        </div><!-- /.instructor-card-three -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-three wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                            <div class="instructor-card-three__image">
-                                <div class="instructor-card-three__image__inner">
-                                    <img src="assets/frontend/images/instructors/instructor-3-2.jpg" alt="david cooper">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://facebook.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Facebook</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://twitter.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Twitter</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://instagram.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Instagram</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://youtube.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Youtube</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
-                                </div><!-- /.instructor-card-three__image__inner -->
-                            </div><!-- /.instructor-card-three__image -->
-                            <div class="instructor-card-three__identity">
-                                <h3 class="instructor-card-three__name">
+            }'>
+            <div class="item">
+                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                    <div class="instructor-card__image">
+                        <img src="assets/frontend/images/instructors/instructor-1-1.jpg" alt="Mike Hardson">
+                        <div class="instructor-card__hover">
+                            <div class="instructor-card__info">
+                                <div class="instructor-card__social">
+                                    <span class="instructor-card__social__share">
+                                        <i class="icon-share"></i>
+                                    </span><!-- /.instructor-card__social__share -->
+                                    <div class="instructor-card__social__list">
+                                        <a href="https://facebook.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Facebook</span>
+                                        </a>
+                                        <a href="https://facebook.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Linkedin</span>
+                                        </a>
+                                        <a href="https://instagram.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Instagram</span>
+                                        </a>
+                                    </div><!-- /.instructor-card__social__list -->
+                                </div><!-- /.instructor-card__social -->
+                                <h3 class="instructor-card__name">
+                                    <a href="instructor-details.html">Mike Hardson</a>
+                                </h3><!-- /.instructor-card__name -->
+                                <h6 class="instructor-card__designation">data scientist</h6><!-- /.instructor-card__designation -->
+                            </div><!-- /.instructor-card__info -->
+                        </div><!-- /.instructor-card__hover -->
+                    </div><!-- /.instructor-card__image -->
+                </div><!-- /.instructor-card -->
+            </div><!-- /.item -->
+            <div class="item">
+                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                    <div class="instructor-card__image">
+                        <img src="assets/frontend/images/instructors/instructor-1-2.jpg" alt="aleesha brown">
+                        <div class="instructor-card__hover">
+                            <div class="instructor-card__info">
+                                <div class="instructor-card__social">
+                                    <span class="instructor-card__social__share">
+                                        <i class="icon-share"></i>
+                                    </span><!-- /.instructor-card__social__share -->
+                                    <div class="instructor-card__social__list">
+                                        <a href="https://facebook.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Facebook</span>
+                                        </a>
+                                        <a href="https://facebook.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Linkedin</span>
+                                        </a>
+                                        <a href="https://instagram.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Instagram</span>
+                                        </a>
+                                    </div><!-- /.instructor-card__social__list -->
+                                </div><!-- /.instructor-card__social -->
+                                <h3 class="instructor-card__name">
+                                    <a href="instructor-details.html">aleesha brown</a>
+                                </h3><!-- /.instructor-card__name -->
+                                <h6 class="instructor-card__designation">Web Developer</h6><!-- /.instructor-card__designation -->
+                            </div><!-- /.instructor-card__info -->
+                        </div><!-- /.instructor-card__hover -->
+                    </div><!-- /.instructor-card__image -->
+                </div><!-- /.instructor-card -->
+            </div><!-- /.item -->
+            <div class="item">
+                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                    <div class="instructor-card__image">
+                        <img src="assets/frontend/images/instructors/instructor-1-3.jpg" alt="david cooper">
+                        <div class="instructor-card__hover">
+                            <div class="instructor-card__info">
+                                <div class="instructor-card__social">
+                                    <span class="instructor-card__social__share">
+                                        <i class="icon-share"></i>
+                                    </span><!-- /.instructor-card__social__share -->
+                                    <div class="instructor-card__social__list">
+                                        <a href="https://facebook.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Facebook</span>
+                                        </a>
+                                        <a href="https://facebook.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Linkedin</span>
+                                        </a>
+                                        <a href="https://instagram.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Instagram</span>
+                                        </a>
+                                    </div><!-- /.instructor-card__social__list -->
+                                </div><!-- /.instructor-card__social -->
+                                <h3 class="instructor-card__name">
                                     <a href="instructor-details.html">david cooper</a>
-                                </h3><!-- /.instructor-card-three__name -->
-                                <p class="instructor-card-three__designation">Sr. Manager</p><!-- /.instructor-card-three__designation -->
-                            </div><!-- /.instructor-card-three__identity -->
-                        </div><!-- /.instructor-card-three -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-three instructor-card-three--top-identity wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                            <div class="instructor-card-three__image">
-                                <div class="instructor-card-three__image__inner">
-                                    <img src="assets/frontend/images/instructors/instructor-3-1.jpg" alt="Anthony B. Castillo">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://facebook.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Facebook</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://twitter.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Twitter</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://instagram.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Instagram</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://youtube.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Youtube</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
-                                </div><!-- /.instructor-card-three__image__inner -->
-                            </div><!-- /.instructor-card-three__image -->
-                            <div class="instructor-card-three__identity">
-                                <h3 class="instructor-card-three__name">
-                                    <a href="instructor-details.html">Anthony B. Castillo</a>
-                                </h3><!-- /.instructor-card-three__name -->
-                                <p class="instructor-card-three__designation">Digital marketer</p><!-- /.instructor-card-three__designation -->
-                            </div><!-- /.instructor-card-three__identity -->
-                        </div><!-- /.instructor-card-three -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-three wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                            <div class="instructor-card-three__image">
-                                <div class="instructor-card-three__image__inner">
-                                    <img src="assets/frontend/images/instructors/instructor-3-2.jpg" alt="david cooper">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://facebook.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Facebook</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://twitter.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Twitter</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://instagram.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Instagram</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://youtube.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Youtube</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
-                                </div><!-- /.instructor-card-three__image__inner -->
-                            </div><!-- /.instructor-card-three__image -->
-                            <div class="instructor-card-three__identity">
-                                <h3 class="instructor-card-three__name">
-                                    <a href="instructor-details.html">david cooper</a>
-                                </h3><!-- /.instructor-card-three__name -->
-                                <p class="instructor-card-three__designation">Sr. Manager</p><!-- /.instructor-card-three__designation -->
-                            </div><!-- /.instructor-card-three__identity -->
-                        </div><!-- /.instructor-card-three -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-three instructor-card-three--top-identity wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                            <div class="instructor-card-three__image">
-                                <div class="instructor-card-three__image__inner">
-                                    <img src="assets/frontend/images/instructors/instructor-3-3.jpg" alt="kevin martin">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://facebook.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Facebook</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://twitter.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Twitter</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://instagram.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Instagram</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://youtube.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Youtube</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
-                                </div><!-- /.instructor-card-three__image__inner -->
-                            </div><!-- /.instructor-card-three__image -->
-                            <div class="instructor-card-three__identity">
-                                <h3 class="instructor-card-three__name">
-                                    <a href="instructor-details.html">kevin martin</a>
-                                </h3><!-- /.instructor-card-three__name -->
-                                <p class="instructor-card-three__designation">Founder & CEO</p><!-- /.instructor-card-three__designation -->
-                            </div><!-- /.instructor-card-three__identity -->
-                        </div><!-- /.instructor-card-three -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-three wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                            <div class="instructor-card-three__image">
-                                <div class="instructor-card-three__image__inner">
-                                    <img src="assets/frontend/images/instructors/instructor-3-4.jpg" alt="Adlof Carone">
-                                    <div class="instructor-card-three__social social-links-two">
-                                        <div class="social-links-two__item">
-                                            <a href="https://facebook.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Facebook</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://twitter.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Twitter</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://instagram.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Instagram</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                        <div class="social-links-two__item">
-                                            <a href="https://youtube.com">
-                                                <span class="social-links-two__icon">
-                                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                                </span><!-- /.social-links-two__icon -->
-                                                <span class="sr-only">Youtube</span>
-                                            </a>
-                                        </div><!-- /.social-links-two__item -->
-                                    </div><!-- /.instructor-card-three__social -->
-                                </div><!-- /.instructor-card-three__image__inner -->
-                            </div><!-- /.instructor-card-three__image -->
-                            <div class="instructor-card-three__identity">
-                                <h3 class="instructor-card-three__name">
-                                    <a href="instructor-details.html">Adlof Carone</a>
-                                </h3><!-- /.instructor-card-three__name -->
-                                <p class="instructor-card-three__designation">UI/UX Designer</p><!-- /.instructor-card-three__designation -->
-                            </div><!-- /.instructor-card-three__identity -->
-                        </div><!-- /.instructor-card-three -->
-                    </div><!-- /.item -->
-                </div><!-- /.instructors-three__carousel -->
-            </div><!-- /.container -->
-        </section><!-- /.instructors-three section-space2 -->
-    <!-- End Brands Section -->
+                                </h3><!-- /.instructor-card__name -->
+                                <h6 class="instructor-card__designation">software engineer</h6><!-- /.instructor-card__designation -->
+                            </div><!-- /.instructor-card__info -->
+                        </div><!-- /.instructor-card__hover -->
+                    </div><!-- /.instructor-card__image -->
+                </div><!-- /.instructor-card -->
+            </div><!-- /.item -->
+            <div class="item">
+                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                    <div class="instructor-card__image">
+                        <img src="assets/frontend/images/instructors/instructor-1-4.jpg" alt="sarah albert">
+                        <div class="instructor-card__hover">
+                            <div class="instructor-card__info">
+                                <div class="instructor-card__social">
+                                    <span class="instructor-card__social__share">
+                                        <i class="icon-share"></i>
+                                    </span><!-- /.instructor-card__social__share -->
+                                    <div class="instructor-card__social__list">
+                                        <a href="https://facebook.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Facebook</span>
+                                        </a>
+                                        <a href="https://facebook.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Linkedin</span>
+                                        </a>
+                                        <a href="https://instagram.com">
+                                            <span class="instructor-card__social__list__icon">
+                                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">Instagram</span>
+                                        </a>
+                                    </div><!-- /.instructor-card__social__list -->
+                                </div><!-- /.instructor-card__social -->
+                                <h3 class="instructor-card__name">
+                                    <a href="instructor-details.html">sarah albert</a>
+                                </h3><!-- /.instructor-card__name -->
+                                <h6 class="instructor-card__designation">UI/UX Designer</h6><!-- /.instructor-card__designation -->
+                            </div><!-- /.instructor-card__info -->
+                        </div><!-- /.instructor-card__hover -->
+                    </div><!-- /.instructor-card__image -->
+                </div><!-- /.instructor-card -->
+            </div><!-- /.item -->
+        </div><!-- /.instructors-one__carousel -->
+    </div><!-- /.container -->
+    <img src="assets/frontend/images/shapes/instructors-shape-1-1.png" alt="shape" class="instructors-one__shape-one">
+    <img src="assets/frontend/images/shapes/instructors-shape-1-2.png" alt="shape" class="instructors-one__shape-two">
+    <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
+    <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
+</section><!-- /.instructors-one section-space2 -->
+
     @endsection

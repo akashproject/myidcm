@@ -1,18 +1,18 @@
 @extends('layouts.main')
     @section('content')
-	<section class="main-slider-two" id="home">
+	    <section class="main-slider-two" id="home">
             <div class="main-slider-two__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-                "items": 1,
-                "margin": 0,
-                "animateIn": "fadeIn",
-                "animateOut": "fadeOut",
-                "loop": true,
-                "smartSpeed": 700,
-                "nav": false,
-                "dots": false,
-                "autoplay": true,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"]
-            }'>
+                    "items": 1,
+                    "margin": 0,
+                    "animateIn": "fadeIn",
+                    "animateOut": "fadeOut",
+                    "loop": true,
+                    "smartSpeed": 700,
+                    "nav": false,
+                    "dots": false,
+                    "autoplay": true,
+                    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"]
+                }'>
                 <div class="main-slider-two__item">
                     <div class="main-slider-two__bg" style="background-image: url({{ url('assets/frontend/images/shapes/main-slider-bg-2-1.png') }});"></div><!-- /.main-slider-two__bg -->
                     <div class="container">
@@ -215,212 +215,7 @@
                 </div><!-- /.main-slider-two__item -->
             </div><!-- /.main-slider-two__carousel -->
         </section><!-- /.main-slider-two -->
-
-        <section class="course-category course-category--carousel section-space-top">
-            <img src="{{ url('assets/frontend/images/shapes/course-category-shape-2-1.png') }}" alt="shape" class="course-category__shape">
-            <div class="container">
-                <div class="course-category__content">
-                    <h4 class="course-category__title">our top courses</h4><!-- /.course-category__title -->
-                </div><!-- /.course-category__content -->
-            </div><!-- /.container -->
-            <div class="container-fluid">
-                <div class="course-category__carousel eduhive-owl__carousel owl-carousel owl-theme" data-owl-options='{
-            "items": 1,
-            "margin": 10,
-            "stagePadding": 75,
-            "loop": true,
-            "smartSpeed": 700,
-            "nav": true,
-            "dots": false,
-            "navContainer": ".course-category__custome-navs",
-            "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-            "autoplay": true,
-            "responsive": {
-                "0": {
-                    "items": 1,
-                    "margin": 10,
-                    "stagePadding": 0
-                },
-                "576": {
-                    "items": 1,
-                    "margin": 30,
-                    "stagePadding": 130
-                },
-                "768": {
-                    "items": 2,
-                    "margin": 30,
-                    "stagePadding": 95
-                },
-                "992": {
-                    "items": 3,
-                    "margin": 30,
-                    "stagePadding": 75
-                },
-                "1200": {
-                    "items": 4,
-                    "margin": 30,
-                    "stagePadding": 75
-                },
-                "1400": {
-                    "items": 4,
-                    "margin": 30,
-                    "stagePadding": 90
-                },
-                "1600": {
-                    "items": 5,
-                    "margin": 30,
-                    "stagePadding": 75
-                },
-                "1800": {
-                    "items": 6,
-                    "margin": 30,
-                    "stagePadding": 75
-                }
-            }
-        }'>
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <div class="course-category__card course-category__card--1">
-                            <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url({{ url('assets/frontend/images/course-category/course-category-card-bg-1-1.jpg') }});">
-                                </div>
-                            </div><!-- /.course-category__card__inner -->
-                            <div class="course-category__card__content">
-                                <div class="course-category__card__icon-box">
-                                    <span class="course-category__card__icon">
-                                        <i class="icon-briefcase"></i>
-                                    </span>
-                                </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Business Management</h4>
-                                <!-- /.course-category__card__title -->
-                            </div><!-- /.course-category__card__content -->
-                        </div><!-- /.course-category__card -->
-                    </div><!-- /.item -->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <div class="course-category__card course-category__card--2">
-                            <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url({{ url('assets/frontend/images/course-category/course-category-card-bg-1-2.jpg') }});">
-                                </div>
-                            </div><!-- /.course-category__card__inner -->
-                            <div class="course-category__card__content">
-                                <div class="course-category__card__icon-box">
-                                    <span class="course-category__card__icon">
-                                        <i class="icon-art-studies"></i>
-                                    </span>
-                                </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Arts & Design</h4>
-                                <!-- /.course-category__card__title -->
-                            </div><!-- /.course-category__card__content -->
-                        </div><!-- /.course-category__card -->
-                    </div><!-- /.item -->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                        <div class="course-category__card course-category__card--3">
-                            <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url({{ url('assets/frontend/images/course-category/course-category-card-bg-1-3.jpg') }});">
-                                </div>
-                            </div><!-- /.course-category__card__inner -->
-                            <div class="course-category__card__content">
-                                <div class="course-category__card__icon-box">
-                                    <span class="course-category__card__icon">
-                                        <i class="icon-self-confidence"></i>
-                                    </span>
-                                </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Personal Development</h4>
-                                <!-- /.course-category__card__title -->
-                            </div><!-- /.course-category__card__content -->
-                        </div><!-- /.course-category__card -->
-                    </div><!-- /.item -->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="course-category__card course-category__card--4">
-                            <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url({{ url('assets/frontend/images/course-category/course-category-card-bg-1-4.jpg') }});">
-                                </div>
-                            </div><!-- /.course-category__card__inner -->
-                            <div class="course-category__card__content">
-                                <div class="course-category__card__icon-box">
-                                    <span class="course-category__card__icon">
-                                        <i class="icon-setting"></i>
-                                    </span>
-                                </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">IT & Software</h4>
-                                <!-- /.course-category__card__title -->
-                            </div><!-- /.course-category__card__content -->
-                        </div><!-- /.course-category__card -->
-                    </div><!-- /.item -->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <div class="course-category__card course-category__card--5">
-                            <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url({{ url('assets/frontend/images/course-category/course-category-card-bg-1-5.jpg') }});">
-                                </div>
-                            </div><!-- /.course-category__card__inner -->
-                            <div class="course-category__card__content">
-                                <div class="course-category__card__icon-box">
-                                    <span class="course-category__card__icon">
-                                        <i class="icon-healthcare"></i>
-                                    </span>
-                                </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Health & Fitness</h4>
-                                <!-- /.course-category__card__title -->
-                            </div><!-- /.course-category__card__content -->
-                        </div><!-- /.course-category__card -->
-                    </div><!-- /.item -->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <div class="course-category__card course-category__card--6">
-                            <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url({{ url('assets/frontend/images/course-category/course-category-card-bg-1-6.jpg') }});">
-                                </div>
-                            </div><!-- /.course-category__card__inner -->
-                            <div class="course-category__card__content">
-                                <div class="course-category__card__icon-box">
-                                    <span class="course-category__card__icon">
-                                        <i class="icon-coding-1"></i>
-                                    </span>
-                                </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Computer Science</h4>
-                                <!-- /.course-category__card__title -->
-                            </div><!-- /.course-category__card__content -->
-                        </div><!-- /.course-category__card -->
-                    </div><!-- /.item -->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                        <div class="course-category__card course-category__card--7">
-                            <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url({{ url('assets/frontend/images/course-category/course-category-card-bg-1-7.jpg') }});">
-                                </div>
-                            </div><!-- /.course-category__card__inner -->
-                            <div class="course-category__card__content">
-                                <div class="course-category__card__icon-box">
-                                    <span class="course-category__card__icon">
-                                        <i class="icon-clapperboard"></i>
-                                    </span>
-                                </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Video & Photography</h4>
-                                <!-- /.course-category__card__title -->
-                            </div><!-- /.course-category__card__content -->
-                        </div><!-- /.course-category__card -->
-                    </div><!-- /.item -->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="course-category__card course-category__card--8">
-                            <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url({{ url('assets/frontend/images/course-category/course-category-card-bg-1-8.jpg') }});">
-                                </div>
-                            </div><!-- /.course-category__card__inner -->
-                            <div class="course-category__card__content">
-                                <div class="course-category__card__icon-box">
-                                    <span class="course-category__card__icon">
-                                        <i class="icon-megaphone"></i>
-                                    </span>
-                                </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">digital Marketing</h4>
-                                <!-- /.course-category__card__title -->
-                            </div><!-- /.course-category__card__content -->
-                        </div><!-- /.course-category__card -->
-                    </div><!-- /.item -->
-                </div><!-- /.course-category__carousel -->
-            </div><!-- /.container-fluid -->
-            <div class="container">
-                <div class="course-category__custome-navs"></div><!-- /.course-category__custome-navs -->
-            </div><!-- /.container -->
-        </section><!-- /.course-category course-category--carousel section-space-top -->
-
+        
         <section class="about-two section-space" id="about">
             <div class="container">
                 <div class="row gutter-y-60">
@@ -491,66 +286,34 @@
             <img src="{{ url('assets/frontend/images/shapes/about-shape-2-3.png') }}" alt="shape" class="about-two__shape-two">
         </section><!-- /.about-two section-space -->
 
-        <div class="client-carousel client-carousel--home-2">
+        <section class="testimonials-three section-space2" id="testimonials">
+            <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.png);">
+            </div><!-- /.testimonials-three__bg -->
             <div class="container-fluid">
-                <div class="client-carousel__inner">
-                    <div class="container">
-                        <div class="client-carousel__content">
-                            <h4 class="client-carousel__title">2K+ brands trust us</h4><!-- /.client-carousel__title -->
-                        </div><!-- /.client-carousel__content -->
-                        <div class="client-carousel__carousel eduhive-owl__carousel owl-theme owl-carousel" data-owl-options='{
-                    "items": 5,
-                    "margin": 65,
-                    "smartSpeed": 700,
-                    "loop":true,
-                    "autoplay": 6000,
-                    "nav":false,
-                    "dots":false,
-                    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                    "responsive":{
-                        "0":{
-                            "items": 2,
-                            "margin": 50
-                        },
-                        "500":{
-                            "items": 3,
-                            "margin": 60
-                        },
-                        "768":{
-                            "items": 3,
-                            "margin": 80
-                        },
-                        "992":{
-                            "items": 4,
-                            "margin": 60
-                        },
-                        "1200":{
-                            "items": 5,
-                            "margin": 163
-                        }
-                    }
-                    }'>
-                            <div class="client-carousel__item">
-                                <img src="{{ url('assets/frontend/images/brand/brand-1-1.png') }}" alt="eduhive" class="client-carousel__image">
-                                <img src="{{ url('assets/frontend/images/brand/brand-1-1-hover.png') }}" alt="eduhive" class="client-carousel__hover-image">
-                            </div><!-- /.owl-slide-item-->
-                            <div class="client-carousel__item">
-                                <img src="{{ url('assets/frontend/images/brand/brand-1-2.png') }}" alt="eduhive" class="client-carousel__image">
-                                <img src="{{ url('assets/frontend/images/brand/brand-1-2-hover.png') }}" alt="eduhive" class="client-carousel__hover-image">
-                            </div><!-- /.owl-slide-item-->
-                            <div class="client-carousel__item">
-                                <img src="{{ url('assets/frontend/images/brand/brand-1-3.png') }}" alt="eduhive" class="client-carousel__image">
-                                <img src="{{ url('assets/frontend/images/brand/brand-1-3-hover.png') }}" alt="eduhive" class="client-carousel__hover-image">
-                            </div><!-- /.owl-slide-item-->
-                            <div class="client-carousel__item">
-                                <img src="{{ url('assets/frontend/images/brand/brand-1-4.png') }}" alt="eduhive" class="client-carousel__image">
-                                <img src="{{ url('assets/frontend/images/brand/brand-1-4-hover.png') }}" alt="eduhive" class="client-carousel__hover-image">
-                            </div><!-- /.owl-slide-item-->
-                        </div><!-- /.client-carousel__carousel -->
-                    </div><!-- /.container -->
-                </div><!-- /.client-carousel__inner -->
-            </div><!-- /.container-fluid -->
-        </div><!-- /.client-carousel -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                            <h3 class="sec-title__title">List <span class="sec-title__title__text">of Top </span> <span class="sec-title__title__shape">Companies</span></h3><!-- /.sec-title__title -->
+                            <p>Experience a journey of learning, growth, and career success. With hands-on training, expert guidance, and real-world exposure, we prepare you for a future full of opportunities.</p>
+                        </div><!-- /.sec-title -->
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="recruiters">
+                            @foreach(getRecruiters() as $recruiter)
+                            <div class="placement-redious-grid">
+                                <a href="javascript:void(0)" class="placement-grid-img">
+                                    <img src="{{ getSizedImage($recruiter->featured_image) }}" alt="" class="width-100">
+                                </a>
+                            </div>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+            <img src="{{ url('assets/frontend/images/shapes/testimonial-shape-3-1.png')}}" alt="shape" class="testimonials-three__shape-one">
+            <img src="{{ url('assets/frontend/images/shapes/testimonial-shape-3-2.png')}}" alt="shape" class="testimonials-three__shape-two">
+            <img src="{{ url('assets/frontend/images/shapes/testimonial-shape-3-3.png')}}" alt="shape" class="testimonials-three__shape-three">
+        </section><!-- /.testimonials-three section-space2 -->
 
         <section class="courses-two section-space-bottom" id="courses">
             <div class="courses-two__bg" style="background-image: url({{ url('assets/frontend/images/shapes/courses-bg-2-1.png') }});"></div>

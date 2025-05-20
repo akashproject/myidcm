@@ -88,6 +88,13 @@ if (! function_exists('get_courses')) {
     }
 }
 
+if (! function_exists('getCourseById')) {
+    function getCourseById($id){
+        $value = Course::where('id',$id)->first();
+        return (isset($value))?$value:"null";
+    }
+}
+
 if (! function_exists('getSubjects')) {
     function getSubjects(){
         $value = Subject::where('status','1')->get();
@@ -108,7 +115,6 @@ if (! function_exists('getTopicsBySubjectId')) {
         return (isset($value))?$value:"null";
     }
 }
-
 
 if (! function_exists('getAllFaqs')) {
     function getAllFaqs(){
@@ -259,5 +265,12 @@ if (! function_exists('getGallery')) {
         } 
         $gallery = $gallery->get();       
         return $gallery;
+    }
+}
+
+if (! function_exists('getRecruters')) {
+    function getRecruiters(){
+        $recruiters = DB::table('recruiters')->get();
+        return $recruiters;
     }
 }

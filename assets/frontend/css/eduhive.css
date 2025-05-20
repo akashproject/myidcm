@@ -476,6 +476,11 @@ h6 {
     max-width: 1200px;
   }
 }
+
+.width-100 {
+    width: 100%;
+}
+
 .row {
   --bs-gutter-x: 30px;
 }
@@ -1354,6 +1359,18 @@ h6 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+.video-one__bg.course-video {
+    min-height: 450px;
+}
+.placement-redious-grid {
+    width: 110px;
+    margin: 5px;
+    display: inline-flex;
+}
+a.placement-grid-img {
+    overflow: hidden;
+    border-radius: 20px;
 }
 @media (max-width: 991px) {
   .video-one__bg {
@@ -6741,7 +6758,7 @@ li:hover .contact-page__info__icon__inner {
 }
 .main-slider-one__item {
   position: relative;
-  padding-top: 60px;
+  padding-top: 130px;
   padding-bottom: 75px;
   background: linear-gradient(104.23deg, #FFF3E7 1.55%, #EFFFFF 99.04%);
 }
@@ -9468,7 +9485,7 @@ li:hover .contact-page__info__icon__inner {
   line-height: 1.5;
   text-transform: capitalize;
   transition: all 500ms ease;
-  width: 70%
+  width: 65%
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .course-details__accordion .accordion-title h4 {
@@ -9789,8 +9806,8 @@ li:hover .contact-page__info__icon__inner {
   margin-bottom: 33px;
 }
 .course-details__info__list li {
-  padding-top: 16px;
-  padding-bottom: 15px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border-bottom: 1px solid var(--eduhive-border-color, #DBD8E6);
 }
 .course-details__info__list li:first-child {
@@ -9890,7 +9907,12 @@ li:hover .contact-page__info__icon__inner {
   border: 1px solid var(--eduhive-border-color, #DBD8E6);
 }
 .couse_description {
-    color: #333;
+  color: #333;
+}
+
+.couse_description h2 {
+    font-size: 26px;
+    font-weight: 800;
 }
 
 .couse_description li {
@@ -10272,6 +10294,7 @@ li:hover .contact-page__info__icon__inner {
   text-align: center;
   border-radius: 20px;
   overflow: hidden;
+  border: 1px solid #283b8f;
 }
 @media (max-width: 360px) {
   .course-category__card {
@@ -10427,6 +10450,7 @@ li:hover .contact-page__info__icon__inner {
   text-transform: capitalize;
   line-height: 1.5;
   transition: all 500ms ease;
+  height: 40px;
 }
 .course-category__card:hover .course-category__card__title {
   color: var(--eduhive-white, #FFFFFF);

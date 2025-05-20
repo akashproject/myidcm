@@ -76,46 +76,16 @@
                 <div class="footer-widget footer-widget--links">
                     <h2 class="footer-widget__title">Courses</h2><!-- /.footer-widget__title -->
                     <ul class="list-unstyled footer-widget__links">
+                        @foreach(get_courses() as $course)
                         <li>
                             <a href="apps-development.html">
                                 <span class="footer-widget__links__icon">
                                     <i class="icon-double-arrow"></i>
                                 </span>
-                                Apps Development
+                                {{ $course->name }}
                             </a>
                         </li>
-                        <li>
-                            <a href="digital-marketing.html">
-                                <span class="footer-widget__links__icon">
-                                    <i class="icon-double-arrow"></i>
-                                </span>
-                                Digital Marketing
-                            </a>
-                        </li>
-                        <li>
-                            <a href="graphics-design.html">
-                                <span class="footer-widget__links__icon">
-                                    <i class="icon-double-arrow"></i>
-                                </span>
-                                Graphics Design
-                            </a>
-                        </li>
-                        <li>
-                            <a href="uiux-design.html">
-                                <span class="footer-widget__links__icon">
-                                    <i class="icon-double-arrow"></i>
-                                </span>
-                                UI/UX Design
-                            </a>
-                        </li>
-                        <li>
-                            <a href="data-science.html">
-                                <span class="footer-widget__links__icon">
-                                    <i class="icon-double-arrow"></i>
-                                </span>
-                                Data Science
-                            </a>
-                        </li>
+                        @endforeach
                     </ul><!-- /.list-unstyled footer-widget__links -->
                 </div><!-- /.footer-widget -->
             </div><!-- /.col-xl-3 col-md-4 col-sm-6 -->

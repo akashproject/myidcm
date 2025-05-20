@@ -214,7 +214,7 @@
             <div class="item">
                 <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                     <div class="course-card__image">
-                        <img src="assets/frontend/images/courses/course-1-2.jpg" alt="The Data Science Revolution: Upgrading Your Skills">
+                        <img src="{{ url('assets/frontend/images/courses/'.$course->slug.'.gif')}}" alt="The Data Science Revolution: Upgrading Your Skills">
                         
                     </div><!-- /.course-card__image -->
                     <div class="course-card__content">
@@ -230,7 +230,7 @@
                         <h3 class="course-card__title"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                         <div class="course-card__info">
                             <div class="course-card__lessons">
-                                <span class="course-card__lessons__icon">
+                                <span class="course-card__lessons__icon">       
                                     <i class="icon-open-book"></i>
                                 </span><!-- /.course-card__lessons__icon -->
                                 {{ $course->no_of_module }} lessons
@@ -307,7 +307,7 @@
 </section><!-- /.courses-one section-space-top2 -->
 
 <section class="about-one section-space" id="about">
-    <div class="about-one__bg" style="background-image: url(assets/frontend/images/shapes/about-bg-1-1.png);"></div><!-- /.about-one__bg -->
+    <div class="about-one__bg" style="background-image: url(assets/frontend/images/shapes/about-bg-1-1.png);"></div>
     <div class="container">
         <div class="row gutter-y-50 align-items-center">
             <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
@@ -372,6 +372,100 @@
         </div><!-- /.row gutter-y-50 -->
     </div><!-- /.container -->
 </section><!-- /.about-one section-space -->
+@php
+    $featuredCourse = getCourseById(1);
+@endphp
+<section class="featured_course mt-5" id="featured_course">
+    <div class="container">
+        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+            <h3 class="sec-title__title">Most Demanding <span class="sec-title__title__shape">Course</span></h3>
+        </div><!-- /.sec-title -->
+        <div class="row gutter-y-50 align-items-center">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
+                <div class="about-one__image">
+                    <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="video-one__bg course-video" style="background-image: url(https://dummyimage.com/600x400);">
+                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-one__video-btn video-btn video-popup">
+                                <i class="icon-play"></i>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a><!-- /.video-one__video-btn -->
+                        </div><!-- /.video-one__bg -->
+                    </div><!-- /.video-one -->
+                </div><!-- /.about-one__image -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
+                <div class="about-two__content">
+                    <div class=" wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <h3 class="sec-title__title">{{ $featuredCourse->name }}</h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="about-two__description wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        {{ $featuredCourse->excerpt }}
+                    </div><!-- /.about-two__description -->
+                    <div class="course-details__info-wrapper">
+                        <div class="course-details__class">
+                            <span class="course-details__class__icon">
+                                <i class="icon-video"></i>
+                            </span><!-- /.course-details__class__icon -->
+                            <p class="course-details__class__text">5649 Enrolled</p><!-- /.course-details__class__text -->
+                        </div><!-- /.course-details__class -->
+                        <div class="course-details__review">
+                            <span class="course-details__review__icon">
+                                <i class="icon-star"></i>
+                            </span><!-- /.course-details__review__icon -->
+                            <p class="course-details__review__text"><span>3.4</span> <span>(36 Review)</span></p><!-- /.course-details__review__text -->
+                        </div><!-- /.course-details__review -->
+                    </div>
+                    <div class="row">
+                        <div class="course_highlights">
+                            {!! $featuredCourse->highlights !!}
+                        </div>
+                    </div>
+                   
+                    <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <a href="about.html" class="eduhive-btn">
+                            <span>Register Now</span>
+                            <span class="eduhive-btn__icon">
+                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                            </span>
+                        </a><!-- /.eduhive-btn -->
+                    </div><!-- /.about-two__button -->
+                </div><!-- /.about-two__content -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-three section-space2" id="testimonials">
+    <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.png);">
+    </div><!-- /.testimonials-three__bg -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h3 class="sec-title__title">List <span class="sec-title__title__text">of Top </span> <span class="sec-title__title__shape">Companies</span></h3><!-- /.sec-title__title -->
+                    <p>Experience a journey of learning, growth, and career success. With hands-on training, expert guidance, and real-world exposure, we prepare you for a future full of opportunities.</p>
+                </div><!-- /.sec-title -->
+            </div>
+            <div class="col-md-8">
+                <ul class="recruiters">
+                    @foreach(getRecruiters() as $recruiter)
+                    <div class="placement-redious-grid">
+                        <a href="javascript:void(0)" class="placement-grid-img">
+                            <img src="{{ getSizedImage($recruiter->featured_image) }}" alt="" class="width-100">
+                        </a>
+                    </div>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div><!-- /.container -->
+    <img src="assets/frontend/images/shapes/testimonial-shape-3-1.png" alt="shape" class="testimonials-three__shape-one">
+    <img src="assets/frontend/images/shapes/testimonial-shape-3-2.png" alt="shape" class="testimonials-three__shape-two">
+    <img src="assets/frontend/images/shapes/testimonial-shape-3-3.png" alt="shape" class="testimonials-three__shape-three">
+</section><!-- /.testimonials-three section-space2 -->
 
 <section class="faq-one section-space">
     <div class="container">
@@ -1345,60 +1439,4 @@
     <img src="assets/frontend/images/shapes/blog-shape-1-2.png" alt="shape" class="blog-one__shape-two">
 </section><!-- /.blog-one section-space -->
 
-<div class="client-carousel client-carousel--home">
-    <div class="container">
-        <div class="client-carousel__content">
-            <h4 class="client-carousel__title">2K+ brands trust us</h4><!-- /.client-carousel__title -->
-        </div><!-- /.client-carousel__content -->
-        <div class="client-carousel__carousel eduhive-owl__carousel owl-theme owl-carousel" data-owl-options='{
-    "items": 5,
-    "margin": 65,
-    "smartSpeed": 700,
-    "loop":true,
-    "autoplay": 6000,
-    "nav":false,
-    "dots":false,
-    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-    "responsive":{
-        "0":{
-            "items": 2,
-            "margin": 50
-        },
-        "500":{
-            "items": 3,
-            "margin": 60
-        },
-        "768":{
-            "items": 3,
-            "margin": 80
-        },
-        "992":{
-            "items": 4,
-            "margin": 60
-        },
-        "1200":{
-            "items": 5,
-            "margin": 163
-        }
-    }
-    }'>
-            <div class="client-carousel__item">
-                <img src="assets/frontend/images/brand/brand-1-1.png" alt="eduhive" class="client-carousel__image">
-                <img src="assets/frontend/images/brand/brand-1-1-hover.png" alt="eduhive" class="client-carousel__hover-image">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__item">
-                <img src="assets/frontend/images/brand/brand-1-2.png" alt="eduhive" class="client-carousel__image">
-                <img src="assets/frontend/images/brand/brand-1-2-hover.png" alt="eduhive" class="client-carousel__hover-image">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__item">
-                <img src="assets/frontend/images/brand/brand-1-3.png" alt="eduhive" class="client-carousel__image">
-                <img src="assets/frontend/images/brand/brand-1-3-hover.png" alt="eduhive" class="client-carousel__hover-image">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__item">
-                <img src="assets/frontend/images/brand/brand-1-4.png" alt="eduhive" class="client-carousel__image">
-                <img src="assets/frontend/images/brand/brand-1-4-hover.png" alt="eduhive" class="client-carousel__hover-image">
-            </div><!-- /.owl-slide-item-->
-        </div><!-- /.client-carousel__carousel -->
-    </div><!-- /.container -->
-</div><!-- /.client-carousel -->
 @endsection

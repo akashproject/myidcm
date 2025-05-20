@@ -15,13 +15,13 @@
                             <span class="course-details__class__icon">
                                 <i class="icon-video"></i>
                             </span><!-- /.course-details__class__icon -->
-                            <p class="course-details__class__text">5649 Enrolled</p><!-- /.course-details__class__text -->
+                            <p class="course-details__class__text">{{ $contentMain->number_of_enrolled }} Enrolled</p><!-- /.course-details__class__text -->
                         </div><!-- /.course-details__class -->
                         <div class="course-details__review">
                             <span class="course-details__review__icon">
                                 <i class="icon-star"></i>
                             </span><!-- /.course-details__review__icon -->
-                            <p class="course-details__review__text"><span>3.4</span> <span>(36 Review)</span></p><!-- /.course-details__review__text -->
+                            <p class="course-details__review__text"><span>3.4</span> <span>(1{{ $contentMain->no_of_rating }} Review)</span></p><!-- /.course-details__review__text -->
                         </div><!-- /.course-details__review -->
                     </div>
                     <div class="row">
@@ -75,7 +75,7 @@
                                 <ul class="tab-buttons">
                                     <li data-tab="#overview" class="tab-btn active-btn">overview</li>
                                     <li data-tab="#curriculum" class="tab-btn">curriculum</li>
-                                    <li data-tab="#reviews" class="tab-btn">reviews</li>
+                                    <li data-tab="#tools" class="tab-btn">Practical Tools</li>
                                 </ul><!-- /.tab-buttons -->
                                 <div class="tabs-content">
                                     <div class="tab active-tab fadeInUp animated" data-wow-delay="200ms" id="overview" style="display: block;">
@@ -115,117 +115,8 @@
                                             </div><!-- /.faq-accordion -->
                                         </div><!-- /.course-details__accordion -->
                                     </div><!-- /.curriculum-tab -->
-                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="reviews" style="display: none;">
-                                        <div class="comments-one course-details__comments">
-                                            <h3 class="comments-one__title">02 Reviews, Data Science Course</h3><!-- /.comments-one__title -->
-                                            <ul class="list-unstyled comments-one__list">
-                                                <li class="comments-one__card">
-                                                    <div class="comments-one__card__image">
-                                                        <img src="/assets/frontend/images/courses/course-c-1-1.png" alt="Kevin martin">
-                                                    </div><!-- /.comments-one__card__image -->
-                                                    <div class="comments-one__card__content">
-                                                        <div class="comments-one__card__top">
-                                                            <div class="comments-one__card__info">
-                                                                <h3 class="comments-one__card__title">Kevin martin</h3><!-- /.comments-one__card__title -->
-                                                                <p class="comments-one__card__date">March 20, 2023 at 2:37 PM</p><!-- / -->
-                                                            </div><!-- /.comments-one__card__info -->
-                                                            <div class="eduhive-ratings">
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                            </div><!-- /.product-ratings -->
-                                                        </div><!-- /.comments-one__card__top -->
-                                                        <p class="comments-one__card__text">Neque porro est qui dolorem ipsum quia quaed inventor veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy</p><!-- /.comments-one__card__text -->
-                                                    </div><!-- /.comments-one__card__content -->
-                                                </li><!-- /.comments-one__card -->
-                                                <li class="comments-one__card">
-                                                    <div class="comments-one__card__image">
-                                                        <img src="{{ url('/assets/frontend/images/courses/course-c-1-2.png')}}" alt="Sarah albert">
-                                                    </div><!-- /.comments-one__card__image -->
-                                                    <div class="comments-one__card__content">
-                                                        <div class="comments-one__card__top">
-                                                            <div class="comments-one__card__info">
-                                                                <h3 class="comments-one__card__title">Sarah albert</h3><!-- /.comments-one__card__title -->
-                                                                <p class="comments-one__card__date">June 10, 2023 At 10:00 AM</p><!-- / -->
-                                                            </div><!-- /.comments-one__card__info -->
-                                                            <div class="eduhive-ratings">
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                                <span class="eduhive-ratings__icon">
-                                                                    <i class="fa fa-star"></i>
-                                                                </span><!-- /.eduhive-ratings__icon -->
-                                                            </div><!-- /.product-ratings -->
-                                                        </div><!-- /.comments-one__card__top -->
-                                                        <p class="comments-one__card__text">Moving the goalposts sorry i was triple muted, so what do you feel you would bring to the table if you were hired for this position. A better understanding of usage can aid in prioritizing future efforts window of opportunity building</p><!-- /.comments-one__card__text -->
-                                                    </div><!-- /.comments-one__card__content -->
-                                                </li><!-- /.comments-one__card -->
-                                            </ul><!-- /.list-unstyled comments-one__list -->
-                                        </div><!-- /.comments-one -->
-                                        <div class="course-details__form">
-                                            <div class="course-details__form__top">
-                                                <h3 class="course-details__form__title">Add a Review</h3>
-                                                <p class="course-details__form__text">Your Email Address Will Not Be Published. Required Fields Are Marked *</p>
-                                                <div class="course-details__form__ratings">
-                                                    <h5 class="course-details__form__ratings__text">Rate this course? *</h5>
-                                                    <div class="eduhive-ratings">
-                                                        <span class="eduhive-ratings__icon">
-                                                            <i class="fa fa-star"></i>
-                                                        </span><!-- /.eduhive-ratings__icon -->
-                                                        <span class="eduhive-ratings__icon">
-                                                            <i class="fa fa-star"></i>
-                                                        </span><!-- /.eduhive-ratings__icon -->
-                                                        <span class="eduhive-ratings__icon">
-                                                            <i class="fa fa-star"></i>
-                                                        </span><!-- /.eduhive-ratings__icon -->
-                                                        <span class="eduhive-ratings__icon">
-                                                            <i class="fa fa-star"></i>
-                                                        </span><!-- /.eduhive-ratings__icon -->
-                                                        <span class="eduhive-ratings__icon">
-                                                            <i class="fa fa-star"></i>
-                                                        </span><!-- /.eduhive-ratings__icon -->
-                                                    </div><!-- /.product-ratings -->
-                                                </div><!-- /.course-details__form__ratings -->
-                                            </div><!-- /.course-details__form__top -->
-                                            <form action="assets/inc/sendemail.php" class="course-details__form__form contact-form-validated">
-                                                <div class="course-details__form__group">
-                                                    <div class="course-details__form__control wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                                                        <input type="text" name="name" placeholder="Your Name">
-                                                    </div><!-- /.course-details__form__control -->
-                                                    <div class="course-details__form__control wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="50ms">
-                                                        <input type="email" name="email" placeholder="Your Email">
-                                                    </div><!-- /.course-details__form__control -->
-                                                    <div class="course-details__form__control course-details__form__control--full wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                                                        <textarea name="message" placeholder="Write Message . ."></textarea>
-                                                    </div><!-- /.course-details__form__control -->
-                                                    <div class="course-details__form__control course-details__form__control--full wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="150ms">
-                                                        <button type="submit" class="course-details__form__btn eduhive-btn eduhive-btn--normal"><span>Post Comment</span></button><!-- /.eduhive-btn -->
-                                                    </div><!-- /.course-details__form__control -->
-                                                </div><!-- /.course-details__form__group -->
-                                            </form><!-- /.course-details__form__form -->
-                                            <div class="result"></div><!-- /.result -->
-                                        </div><!-- /.course-details__comments -->
+                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="tools" style="display: none;">
+                                        
                                     </div><!-- /.reviews-tab -->
                                 </div><!-- /.tab-content -->
                             </div><!-- /.course-details__main-tab-box -->
@@ -296,7 +187,6 @@
                                     <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
                                 </span>
                             </a><!-- /.eduhive-btn -->
-                            <div class="course-details__info__price">This course Fee $49.00</div><!-- /.course-details__info__price -->
                             
                             <div class="course-details__social">
                                 <h3 class="course-details__social__title">Share:</h3><!-- /.course-details__social__title -->
@@ -403,11 +293,11 @@
             <div class="container">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                     <h6 class="sec-title__tagline">benefits</h6><!-- /.sec-title__tagline -->
-                    <h3 class="sec-title__title"><span class="sec-title__title__text">Course</span> <span class="sec-title__title__shape">Benefits</span></h3><!-- /.sec-title__title -->
+                    <h3 class="sec-title__title"><span class="sec-title__title__text">Digital Marketing Roles</span> <span class="sec-title__title__shape">Placed</span></h3><!-- /.sec-title__title -->
                 </div><!-- /.sec-title -->
                 <div class="row gutter-y-30">
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <div class="course-category__card course-category__card--1">
+                        <div class="course-category__card">
                             <div class="course-category__card__inner">
                                 <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-1.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
@@ -417,12 +307,12 @@
                                         <i class="icon-briefcase"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Business Management</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Performance Marketing Analyst</h4><!-- /.course-category__card__title -->
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <div class="course-category__card course-category__card--2">
+                        <div class="course-category__card">
                             <div class="course-category__card__inner">
                                 <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-2.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
@@ -432,12 +322,12 @@
                                         <i class="icon-art-studies"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Arts & Design</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Social Media Specialist</h4><!-- /.course-category__card__title -->
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                        <div class="course-category__card course-category__card--3">
+                        <div class="course-category__card">
                             <div class="course-category__card__inner">
                                 <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-3.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
@@ -447,12 +337,12 @@
                                         <i class="icon-self-confidence"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Personal Development</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Digital Marketing Analyst</h4><!-- /.course-category__card__title -->
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="course-category__card course-category__card--4">
+                        <div class="course-category__card">
                             <div class="course-category__card__inner">
                                 <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-4.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
@@ -462,12 +352,12 @@
                                         <i class="icon-setting"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">IT & Software</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Creative Writing & Content Marketing</h4><!-- /.course-category__card__title -->
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <div class="course-category__card course-category__card--5">
+                        <div class="course-category__card">
                             <div class="course-category__card__inner">
                                 <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-5.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
@@ -477,12 +367,12 @@
                                         <i class="icon-healthcare"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Health & Fitness</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Influencer Marketing Specialist</h4><!-- /.course-category__card__title -->
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <div class="course-category__card course-category__card--6">
+                        <div class="course-category__card">
                             <div class="course-category__card__inner">
                                 <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-6.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
@@ -492,12 +382,12 @@
                                         <i class="icon-coding-1"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Computer Science</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Category Management</h4><!-- /.course-category__card__title -->
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                        <div class="course-category__card course-category__card--7">
+                        <div class="course-category__card">
                             <div class="course-category__card__inner">
                                 <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-7.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
@@ -507,12 +397,12 @@
                                         <i class="icon-clapperboard"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">Video & Photography</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">Brand Associate</h4><!-- /.course-category__card__title -->
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="course-category__card course-category__card--8">
+                        <div class="course-category__card">
                             <div class="course-category__card__inner">
                                 <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-8.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
@@ -522,7 +412,7 @@
                                         <i class="icon-megaphone"></i>
                                     </span>
                                 </div><!-- /.course-category__card__icon-box -->
-                                <h4 class="course-category__card__title">digital Marketing</h4><!-- /.course-category__card__title -->
+                                <h4 class="course-category__card__title">SEO Analyst</h4><!-- /.course-category__card__title -->
                             </div><!-- /.course-category__card__content -->
                         </div><!-- /.course-category__card -->
                     </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
@@ -576,8 +466,7 @@
             <div class="item">
                 <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                     <div class="course-card__image">
-                        <img src="{{ url('/assets/frontend/images/courses/course-1-2.jpg')}}" alt="The Data Science Revolution: Upgrading Your Skills">
-                        
+                        <img src="{{ url('/assets/frontend/images/courses/course-1-2.jpg') }}" alt="The Data Science Revolution: Upgrading Your Skills">
                     </div><!-- /.course-card__image -->
                     <div class="course-card__content">
                         <div class="course-card__content__top">
