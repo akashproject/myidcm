@@ -71,7 +71,7 @@
         <div class="custom-cursor__cursor-two"></div>
 
         <div class="preloader">
-            <div class="preloader__image" style="background-image: url(assets/frontend/images/loader.png);"></div>
+            <div class="preloader__image" style="background-image: url(/assets/frontend/images/idcm-loader.gif);"></div>
         </div>
         <!-- /.preloader -->
         <div class="page-wrapper">

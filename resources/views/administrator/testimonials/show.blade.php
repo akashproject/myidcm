@@ -58,7 +58,7 @@
 							<div class="col-sm-9">
 								<select name="course_id" id="course_id" class="select2 form-control custom-select" style="width: 100%; height:36px;">	
 									<option value="">Select Course</option>
-									@foreach ($courses as $value)
+									@foreach($courses as $value)
 									<option value="{{ $value->id }}" {{ ( $testimonial->course_id ==  $value->id )? 'selected' : '' }} > {{ $value->name }} </option>
 									@endforeach
 								</select>
@@ -89,10 +89,10 @@
 							<label for="tags" class="col-md-6 text-left control-label col-form-label">Featured Image</label>
 							<div class="col-sm-6 text-center">
 								<a href="#imageBox" class="image-profile open-popup-link">
-									<img src="{{ (isset($testimonial->featured_image))?getSizedImage('',$testimonial->featured_image):'https://dummyimage.com/150x150?text=Add%20Image' }}" alt="">
+									<img src="{{ (isset($testimonial->featured_image))?getSizedImage($testimonial->featured_image):'https://dummyimage.com/150x150?text=Add%20Image' }}" alt="">
 									<input type="hidden" name="featured_image" id="featured_image" value="{{ $testimonial->featured_image }}" >	
 								</a>	
-								@if(isset($course->featured_image))
+								@if(isset($testimonial->featured_image))
 									<a href="javascript:void(0)" class="removeImage" style="color: #c90f0f;font-weight: 600;"> Remove Image </a>	
 								@endif					
 							</div>

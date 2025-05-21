@@ -970,7 +970,7 @@
                                 <div class="testimonial-card">
                                     <div class="testimonial-card__top">
                                         <div class="testimonial-card__image">
-                                            <img src="assets/frontend/images/testimonials/testimonial-1-1.jpg" alt="Esther Howard">
+                                            <img src="{{ (isset($testimonial->featured_image))?getSizedImage($testimonial->featured_image):'https://dummyimage.com/150x150' }}" alt="{{ $testimonial->name }}">
                                             <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
                                         </div><!-- /.testimonial-card__image -->
                                         <div class="testimonial-card__identity">

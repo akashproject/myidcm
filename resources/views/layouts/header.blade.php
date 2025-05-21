@@ -100,9 +100,9 @@
 							<span class="eduhive-btn__icon">
 								<span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
 							</span>
-						</a><!-- /.main-header__btn eduhive-btn -->
-					</div><!-- /.main-header__right -->
-				</div><!-- /.main-header__inner -->
+						</a>
+					</div>
+				</div>
 			</div><!-- /.container-fluid -->
 		</header><!-- /.main-header -->
 	</div><!-- /.home-main-header -->

@@ -2597,7 +2597,6 @@ a:hover .instructor-card-two__social__icon {
 
 .courses-two {
   position: relative;
-  padding-top: 355px;
   background-color: var(--eduhive-white, #FFFFFF);
 }
 @media (max-width: 767px) {
@@ -5355,6 +5354,14 @@ body.megamenu-popup-active .mobile-nav__content {
     height: 25px;
     border: 1px solid var(--eduhive-base, #674CEF);
     border-radius: 50%;
+}
+
+.practical_tools a {
+  padding: 2px;
+  border: 1px solid #d7d7d7;
+  overflow: hidden;
+  width: 90px;
+  display: inline-flex;
 }
 
 .page-header__list__icon svg {
@@ -9910,7 +9917,7 @@ li:hover .contact-page__info__icon__inner {
   color: #333;
 }
 
-.couse_description h2 {
+.couse_description h2,.practical_tools h2 {
     font-size: 26px;
     font-weight: 800;
 }
@@ -10173,6 +10180,9 @@ li:hover .contact-page__info__icon__inner {
   left: 140px;
   animation: textRotate 4s infinite linear;
 }
+.course-category__card:hover {
+    box-shadow: -1px 0px 4px 0px;
+}
 @media (max-width: 1399px) {
   .course-category--carousel .course-category__shape {
     left: 100px;
@@ -10292,7 +10302,7 @@ li:hover .contact-page__info__icon__inner {
   position: relative;
   padding: 30px 30px 25px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid #283b8f;
 }
@@ -10453,7 +10463,8 @@ li:hover .contact-page__info__icon__inner {
   height: 40px;
 }
 .course-category__card:hover .course-category__card__title {
-  color: var(--eduhive-white, #FFFFFF);
+    color: #c52626;
+    font-weight: 800;
 }
 .course-category__shape-one {
   position: absolute;
@@ -15156,11 +15167,11 @@ li:hover .sidebar__comments__icon {
   z-index: 1;
 }
 .faq-one--home .funfact-one__grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 @media (max-width: 575px) {
   .faq-one--home .funfact-one__grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .faq-one--home .faq-one__image-inner {

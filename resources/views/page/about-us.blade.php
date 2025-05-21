@@ -423,7 +423,7 @@
             <div class="item">
                 <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-1.jpg" alt="Mike Hardson">
+                        <img src="assets/frontend/images/teams/nks.webp" alt="Dr.Narendra Shyamsukha">
                         <div class="instructor-card__hover">
                             <div class="instructor-card__info">
                                 <div class="instructor-card__social">
@@ -431,30 +431,24 @@
                                         <i class="icon-share"></i>
                                     </span><!-- /.instructor-card__social__share -->
                                     <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
+                                        <a href="https://www.facebook.com/narendra.shyamsukha">
                                             <span class="instructor-card__social__list__icon">
                                                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
                                             </span>
                                             <span class="sr-only">Facebook</span>
                                         </a>
-                                        <a href="https://facebook.com">
+                                        <a href="https://www.linkedin.com/in/narendrashyamsukha/">
                                             <span class="instructor-card__social__list__icon">
                                                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                                             </span>
                                             <span class="sr-only">Linkedin</span>
                                         </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
                                     </div><!-- /.instructor-card__social__list -->
                                 </div><!-- /.instructor-card__social -->
                                 <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">Mike Hardson</a>
+                                    <a href="instructor-details.html">Dr.Narendra Shyamsukha</a>
                                 </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">data scientist</h6><!-- /.instructor-card__designation -->
+                                <h6 class="instructor-card__designation">Chairman</h6><!-- /.instructor-card__designation -->
                             </div><!-- /.instructor-card__info -->
                         </div><!-- /.instructor-card__hover -->
                     </div><!-- /.instructor-card__image -->
@@ -463,7 +457,7 @@
             <div class="item">
                 <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                     <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-2.jpg" alt="aleesha brown">
+                        <img src="assets/frontend/images/teams/ankit.webp" alt="Ankit Shyamsukha">
                         <div class="instructor-card__hover">
                             <div class="instructor-card__info">
                                 <div class="instructor-card__social">
@@ -471,30 +465,24 @@
                                         <i class="icon-share"></i>
                                     </span><!-- /.instructor-card__social__share -->
                                     <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
+                                        <a href="https://www.facebook.com/ankitshyamsukha">
                                             <span class="instructor-card__social__list__icon">
                                                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
                                             </span>
                                             <span class="sr-only">Facebook</span>
                                         </a>
-                                        <a href="https://facebook.com">
+                                        <a href="https://www.linkedin.com/in/ankitshyamsukha/">
                                             <span class="instructor-card__social__list__icon">
                                                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                                             </span>
                                             <span class="sr-only">Linkedin</span>
                                         </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
                                     </div><!-- /.instructor-card__social__list -->
                                 </div><!-- /.instructor-card__social -->
                                 <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">aleesha brown</a>
+                                    <a href="instructor-details.html">Ankit Shyamsukha</a>
                                 </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">Web Developer</h6><!-- /.instructor-card__designation -->
+                                <h6 class="instructor-card__designation">CEO</h6><!-- /.instructor-card__designation -->
                             </div><!-- /.instructor-card__info -->
                         </div><!-- /.instructor-card__hover -->
                     </div><!-- /.instructor-card__image -->
@@ -503,7 +491,7 @@
             <div class="item">
                 <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
                     <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-3.jpg" alt="david cooper">
+                        <img src="assets/frontend/images/teams/kanhaiya.webp" alt="david cooper">
                         <div class="instructor-card__hover">
                             <div class="instructor-card__info">
                                 <div class="instructor-card__social">
@@ -511,30 +499,23 @@
                                         <i class="icon-share"></i>
                                     </span><!-- /.instructor-card__social__share -->
                                     <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
+                                        <a href="https://www.facebook.com/kanhaiya.poddar.75">
                                             <span class="instructor-card__social__list__icon">
                                                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
                                             </span>
                                             <span class="sr-only">Facebook</span>
                                         </a>
-                                        <a href="https://facebook.com">
+                                        <a href="https://www.linkedin.com/in/kanhaiya-poddar-0a094a23/">
                                             <span class="instructor-card__social__list__icon">
                                                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                                             </span>
                                             <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
                                     </div><!-- /.instructor-card__social__list -->
                                 </div><!-- /.instructor-card__social -->
                                 <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">david cooper</a>
+                                    <a href="instructor-details.html">Kanhaiya Poddar</a>
                                 </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">software engineer</h6><!-- /.instructor-card__designation -->
+                                <h6 class="instructor-card__designation">CFO</h6><!-- /.instructor-card__designation -->
                             </div><!-- /.instructor-card__info -->
                         </div><!-- /.instructor-card__hover -->
                     </div><!-- /.instructor-card__image -->

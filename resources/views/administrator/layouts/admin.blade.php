@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{ url('assets/administrator/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{ url('assets/administrator/css/demo.css') }}" />
     <link rel="stylesheet" href="{{ url('assets/administrator/css/own.css') }}" />
+    <link rel="stylesheet" href="{{ url('assets/administrator/css/style.css') }}" />
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ url('assets/administrator/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />

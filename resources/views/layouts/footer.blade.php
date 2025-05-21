@@ -5,7 +5,7 @@
                 <div class="footer-widget footer-widget--about">
                     <div class="mb-3">
                         <a href="index.html" class="main-footer__logo">
-                            <img src="{{ url('assets/logo/logo.png') }}" width="209" alt="Eduhive HTML Template">
+                            <img src="{{ url('/assets/logo/logo.png') }}" width="209" alt="Eduhive HTML Template">
                         </a><!-- /.main-footer__logo -->
                     </div>
                     
@@ -138,11 +138,11 @@
             </div><!-- /.main-footer__inner -->
         </div><!-- /.container -->
     </div><!-- /.main-footer__bottom -->
-    <img src="assets/frontend/images/shapes/footer-shape-1.png" alt="shape" class="main-footer__shape-one">
-    <img src="assets/frontend/images/shapes/footer-shape-2.png" alt="shape" class="main-footer__shape-two">
-    <img src="assets/frontend/images/shapes/footer-shape-3.png" alt="shape" class="main-footer__shape-three">
-    <img src="assets/frontend/images/shapes/footer-shape-4.png" alt="shape" class="main-footer__shape-four">
-    <img src="assets/frontend/images/shapes/footer-shape-5.png" alt="shape" class="main-footer__shape-five">
+    <img src="{{ url('/assets/frontend/images/shapes/footer-shape-1.png') }}" alt="shape" class="main-footer__shape-one">
+    <img src="{{ url('/assets/frontend/images/shapes/footer-shape-2.png') }}" alt="shape" class="main-footer__shape-two">
+    <img src="{{ url('/assets/frontend/images/shapes/footer-shape-3.png') }}" alt="shape" class="main-footer__shape-three">
+    <img src="{{ url('/assets/frontend/images/shapes/footer-shape-4.png') }}" alt="shape" class="main-footer__shape-four">
+    <img src="{{ url('/assets/frontend/images/shapes/footer-shape-5.png') }}" alt="shape" class="main-footer__shape-five">
 </footer><!-- /.main-footer section-space-top -->
 
 </div><!-- /.page-wrapper -->
@@ -153,7 +153,7 @@
         <span class="mobile-nav__close mobile-nav__toggler"><i class="icon-close"></i></span>
         <div class="logo-box logo-retina">
             <a href="index.html" aria-label="logo image">
-                <img src="assets/frontend/images/logo-light.png" width="209" alt="" />
+                <img src="{{ url('/assets/frontend/images/logo-light.png') }}" width="209" alt="" />
             </a>
         </div><!-- /.logo-box -->
         <div class="mobile-nav__container"></div><!-- /.mobile-nav__container -->

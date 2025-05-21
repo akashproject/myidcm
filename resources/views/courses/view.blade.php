@@ -116,7 +116,14 @@
                                         </div><!-- /.course-details__accordion -->
                                     </div><!-- /.curriculum-tab -->
                                     <div class="tab fadeInUp animated" data-wow-delay="200ms" id="tools" style="display: none;">
-                                        
+                                        <div class="practical_tools">
+                                            <h2>Practical Training</h2>
+                                            @foreach($tools as $value )
+                                                <a href="javascript:void(0)" class="m-2">
+                                                    <img src="{{ url('/public/tools/'.$value) }}" alt="{{ $value }}" class="width-100">
+                                                </a>
+                                            @endforeach
+                                        </div>
                                     </div><!-- /.reviews-tab -->
                                 </div><!-- /.tab-content -->
                             </div><!-- /.course-details__main-tab-box -->
@@ -230,7 +237,7 @@
                             <div class="col-lg-6 wow fadeInLeft animated" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInLeft;">
                                 <div class="about-three__image">
                                     <div class="about-three__image__inner">
-                                        <img src="{{ url('assets/frontend/images/courses/certification.webp')}}" alt="about">
+                                        <img src="{{ url('/assets/frontend/images/courses/certification.webp')}}" alt="about">
                                         <div class="about-three__experience">
                                             <span class="about-three__experience__icon">
                                                 <i class="icon-connectibity"></i>
@@ -245,7 +252,7 @@
                                         <div class="about-three__image__shape-two"></div><!-- /.about-three__image__shape-two -->
                                     </div><!-- /.about-three__image__inner -->
                                     <div class="about-three__image__box"></div><!-- /.about-three__image__box -->
-                                    <img src="{{ url('assets/frontend/images/shapes/about-shape-3-2.png')}}" alt="shape" class="about-three__image__shape-three">
+                                    <img src="{{ url('/assets/frontend/images/shapes/about-shape-3-2.png')}}" alt="shape" class="about-three__image__shape-three">
                                 </div><!-- /.about-three__image -->
                             </div><!-- /.col-lg-6 -->
                             <div class="col-lg-6">
@@ -281,13 +288,13 @@
                             </div><!-- /.col-lg-6 -->
                         </div><!-- /.row gutter-y-50 -->
                     </div><!-- /.container -->
-                    <img src="{{ url('assets/frontend/images/shapes/about-shape-3-1.png')}}" alt="shape" class="about-three__shape-one">
+                    <img src="{{ url('/assets/frontend/images/shapes/about-shape-3-1.png')}}" alt="shape" class="about-three__shape-one">
                     <div class="about-three__circle-one"></div><!-- /.about-three__circle-one -->
                     <div class="about-three__circle-two"></div><!-- /.about-three__circle-two -->
                     <div class="about-three__circle-three"></div><!-- /.about-three__circle-three -->
                 </div><!-- /.about-three__inner section-space -->
             </div><!-- /.container-fluid -->
-            <img src="{{ url('assets/frontend/images/shapes/about-shape-3-3.png')}}" alt="shape" class="about-three__shape-two">
+            <img src="{{ url('/assets/frontend/images/shapes/about-shape-3-3.png')}}" alt="shape" class="about-three__shape-two">
         </section>
         <section class="course-category section-space">
             <div class="container">
@@ -299,7 +306,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <div class="course-category__card">
                             <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-1.jpg);"></div>
+                                <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-1.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
                             <div class="course-category__card__content">
                                 <div class="course-category__card__icon-box">
@@ -314,7 +321,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                         <div class="course-category__card">
                             <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-2.jpg);"></div>
+                                <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-2.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
                             <div class="course-category__card__content">
                                 <div class="course-category__card__icon-box">
@@ -329,7 +336,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
                         <div class="course-category__card">
                             <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-3.jpg);"></div>
+                                <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-3.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
                             <div class="course-category__card__content">
                                 <div class="course-category__card__icon-box">
@@ -344,7 +351,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                         <div class="course-category__card">
                             <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-4.jpg);"></div>
+                                <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-4.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
                             <div class="course-category__card__content">
                                 <div class="course-category__card__icon-box">
@@ -359,7 +366,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <div class="course-category__card">
                             <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-5.jpg);"></div>
+                                <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-5.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
                             <div class="course-category__card__content">
                                 <div class="course-category__card__icon-box">
@@ -374,7 +381,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                         <div class="course-category__card">
                             <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-6.jpg);"></div>
+                                <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-6.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
                             <div class="course-category__card__content">
                                 <div class="course-category__card__icon-box">
@@ -389,7 +396,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
                         <div class="course-category__card">
                             <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-7.jpg);"></div>
+                                <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-7.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
                             <div class="course-category__card__content">
                                 <div class="course-category__card__icon-box">
@@ -404,7 +411,7 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                         <div class="course-category__card">
                             <div class="course-category__card__inner">
-                                <div class="course-category__card__bg" style="background-image: url(assets/frontend/images/course-category/course-category-card-bg-1-8.jpg);"></div>
+                                <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-8.jpg);"></div>
                             </div><!-- /.course-category__card__inner -->
                             <div class="course-category__card__content">
                                 <div class="course-category__card__icon-box">
@@ -555,7 +562,109 @@
                 </div><!-- /.courses-four__carousel -->
             </div>
         </section>
-        <section class="faq-one section-space">
+        <section class="testimonials-one my-5" id="testimonials">
+            <div class="container">
+                <div class="row gutter-y-50">
+                    <div class="col-xl-4">
+                        <div class="testimonials-one__content">
+                            <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
+                                <h3 class="sec-title__title">what students <span class="sec-title__title__shape">say about</span> <span class="sec-title__title__text">idcm</span></h3><!-- /.sec-title__title -->
+                            </div><!-- /.sec-title -->
+                            <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
+                                <p class="testimonials-one__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue.</p><!-- /.testimonials-one__text -->
+                            </div><!-- /.testimonial-one__description -->
+                            <div class="testimonials-one__custome-navs"></div><!-- /.testimonials-one__custome-navs -->
+                        </div><!-- /.testimonials-one__content -->
+                    </div><!-- /.col-xl-4 -->
+                    <div class="col-xl-8">
+                        <div class="eduhive-stretch-element-inside-column">
+                            <div class="testimonials-one__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
+                        "items": 1,
+                        "margin": 30,
+                        "smartSpeed": 700,
+                        "loop": true,
+                        "autoplay": 600,
+                        "nav": true,
+                        "navContainer": ".testimonials-one__custome-navs",
+                        "dots": false,
+                        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                        "responsive":{
+                            "0":{
+                                "items": 1,
+                                "margin": 10
+                            },
+                            "576":{
+                                "items": 1.5
+                            },
+                            "768":{
+                                "items": 1.8
+                            },
+                            "992":{
+                                "items": 2.6
+                            },
+                            "1200":{
+                                "items": 2.3
+                            },
+                            "1360":{
+                                "items": 2.3
+                            },
+                            "1536":{
+                                "items": 2.5
+                            },
+                            "1600":{
+                                "items": 2.7
+                            },
+                            "1800":{
+                                "items": 2.94
+                            }
+                        }
+                        }'>
+                                @foreach(getTestimonials() as $testimonial)
+                                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                        <div class="testimonial-card">
+                                            <div class="testimonial-card__top">
+                                                <div class="testimonial-card__image">
+                                                    <img src="{{ (isset($testimonial->featured_image))?getSizedImage($testimonial->featured_image):'https://dummyimage.com/150x150' }}" alt="{{ $testimonial->name }}">
+                                                    <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
+                                                </div><!-- /.testimonial-card__image -->
+                                                <div class="testimonial-card__identity">
+                                                    <h5 class="testimonial-card__name">{{ $testimonial->name }}</h5>
+                                                    <p class="testimonial-card__designation">{{ $testimonial->dasignation }}</p>
+                                                </div><!-- /.testimonial-card__identity -->
+                                            </div><!-- /.testimonial-card__top -->
+                                            <div class="testimonial-card__content">
+                                                <p class="testimonial-card__quote">{!! $testimonial->comment !!}</p><!-- /.testimonial-card__quote -->
+                                                <div class="eduhive-ratings">
+                                                    <span class="eduhive-ratings__icon">
+                                                        <i class="fa fa-star"></i>
+                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    <span class="eduhive-ratings__icon">
+                                                        <i class="fa fa-star"></i>
+                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    <span class="eduhive-ratings__icon">
+                                                        <i class="fa fa-star"></i>
+                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    <span class="eduhive-ratings__icon">
+                                                        <i class="fa fa-star"></i>
+                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    <span class="eduhive-ratings__icon">
+                                                        <i class="fa fa-star"></i>
+                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                </div><!-- /.product-ratings -->
+                                            </div><!-- /.testimonial-card__content -->
+                                        </div><!-- /.testimonial-card -->
+                                    </div><!-- /.owl-slide-item-->
+                                @endforeach
+                            </div><!-- /.testimonials-one__carousel -->
+                        </div><!-- /.eduhive-stretch-element-inside-column -->
+                    </div><!-- /.col-xl-8 -->
+                </div><!-- /.row gutter-y-50 -->
+            </div><!-- /.container -->
+            <img src="/assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
+            <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
+        </section><!-- /.testimonials-one section-space -->
+        <section class="faq-one my-5">
             <div class="container">
                 <div class="row gutter-y-50">
                     <div class="col-lg-12">
@@ -587,7 +696,7 @@
                     </div>
                 </div><!-- /.row gutter-y-50 -->
             </div><!-- /.container -->
-            <img src="{{ url('assets/frontend/images/shapes/faq-shape-1-1.png')}}" alt="shape" class="faq-one__shape-one">
-            <img src="{{ url('assets/frontend/images/shapes/faq-shape-1-4.png')}}" alt="shape" class="faq-one__shape-two">
+            <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-1.png')}}" alt="shape" class="faq-one__shape-one">
+            <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-4.png')}}" alt="shape" class="faq-one__shape-two">
         </section><!-- /.faq-one section-space -->
     @endsection 

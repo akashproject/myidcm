@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Course;
+use Illuminate\Support\Facades\File;
 
 class CourseController extends Controller
 {
@@ -25,8 +26,16 @@ class CourseController extends Controller
 
             $utm_campaign = $contentMain->utm_campaign;
             $utm_source = $contentMain->utm_source;
-
-            return view('courses.view',compact('contentMain','courses'));
+            $directoryPath = public_path('tools/');
+            $fileNames = [];
+            if (File::isDirectory($directoryPath)) {
+                $fileNames = File::files($directoryPath);
+            }
+            $tools = [];
+            foreach ($fileNames as $file) {
+                $tools[] = pathinfo($file, PATHINFO_FILENAME).'.'.pathinfo($file, PATHINFO_EXTENSION);
+            }
+            return view('courses.view',compact('contentMain','courses','tools'));
         } catch(\Illuminate\Database\QueryException $e){
             return response()->json($e->getMessage(), 200);
         }
