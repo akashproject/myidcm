@@ -429,59 +429,40 @@
                     }
                 }
             }'>
+            @foreach(get_courses() as $course)
             <div class="item programming">
-                <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
+                <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                     <div class="course-card__image">
-                        <img src="{{ url('/assets/frontend/images/courses/course-1-1.jpg') }}" alt="WordPress for Everyone: Unlock Your Creativity Online">
-                        <div class="course-card__ratings">
-                            <div class="eduhive-ratings">
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                            </div><!-- /.product-ratings -->
-                            <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
-                        </div><!-- /.course-card__ratings -->
+                        <img src="{{ url('assets/frontend/images/courses/'.$course->slug.'.gif')}}" alt="The Data Science Revolution: Upgrading Your Skills">
+                        
                     </div><!-- /.course-card__image -->
                     <div class="course-card__content">
                         <div class="course-card__content__top">
-                            <div class="course-card__category">Experts</div><!-- /.course-card__category -->
+                            <div class="course-card__category">{{ $course->no_of_module }} lessons</div><!-- /.course-card__category -->
                             <div class="course-card__duration">
                                 <span class="course-card__duration__icon">
                                     <i class="icon-clock"></i>
                                 </span><!-- /.course-card__duration__icon -->
-                                25 weeks
+                                {{ $course->duration }} Months
                             </div><!-- /.course-card__duration -->
                         </div><!-- /.course-card__content__top -->
-                        <h3 class="course-card__title"><a href="wordpress-development.html">WordPress for Everyone: Unlock Your Creativity Online</a></h3><!-- /.course-card__title -->
+                        <h3 class="course-card__title"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                         <div class="course-card__info">
                             <div class="course-card__lessons">
-                                <span class="course-card__lessons__icon">
+                                <span class="course-card__lessons__icon">       
                                     <i class="icon-open-book"></i>
                                 </span><!-- /.course-card__lessons__icon -->
-                                25 lessons
+                                {{ $course->no_of_module }} lessons
                             </div><!-- /.course-card__lessons -->
                             <div class="course-card__students">
                                 <span class="course-card__students__icon">
                                     <i class="icon-multiple-users-silhouette"></i>
                                 </span><!-- /.course-card__lessons__icon -->
-                                350 Students
+                                {{ $course->number_of_enrolled }} Students
                             </div><!-- /.course-card__students -->
                         </div><!-- /.course-card__info -->
-                        <h4 class="course-card__price">$<span>69.00</span></h4><!-- /.course-card__price -->
                     </div><!-- /.course-card__content -->
-                    <div class="course-card__hover" style="background-image: url({{ url('/assets/frontend/images/shapes/course-card-bg-1-1.png') }});">
+                    <div class="course-card__hover" style="background-image: url(assets/frontend/images/shapes/course-card-bg-1-1.png);">
                         <div class="course-card__hover__content">
                             <div class="course-card__content__top course-card__content__top--hover">
                                 <div class="course-card__category">Experts</div><!-- /.course-card__category -->
@@ -489,11 +470,11 @@
                                     <span class="course-card__duration__icon">
                                         <i class="icon-clock"></i>
                                     </span><!-- /.course-card__duration__icon -->
-                                    25 weeks
+                                    {{ $course->duration }} Months
                                 </div><!-- /.course-card__duration -->
                             </div><!-- /.course-card__content__top -->
-                            <h3 class="course-card__title course-card__title--hover"><a href="wordpress-development.html">WordPress for Everyone: Unlock Your Creativity Online</a></h3><!-- /.course-card__title -->
-                            <p class="course-card__text">Viverra ipsum nunc aliquet bibendum enim facilisis gravida. Diam phasellus vestibulum lorem sed risus</p><!-- /.course-card__text -->
+                            <h3 class="course-card__title course-card__title--hover"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
+                            <p class="course-card__text">{{ substr($course->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
                             <div class="course-card__ratings course-card__ratings--hover">
                                 <div class="eduhive-ratings">
                                     <span class="eduhive-ratings__icon">
@@ -514,7 +495,7 @@
                                 </div><!-- /.product-ratings -->
                                 <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
                             </div><!-- /.course-card__ratings -->
-                            <a href="wordpress-development.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                            <a href="data-science.html" class="course-card__btn eduhive-btn eduhive-btn--border">
                                 <span>enroll now</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
@@ -525,128 +506,20 @@
                                     <span class="course-card__lessons__icon">
                                         <i class="icon-open-book"></i>
                                     </span><!-- /.course-card__lessons__icon -->
-                                    25 lessons
+                                    20 lessons
                                 </div><!-- /.course-card__lessons -->
                                 <div class="course-card__students">
                                     <span class="course-card__students__icon">
                                         <i class="icon-multiple-users-silhouette"></i>
                                     </span><!-- /.course-card__lessons__icon -->
-                                    350 Students
+                                    {{ $course->number_of_enrolled }} Students
                                 </div><!-- /.course-card__students -->
                             </div><!-- /.course-card__info -->
                         </div><!-- /.course-card__hover__content -->
                     </div><!-- /.course-card__hover -->
                 </div><!-- /.course-card -->
-            </div><!-- /.item programming -->
-            <div class="item digital-marketing">
-                <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                    <div class="course-card__image">
-                        <img src="{{ url('/assets/frontend/images/courses/course-1-6.jpg') }}" alt="Digital Marketing course Guideline: Level Up Your Skills">
-                        <div class="course-card__ratings">
-                            <div class="eduhive-ratings">
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                            </div><!-- /.product-ratings -->
-                            <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
-                        </div><!-- /.course-card__ratings -->
-                    </div><!-- /.course-card__image -->
-                    <div class="course-card__content">
-                        <div class="course-card__content__top">
-                            <div class="course-card__category">Experts</div><!-- /.course-card__category -->
-                            <div class="course-card__duration">
-                                <span class="course-card__duration__icon">
-                                    <i class="icon-clock"></i>
-                                </span><!-- /.course-card__duration__icon -->
-                                28 weeks
-                            </div><!-- /.course-card__duration -->
-                        </div><!-- /.course-card__content__top -->
-                        <h3 class="course-card__title"><a href="digital-marketing.html">Digital Marketing course Guideline: Level Up Your Skills</a></h3><!-- /.course-card__title -->
-                        <div class="course-card__info">
-                            <div class="course-card__lessons">
-                                <span class="course-card__lessons__icon">
-                                    <i class="icon-open-book"></i>
-                                </span><!-- /.course-card__lessons__icon -->
-                                26 lessons
-                            </div><!-- /.course-card__lessons -->
-                            <div class="course-card__students">
-                                <span class="course-card__students__icon">
-                                    <i class="icon-multiple-users-silhouette"></i>
-                                </span><!-- /.course-card__lessons__icon -->
-                                100 Students
-                            </div><!-- /.course-card__students -->
-                        </div><!-- /.course-card__info -->
-                        <h4 class="course-card__price">$<span>20.00</span></h4><!-- /.course-card__price -->
-                    </div><!-- /.course-card__content -->
-                    <div class="course-card__hover" style="background-image: url({{ url('/assets/frontend/images/shapes/course-card-bg-1-1.png') }});">
-                        <div class="course-card__hover__content">
-                            <div class="course-card__content__top course-card__content__top--hover">
-                                <div class="course-card__category">Experts</div><!-- /.course-card__category -->
-                                <div class="course-card__duration">
-                                    <span class="course-card__duration__icon">
-                                        <i class="icon-clock"></i>
-                                    </span><!-- /.course-card__duration__icon -->
-                                    28 weeks
-                                </div><!-- /.course-card__duration -->
-                            </div><!-- /.course-card__content__top -->
-                            <h3 class="course-card__title course-card__title--hover"><a href="digital-marketing.html">Digital Marketing course Guideline: Level Up Your Skills</a></h3><!-- /.course-card__title -->
-                            <p class="course-card__text">Unless they bother until the end of time maybe vis a vis too many cooks over the line encourage & support business</p><!-- /.course-card__text -->
-                            <div class="course-card__ratings course-card__ratings--hover">
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                                <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
-                            </div><!-- /.course-card__ratings -->
-                            <a href="digital-marketing.html" class="course-card__btn eduhive-btn eduhive-btn--border">
-                                <span>enroll now</span>
-                                <span class="eduhive-btn__icon">
-                                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                </span>
-                            </a><!-- /.course-card__btn eduhive-btn -->
-                            <div class="course-card__info course-card__info--hover">
-                                <div class="course-card__lessons">
-                                    <span class="course-card__lessons__icon">
-                                        <i class="icon-open-book"></i>
-                                    </span><!-- /.course-card__lessons__icon -->
-                                    26 lessons
-                                </div><!-- /.course-card__lessons -->
-                                <div class="course-card__students">
-                                    <span class="course-card__students__icon">
-                                        <i class="icon-multiple-users-silhouette"></i>
-                                    </span><!-- /.course-card__lessons__icon -->
-                                    100 Students
-                                </div><!-- /.course-card__students -->
-                            </div><!-- /.course-card__info -->
-                        </div><!-- /.course-card__hover__content -->
-                    </div><!-- /.course-card__hover -->
-                </div><!-- /.course-card -->
-            </div><!-- /.item digital-marketing -->
+            </div><!-- /.item -->
+            @endforeach
         </div><!-- /.courses-two__carousel -->
     </div><!-- /.courses-two__container container -->
     <div class="container">
@@ -773,402 +646,191 @@
     <div class="online-class__box"></div><!-- /.online-class__box -->
 </section><!-- /.online-class section-space-bottom -->
 
-<section class="testimonials-two section-space" id="testimonials">
+<section class="testimonials-one my-5" id="testimonials">
     <div class="container">
-        <div class="row gutter-y-40 align-items-center">
-            <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
-                <div class="testimonials-two__image">
-                    <div class="testimonials-two__image__shape"></div><!-- /.testimonials-two__image__shape -->
-                    <div class="testimonials-two__image__inner">
-                        <img src="{{ url('/assets/frontend/images/testimonials/testimonial-2-1.jpg') }}" alt="testimonial">
-                    </div><!-- /.testimonials-two__image__inner -->
-                </div><!-- /.testimonials-two__image -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <div class="testimonials-two__content">
+        <div class="row gutter-y-50">
+            <div class="col-xl-4">
+                <div class="testimonials-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">What Our <span class="sec-title__title__shape">Students Have</span> <br> to <span class="sec-title__title__text">Say</span></h3><!-- /.sec-title__title -->
+                        <h3 class="sec-title__title">what students <span class="sec-title__title__shape">say about</span> <span class="sec-title__title__text">idcm</span></h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
-                    <div class="testimonials-two__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-theme owl-carousel" data-owl-options='{
+                    <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
+                        <p class="testimonials-one__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue.</p><!-- /.testimonials-one__text -->
+                    </div><!-- /.testimonial-one__description -->
+                    <div class="testimonials-one__custome-navs"></div><!-- /.testimonials-one__custome-navs -->
+                </div><!-- /.testimonials-one__content -->
+            </div><!-- /.col-xl-4 -->
+            <div class="col-xl-8">
+                <div class="eduhive-stretch-element-inside-column">
+                    <div class="testimonials-one__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
                 "items": 1,
                 "margin": 30,
                 "smartSpeed": 700,
                 "loop": true,
-                "autoplay": true,
-                "nav": false,
-                "dots": true,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"]
+                "autoplay": 600,
+                "nav": true,
+                "navContainer": ".testimonials-one__custome-navs",
+                "dots": false,
+                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                "responsive":{
+                    "0":{
+                        "items": 1,
+                        "margin": 10
+                    },
+                    "576":{
+                        "items": 1.5
+                    },
+                    "768":{
+                        "items": 1.8
+                    },
+                    "992":{
+                        "items": 2.6
+                    },
+                    "1200":{
+                        "items": 2.3
+                    },
+                    "1360":{
+                        "items": 2.3
+                    },
+                    "1536":{
+                        "items": 2.5
+                    },
+                    "1600":{
+                        "items": 2.7
+                    },
+                    "1800":{
+                        "items": 2.94
+                    }
+                }
                 }'>
-                        <div class="item">
-                            <p class="testimonials-two__quote">Nullam dignissim, ante scelerisque is euismod fermentum odio sem semper is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque nisi dui eget dapibus enim ornare eu morbi.</p><!-- /.quote -->
-                            <div class="testimonials-two__bottom">
-                                <div class="testimonials-two__identity">
-                                    <h4 class="testimonials-two__name">Kathryn Murphy</h4><!-- /.name -->
-                                    <p class="testimonials-two__designation">Web Designer</p><!-- /.designation -->
-                                </div><!-- /.testimonials-two__identity -->
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                            </div><!-- /.testimonials-two__bottom -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <p class="testimonials-two__quote">I really think this could go viral. I think this should be fairly easy so if you just want to have a look we need to make the new version clean and sexy that will be a conversation piece. I'll know it when i see it can.</p><!-- /.quote -->
-                            <div class="testimonials-two__bottom">
-                                <div class="testimonials-two__identity">
-                                    <h4 class="testimonials-two__name">Sarah Albert</h4><!-- /.name -->
-                                    <p class="testimonials-two__designation">managing director</p><!-- /.designation -->
-                                </div><!-- /.testimonials-two__identity -->
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                            </div><!-- /.testimonials-two__bottom -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <p class="testimonials-two__quote">How much will it cost, make it original just do what you think. I trust you, and i love it, but can you invert all colors?, yet in an ideal world. Can you make pink a little more pinkish it looks a bit empty try to make.</p><!-- /.quote -->
-                            <div class="testimonials-two__bottom">
-                                <div class="testimonials-two__identity">
-                                    <h4 class="testimonials-two__name">Esther Howard</h4><!-- /.name -->
-                                    <p class="testimonials-two__designation">Ethical Hacker</p><!-- /.designation -->
-                                </div><!-- /.testimonials-two__identity -->
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                            </div><!-- /.testimonials-two__bottom -->
-                        </div><!-- /.item -->
-                    </div><!-- /.testimonials-two__carousel -->
-                </div><!-- /.testimonials-two__content -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row gutter-y-40 -->
+                        @foreach(getTestimonials() as $testimonial)
+                            <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-card__top">
+                                        <div class="testimonial-card__image">
+                                            <img src="{{ (isset($testimonial->featured_image))?getSizedImage($testimonial->featured_image):'https://dummyimage.com/150x150' }}" alt="{{ $testimonial->name }}">
+                                            <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
+                                        </div><!-- /.testimonial-card__image -->
+                                        <div class="testimonial-card__identity">
+                                            <h5 class="testimonial-card__name">{{ $testimonial->name }}</h5>
+                                            <p class="testimonial-card__designation">{{ $testimonial->dasignation }}</p>
+                                        </div><!-- /.testimonial-card__identity -->
+                                    </div><!-- /.testimonial-card__top -->
+                                    <div class="testimonial-card__content">
+                                        <p class="testimonial-card__quote">{!! $testimonial->comment !!}</p><!-- /.testimonial-card__quote -->
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                    </div><!-- /.testimonial-card__content -->
+                                </div><!-- /.testimonial-card -->
+                            </div><!-- /.owl-slide-item-->
+                        @endforeach
+                    </div><!-- /.testimonials-one__carousel -->
+                </div><!-- /.eduhive-stretch-element-inside-column -->
+            </div><!-- /.col-xl-8 -->
+        </div><!-- /.row gutter-y-50 -->
     </div><!-- /.container -->
-    <img src="{{ url('/assets/frontend/images/shapes/testimonial-shape-2-1.png') }}" alt="shape" class="testimonials-two__shape-one">
-    <img src="{{ url('/assets/frontend/images/shapes/testimonial-shape-2-2.png') }}" alt="shape" class="testimonials-two__shape-two">
-</section><!-- /.testimonials-two section-space -->
+    <img src="/assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
+    <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
+</section><!-- /.testimonials-one section-space -->
 
-        <section class="instructors-two section-space" id="instructors">
-            <div class="instructors-two__bg" style="background-image: url({{ url('/assets/frontend/images/shapes/instructors-bg-2-1.jpg') }});"></div><!-- /.instructors-two__bg -->
-            <div class="container">
-                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
-                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">expert</span> <span class="sec-title__title__shape">instructor</span></h3><!-- /.sec-title__title -->
-                </div><!-- /.sec-title -->
-                <div class="instructors-two__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-			"items": 1,
-			"margin": 10,
-			"loop": true,
-			"smartSpeed": 700,
-			"nav": false,
-			"dots": false,
-			"navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-			"autoplay": true,
-			"responsive": {
-				"0": {
-					"items": 1,
-					"nav": true,
-					"dots": false,
-					"margin": 10
-				},
-				"768": {
-					"items": 2,
-                    "dots": true,
-					"margin": 30
-				},
-				"992": {
-					"items": 3,
-					"margin": 30
-				}
-			}
-		}'>
-                    <div class="item">
-                        <div class="instructor-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                            <div class="instructor-card-two__image">
-                                <img src="{{ url('/assets/frontend/images/instructors/instructor-2-1.jpg') }}" alt="Mike Hardson">
-                            </div><!-- /.instructor-card-two__image -->
-                            <div class="instructor-card-two__content">
-                                <div class="instructor-card-two__info">
-                                    <h3 class="instructor-card-two__name">
-                                        <a href="instructor-details.html">Mike Hardson</a>
-                                    </h3><!-- /.instructor-card-two__name -->
-                                    <h6 class="instructor-card-two__designation">data scientist</h6><!-- /.instructor-card-two__designation -->
-                                </div><!-- /.instructor-card-two__info -->
-                                <div class="instructor-card-two__social">
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Facebook</span>
-                                    </a>
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Linkedin</span>
-                                    </a>
-                                    <a href="https://instagram.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Instagram</span>
-                                    </a>
-                                </div><!-- /.instructor-card-two__social -->
-                            </div><!-- /.instructor-card-two__content -->
-                        </div><!-- /.instructor-card-two -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                            <div class="instructor-card-two__image">
-                                <img src="{{ url('/assets/frontend/images/instructors/instructor-2-2.jpg') }}" alt="aleesha brown">
-                            </div><!-- /.instructor-card-two__image -->
-                            <div class="instructor-card-two__content">
-                                <div class="instructor-card-two__info">
-                                    <h3 class="instructor-card-two__name">
-                                        <a href="instructor-details.html">aleesha brown</a>
-                                    </h3><!-- /.instructor-card-two__name -->
-                                    <h6 class="instructor-card-two__designation">Web Developer</h6><!-- /.instructor-card-two__designation -->
-                                </div><!-- /.instructor-card-two__info -->
-                                <div class="instructor-card-two__social">
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Facebook</span>
-                                    </a>
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Linkedin</span>
-                                    </a>
-                                    <a href="https://instagram.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Instagram</span>
-                                    </a>
-                                </div><!-- /.instructor-card-two__social -->
-                            </div><!-- /.instructor-card-two__content -->
-                        </div><!-- /.instructor-card-two -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                            <div class="instructor-card-two__image">
-                                <img src="{{ url('/assets/frontend/images/instructors/instructor-2-3.jpg') }}" alt="david cooper">
-                            </div><!-- /.instructor-card-two__image -->
-                            <div class="instructor-card-two__content">
-                                <div class="instructor-card-two__info">
-                                    <h3 class="instructor-card-two__name">
-                                        <a href="instructor-details.html">david cooper</a>
-                                    </h3><!-- /.instructor-card-two__name -->
-                                    <h6 class="instructor-card-two__designation">software engineer</h6><!-- /.instructor-card-two__designation -->
-                                </div><!-- /.instructor-card-two__info -->
-                                <div class="instructor-card-two__social">
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Facebook</span>
-                                    </a>
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Linkedin</span>
-                                    </a>
-                                    <a href="https://instagram.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Instagram</span>
-                                    </a>
-                                </div><!-- /.instructor-card-two__social -->
-                            </div><!-- /.instructor-card-two__content -->
-                        </div><!-- /.instructor-card-two -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                            <div class="instructor-card-two__image">
-                                <img src="{{ url('/assets/frontend/images/instructors/instructor-2-4.jpg') }}" alt="kevin martin">
-                            </div><!-- /.instructor-card-two__image -->
-                            <div class="instructor-card-two__content">
-                                <div class="instructor-card-two__info">
-                                    <h3 class="instructor-card-two__name">
-                                        <a href="instructor-details.html">kevin martin</a>
-                                    </h3><!-- /.instructor-card-two__name -->
-                                    <h6 class="instructor-card-two__designation">App Developer</h6><!-- /.instructor-card-two__designation -->
-                                </div><!-- /.instructor-card-two__info -->
-                                <div class="instructor-card-two__social">
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Facebook</span>
-                                    </a>
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Linkedin</span>
-                                    </a>
-                                    <a href="https://instagram.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Instagram</span>
-                                    </a>
-                                </div><!-- /.instructor-card-two__social -->
-                            </div><!-- /.instructor-card-two__content -->
-                        </div><!-- /.instructor-card-two -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                            <div class="instructor-card-two__image">
-                                <img src="{{ url('/assets/frontend/images/instructors/instructor-2-5.jpg') }}" alt="christine eve">
-                            </div><!-- /.instructor-card-two__image -->
-                            <div class="instructor-card-two__content">
-                                <div class="instructor-card-two__info">
-                                    <h3 class="instructor-card-two__name">
-                                        <a href="instructor-details.html">christine eve</a>
-                                    </h3><!-- /.instructor-card-two__name -->
-                                    <h6 class="instructor-card-two__designation">Marketing Expert</h6><!-- /.instructor-card-two__designation -->
-                                </div><!-- /.instructor-card-two__info -->
-                                <div class="instructor-card-two__social">
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Facebook</span>
-                                    </a>
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Linkedin</span>
-                                    </a>
-                                    <a href="https://instagram.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Instagram</span>
-                                    </a>
-                                </div><!-- /.instructor-card-two__social -->
-                            </div><!-- /.instructor-card-two__content -->
-                        </div><!-- /.instructor-card-two -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="instructor-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                            <div class="instructor-card-two__image">
-                                <img src="{{ url('/assets/frontend/images/instructors/instructor-2-6.jpg') }}" alt="Adlof Carone">
-                            </div><!-- /.instructor-card-two__image -->
-                            <div class="instructor-card-two__content">
-                                <div class="instructor-card-two__info">
-                                    <h3 class="instructor-card-two__name">
-                                        <a href="instructor-details.html">Adlof Carone</a>
-                                    </h3><!-- /.instructor-card-two__name -->
-                                    <h6 class="instructor-card-two__designation">UI/UX Designer</h6><!-- /.instructor-card-two__designation -->
-                                </div><!-- /.instructor-card-two__info -->
-                                <div class="instructor-card-two__social">
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Facebook</span>
-                                    </a>
-                                    <a href="https://facebook.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Linkedin</span>
-                                    </a>
-                                    <a href="https://instagram.com">
-                                        <span class="instructor-card-two__social__icon">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">Instagram</span>
-                                    </a>
-                                </div><!-- /.instructor-card-two__social -->
-                            </div><!-- /.instructor-card-two__content -->
-                        </div><!-- /.instructor-card-two -->
-                    </div><!-- /.item -->
-                </div><!-- /.instructors-two__carousel -->
-            </div><!-- /.container -->
-            <img src="{{ url('/assets/frontend/images/shapes/instructors-shape-2-1.png') }}" alt="shape" class="instructors-two__shape">
-            <div class="instructors-two__shape-box-one"></div><!-- /.instructors-two__shape-box-one -->
-            <div class="instructors-two__shape-box-two"></div><!-- /.instructors-two__shape-box-two -->
-        </section><!-- /.instructors-two section-space -->
-
-        <section class="blog-two section-space" id="blog">
-            <div class="container">
-                <div class="blog-two__top">
-                    <div class="row gutter-y-60 align-items-center">
-                        <div class="col-xl-9 col-lg-8">
-                            <div class="blog-two__content">
-                                <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                                    <h6 class="sec-title__tagline">latest blog</h6><!-- /.sec-title__tagline -->
-                                    <h3 class="sec-title__title"><span class="sec-title__title__shape">our latest</span> <span class="sec-title__title__text">blog news</span></h3><!-- /.sec-title__title -->
-                                </div><!-- /.sec-title -->
-                            </div><!-- /.blog-two__content -->
-                        </div><!-- /.col-xl-9 col-lg-8 -->
-                        <div class="col-xl-3 col-lg-4">
-                            <div class="blog-two__button">
-                                <a href="blog-grid-right.html" class="eduhive-btn">
-                                    <span>view all blog</span>
-                                    <span class="eduhive-btn__icon">
-                                        <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+<section class="blog-two section-space" id="blog">
+    <div class="container">
+        <div class="blog-two__top">
+            <div class="row gutter-y-60 align-items-center">
+                <div class="col-xl-9 col-lg-8">
+                    <div class="blog-two__content">
+                        <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                            <h6 class="sec-title__tagline">latest blog</h6><!-- /.sec-title__tagline -->
+                            <h3 class="sec-title__title"><span class="sec-title__title__shape">our latest</span> <span class="sec-title__title__text">blog news</span></h3><!-- /.sec-title__title -->
+                        </div><!-- /.sec-title -->
+                    </div><!-- /.blog-two__content -->
+                </div><!-- /.col-xl-9 col-lg-8 -->
+                <div class="col-xl-3 col-lg-4">
+                    <div class="blog-two__button">
+                        <a href="blog-grid-right.html" class="eduhive-btn">
+                            <span>view all blog</span>
+                            <span class="eduhive-btn__icon">
+                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                            </span>
+                        </a><!-- /.eduhive-btn -->
+                    </div><!-- /.blog-two__button -->
+                </div><!-- /.col-xl-3 col-lg-4 -->
+            </div><!-- /.row gutter-y-60 align-items-center -->
+        </div><!-- /.blog-two__top -->
+        <div class="row gutter-y-30">
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                <div class="blog-card blog-card--two">
+                    <div class="blog-card__image">
+                        <img src="{{ url('/assets/frontend/images/blog/blog-2-1.jpg') }}" alt="Questions to Ask Vendors Before Choosing an LMS Platform">
+                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Questions
+                                to Ask Vendors Before Choosing an LMS Platform</span><!-- /.sr-only --></a>
+                    </div><!-- /.blog-card__image -->
+                    <div class="blog-card__content">
+                        <ul class="list-unstyled blog-card__meta">
+                            <li>
+                                <a href="#">
+                                    <span class="blog-card__meta__icon">
+                                        <i class="icon-comments"></i>
                                     </span>
-                                </a><!-- /.eduhive-btn -->
-                            </div><!-- /.blog-two__button -->
-                        </div><!-- /.col-xl-3 col-lg-4 -->
-                    </div><!-- /.row gutter-y-60 align-items-center -->
-                </div><!-- /.blog-two__top -->
+                                    Web Design
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="blog-card__meta__icon">
+                                        <i class="icon-date"></i>
+                                    </span>
+                                    Jan 26, 2024
+                                </a>
+                            </li>
+                        </ul><!-- /.list-unstyled blog-card__meta -->
+                        <h3 class="blog-card__title"><a href="blog-details-right.html">Questions to Ask Vendors Before
+                                Choosing an LMS Platform</a></h3><!-- /.blog-card__title -->
+                        <p class="blog-card__text">Consequat Quisque eget congue velit in OF cursus leo sodales IS the
+                            euismod quis sapien euismod</p><!-- /.blog-card__text -->
+                        <div class="blog-card__bottom">
+                            <div class="blog-card__author">
+                                <img src="{{ url('/assets/frontend/images/blog/blog-author-2-1.png') }}" alt="Ronald Richards" class="blog-card__author__image">
+                                <div class="blog-card__author__identity">
+                                    <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
+                                    <h5 class="blog-card__author__name">
+                                        <a href="#">Ronald Richards</a>
+                                    </h5><!-- /.author-name -->
+                                </div><!-- /.blog-card__author__identity -->
+                            </div><!-- /.blog-card__author -->
+                            <a href="blog-details-right.html" class="eduhive-btn">
+                                <span class="eduhive-btn__text">read More</span>
+                                <span class="eduhive-btn__icon">
+                                    <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
+                                </span>
+                            </a><!-- /.eduhive-btn -->
+                        </div><!-- /.blog-card__bottom -->
+                    </div><!-- /.blog-card__content -->
+                </div><!-- /.blog-card -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6">
                 <div class="row gutter-y-30">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <div class="blog-card blog-card--two">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="blog-card blog-card--two blog-card--right">
                             <div class="blog-card__image">
-                                <img src="{{ url('/assets/frontend/images/blog/blog-2-1.jpg') }}" alt="Questions to Ask Vendors Before Choosing an LMS Platform">
-                                <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Questions
-                                        to Ask Vendors Before Choosing an LMS Platform</span><!-- /.sr-only --></a>
+                                <img src="{{ url('/assets/frontend/images/blog/blog-2-2.jpg') }}" alt="Make Your Own Expanding">
+                                <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Make Your Own Expanding</span><!-- /.sr-only --></a>
                             </div><!-- /.blog-card__image -->
                             <div class="blog-card__content">
                                 <ul class="list-unstyled blog-card__meta">
@@ -1177,7 +839,7 @@
                                             <span class="blog-card__meta__icon">
                                                 <i class="icon-comments"></i>
                                             </span>
-                                            Web Design
+                                            Data Science
                                         </a>
                                     </li>
                                     <li>
@@ -1185,120 +847,69 @@
                                             <span class="blog-card__meta__icon">
                                                 <i class="icon-date"></i>
                                             </span>
-                                            Jan 26, 2024
+                                            Feb 28, 2024
                                         </a>
                                     </li>
                                 </ul><!-- /.list-unstyled blog-card__meta -->
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">Questions to Ask Vendors Before
-                                        Choosing an LMS Platform</a></h3><!-- /.blog-card__title -->
-                                <p class="blog-card__text">Consequat Quisque eget congue velit in OF cursus leo sodales IS the
-                                    euismod quis sapien euismod</p><!-- /.blog-card__text -->
-                                <div class="blog-card__bottom">
-                                    <div class="blog-card__author">
-                                        <img src="{{ url('/assets/frontend/images/blog/blog-author-2-1.png') }}" alt="Ronald Richards" class="blog-card__author__image">
-                                        <div class="blog-card__author__identity">
-                                            <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
-                                            <h5 class="blog-card__author__name">
-                                                <a href="#">Ronald Richards</a>
-                                            </h5><!-- /.author-name -->
-                                        </div><!-- /.blog-card__author__identity -->
-                                    </div><!-- /.blog-card__author -->
-                                    <a href="blog-details-right.html" class="eduhive-btn">
-                                        <span class="eduhive-btn__text">read More</span>
-                                        <span class="eduhive-btn__icon">
-                                            <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
-                                        </span>
-                                    </a><!-- /.eduhive-btn -->
-                                </div><!-- /.blog-card__bottom -->
+                                <h3 class="blog-card__title"><a href="blog-details-right.html">Make Your Own
+                                        Expanding</a></h3><!-- /.blog-card__title -->
+                                <div class="blog-card__author">
+                                    <img src="{{ url('/assets/frontend/images/blog/blog-author-2-2.png') }}" alt="Mike Hardson" class="blog-card__author__image">
+                                    <div class="blog-card__author__identity">
+                                        <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
+                                        <h5 class="blog-card__author__name">
+                                            <a href="#">Mike Hardson</a>
+                                        </h5><!-- /.author-name -->
+                                    </div><!-- /.blog-card__author__identity -->
+                                </div><!-- /.blog-card__author -->
                             </div><!-- /.blog-card__content -->
                         </div><!-- /.blog-card -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="row gutter-y-30">
-                            <div class="col-lg-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                                <div class="blog-card blog-card--two blog-card--right">
-                                    <div class="blog-card__image">
-                                        <img src="{{ url('/assets/frontend/images/blog/blog-2-2.jpg') }}" alt="Make Your Own Expanding">
-                                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Make Your Own Expanding</span><!-- /.sr-only --></a>
-                                    </div><!-- /.blog-card__image -->
-                                    <div class="blog-card__content">
-                                        <ul class="list-unstyled blog-card__meta">
-                                            <li>
-                                                <a href="#">
-                                                    <span class="blog-card__meta__icon">
-                                                        <i class="icon-comments"></i>
-                                                    </span>
-                                                    Data Science
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <span class="blog-card__meta__icon">
-                                                        <i class="icon-date"></i>
-                                                    </span>
-                                                    Feb 28, 2024
-                                                </a>
-                                            </li>
-                                        </ul><!-- /.list-unstyled blog-card__meta -->
-                                        <h3 class="blog-card__title"><a href="blog-details-right.html">Make Your Own
-                                                Expanding</a></h3><!-- /.blog-card__title -->
-                                        <div class="blog-card__author">
-                                            <img src="{{ url('/assets/frontend/images/blog/blog-author-2-2.png') }}" alt="Mike Hardson" class="blog-card__author__image">
-                                            <div class="blog-card__author__identity">
-                                                <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
-                                                <h5 class="blog-card__author__name">
-                                                    <a href="#">Mike Hardson</a>
-                                                </h5><!-- /.author-name -->
-                                            </div><!-- /.blog-card__author__identity -->
-                                        </div><!-- /.blog-card__author -->
-                                    </div><!-- /.blog-card__content -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-lg-12 -->
-                            <div class="col-lg-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                                <div class="blog-card blog-card--two blog-card--right">
-                                    <div class="blog-card__image">
-                                        <img src="{{ url('/assets/frontend/images/blog/blog-2-3.jpg') }}" alt="How to Remedy Tailbone Back">
-                                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">How to Remedy Tailbone Back</span><!-- /.sr-only --></a>
-                                    </div><!-- /.blog-card__image -->
-                                    <div class="blog-card__content">
-                                        <ul class="list-unstyled blog-card__meta">
-                                            <li>
-                                                <a href="#">
-                                                    <span class="blog-card__meta__icon">
-                                                        <i class="icon-comments"></i>
-                                                    </span>
-                                                    UI/UX Design
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <span class="blog-card__meta__icon">
-                                                        <i class="icon-date"></i>
-                                                    </span>
-                                                    Jun 20, 2024
-                                                </a>
-                                            </li>
-                                        </ul><!-- /.list-unstyled blog-card__meta -->
-                                        <h3 class="blog-card__title"><a href="blog-details-right.html">How to Remedy Tailbone
-                                                Back</a></h3><!-- /.blog-card__title -->
-                                        <div class="blog-card__author">
-                                            <img src="{{ url('/assets/frontend/images/blog/blog-author-2-3.png') }}" alt="david cooper" class="blog-card__author__image">
-                                            <div class="blog-card__author__identity">
-                                                <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
-                                                <h5 class="blog-card__author__name">
-                                                    <a href="#">david cooper</a>
-                                                </h5><!-- /.author-name -->
-                                            </div><!-- /.blog-card__author__identity -->
-                                        </div><!-- /.blog-card__author -->
-                                    </div><!-- /.blog-card__content -->
-                                </div><!-- /.blog-card -->
-                            </div><!-- /.col-lg-12 -->
-                        </div><!-- /.row gutter-y-30 -->
-                    </div><!-- /.col-lg-6 -->
+                    </div><!-- /.col-lg-12 -->
+                    <div class="col-lg-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="blog-card blog-card--two blog-card--right">
+                            <div class="blog-card__image">
+                                <img src="{{ url('/assets/frontend/images/blog/blog-2-3.jpg') }}" alt="How to Remedy Tailbone Back">
+                                <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">How to Remedy Tailbone Back</span><!-- /.sr-only --></a>
+                            </div><!-- /.blog-card__image -->
+                            <div class="blog-card__content">
+                                <ul class="list-unstyled blog-card__meta">
+                                    <li>
+                                        <a href="#">
+                                            <span class="blog-card__meta__icon">
+                                                <i class="icon-comments"></i>
+                                            </span>
+                                            UI/UX Design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="blog-card__meta__icon">
+                                                <i class="icon-date"></i>
+                                            </span>
+                                            Jun 20, 2024
+                                        </a>
+                                    </li>
+                                </ul><!-- /.list-unstyled blog-card__meta -->
+                                <h3 class="blog-card__title"><a href="blog-details-right.html">How to Remedy Tailbone
+                                        Back</a></h3><!-- /.blog-card__title -->
+                                <div class="blog-card__author">
+                                    <img src="{{ url('/assets/frontend/images/blog/blog-author-2-3.png') }}" alt="david cooper" class="blog-card__author__image">
+                                    <div class="blog-card__author__identity">
+                                        <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
+                                        <h5 class="blog-card__author__name">
+                                            <a href="#">david cooper</a>
+                                        </h5><!-- /.author-name -->
+                                    </div><!-- /.blog-card__author__identity -->
+                                </div><!-- /.blog-card__author -->
+                            </div><!-- /.blog-card__content -->
+                        </div><!-- /.blog-card -->
+                    </div><!-- /.col-lg-12 -->
                 </div><!-- /.row gutter-y-30 -->
-            </div><!-- /.container -->
-        </section><!-- /.blog-two section-space -->
-    @endsection
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row gutter-y-30 -->
+    </div><!-- /.container -->
+</section><!-- /.blog-two section-space -->
+@endsection
 @section('script')
 <!-- ============================================================== -->
 <!-- CHARTS -->

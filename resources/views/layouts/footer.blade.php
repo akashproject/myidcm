@@ -12,15 +12,15 @@
                     <ul class="footer-widget__info">
                         <li>
                             <span class="footer-widget__info__icon"><i class="icon-location"></i></span>
-                            <a href="https://www.google.com/maps">2683 Smith Street, Boston - 02110</a>
+                            <a href="https://www.google.com/maps">{{ get_theme_setting('address') }}</a>
                         </li>
                         <li>
                             <span class="footer-widget__info__icon"><i class="icon-email"></i></span>
-                            <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                            <a href="mailto:{{ get_theme_setting('email') }}">{{ get_theme_setting('email') }}</a>
                         </li>
                         <li>
                             <span class="footer-widget__info__icon"><i class="icon-telephone"></i></span>
-                            <a href="tel:+6120320024">+61 2032 0024</a>
+                            <a href="tel:{{ get_theme_setting('mobile') }}">+91 {{ get_theme_setting('mobile') }}</a>
                         </li>
                     </ul><!-- /.footer-widget__info -->
                 </div><!-- /.footer-widget -->
@@ -29,46 +29,16 @@
                 <div class="footer-widget footer-widget--links">
                     <h2 class="footer-widget__title">Quick Link</h2><!-- /.footer-widget__title -->
                     <ul class="list-unstyled footer-widget__links">
+                        @foreach($footerMenu as $key => $value)
                         <li>
-                            <a href="about.html">
+                            <a href="{{ $key }}">
                                 <span class="footer-widget__links__icon">
                                     <i class="icon-double-arrow"></i>
                                 </span>
-                                About Eduhive
+                                {{  $value }}
                             </a>
                         </li>
-                        <li>
-                            <a href="courses.html">
-                                <span class="footer-widget__links__icon">
-                                    <i class="icon-double-arrow"></i>
-                                </span>
-                                Our Courses
-                            </a>
-                        </li>
-                        <li>
-                            <a href="instructors.html">
-                                <span class="footer-widget__links__icon">
-                                    <i class="icon-double-arrow"></i>
-                                </span>
-                                Instructors
-                            </a>
-                        </li>
-                        <li>
-                            <a href="instructor-details.html">
-                                <span class="footer-widget__links__icon">
-                                    <i class="icon-double-arrow"></i>
-                                </span>
-                                Instructor Details
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.html">
-                                <span class="footer-widget__links__icon">
-                                    <i class="icon-double-arrow"></i>
-                                </span>
-                                Contact Us
-                            </a>
-                        </li>
+                        @endforeach
                     </ul><!-- /.list-unstyled footer-widget__links -->
                 </div><!-- /.footer-widget -->
             </div><!-- /.col-xl-3 col-md-4 col-sm-6 -->
@@ -78,7 +48,7 @@
                     <ul class="list-unstyled footer-widget__links">
                         @foreach(get_courses() as $course)
                         <li>
-                            <a href="apps-development.html">
+                            <a href="{{ route('view-courses',$course->slug) }}">
                                 <span class="footer-widget__links__icon">
                                     <i class="icon-double-arrow"></i>
                                 </span>
@@ -160,33 +130,33 @@
         <ul class="mobile-nav__contact list-unstyled">
             <li>
                 <span class="mobile-nav__contact__icon"><i class="fa fa-envelope"></i></span>
-                <a href="mailto:needhelp@eduhive.com">needhelp@company.com</a>
+                <a href="mailto:{{ get_theme_setting('email') }}">{{ get_theme_setting('email') }}</a>
             </li>
             <li>
                 <span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span>
-                <a href="tel:+9156980036420">+91 5698 0036 420</a>
+                <a href="tel:+{{ get_theme_setting('mobile') }}">+91 {{ get_theme_setting('mobile') }}</a>
             </li>
         </ul><!-- /.mobile-nav__contact -->
         <div class="mobile-nav__social social-links-two">
-            <a href="https://facebook.com">
+            <a href="{{ get_theme_setting('facebook') }}">
                 <span class="social-links-two__icon">
                     <i class="fab fa-facebook-f" aria-hidden="true"></i>
                 </span><!-- /.social-links-two__icon -->
                 <span class="sr-only">Facebook</span>
             </a>
-            <a href="https://twitter.com">
+            <a href="{{ get_theme_setting('twitter') }}">
                 <span class="social-links-two__icon">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </span><!-- /.social-links-two__icon -->
                 <span class="sr-only">Twitter</span>
             </a>
-            <a href="https://instagram.com">
+            <a href="{{ get_theme_setting('instagram') }}">
                 <span class="social-links-two__icon">
                     <i class="fab fa-instagram" aria-hidden="true"></i>
                 </span><!-- /.social-links-two__icon -->
                 <span class="sr-only">Instagram</span>
             </a>
-            <a href="https://youtube.com">
+            <a href="{{ get_theme_setting('youtube') }}">
                 <span class="social-links-two__icon">
                     <i class="fab fa-youtube" aria-hidden="true"></i>
                 </span><!-- /.social-links-two__icon -->

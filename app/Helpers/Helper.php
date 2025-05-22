@@ -274,3 +274,10 @@ if (! function_exists('getRecruters')) {
         return $recruiters;
     }
 }
+
+if (! function_exists('getPlacements')) {
+    function getPlacements(){
+        $placements = DB::table('placements')->get();
+        return $placements;
+    }
+}

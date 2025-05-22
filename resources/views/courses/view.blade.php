@@ -473,7 +473,8 @@
             <div class="item">
                 <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                     <div class="course-card__image">
-                        <img src="{{ url('/assets/frontend/images/courses/course-1-2.jpg') }}" alt="The Data Science Revolution: Upgrading Your Skills">
+                        <img src="{{ url('assets/frontend/images/courses/'.$course->slug.'.gif')}}" alt="The Data Science Revolution: Upgrading Your Skills">
+                        
                     </div><!-- /.course-card__image -->
                     <div class="course-card__content">
                         <div class="course-card__content__top">
@@ -488,7 +489,7 @@
                         <h3 class="course-card__title"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                         <div class="course-card__info">
                             <div class="course-card__lessons">
-                                <span class="course-card__lessons__icon">
+                                <span class="course-card__lessons__icon">       
                                     <i class="icon-open-book"></i>
                                 </span><!-- /.course-card__lessons__icon -->
                                 {{ $course->no_of_module }} lessons
@@ -501,7 +502,7 @@
                             </div><!-- /.course-card__students -->
                         </div><!-- /.course-card__info -->
                     </div><!-- /.course-card__content -->
-                    <div class="course-card__hover" style="background-image: url('/assets/frontend/images/shapes/course-card-bg-1-1.png');">
+                    <div class="course-card__hover" style="background-image: url(assets/frontend/images/shapes/course-card-bg-1-1.png);">
                         <div class="course-card__hover__content">
                             <div class="course-card__content__top course-card__content__top--hover">
                                 <div class="course-card__category">Experts</div><!-- /.course-card__category -->

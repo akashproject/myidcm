@@ -1,20 +1,20 @@
 @extends('layouts.main')
     @section('content')
     <section class="page-header">
-            <div class="container">
-                <div class="page-header__content">
-                    <ul class="eduhive-breadcrumb list-unstyled">
-                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
-                        <li><span>About us</span></li>
-                    </ul><!-- /.eduhive-breadcrumb list-unstyled -->
-                    <h2 class="page-header__title">About us</h2>
-                </div><!-- /.page-header__content -->
-            </div><!-- /.container -->
-            <img src="assets/frontend/images/shapes/page-header-shape-1.png" alt="shape" class="page-header__shape-one">
-            <img src="assets/frontend/images/shapes/page-header-shape-2.png" alt="shape" class="page-header__shape-two">
-            <div class="page-header__shape-three"></div><!-- /.page-header__shape-three -->
-            <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
-        </section><!-- /.page-header -->
+        <div class="container">
+            <div class="page-header__content">
+                <ul class="eduhive-breadcrumb list-unstyled">
+                    <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
+                    <li><span>About us</span></li>
+                </ul><!-- /.eduhive-breadcrumb list-unstyled -->
+                <h2 class="page-header__title">About us</h2>
+            </div><!-- /.page-header__content -->
+        </div><!-- /.container -->
+        <img src="assets/frontend/images/shapes/page-header-shape-1.png" alt="shape" class="page-header__shape-one">
+        <img src="assets/frontend/images/shapes/page-header-shape-2.png" alt="shape" class="page-header__shape-two">
+        <div class="page-header__shape-three"></div><!-- /.page-header__shape-three -->
+        <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
+    </section><!-- /.page-header -->
 
         <section class="about-two section-space">
             <div class="container">
@@ -568,5 +568,4 @@
     <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
     <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
 </section><!-- /.instructors-one section-space2 -->
-
-    @endsection
+@endsection
