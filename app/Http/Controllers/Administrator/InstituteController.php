@@ -51,6 +51,7 @@ class InstituteController extends Controller
                 'slug' => 'required',
             ]);
             $data['courses'] = isset($data['courses'])?json_encode($data['courses']):null;
+            $data['faqs'] = isset($data['faqs'])?json_encode($data['faqs']):null;
             if($data['institute_id'] <= 0){
                 $institute = Institute::create($data);
             } else {

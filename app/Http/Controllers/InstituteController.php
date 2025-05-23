@@ -73,26 +73,30 @@ class InstituteController extends Controller
             ->where('courses.status',1)
             ->get();
 
-            // $directoryPath = public_path('gallery/'.$contentMain->slug);
-            // $fileNames = [];
-            // if (File::isDirectory($directoryPath)) {
-            //     $fileNames = File::files($directoryPath);
-            // }
-            // $galleryImg=[];
-
-            // foreach ($fileNames as $file) {
-            //     $galleryImg[] = $contentMain->slug.'/'.pathinfo($file, PATHINFO_FILENAME).'.'.pathinfo($file, PATHINFO_EXTENSION);
-            // }
-
+            $directoryPath = public_path('gallery/'.$contentMain->slug);
+            $galleryImg = [];
+            if (File::isDirectory($directoryPath)) {
+                $folders = File::directories($directoryPath);
+                foreach($folders as $folder) {
+                    $basename = basename($folder);
+                    $folderName = ucwords(implode(" ", explode('-',$basename)));
+                    $files = File::files($folder);
+                    $fileNames = [];
+                    foreach($files as $file) {
+                        $fileNames[] = $contentMain->slug.'/'.$basename.'/'.pathinfo($file, PATHINFO_FILENAME).'.'.pathinfo($file, PATHINFO_EXTENSION);
+                    }
+                    $galleryImg[$basename]['name'] = $folderName;
+                    $galleryImg[$basename]['images'] = $fileNames;
+                }
+            }
             $states = State::where('status', 1)->get();
             $institute = $contentMain->name;
 
             // $directoryPath = 'u';
-
             // $gallery = DB::table('gallery')->where("institute_id",$contentMain->id)->get();
 
             $state = State::select('name','region')->where('id',$contentMain->state_id)->first();
-            return view('institutes.view',compact('contentMain','institute','courses','states','state'));
+            return view('institutes.view',compact('contentMain','institute','courses','states','state','galleryImg'));
         } catch(\Illuminate\Database\QueryException $e){
             var_dump($e);
         }

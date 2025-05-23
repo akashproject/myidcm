@@ -276,8 +276,35 @@ if (! function_exists('getRecruters')) {
 }
 
 if (! function_exists('getPlacements')) {
-    function getPlacements(){
-        $placements = DB::table('placements')->get();
+    function getPlacements($limit = 1000){
+        $placements = DB::table('placements')->limit($limit)->get();
         return $placements;
+    }
+}
+
+if (! function_exists('getUtmCampaign')) {
+    function getUtmCampaign($params = null){
+        if(request()->has('utm_campaign')){
+            return request()->get('utm_campaign');
+        }
+        return ($params)?$params:get_theme_setting('utm_campaign');
+    }
+}
+
+if (! function_exists('getUtmSource')) {
+    function getUtmSource($params = null){
+        if(request()->has('utm_source')){
+            return request()->get('utm_source');
+        }
+        return ($params)?$params:get_theme_setting('utm_source');
+    }
+}
+
+if (! function_exists('getCommunicationMedium')) {
+    function getCommunicationMedium($params = null){
+        if(request()->has('lead_type')){
+            return request()->get('lead_type');
+        }
+        return ($params)?$params:get_theme_setting('lead_type');
     }
 }

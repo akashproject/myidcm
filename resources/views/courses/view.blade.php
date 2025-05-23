@@ -38,11 +38,11 @@
                     
                 </div>
             </div>
-            <img src="{{ url('/assets/frontend/images/shapes/page-header-shape-1.png') }}" alt="shape" class="page-header__shape-one">
             <img src="{{ url('/assets/frontend/images/shapes/page-header-shape-2.png') }}" alt="shape" class="page-header__shape-two">
             <div class="page-header__shape-three"></div>
             <div class="page-header__shape-four"></div>
         </section>
+        
         <section class="course-details ">
             <div class="container position-relative">
                 <div class="course-video-section">
@@ -74,7 +74,7 @@
                             <div class="course-details__main-tab-box tabs-box">
                                 <ul class="tab-buttons">
                                     <li data-tab="#overview" class="tab-btn active-btn">overview</li>
-                                    <li data-tab="#curriculum" class="tab-btn">curriculum</li>
+                                    <li data-tab="#syllabus" class="tab-btn">Syllabus</li>
                                     <li data-tab="#tools" class="tab-btn">Practical Tools</li>
                                 </ul><!-- /.tab-buttons -->
                                 <div class="tabs-content">
@@ -83,7 +83,7 @@
                                             {!! $contentMain->description !!}
                                         </div>
                                     </div><!-- /.overview-tab -->
-                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="curriculum" style="display: none;">
+                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="syllabus" style="display: none;">
                                         <div class="course-details__accordion">
                                             <div class="eduhive-accordion" data-grp-name="eduhive-accordion">
                                                 @foreach(getSubjectsByCourseId($contentMain->subjects) as $key => $subject)
@@ -114,7 +114,8 @@
                                                 
                                             </div><!-- /.faq-accordion -->
                                         </div><!-- /.course-details__accordion -->
-                                    </div><!-- /.curriculum-tab -->
+                                    </div><!-- /.syllabus
+                                    -tab -->
                                     <div class="tab fadeInUp animated" data-wow-delay="200ms" id="tools" style="display: none;">
                                         <div class="practical_tools">
                                             <h2>Practical Training</h2>
@@ -229,6 +230,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.course-details section-space -->
+        
         <section class="about-three mt-3" id="about">
             <div class="container-fluid">
                 <div class="about-three__inner section-space">
@@ -296,6 +298,7 @@
             </div><!-- /.container-fluid -->
             <img src="{{ url('/assets/frontend/images/shapes/about-shape-3-3.png')}}" alt="shape" class="about-three__shape-two">
         </section>
+        
         <section class="course-category section-space">
             <div class="container">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
@@ -428,6 +431,42 @@
             <div class="course-category__shape-one"></div><!-- /.course-category__shape-one -->
             <div class="course-category__shape-two"></div><!-- /.course-category__shape-two -->
         </section><!-- /.course-category section-space -->
+        
+        <section class="all-placed-student mt-5">
+            <div class="container">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h3 class="sec-title__title"><span>Placed </span> <span class="sec-title__title__shape">Students</span><span class="sec-title__title__text"> Story</span></h3><!-- /.sec-title__title -->
+                </div><!-- /.sec-title -->
+                <div class="row">
+                    @foreach(getPlacements(6) as $placement)
+                        <div class="col-md-4"> 
+                            <div class="placed-student-container my-2">
+                                <div class="placed-student-content text-white margin-20px-right">
+                                    <h6 class="margin-10px-bottom"> <strong>{{$placement->name }}</strong> </h6>
+                                    <p> Designation: <strong>{{ $placement->dasignation}}</strong></p>
+                                    <p> Placed At: <strong>{{ $placement->placed_at}}</strong></p>
+                                    <p> Joining Salary : <strong>{{ $placement->joining_salary}}</strong></p>
+                                </div>
+                                <div class="student-image">                     
+                                    <img src="{{ getSizedImage($placement->featured_image) }}" alt="{{$placement->name }}" data-no-retina="">
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <a href="{{ route('page-view','all-placement-students') }}" class="eduhive-btn">
+                            <span>Explore All</span>
+                            <span class="eduhive-btn__icon">
+                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="courses-four">
             <div class="container">
                 <div class="courses-four__top">
@@ -563,6 +602,7 @@
                 </div><!-- /.courses-four__carousel -->
             </div>
         </section>
+
         <section class="testimonials-one my-5" id="testimonials">
             <div class="container">
                 <div class="row gutter-y-50">
@@ -665,6 +705,7 @@
             <img src="/assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
             <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
         </section><!-- /.testimonials-one section-space -->
+
         <section class="faq-one my-5">
             <div class="container">
                 <div class="row gutter-y-50">

@@ -38,9 +38,9 @@
 						<div class="form-group row mb-2">
 							<label for="state" class="col-sm-3 text-right control-label col-form-label"> Center Enrolled </label>
 							<div class="col-sm-9">
-								<select name="university_id" id="university_id" class="select2 form-control custom-select" style="width: 100%; height:36px;">	
+								<select name="institute_id" id="institute_id" class="select2 form-control custom-select" style="width: 100%; height:36px;">	
 									<option value="">Select Center</option>
-									@foreach ($centers as $value)
+									@foreach ($institutes as $value)
 									<option value="{{ $value->id }}" > {{ $value->name }} </option>
 									@endforeach
 								</select>

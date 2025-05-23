@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->courses = DB::table('courses')->where("status","1")->get();
-        $this->institutes = DB::table('institutes')->select('slug','name')->where("status","1")->get();
+        $this->institutes = DB::table('institutes')->where("status","1")->get();
         $instituteArray = array();
         foreach ($this->institutes as $key => $value) {
             $instituteArray['/institute/'.$value->slug] = $value->name;
@@ -65,6 +65,10 @@ class AppServiceProvider extends ServiceProvider
             return $this->courses;
         });
 
+        App::singleton('institutes', function () {
+            return $this->institutes;
+        });
+
     }
 
     /**
@@ -80,7 +84,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('primaryMenu', $this->primaryMenu);
             $view->with('footerMenu', $this->footerMenu);
             $view->with('courses', $this->courses);
-
+            $view->with('institutes', $this->institutes);
             $media = Media::orderBy('created_at', 'desc')->get();
             $view->with('media', $media);
 

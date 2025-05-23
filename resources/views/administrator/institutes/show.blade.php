@@ -6,7 +6,6 @@
 		<form class="form-horizontal" method="post" action="{{ url('administrator/save-institute') }}" enctype="multipart/form-data">
 			@csrf
 			<div class="card-body">
-				<h4 class="card-title"> General Options </h4>
 				@if ($errors->any())
 					<div class="alert alert-danger">
 						<ul>
@@ -118,14 +117,7 @@
 							<input type="text" class="form-control" name="institute_pincode" id="institute_pincode" placeholder="Enter Institute Pincode Here" value="{{ $institute->institute_pincode }}" >
 							</div>
 						</div>
-						<div class="form-group row mb-2">
-							<label for="no_of_module" class="col-sm-3 text-left control-label col-form-label">Gallery</label>
-							<div class="col-sm-9">
-								<a href="{{ url('administrator/gallery') }}/{{ $institute->id }}" class="btn btn-primary">
-									Gallery Detail
-								</a>								
-							</div>
-						</div>
+						
 					</div>
 					<div class="col-md-5">
 						<div class="form-group row mb-2">
@@ -204,9 +196,9 @@
 						<div class="form-group row mb-2">
 							<label for="title" class="col-sm-6 text-left control-label col-form-label">Select Questions</label>
 							<div class="col-sm-12">
-								<select name="faq[]" class="form-control" multiple style="height:300px" >
+								<select name="faqs[]" class="form-control" multiple style="height:300px" >
 									@foreach(getAllFaqs() as $key => $faq)
-									<option value="{{ $faq->id }}" {{ ( $institute->city_id ==  $faq->id )? 'selected' : '' }}>{{$key+1}}. {{ $faq->question }} </option>
+									<option value="{{ $faq->id }}" {{ (in_array($faq->id,  json_decode($institute->faqs)))?'selected' : '' }} >{{$key+1}}. {{ $faq->question }} </option>
 									@endforeach
 								</select>
 							</div>

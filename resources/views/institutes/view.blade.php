@@ -6,11 +6,11 @@
                 "margin": 0,
                 "animateIn": "fadeIn",
                 "animateOut": "fadeOut",
-                "loop": true,
-                "smartSpeed": 700,
+                "loop": false,
+                "smartSpeed": 700000,
                 "nav": false,
                 "dots": false,
-                "autoplay": true,
+                "autoplay": false,
                 "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"]
             }'>
         <div class="main-slider-two__item">
@@ -28,6 +28,15 @@
                             <div class="main-slider-two__description">
                                 <p class="main-slider-two__text">There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have Suffered Alteration In Some.</p><!-- /.text -->
                             </div><!-- /.description -->
+                            <h6> Our Partners </h6>
+                            <div class="partner-certification">
+                                <a href="javascript:void(0);"> 
+                                    <img src="https://dummyimage.com/150x100" >
+                                </a>
+                                <a href="javascript:void(0);"> 
+                                    <img src="https://dummyimage.com/150x100" >
+                                </a>
+                            </div>
                             <div class="main-slider-two__button">
                                 <div class="main-slider-two__button__inner">
                                     <a href="courses.html" class="main-slider-two__btn-1 eduhive-btn">
@@ -113,106 +122,7 @@
             <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-1.png') }}" alt="shape" class="main-slider-two__shape-one slider-image">
             <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-6.png') }}" alt="shape" class="main-slider-two__shape-two slider-image">
         </div><!-- /.main-slider-two__item -->
-        <div class="main-slider-two__item">
-            <div class="main-slider-two__bg" style="background-image: url({{ url('/assets/frontend/images/shapes/main-slider-bg-2-1.png') }});"></div><!-- /.main-slider-two__bg -->
-            <div class="container">
-                <div class="row gutter-y-60 align-items-center">
-                    <div class="main-slider-two__col-content">
-                        <div class="main-slider-two__content">
-                            <div class="main-slider-two__top">
-                                <p class="main-slider-two__sub-title">The Pathway to Education</p><!-- /.sub-title -->
-                            </div><!-- /.main-slider-two__top -->
-                            <h2 class="main-slider-two__title">
-                                <span class="main-slider-two__title__inner">Learn & Grow Your <br> <span class="main-slider-two__title__text">skills.</span> From Anywhere.</span>
-                            </h2><!-- /.title -->
-                            <div class="main-slider-two__description">
-                                <p class="main-slider-two__text">Who's Responsible For The Ask For This Request? My Supervisor Didn't Like The Latest Revision You Gave Me Can You Switch.</p><!-- /.text -->
-                            </div><!-- /.description -->
-                            <div class="main-slider-two__button">
-                                <div class="main-slider-two__button__inner">
-                                    <a href="courses.html" class="main-slider-two__btn-1 eduhive-btn">
-                                        <span>find course</span>
-                                        <span class="eduhive-btn__icon">
-                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                        </span>
-                                    </a><!-- /.eduhive-btn -->
-                                </div><!-- /.main-slider-two__button__inner -->
-                                <div class="main-slider-two__button__inner">
-                                    <a href="about.html" class="main-slider-two__btn-2 eduhive-btn eduhive-btn--border">
-                                        <span>About us</span>
-                                        <span class="eduhive-btn__icon">
-                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                        </span>
-                                    </a><!-- /.eduhive-btn -->
-                                </div><!-- /.main-slider-two__button__inner -->
-                            </div><!-- /.button -->
-                            <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-2.png') }}" alt="shape" class="main-slider-two__content__shape-one slider-image">
-                            <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-3.png') }}" alt="shape" class="main-slider-two__content__shape-two slider-image">
-                        </div><!-- /.main-slider-two__content -->
-                    </div><!-- /.main-slider-two__col-content -->
-                    <div class="main-slider-two__col-image">
-                        <div class="main-slider-two__image">
-                            <div class="main-slider-two__image__inner">
-                                <div class="main-slider-two__image__mask">
-                                    <img src="{{ url('/assets/frontend/images/main-slider/main-slider-2-4.jpg') }}" alt="slider image" class="slider-image">
-                                </div><!-- /.main-slider-two__image__mask -->
-                                <div class="main-slider-two__image__one">
-                                    <img src="{{ url('/assets/frontend/images/main-slider/main-slider-2-5.jpg') }}" alt="slider image" class="slider-image">
-                                    <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video-btn video-btn video-popup">
-                                        <i class="icon-play"></i>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </a><!-- /.video-btn -->
-                                </div><!-- /.main-slider-two__image__one -->
-                                <div class="main-slider-two__image__two">
-                                    <img src="{{ url('/assets/frontend/images/main-slider/main-slider-2-6.jpg') }}" alt="slider image" class="slider-image">
-                                </div><!-- /.main-slider-two__image__two -->
-                                <div class="main-slider-two__student">
-                                    <div class="main-slider-two__student__image">
-                                        <img src="{{ url('/assets/frontend/images/main-slider/main-slider-student-2-1.png') }}" alt="student">
-                                        <img src="{{ url('/assets/frontend/images/main-slider/main-slider-student-2-2.png') }}" alt="student">
-                                        <img src="{{ url('/assets/frontend/images/main-slider/main-slider-student-2-3.png') }}" alt="student">
-                                        <img src="{{ url('/assets/frontend/images/main-slider/main-slider-student-2-4.png') }}" alt="student">
-                                        <h4 class="main-slider-two__student__count count-box">
-                                            <span class="count-text" data-stop="2" data-speed="1500">0</span><span>k+</span>
-                                        </h4><!-- /.main-slider-two__student__count -->
-                                    </div><!-- /.main-slider-two__student__image -->
-                                    <div class="main-slider-two__student__content">
-                                        <div class="eduhive-ratings">
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
-                                        </div><!-- /.product-ratings -->
-                                        <p class="main-slider-two__student__text">enrolled students</p>
-                                    </div><!-- /.main-slider-two__student__content -->
-                                </div><!-- /.main-slider-two__student -->
-                                <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-4.png') }}" alt="shape" class="main-slider-two__image__shape-one slider-image">
-                                <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-5.png') }}" alt="shape" class="main-slider-two__image__shape-two slider-image">
-                                <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-7.png') }}" alt="shape" class="main-slider-two__image__shape-three slider-image">
-                                <div class="main-slider-two__image__shape-box"></div>
-                            </div><!-- /.main-slider-two__image__inner -->
-                        </div><!-- /.main-slider-two__image -->
-                    </div><!-- /.main-slider-two__col-image -->
-                </div><!-- /.row gutter-y-60 -->
-            </div><!-- /.container -->
-            <div class="main-slider-two__shape-box"></div><!-- /.main-slider-two__shape-box -->
-            <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-1.png') }}" alt="shape" class="main-slider-two__shape-one slider-image">
-            <img src="{{ url('/assets/frontend/images/shapes/main-slider-shape-2-6.png') }}" alt="shape" class="main-slider-two__shape-two slider-image">
-        </div><!-- /.main-slider-two__item -->
+        
     </div><!-- /.main-slider-two__carousel -->
 </section><!-- /.main-slider-two -->
 
@@ -588,6 +498,41 @@
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-5.png') }}" alt="shape" class="faq-one__shape-three">
 </section><!-- /.faq-one section-space -->
 
+@if(!empty($galleryImg))
+<section class="gallery-page my-5">
+    <div class="container">
+        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+            <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Institute</span> <span>Story</span> <span class="sec-title__title__text">Activities</span></h3><!-- /.sec-title__title -->
+        </div><!-- /.sec-title -->
+        <div class="gallery-page__filter">
+            <ul class="list-unstyled post-filter gallery-page__filter__list">
+                <li class="eduhive-btn active" data-filter=".filter-item"><span>all</span></li>
+                @foreach($galleryImggalleryImg as $key => $gallery)
+                <li class="eduhive-btn" data-filter=".{{ $key }}"><span>{{ $gallery->name }}</span></li>
+                @endforeach
+                
+            </ul><!-- /.list-unstyledf -->
+        </div><!-- /.gallery-page__filter -->
+        <div class="row masonry-layout filter-layout">
+            @foreach($galleryImg as $key => $gallery)
+                @foreach($gallery['images'] as $key => $img)
+                <div class="col-lg-3 col-md-6 filter-item computer-science sale-marketing data-science">
+                    <div class="gallery-page__card">
+                        <img src="{{url('/public/gallery/'.$img)}}" alt="">
+                        <div class="gallery-page__card__hover">
+                            <a href="{{url('/public/gallery/'.$img)}}" class="img-popup">
+                                <span class="gallery-page__card__icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            @endforeach
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.gallery-page section-space -->
+@endif
+
 <section class="online-class section-space-bottom">
     <div class="online-class__inner">
         <div class="online-class__inner__bg" style="background-image: url({{ url('/assets/frontend/images/shapes/online-class-bg-1-1.png') }});">
@@ -749,166 +694,78 @@
     <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
 </section><!-- /.testimonials-one section-space -->
 
-<section class="blog-two section-space" id="blog">
+<section class="all-placed-student mt-5">
     <div class="container">
-        <div class="blog-two__top">
-            <div class="row gutter-y-60 align-items-center">
-                <div class="col-xl-9 col-lg-8">
-                    <div class="blog-two__content">
-                        <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                            <h6 class="sec-title__tagline">latest blog</h6><!-- /.sec-title__tagline -->
-                            <h3 class="sec-title__title"><span class="sec-title__title__shape">our latest</span> <span class="sec-title__title__text">blog news</span></h3><!-- /.sec-title__title -->
-                        </div><!-- /.sec-title -->
-                    </div><!-- /.blog-two__content -->
-                </div><!-- /.col-xl-9 col-lg-8 -->
-                <div class="col-xl-3 col-lg-4">
-                    <div class="blog-two__button">
-                        <a href="blog-grid-right.html" class="eduhive-btn">
-                            <span>view all blog</span>
-                            <span class="eduhive-btn__icon">
-                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                            </span>
-                        </a><!-- /.eduhive-btn -->
-                    </div><!-- /.blog-two__button -->
-                </div><!-- /.col-xl-3 col-lg-4 -->
-            </div><!-- /.row gutter-y-60 align-items-center -->
-        </div><!-- /.blog-two__top -->
-        <div class="row gutter-y-30">
-            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                <div class="blog-card blog-card--two">
-                    <div class="blog-card__image">
-                        <img src="{{ url('/assets/frontend/images/blog/blog-2-1.jpg') }}" alt="Questions to Ask Vendors Before Choosing an LMS Platform">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Questions
-                                to Ask Vendors Before Choosing an LMS Platform</span><!-- /.sr-only --></a>
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
+        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+            <h3 class="sec-title__title"><span>Placed </span> <span class="sec-title__title__shape">Students</span><span class="sec-title__title__text"> Story</span></h3><!-- /.sec-title__title -->
+        </div><!-- /.sec-title -->
+        <div class="row">
+            @foreach(getPlacements(6) as $placement)
+                <div class="col-md-4"> 
+                    <div class="placed-student-container my-2">
+                        <div class="placed-student-content text-white margin-20px-right">
+                            <h6 class="margin-10px-bottom"> <strong>{{$placement->name }}</strong> </h6>
+                            <p> Designation: <strong>{{ $placement->dasignation}}</strong></p>
+                            <p> Placed At: <strong>{{ $placement->placed_at}}</strong></p>
+                            <p> Joining Salary : <strong>{{ $placement->joining_salary}}</strong></p>
+                        </div>
+                        <div class="student-image">                     
+                            <img src="{{ getSizedImage($placement->featured_image) }}" alt="{{$placement->name }}" data-no-retina="">
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <a href="{{ route('page-view','all-placement-students') }}" class="eduhive-btn">
+                    <span>Explore All</span>
+                    <span class="eduhive-btn__icon">
+                        <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if($contentMain->faqs != null)
+<section class="faq-one my-5">
+    <div class="container">
+        <div class="row gutter-y-50">
+            <div class="col-lg-12">
+                <div class="faq-one__content">
+                    <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <h6 class="sec-title__tagline">faq’s</h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">We Are Always Ensure <span class="sec-title__title__text">Best <br> Course</span> For <span class="sec-title__title__shape">Your Learning</span></h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="faq-one__accordion">
+                        <div class="eduhive-accordion" data-grp-name="eduhive-accordion">
+                            @foreach(getFaqsById($contentMain->faqs) as $faq)
+                            <div class="accordion wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="accordion-title">
+                                    <h4>{{ $faq->question }}</h4>
+                                    <span class="accordion-title__icon">
+                                        <i class="icon-double-arrow"></i>
                                     </span>
-                                    Web Design
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-date"></i>
-                                    </span>
-                                    Jan 26, 2024
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">Questions to Ask Vendors Before
-                                Choosing an LMS Platform</a></h3><!-- /.blog-card__title -->
-                        <p class="blog-card__text">Consequat Quisque eget congue velit in OF cursus leo sodales IS the
-                            euismod quis sapien euismod</p><!-- /.blog-card__text -->
-                        <div class="blog-card__bottom">
-                            <div class="blog-card__author">
-                                <img src="{{ url('/assets/frontend/images/blog/blog-author-2-1.png') }}" alt="Ronald Richards" class="blog-card__author__image">
-                                <div class="blog-card__author__identity">
-                                    <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
-                                    <h5 class="blog-card__author__name">
-                                        <a href="#">Ronald Richards</a>
-                                    </h5><!-- /.author-name -->
-                                </div><!-- /.blog-card__author__identity -->
-                            </div><!-- /.blog-card__author -->
-                            <a href="blog-details-right.html" class="eduhive-btn">
-                                <span class="eduhive-btn__text">read More</span>
-                                <span class="eduhive-btn__icon">
-                                    <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
-                                </span>
-                            </a><!-- /.eduhive-btn -->
-                        </div><!-- /.blog-card__bottom -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <div class="row gutter-y-30">
-                    <div class="col-lg-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <div class="blog-card blog-card--two blog-card--right">
-                            <div class="blog-card__image">
-                                <img src="{{ url('/assets/frontend/images/blog/blog-2-2.jpg') }}" alt="Make Your Own Expanding">
-                                <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Make Your Own Expanding</span><!-- /.sr-only --></a>
-                            </div><!-- /.blog-card__image -->
-                            <div class="blog-card__content">
-                                <ul class="list-unstyled blog-card__meta">
-                                    <li>
-                                        <a href="#">
-                                            <span class="blog-card__meta__icon">
-                                                <i class="icon-comments"></i>
-                                            </span>
-                                            Data Science
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="blog-card__meta__icon">
-                                                <i class="icon-date"></i>
-                                            </span>
-                                            Feb 28, 2024
-                                        </a>
-                                    </li>
-                                </ul><!-- /.list-unstyled blog-card__meta -->
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">Make Your Own
-                                        Expanding</a></h3><!-- /.blog-card__title -->
-                                <div class="blog-card__author">
-                                    <img src="{{ url('/assets/frontend/images/blog/blog-author-2-2.png') }}" alt="Mike Hardson" class="blog-card__author__image">
-                                    <div class="blog-card__author__identity">
-                                        <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
-                                        <h5 class="blog-card__author__name">
-                                            <a href="#">Mike Hardson</a>
-                                        </h5><!-- /.author-name -->
-                                    </div><!-- /.blog-card__author__identity -->
-                                </div><!-- /.blog-card__author -->
-                            </div><!-- /.blog-card__content -->
-                        </div><!-- /.blog-card -->
-                    </div><!-- /.col-lg-12 -->
-                    <div class="col-lg-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                        <div class="blog-card blog-card--two blog-card--right">
-                            <div class="blog-card__image">
-                                <img src="{{ url('/assets/frontend/images/blog/blog-2-3.jpg') }}" alt="How to Remedy Tailbone Back">
-                                <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">How to Remedy Tailbone Back</span><!-- /.sr-only --></a>
-                            </div><!-- /.blog-card__image -->
-                            <div class="blog-card__content">
-                                <ul class="list-unstyled blog-card__meta">
-                                    <li>
-                                        <a href="#">
-                                            <span class="blog-card__meta__icon">
-                                                <i class="icon-comments"></i>
-                                            </span>
-                                            UI/UX Design
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="blog-card__meta__icon">
-                                                <i class="icon-date"></i>
-                                            </span>
-                                            Jun 20, 2024
-                                        </a>
-                                    </li>
-                                </ul><!-- /.list-unstyled blog-card__meta -->
-                                <h3 class="blog-card__title"><a href="blog-details-right.html">How to Remedy Tailbone
-                                        Back</a></h3><!-- /.blog-card__title -->
-                                <div class="blog-card__author">
-                                    <img src="{{ url('/assets/frontend/images/blog/blog-author-2-3.png') }}" alt="david cooper" class="blog-card__author__image">
-                                    <div class="blog-card__author__identity">
-                                        <p class="blog-card__author__text">By Admin</p><!-- /.author-text -->
-                                        <h5 class="blog-card__author__name">
-                                            <a href="#">david cooper</a>
-                                        </h5><!-- /.author-name -->
-                                    </div><!-- /.blog-card__author__identity -->
-                                </div><!-- /.blog-card__author -->
-                            </div><!-- /.blog-card__content -->
-                        </div><!-- /.blog-card -->
-                    </div><!-- /.col-lg-12 -->
-                </div><!-- /.row gutter-y-30 -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row gutter-y-30 -->
+                                </div><!-- /.accordion-title -->
+                                <div class="accordion-content">
+                                    <div class="inner">
+                                        {!! $faq->answer !!}
+                                    </div><!-- /.inner -->
+                                </div><!-- /.accordion-content -->
+                            </div>
+                            @endforeach
+                        </div><!-- /.faq-accordion -->
+                    </div><!-- /.faq-one__accordion -->
+                </div><!-- /.faq-one__content -->
+            </div>
+        </div><!-- /.row gutter-y-50 -->
     </div><!-- /.container -->
-</section><!-- /.blog-two section-space -->
+    <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-1.png')}}" alt="shape" class="faq-one__shape-one">
+    <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-4.png')}}" alt="shape" class="faq-one__shape-two">
+</section><!-- /.faq-one section-space -->
+@endif
 @endsection
 @section('script')
 <!-- ============================================================== -->

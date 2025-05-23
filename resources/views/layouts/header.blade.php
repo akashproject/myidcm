@@ -90,7 +90,7 @@
 							<span></span>
 							<span></span>
 						</div><!-- /.mobile-nav__toggler -->
-						<a href="contact.html" class="main-header__btn eduhive-btn eduhive-btn--border">
+						<a href="#lead-generate-popup" class="main-header__btn eduhive-btn eduhive-btn--border open-popup-link">
 							<span>Apply now</span>
 							<span class="eduhive-btn__icon">
 								<span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>

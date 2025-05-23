@@ -6,11 +6,11 @@
         "margin": 0,
         "animateIn": "fadeIn",
         "animateOut": "fadeOut",
-        "loop": true,
-        "smartSpeed": 1000,
+        "loop": false,
+        "smartSpeed": 100000,
         "nav": false,
         "dots": false,
-        "autoplay": true,
+        "autoplay": false,
         "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"]
     }'>
         <div class="main-slider-one__item">
@@ -27,6 +27,15 @@
                             <div class="main-slider-one__description">
                                 <p class="main-slider-one__text">There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have Suffered Alteration In Some.</p><!-- /.text -->
                             </div><!-- /.description -->
+                            <h6> Our Partners </h6>
+                            <div class="partner-certification">
+                                <a href="javascript:void(0);"> 
+                                    <img src="https://dummyimage.com/150x100" >
+                                </a>
+                                <a href="javascript:void(0);"> 
+                                    <img src="https://dummyimage.com/150x100" >
+                                </a>
+                            </div>
                             <div class="main-slider-one__button">
                                 <a href="courses.html" class="main-slider-one__btn-1 eduhive-btn">
                                     <span>find course</span>
@@ -84,77 +93,7 @@
             <div class="main-slider-one__shape-three"></div><!-- /.main-slider-one__shape-three -->
             <img src="assets/frontend/images/shapes/main-slider-shape-1-2.png" alt="shape" class="main-slider-one__shape-four slider-image">
         </div><!-- /.main-slider-one__item -->
-        <div class="main-slider-one__item">
-            <div class="container">
-                <div class="row gutter-y-60 align-items-center">
-                    <div class="main-slider-one__col-content">
-                        <div class="main-slider-one__content">
-                            <img src="assets/frontend/images/shapes/main-slider-shape-1-1.png" alt="shape" class="main-slider-one__content__shape slider-image">
-                            <p class="main-slider-one__sub-title">The Pathway to Education</p><!-- /.sub-title -->
-                            <h2 class="main-slider-one__title">
-                                Learn <span class="main-slider-one__title__shape">New Skills</span> To Go <br>
-                                Ahead For Your <span class="main-slider-one__title__text">Career</span>
-                            </h2><!-- /.title -->
-                            <div class="main-slider-one__description">
-                                <p class="main-slider-one__text">Who's Responsible For The Ask For This Request? My Supervisor Didn't Like The Latest Revision You Gave Me Can You Switch Back.</p><!-- /.text -->
-                            </div><!-- /.description -->
-                            <div class="main-slider-one__button">
-                                <a href="courses.html" class="main-slider-one__btn-1 eduhive-btn">
-                                    <span>find course</span>
-                                    <span class="eduhive-btn__icon">
-                                        <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                    </span>
-                                </a><!-- /.eduhive-btn -->
-                                <a href="about.html" class="main-slider-one__btn-2 eduhive-btn eduhive-btn--border">
-                                    <span>About us</span>
-                                    <span class="eduhive-btn__icon">
-                                        <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                    </span>
-                                </a><!-- /.eduhive-btn -->
-                            </div><!-- /.button -->
-                        </div><!-- /.main-slider-one__content -->
-                    </div><!-- /.main-slider-one__col-content -->
-                    <div class="main-slider-one__col-image">
-                        <div class="main-slider-one__image">
-                            <div class="main-slider-one__image__left">
-                                <div class="main-slider-one__image__one">
-                                    <div class="main-slider-one__image__one__inner">
-                                        <img src="assets/frontend/images/main-slider/main-slider-1-4.webp" alt="slider image" class="slider-image">
-                                    </div><!-- /.main-slider-one__image__one__inner -->
-                                    <div class="total-student">
-                                        <div class="total-student__inner">
-                                            <div class="total-student__image">
-                                                <img src="assets/frontend/images/main-slider/main-slider-student-1-1.png" alt="student" class="slider-image">
-                                                <img src="assets/frontend/images/main-slider/main-slider-student-1-2.png" alt="student" class="slider-image">
-                                            </div><!-- /.total-student__image -->
-                                            <h4 class="total-student__text count-box">
-                                                <span class="count-text" data-stop="200" data-speed="1500">0</span><span>k+ <br> Students</span>
-                                            </h4><!-- /.total-student__text -->
-                                        </div><!-- /.total-student__inner -->
-                                    </div><!-- /.total-student -->
-                                </div><!-- /.main-slider-one__image__one -->
-                            </div><!-- /.main-slider-one__image__left -->
-                            <div class="main-slider-one__image__right">
-                                <div class="main-slider-one__image__two">
-                                    <img src="assets/frontend/images/main-slider/main-slider-1-5.webp" alt="slider image" class="slider-image">
-                                </div><!-- /.main-slider-one__image__two -->
-                                <div class="main-slider-one__image__three">
-                                    <img src="assets/frontend/images/main-slider/main-slider-1-6.jpg" alt="slider image" class="slider-image">
-                                </div><!-- /.main-slider-one__image__three -->
-                            </div><!-- /.main-slider-one__image__right -->
-                            <img src="assets/frontend/images/shapes/main-slider-shape-1-3.png" alt="shape" class="main-slider-one__image__shape-one slider-image">
-                            <img src="assets/frontend/images/shapes/main-slider-shape-1-4.png" alt="shape" class="main-slider-one__image__shape-two slider-image">
-                            <img src="assets/frontend/images/shapes/main-slider-shape-1-5.png" alt="shape" class="main-slider-one__image__shape-three slider-image">
-                            <div class="main-slider-one__image__shape-four"></div><!-- /.main-slider-one__image__shape -->
-                        </div><!-- /.main-slider-one__image -->
-                    </div><!-- /.main-slider-one__col-image -->
-                </div><!-- /.row gutter-y-60 -->
-            </div><!-- /.container -->
-            <div class="main-slider-one__shape-one"></div><!-- /.main-slider-one__shape-one -->
-            <div class="main-slider-one__shape-two"></div><!-- /.main-slider-one__shape-two -->
-            <div class="main-slider-one__shape-three"></div><!-- /.main-slider-one__shape-three -->
-            <img src="assets/frontend/images/shapes/main-slider-shape-1-2.png" alt="shape" class="main-slider-one__shape-four slider-image">
-        </div><!-- /.main-slider-one__item -->
+    
     </div><!-- /.main-slider-one__carousel -->
 </section><!-- /.main-slider-one -->
 
@@ -450,8 +389,8 @@
                 </div><!-- /.sec-title -->
             </div>
             <div class="col-md-8">
-                <ul class="recruiters">
-                    @foreach(getRecruiters() as $recruiter)
+                <ul class="recruiters ">
+                    @foreach(getRecruiters() as $key => $recruiter)
                     <div class="placement-redious-grid">
                         <a href="javascript:void(0)" class="placement-grid-img">
                             <img src="{{ getSizedImage($recruiter->featured_image) }}" alt="" class="width-100">

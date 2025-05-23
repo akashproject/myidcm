@@ -98,6 +98,10 @@ Route::get('/{slug}', [App\Http\Controllers\PageController::class, 'index'])->na
 Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'view'])->name('view-courses');
 Route::get('/institute/{slug}', [App\Http\Controllers\InstituteController::class, 'view'])->name('view-institute');
 
+Route::post('/submit-mobile-otp', [App\Http\Controllers\IndexController::class, 'submitMobileOtp'])->name('submit-mobile-otp');
+Route::post('/capture-lead', [App\Http\Controllers\IndexController::class, 'captureLead'])->name('insert-lead-records');
+Route::post('/save-contact', [App\Http\Controllers\IndexController::class, 'saveContact'])->name('save-contact');
+
 
 Route::get('/api/primary-menu', [App\Http\Controllers\ApiController::class, 'primaryMenu'])->name('api-primary-menu');
 Route::get('/api/footer-menu', [App\Http\Controllers\ApiController::class, 'footerMenu'])->name('api-footer-menu');

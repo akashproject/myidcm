@@ -111,6 +111,19 @@
   --section-space2: 116px;
 }
 
+@keyframes moveRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
+.move-to-right {
+  position: absolute;
+  animation: moveRight 3s linear infinite;
+}
 /*--------------------------------------------------------------
 # Utility
 --------------------------------------------------------------*/
@@ -3910,7 +3923,7 @@ a:hover .instructor-card-two__social__icon {
 --------------------------------------------------------------*/
 .topbar {
   display: none;
-  background-color: var(--eduhive-black, #20104B);
+  background-color: #1ca298;
 }
 @media (min-width: 768px) {
   .topbar {
@@ -7272,10 +7285,18 @@ li:hover .contact-page__info__icon__inner {
 }
 .main-slider-two__item {
   position: relative;
-  padding-top: 211px;
+  padding-top: 150px;
   padding-bottom: 113px;
   background-color: var(--eduhive-white2, #EDEAF4);
 }
+.partner-certification {
+  display: inline-flex;
+}
+
+.partner-certification a {
+  padding: 5px;
+}
+
 @media (max-width: 1199px) {
   .main-slider-two__item {
     padding-top: 250px;
@@ -16355,7 +16376,7 @@ li:hover .sidebar__comments__icon {
   border-radius: 20px;
   height: 180px;
   border: 1px solid;
-  background: linear-gradient(to right, #9da4ef 0%, #ffc2c2 61%, #fbfbfb 100%);
+  background: linear-gradient(to right, #a2e9e4 0%, #fbfbfb 61%, #fbfbfb 100%)
 }
 
 .placed-student-content {
@@ -16370,6 +16391,7 @@ li:hover .sidebar__comments__icon {
     font-size: 13px;
     color: #201046;
 }
+
 
 /*--------------------------------------------------------------
 # Boxed Home
@@ -16496,3 +16518,74 @@ body.boxed-wrapper .main-footer__shape-five {
   }
 }
 /*# sourceMappingURL=eduhive.css.map */
+
+/* Blog Css */
+.blog-card__content .block {
+    width: 100%!important; 
+    overflow-x: auto!important;
+    background: #f2f2f2!important; 
+    border: 1px dashed #3E4095!important; 
+    padding: 1%!important; 
+    margin: 3% 0!important;
+}
+.blog-card__content .block a {
+    font-weight: normal!important;
+}
+.blog-card__content .blockquote {
+    padding: 15px 30px!important;
+    background-color: #d3e0ff!important;
+    margin: 10px 0!important;
+    font-size: 16px!important;
+    color: #008000!important;
+    font-weight: bold!important;
+    border: 2px dashed #008000!important;
+}
+.blog-card__content table {
+    width: 100%!important; 
+    overflow-x: auto!important;
+    background: #f2f2f2!important; 
+    margin: 0!important;
+    padding: 0!important;
+}
+.blog-card__content table td {
+    padding-left: 10px!important;
+}
+.blog-card__content table th {
+    background: #3E4095!important;
+    color: #fff!important;
+    font-weight: bold!important;
+    border-left: 1px solid #fff!important;
+    border-right: 1px solid #fff!important;
+}
+.blog-card__content .disclaimer {
+    padding: 10px!important;
+    background: #eee;
+    margin: 15px 0!important;
+    font-size: 14px!important;
+    color: #000000!important;
+    border: 1px dashed #393185!important;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 0;
+  width: auto;
+  max-width: 920px;
+  margin: 20px auto;
+  transition: 1s all;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.leadModelHeader {
+    padding: 20px;
+}
+.leadModelBody {
+    padding: 30px;
+}
+.lead_steps {
+    display: none;
+}
+.lead_steps.active {
+    display: block;
+}

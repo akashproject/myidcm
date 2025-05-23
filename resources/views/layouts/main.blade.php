@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/fontawesome/css/all.min.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/jquery-ui/jquery-ui.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/jarallax/jarallax.css')}}" />
-    <link rel="stylesheet" href="{{ url('assets/frontend/vendors/jquery-magnific-popup/jquery.magnific-popup.css')}}" />
+    <link rel="stylesheet" href="{{ url('assets/frontend/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/nouislider/nouislider.min.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/nouislider/nouislider.pips.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/tiny-slider/tiny-slider.css')}}" />
@@ -78,7 +78,9 @@
             @include('layouts.header')
             @yield('content')
             @include('layouts.footer')
-    
+            <div id="lead-generate-popup" class="white-popup mfp-hide">
+                @include('common.leadCaptureForm')
+            </div>
             <script>
                 let globalUrl = "{{ env("APP_URL") }}"
                 let isEnableOtp = {{ (get_theme_setting('enable_otp') == "1")?get_theme_setting('enable_otp'):$contentMain->enable_otp }}
@@ -93,7 +95,7 @@
             <script src="{{ url('/assets/frontend/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-appear/jquery.appear.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-circle-progress/jquery.circle-progress.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+            <script src="{{ url('assets/frontend/js/jquery.magnific-popup.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/nouislider/nouislider.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/tiny-slider/tiny-slider.js') }}"></script>

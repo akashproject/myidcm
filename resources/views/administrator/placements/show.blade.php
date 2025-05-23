@@ -6,7 +6,6 @@
 		<form class="form-horizontal" method="post" action="{{ url('administrator/save-placement') }}" enctype="multipart/form-data">
 			@csrf
 			<div class="card-body">
-				<h4 class="card-title"> Add Placement </h4>
 				@if ($errors->any())
 					<div class="alert alert-danger">
 						<ul>
@@ -43,17 +42,7 @@
 								<input type="text" class="form-control" name="placed_at" id="placed_at" placeholder="Enter Name Here" value="{{ $placement->placed_at }}" >
 							</div>
 						</div>	
-						<div class="form-group row mb-2">
-							<label for="state" class="col-sm-3 text-right control-label col-form-label"> University Enrolled </label>
-							<div class="col-sm-9">
-								<select name="university_id" id="university_id" class="select2 form-control custom-select" style="width: 100%; height:36px;">	
-									<option value="">Select University</option>
-									@foreach ($universities as $value)
-									<option value="{{ $value->id }}"  {{ ( $placement->university_id ==  $value->id )? 'selected' : '' }}> {{ $value->name }} </option>
-									@endforeach
-								</select>
-							</div>
-						</div>	
+						
 						<div class="form-group row mb-2">
 							<label for="state" class="col-sm-3 text-right control-label col-form-label"> Course Enrolled</label>
 							<div class="col-sm-9">

@@ -27,8 +27,8 @@ class PlacementController extends Controller
         try {
             $courses = Course::all();
             $recruiters = Recruiter::all();
-            $centers = Institute::all();
-            return view('administrator.placements.add',compact('centers','courses','recruiters'));
+            $institutes = Institute::all();
+            return view('administrator.placements.add',compact('institutes','courses','recruiters'));
         } catch(\Illuminate\Database\QueryException $e){
             //throw $th;
         }

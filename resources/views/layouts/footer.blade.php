@@ -5,7 +5,7 @@
                 <div class="footer-widget footer-widget--about">
                     <div class="mb-3">
                         <a href="index.html" class="main-footer__logo">
-                            <img src="{{ url('/assets/logo/logo.png') }}" width="209" alt="Eduhive HTML Template">
+                            <img src="{{ url('assets/logo/logo.gif') }}" width="209" alt="Eduhive HTML Template">
                         </a><!-- /.main-footer__logo -->
                     </div>
                     
@@ -165,17 +165,6 @@
         </div><!-- /.mobile-nav__social -->
     </div><!-- /.mobile-nav__content -->
 </div><!-- /.mobile-nav__wrapper -->
-<div class="search-popup">
-    <div class="search-popup__overlay search-toggler"></div>
-    <!-- /.search-popup__overlay -->
-    <div class="search-popup__content">
-        <form role="search" method="get" class="search-popup__form" action="#">
-            <input type="text" id="search" placeholder="Search Here..." />
-            <button type="submit" aria-label="search submit" class="eduhive-btn">
-                <i class="icon-search"></i>
-            </button>
-        </form>
-    </div>
-    <!-- /.search-popup__content -->
-</div>
+
+
 <!-- /.search-popup -->
