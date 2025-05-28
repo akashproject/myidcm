@@ -277,7 +277,7 @@ if (! function_exists('getRecruters')) {
 
 if (! function_exists('getPlacements')) {
     function getPlacements($limit = 1000){
-        $placements = DB::table('placements')->limit($limit)->get();
+        $placements = DB::table('placements')->limit($limit)->inRandomOrder()->get();
         return $placements;
     }
 }

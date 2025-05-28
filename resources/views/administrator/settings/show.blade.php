@@ -24,8 +24,8 @@
 							class="nav-link active"
 							role="tab"
 							data-bs-toggle="tab"
-							data-bs-target="#navs-pills-justified-home"
-							aria-controls="navs-pills-justified-home"
+							data-bs-target="#navs-pills-general"
+							aria-controls="navs-pills-general"
 							aria-selected="true"
 						>
 							<i class="tf-icons bx bx-home"></i> General Settings
@@ -37,8 +37,8 @@
 							class="nav-link"
 							role="tab"
 							data-bs-toggle="tab"
-							data-bs-target="#navs-pills-justified-profile"
-							aria-controls="navs-pills-justified-profile"
+							data-bs-target="#navs-pills-contact"
+							aria-controls="navs-pills-contact"
 							aria-selected="false"
 						>
 							<i class="tf-icons bx bx-user"></i> Contact Settings
@@ -50,16 +50,29 @@
 							class="nav-link"
 							role="tab"
 							data-bs-toggle="tab"
-							data-bs-target="#navs-pills-justified-messages"
-							aria-controls="navs-pills-justified-messages"
+							data-bs-target="#navs-pills-social"
+							aria-controls="navs-pills-social"
 							aria-selected="false"
 						>
 							<i class="tf-icons bx bx-message-square"></i> Social Settings
 						</button>
 					</li>
+					<li class="nav-item">
+						<button
+							type="button"
+							class="nav-link"
+							role="tab"
+							data-bs-toggle="tab"
+							data-bs-target="#navs-pills-seo"
+							aria-controls="navs-pills-seo"
+							aria-selected="false"
+						>
+							<i class="tf-icons bx bx-message"></i> SEO Settings
+						</button>
+					</li>
 				</ul>
 				<div class="tab-content">
-					<div class="tab-pane fade show active" id="navs-pills-justified-home" role="tabpanel">
+					<div class="tab-pane fade show active" id="navs-pills-general" role="tabpanel">
 						<!-- Account -->
 						<div class="card-body">
 							<div class="d-flex align-items-start align-items-sm-center gap-4">
@@ -198,7 +211,7 @@
 						</div>
 						<!-- /Account -->
 					</div>
-					<div class="tab-pane fade" id="navs-pills-justified-profile" role="tabpanel">
+					<div class="tab-pane fade" id="navs-pills-contact" role="tabpanel">
 						<h5 class="card-header">Contact Information</h5>
 						<div class="card-body">
 							<div class="row">
@@ -259,7 +272,7 @@
 							</div>
 						</div>
                     </div>
-					<div class="tab-pane fade" id="navs-pills-justified-messages" role="tabpanel">
+					<div class="tab-pane fade" id="navs-pills-social" role="tabpanel">
 						<div class="card-body">
 							<div class="row">
 								<div class="mb-3 col-md-6">
@@ -297,6 +310,47 @@
 										name="youtube" id="youtube" placeholder="Enter YouTube Link Here" value="{{ (isset($settings['youtube']))?$settings['youtube']:'' }}"
 										autofocus
 									/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="navs-pills-seo" role="tabpanel">
+						<div class="card-body">
+							<div class="row">
+								<div class="mb-3 col-md-6">
+									<label for="firstName" class="form-label">UTM Campaign</label>
+									<input
+										class="form-control"
+										type="text"
+										name="utm_campaign" id="utm_campaign" placeholder="Enter UTM Campaign Here" value="{{ (isset($settings['utm_campaign']))?$settings['utm_campaign']:'' }}" 
+										autofocus
+									/>
+								</div>		
+								<div class="mb-3 col-md-6">
+									<label for="firstName" class="form-label">UTM Source</label>
+									<input
+										class="form-control"
+										type="text"
+										name="utm_source" id="utm_source" placeholder="Enter UTM Source Here" value="{{ (isset($settings['utm_source']))?$settings['utm_source']:'' }}"
+										autofocus
+									/>
+								</div>		
+								<div class="mb-3 col-md-6">
+									<label for="firstName" class="form-label">Communication Medium</label>
+									<input
+										class="form-control"
+										type="text"
+										name="lead_type" id="lead_type" placeholder="Enter Communication Medium Here" value="{{ (isset($settings['lead_type']))?$settings['lead_type']:'' }}"
+										autofocus
+									/>
+								</div>	
+								<div class="mb-3 col-md-6">
+									<label for="firstName" class="form-label">Schema</label>
+									<textarea
+										class="form-control"
+										name="schema" id="schema" placeholder="Enter Schema Here"
+										autofocus
+									>{{ (isset($settings['schema']))?$settings['schema']:'' }}</textarea>
 								</div>
 							</div>
 						</div>

@@ -215,7 +215,7 @@
                                 </div><!-- /.product-ratings -->
                                 <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
                             </div><!-- /.course-card__ratings -->
-                            <a href="data-science.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                            <a href="#lead-generate-popup" class="course-card__btn eduhive-btn eduhive-btn--border open-popup-link">
                                 <span>enroll now</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
@@ -364,7 +364,7 @@
                     </div>
                    
                     <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <a href="about.html" class="eduhive-btn">
+                        <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
                             <span>Register Now</span>
                             <span class="eduhive-btn__icon">
                                 <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
@@ -954,7 +954,7 @@
         <div class="cta-one__content wow fadeInUp" data-wow-duration="1500ms">
             <h2 class="cta-one__title">Get Your Quality Skills Certificate <br>
                 Through Eduhive</h2><!-- /.cta-one__title -->
-            <a href="contact.html" class="eduhive-btn">
+            <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
                 <span>get started now</span>
                 <span class="eduhive-btn__icon">
                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>

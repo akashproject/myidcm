@@ -109,6 +109,7 @@
             <script src="{{ url('/assets/frontend/vendors/countdown/countdown.min.js') }}"></script>
             <script src="{{ url('assets/frontend/vendors/jquery-circleType/jquery.circleType.js')}}"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js')}}"></script>
+            <script src="https://cdn.jsdelivr.net/gh/HichemTab-tech/OTP-designer-jquery@2.0.1/dist/otpdesigner.min.js"></script>
             <!-- template js -->
             <script src="{{ url('/assets/frontend/js/eduhive.js')}}"></script>
         </div>

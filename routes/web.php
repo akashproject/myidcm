@@ -99,7 +99,8 @@ Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'vi
 Route::get('/institute/{slug}', [App\Http\Controllers\InstituteController::class, 'view'])->name('view-institute');
 
 Route::post('/submit-mobile-otp', [App\Http\Controllers\IndexController::class, 'submitMobileOtp'])->name('submit-mobile-otp');
-Route::post('/capture-lead', [App\Http\Controllers\IndexController::class, 'captureLead'])->name('insert-lead-records');
+Route::post('/insert-lead-records', [App\Http\Controllers\IndexController::class, 'insertLeadRecord'])->name('insert-lead-records');
+Route::post('/capture-lead', [App\Http\Controllers\IndexController::class, 'captureLead'])->name('capture-lead');
 Route::post('/save-contact', [App\Http\Controllers\IndexController::class, 'saveContact'])->name('save-contact');
 
 

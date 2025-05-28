@@ -189,7 +189,7 @@
                                     </div><!-- /.course-details__info__text -->
                                 </li>
                             </ul><!-- /.course-details__info__list -->
-                            <a href="contact.html" class="course-details__info__btn eduhive-btn">
+                            <a href="#lead-generate-popup" class="course-details__info__btn eduhive-btn open-popup-link">
                                 <span class="eduhive-btn__text">Join This course</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
@@ -268,7 +268,7 @@
                                     </div><!-- /.about-three__description -->
                                     
                                     <div class="about-three__bottom wow fadeInUp animated" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInUp;">
-                                        <a href="about.html" class="eduhive-btn">
+                                        <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
                                             <span>Register Now</span>
                                             <span class="eduhive-btn__icon">
                                                 <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
@@ -574,7 +574,7 @@
                                 </div><!-- /.product-ratings -->
                                 <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
                             </div><!-- /.course-card__ratings -->
-                            <a href="data-science.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                            <a href="#lead-generate-popup" class="course-card__btn eduhive-btn eduhive-btn--border open-popup-link">
                                 <span>enroll now</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>

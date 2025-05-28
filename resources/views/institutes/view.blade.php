@@ -507,8 +507,8 @@
         <div class="gallery-page__filter">
             <ul class="list-unstyled post-filter gallery-page__filter__list">
                 <li class="eduhive-btn active" data-filter=".filter-item"><span>all</span></li>
-                @foreach($galleryImggalleryImg as $key => $gallery)
-                <li class="eduhive-btn" data-filter=".{{ $key }}"><span>{{ $gallery->name }}</span></li>
+                @foreach($galleryImg as $key => $gallery)
+                <li class="eduhive-btn" data-filter=".{{ $key }}"><span>{{ $gallery['name'] }}</span></li>
                 @endforeach
                 
             </ul><!-- /.list-unstyledf -->

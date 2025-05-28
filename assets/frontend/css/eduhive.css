@@ -1398,6 +1398,10 @@ a.placement-grid-img {
   height: auto;
   border-radius: 20px;
 }
+.td_fs_14 {
+    font-size: 14px;
+    line-height: 1.3em;
+}
 @media (max-width: 991px) {
   .video-one img {
     left: 30px;
@@ -5128,11 +5132,15 @@ body.megamenu-popup-active .mobile-nav__content {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.headerLogo {
+    width: 30%;
+}
 .form-one__group {
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 30px;
+}
+.form-one__group h3 {
+    font-size: 24px;
+    font-weight: 800;
 }
 @media (min-width: 576px) {
   .form-one__group {
@@ -5151,6 +5159,7 @@ body.megamenu-popup-active .mobile-nav__content {
   border-radius: 0;
   padding: 0;
   position: relative;
+  margin: 10px 0;
 }
 .form-one__control__icon {
   position: absolute;
@@ -5244,16 +5253,19 @@ body.megamenu-popup-active .mobile-nav__content {
 .form-one label {
   margin-bottom: 11px;
   font-family: var(--eduhive-font, "Plus Jakarta Sans", sans-serif);
-  font-size: 16px;
+  font-size: 13px;
   color: var(--eduhive-black, #20104B);
   font-weight: 500;
   line-height: 1.88;
 }
+.form-one label.error {
+    margin-bottom: 0;
+    color: #ff0000;
+}
 .form-one input[type=text],
 .form-one input[type=email],
 .form-one input[type=password],
-.form-one input[type=tel],
-.form-one textarea {
+.form-one input[type=tel] {
   display: block;
   width: 100%;
   font-family: var(--eduhive-font, "Plus Jakarta Sans", sans-serif);
@@ -5263,8 +5275,7 @@ body.megamenu-popup-active .mobile-nav__content {
   border: none;
   outline: none;
   padding: 0 20px;
-  height: 61px;
-  background-color: var(--eduhive-white2, #EDEAF4);
+  height: 47px;
   border: 1px solid transparent;
   border-radius: 10px;
   transition: all 400ms ease;
@@ -5272,14 +5283,9 @@ body.megamenu-popup-active .mobile-nav__content {
 .form-one input[type=text]:focus,
 .form-one input[type=email]:focus,
 .form-one input[type=password]:focus,
-.form-one input[type=tel]:focus,
-.form-one textarea:focus {
+.form-one input[type=tel]:focus {
   color: var(--eduhive-black, #20104B);
   border-color: var(--eduhive-base, #674CEF);
-}
-.form-one textarea {
-  height: 143px;
-  padding: 20px 20px 0;
 }
 
 /*--------------------------------------------------------------
@@ -6259,7 +6265,7 @@ li:hover .contact-page__info__icon__inner {
 }
 .contact-page__form {
   position: relative;
-  padding: 30px 30px 96px;
+  padding: 20px 20px 0;
   background-color: var(--eduhive-white, #FFFFFF);
   box-shadow: 0px 4px 60px rgba(103, 76, 239, 0.1);
   border-radius: 20px;
@@ -6301,55 +6307,43 @@ li:hover .contact-page__info__icon__inner {
     max-width: 200px;
   }
 }
-.contact-page .form-one__group {
+.form-one__group {
   position: relative;
   grid-gap: 20px;
   z-index: 1;
 }
-.contact-page .form-one input[type=text],
-.contact-page .form-one input[type=email],
-.contact-page .form-one input[type=password],
-.contact-page .form-one input[type=tel],
-.contact-page .form-one textarea {
-  height: 60px;
+.form-one input[type=text],
+.form-one input[type=email],
+.form-one input[type=password],
+.form-one input[type=tel]{
+  height: 47px;
   padding-left: 26px;
   padding-inline-end: 26px;
   border-radius: 6px;
   border-color: var(--eduhive-border-color, #DBD8E6);
 }
-.contact-page .form-one input[type=text]:focus,
-.contact-page .form-one input[type=email]:focus,
-.contact-page .form-one input[type=password]:focus,
-.contact-page .form-one input[type=tel]:focus,
-.contact-page .form-one textarea:focus {
+.form-one input[type=text]:focus,
+.form-one input[type=email]:focus,
+.form-one input[type=password]:focus,
+.form-one input[type=tel]:focus{
   border-color: var(--eduhive-base, #674CEF);
 }
 @media (max-width: 430px) {
-  .contact-page .form-one input[type=text],
-  .contact-page .form-one input[type=email],
-  .contact-page .form-one input[type=password],
-  .contact-page .form-one input[type=tel],
-  .contact-page .form-one textarea {
+  .form-one input[type=text],
+  .form-one input[type=email],
+  .form-one input[type=password],
+  .form-one input[type=tel]{
     padding-left: 20px;
     padding-right: 20px;
   }
 }
-.contact-page .form-one textarea {
-  height: 132px;
-  padding: 26px 26px 0;
-}
-@media (max-width: 430px) {
-  .contact-page .form-one textarea {
-    padding: 20px 20px 0;
-  }
-}
-.contact-page .form-one .eduhive-btn {
+.form-one .eduhive-btn {
   padding: 11.5px 16px;
   font-size: 15px;
   gap: 10px;
   border-radius: 100px;
 }
-.contact-page .form-one .eduhive-btn__icon {
+.form-one .eduhive-btn__icon {
   display: inline-flex;
   width: auto;
   height: auto;
@@ -6359,15 +6353,17 @@ li:hover .contact-page__info__icon__inner {
   border-radius: 0;
   transition: all 500ms ease;
 }
-.contact-page .form-one .eduhive-btn__icon svg {
+.form-one .eduhive-btn__icon svg {
   width: 1em;
   height: 1em;
   fill: currentColor;
 }
-.contact-page .form-one .eduhive-btn:hover .eduhive-btn__icon {
+.form-one .eduhive-btn:hover .eduhive-btn__icon {
   transform: rotate(45deg);
 }
-
+.realInput {
+  border: none;
+}
 /*--------------------------------------------------------------
 # Animations
 --------------------------------------------------------------*/
@@ -9659,6 +9655,9 @@ li:hover .contact-page__info__icon__inner {
   .course-details__accordion__class__duration {
     margin: 0;
   }
+}
+.justified-content-center {
+  justify-content: center;
 }
 .course-details__accordion__class__check {
   display: inline-flex;
@@ -16581,11 +16580,25 @@ body.boxed-wrapper .main-footer__shape-five {
     padding: 20px;
 }
 .leadModelBody {
-    padding: 30px;
+    padding: 0 10px 30px 10px
 }
 .lead_steps {
     display: none;
 }
 .lead_steps.active {
     display: block;
+}
+.modelSideBanner {
+  /* background: url('https://www.skillvarsity.in/assets/frontend/img/modelBanner.png'); */
+  height: 81vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+div#otp_target {
+    display: flex;
+}
+.otp-content .message {
+    font-size: 13px;
 }
