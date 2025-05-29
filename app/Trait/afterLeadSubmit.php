@@ -136,5 +136,46 @@ trait afterLeadSubmit
         }
     }
 
-    
+    public function sendEmailBrochureByBrevo($postData)
+    {
+        try {
+
+            $apiData = [
+                "sender" => [
+                    "name" => "IDCM- Institute of Digital & Content Marketing",
+                    "email" => "info@myidcm.com",
+                ],
+                "replyTo" => [
+                    "name" => "IDCM- Institute of Digital & Content Marketing",
+                    "email" => "no-reply@myidcm.com",
+                ],
+                "params" => [
+                    "FIRSTNAME" => $postData["first_name"],
+                ],
+                "to" => [["email" => $postData["lead_email"], "name" => $postData["first_name"]]],
+                "cc" => [["email" => "proloy@icagroup.in", "name" => "Proloy Ghosh"]],
+                "templateId" => 168,
+            ];
+
+            $url = "https://api.brevo.com/v3/smtp/email";
+            $curl = curl_init();
+            $data = json_encode($apiData);
+            $curl = curl_init($url);
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_POST, true);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            $resp = curl_exec($curl);
+            curl_close($curl);
+               
+            return true;
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+
+            var_dump($e);
+        }
+    }
 }
