@@ -20,7 +20,7 @@ class AdPageController extends Controller
             return view('administrator.adPages.index',compact('adPages'));
 
         } catch(\Illuminate\Database\QueryException $e){
-            //throw $th;
+            var_dump($e->getMessage());
         }        
     }
 

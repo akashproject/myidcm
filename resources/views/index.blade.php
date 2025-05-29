@@ -74,10 +74,10 @@
                             </div><!-- /.main-slider-one__image__left -->
                             <div class="main-slider-one__image__right">
                                 <div class="main-slider-one__image__two">
-                                    <img src="assets/frontend/images/main-slider/main-slider-1-2.jpg" alt="slider image" class="slider-image">
+                                    <img src="assets/frontend/images/main-slider/main-slider-1-2.png" alt="slider image" class="slider-image">
                                 </div><!-- /.main-slider-one__image__two -->
                                 <div class="main-slider-one__image__three">
-                                    <img src="assets/frontend/images/main-slider/main-slider-1-3.jpg" alt="slider image" class="slider-image">
+                                    <img src="assets/frontend/images/main-slider/main-slider-1-3.png" alt="slider image" class="slider-image">
                                 </div><!-- /.main-slider-one__image__three -->
                             </div><!-- /.main-slider-one__image__right -->
                             <img src="assets/frontend/images/shapes/main-slider-shape-1-3.png" alt="shape" class="main-slider-one__image__shape-one slider-image">
@@ -323,7 +323,7 @@
             <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
                 <div class="about-one__image">
                     <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="video-one__bg course-video" style="background-image: url(https://dummyimage.com/600x400);">
+                        <div class="video-one__bg course-video" style="background-image: url(assets/frontend/images/courses/featured-course.jpg);">
                             <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-one__video-btn video-btn video-popup">
                                 <i class="icon-play"></i>
                                 <span></span>
@@ -463,7 +463,7 @@
                 <div class="faq-one__image">
                     <div class="faq-one__image__one">
                         <div class="faq-one__image__one__inner">
-                            <img src="assets/frontend/images/faq/faq-1-1.jpg" alt="faq">
+                            <img src="assets/frontend/images/faq/faq-1-1.png" alt="faq">
                         </div><!-- /.faq-one__image__one__inner -->
                         <img src="assets/frontend/images/shapes/faq-shape-1-2.png" alt="shape" class="faq-one__image__shape-one">
                         <img src="assets/frontend/images/shapes/faq-shape-1-3.png" alt="shape" class="faq-one__image__shape-two">
@@ -471,7 +471,7 @@
                         <div class="faq-one__image__shape-box"></div><!-- /.faq-one__image__shape-box -->
                     </div><!-- /.faq-one__image__one -->
                     <div class="faq-one__image__two">
-                        <img src="assets/frontend/images/faq/faq-1-2.jpg" alt="faq">
+                        <img src="assets/frontend/images/faq/faq-1-2.png" alt="faq">
                     </div><!-- /.faq-one__image__two -->
                 </div><!-- /.faq-one__image -->
             </div><!-- /.col-lg-6 -->

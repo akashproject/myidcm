@@ -506,7 +506,6 @@
         </div><!-- /.sec-title -->
         <div class="gallery-page__filter">
             <ul class="list-unstyled post-filter gallery-page__filter__list">
-                <li class="eduhive-btn active" data-filter=".filter-item"><span>all</span></li>
                 @foreach($galleryImg as $key => $gallery)
                 <li class="eduhive-btn" data-filter=".{{ $key }}"><span>{{ $gallery['name'] }}</span></li>
                 @endforeach
@@ -515,8 +514,8 @@
         </div><!-- /.gallery-page__filter -->
         <div class="row masonry-layout filter-layout">
             @foreach($galleryImg as $key => $gallery)
-                @foreach($gallery['images'] as $key => $img)
-                <div class="col-lg-3 col-md-6 filter-item computer-science sale-marketing data-science">
+                @foreach($gallery['images'] as $img)
+                <div class="col-lg-3 col-md-6 filter-item {{ $key }}">
                     <div class="gallery-page__card">
                         <img src="{{url('/public/gallery/'.$img)}}" alt="">
                         <div class="gallery-page__card__hover">

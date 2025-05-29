@@ -19,8 +19,8 @@ class CourseController extends Controller
     {
         try {
 
-            $contentMain = Course::where('slug', $slug)->first();
-            
+            $contentMain = Course::whereRaw("`slug` COLLATE utf8mb4_bin = ?", [$slug])->first();
+                            
             //Related Courses
             $courses = DB::table('courses')->get();
 

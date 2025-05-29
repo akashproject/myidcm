@@ -24,7 +24,7 @@
                             <div class="contact-page__content__bg" style="background-image: url(assets/frontend/images/shapes/contact-form-bg-1-1.png);"></div>
                             <!-- /.contact-page__content__bg -->
                             <div class="contact-page__content__image">
-                                <img src="assets/frontend/images/resources/contact-1-1.jpg" alt="contact">
+                                <img src="assets/frontend/images/resources/contact-1-1.png" alt="contact">
                             </div><!-- /.contact-page__content__image -->
                             <div class="contact-page__content__inner">
                                 <div class="sec-title">
@@ -105,7 +105,7 @@
                                 </div><!-- /.form-one__control -->
                             </div><!-- /.form-one__group -->
                             <div class="contact-page__form__image">
-                                <img src="assets/frontend/images/resources/contact-1-2.jpg" alt="contact">
+                                <img src="assets/frontend/images/resources/contact-1-2.png" alt="contact">
                             </div><!-- /.contact-page__form__image -->
                         </form><!-- /.contact-page__form -->
                     </div><!-- /.col-lg-6 -->

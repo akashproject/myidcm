@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Page extends Model
+class Adpage extends Model
 {
     use HasFactory;
-    protected $table = 'pages';
+    protected $table = 'adpages';
     protected $primaryKey = 'id';
 
     protected $fillable = [
