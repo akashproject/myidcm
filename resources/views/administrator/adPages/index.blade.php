@@ -50,16 +50,16 @@
 								<td>{{ $value->created_at->format("d M, Y") }}</td>									
 								<td>
 									<div class="d-inline-block text-nowrap">
-										<a href="{{ route('page-view',$value->slug) }}" class="btn btn-sm btn-icon">
+										<a href="{{ route('ad-page-view',$value->slug) }}" class="btn btn-sm btn-icon">
 											<i class="bx bx-show"></i>
 										</a>
 										@can('update')
-										<a href="{{ route('admin-view-page',$value->id) }}" class="btn btn-sm btn-icon">
+										<a href="{{ route('admin-ad-view-page',$value->id) }}" class="btn btn-sm btn-icon">
 											<i class="bx bx-edit"></i>
 										</a>
 										@endcan
 										@can('delete')
-										<a href="{{ route('admin-delete-page',$value->id) }}" onclick="return confirm('Are you sure?')"; class="btn btn-sm btn-icon delete-record">
+										<a href="{{ route('admin-ad-delete-page',$value->id) }}" onclick="return confirm('Are you sure?')"; class="btn btn-sm btn-icon delete-record">
 											<i class="bx bx-trash"></i>
 										</a>
 										@endcan

@@ -20,22 +20,22 @@
                         <div class="main-slider-one__content">
                             <img src="assets/frontend/images/shapes/main-slider-shape-1-1.png" alt="shape" class="main-slider-one__content__shape slider-image">
                             <p class="main-slider-one__sub-title">The Pathway to Education</p><!-- /.sub-title -->
-                            <h2 class="main-slider-one__title">
-                                Learn New <span class="main-slider-one__title__shape">Skills Online</span> <br>
-                                With Top <span class="main-slider-one__title__text">instructors</span>
+                            <h2 style="font-size: 42px!important;" class="main-slider-one__title">
+                                Shaping the Next Generation <br>
+                                of <span class="main-slider-one__title__text">Digital Leaders</span>
                             </h2><!-- /.title -->
                             <div class="main-slider-one__description">
-                                <p class="main-slider-one__text">There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have Suffered Alteration In Some.</p><!-- /.text -->
+                                <p class="main-slider-one__text">Your career in AI-powered Digital & Content Marketing starts here with 100% Placement Assurance and Paid Internships.</p><!-- /.text -->
                             </div><!-- /.description -->
-                            <h6> Our Partners </h6>
-                            <div class="partner-certification">
-                                <a href="javascript:void(0);"> 
-                                    <img src="https://dummyimage.com/150x100" >
-                                </a>
-                                <a href="javascript:void(0);"> 
-                                    <img src="https://dummyimage.com/150x100" >
-                                </a>
-                            </div>
+                                <h6> Our Partner </h6>
+                                <div class="partner-certification">
+                                    <a href="https://www.google.com/partners/agency?id=4439042709" target="_blank">
+                                        <img src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg"/>
+                                    </a>
+                                    <!--a href="javascript:void(0);"> 
+                                        <img src="https://dummyimage.com/150x100" >
+                                    </a-->
+                                </div>
                             <div class="main-slider-one__button">
                                 <a href="courses.html" class="main-slider-one__btn-1 eduhive-btn">
                                     <span>find course</span>
@@ -100,7 +100,7 @@
 <section class="courses-one pt-5" id="courses">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Most</span> <span>Popular</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
+            <h3 class="sec-title__title"><span>Explore Our</span> <span class="sec-title__title__shape">Top-Rated</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
         </div><!-- /.sec-title -->
     </div><!-- /.container -->
     <div class="courses-one__container container">
@@ -277,28 +277,33 @@
                 <div class="about-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <h6 class="sec-title__tagline">about us</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">we are the most popular online <br> <span class="sec-title__title__shape">skill development</span> <span class="sec-title__title__text">platform</span></h3><!-- /.sec-title__title -->
+                        <h3 class="sec-title__title">Employers looking for the <span class="sec-title__title__text">right Skills</span>. <span class="sec-title__title__shape">Do you have it in you?</span> </h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
                     <div class="about-one__description wow fadeInUp" data-wow-duration="1500ms">
-                        <p class="about-one__text">Viverra Ipsum Nunc Aliquet Bibendum Enim Facilisis Gravida. Diam Phasellus Vestibulum Lorem Sed Risus Ultricies. Magna Sit Amet Purus Gravida Quis Blandit. Arcu Cursus Vitae Congue Mauris.</p><!-- /.about-one__text -->
+                        <p class="about-one__text">As we enter the AI era, AI-powered digital marketing is no longer the future – it’s happening now. Every business, big or small, needs digital marketing to grow. That’s why skilled marketers are in high demand. At IDCM, we offer classroom training with hands-on practice, real projects, and the latest AI tools. We don’t just teach — we prepare you to lead in the digital world.</p><!-- /.about-one__text -->
                     </div><!-- /.about-one__description -->
                     <div class="about-one__inner wow fadeInUp" data-wow-duration="1500ms">
                         <ul class="about-one__info list-unstyled">
                             <li>
                                 <span class="about-one__info__icon"><i class="icon-right-up"></i></span>
-                                Expert Trainers
+                                100% Placement Assurance
                             </li>
                             <li>
                                 <span class="about-one__info__icon"><i class="icon-right-up"></i></span>
-                                Online Remote Learning
+                                30+ Live Projects
                             </li>
                             <li>
                                 <span class="about-one__info__icon"><i class="icon-right-up"></i></span>
-                                Lifetime Access
+                                12+ Certifications
                             </li>
+                            <li>
+                                <span class="about-one__info__icon"><i class="icon-right-up"></i></span>
+                               70+ Digital Automation Tools
+                            </li>
+                        </ul>    
                         </ul><!-- /.about-one__info list-unstyled -->
                         <div class="about-one__button">
-                            <a href="about.html" class="about-one__btn eduhive-btn eduhive-btn--border">
+                            <a href="{{ url('/about-us') }}" class="about-one__btn eduhive-btn eduhive-btn--border">
                                 <span>more About us</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
@@ -348,13 +353,13 @@
                             <span class="course-details__class__icon">
                                 <i class="icon-video"></i>
                             </span><!-- /.course-details__class__icon -->
-                            <p class="course-details__class__text">5649 Enrolled</p><!-- /.course-details__class__text -->
+                            <p class="course-details__class__text">2196 Enrolled</p><!-- /.course-details__class__text -->
                         </div><!-- /.course-details__class -->
                         <div class="course-details__review">
                             <span class="course-details__review__icon">
                                 <i class="icon-star"></i>
                             </span><!-- /.course-details__review__icon -->
-                            <p class="course-details__review__text"><span>3.4</span> <span>(36 Review)</span></p><!-- /.course-details__review__text -->
+                            <p class="course-details__review__text"><span>5</span> <span>(941 Reviews)</span></p><!-- /.course-details__review__text -->
                         </div><!-- /.course-details__review -->
                     </div>
                     <div class="row">
@@ -384,8 +389,8 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h3 class="sec-title__title">List <span class="sec-title__title__text">of Top </span> <span class="sec-title__title__shape">Companies</span></h3><!-- /.sec-title__title -->
-                    <p>Experience a journey of learning, growth, and career success. With hands-on training, expert guidance, and real-world exposure, we prepare you for a future full of opportunities.</p>
+                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">Top </span> <span class="sec-title__title__shape">Recruiters</span></h3><!-- /.sec-title__title -->
+                    <p>We connect you with top companies, and our dedicated placement assistance helps you land your dream job in the digital marketing industry. Our strong ties with leading recruiters ensure IDCM Alumni are highly sought after for cutting-edge job roles.</p>
                 </div><!-- /.sec-title -->
             </div>
             <div class="col-md-8">
@@ -412,46 +417,46 @@
             <div class="col-lg-6">
                 <div class="faq-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h3 class="sec-title__title">We Are Always Ensure <span class="sec-title__title__text">Best <br> Course</span> For <span class="sec-title__title__shape">Your Learning</span></h3><!-- /.sec-title__title -->
+                        <h3 class="sec-title__title">Why you choose <span class="sec-title__title__text"><span class="sec-title__title__shape">IDCM</span></span></h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
                     <div class="faq-one__accordion">
                         <div class="eduhive-accordion" data-grp-name="eduhive-accordion">
-                            <div class="accordion wow fadeInUp" data-wow-duration="1500ms">
-                                <div class="accordion-title">
-                                    <h4>How long should a business plan be?</h4>
-                                    <span class="accordion-title__icon">
-                                        <i class="icon-double-arrow"></i>
-                                    </span>
-                                </div><!-- /.accordion-title -->
-                                <div class="accordion-content">
-                                    <div class="inner">
-                                        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal.</p>
-                                    </div><!-- /.inner -->
-                                </div><!-- /.accordion-content -->
-                            </div><!-- /.accordion-item -->
                             <div class="accordion active wow fadeInUp" data-wow-duration="1500ms">
                                 <div class="accordion-title">
-                                    <h4>What is included in your services?</h4>
+                                    <h4>Discovering Talents</h4>
                                     <span class="accordion-title__icon">
                                         <i class="icon-double-arrow"></i>
                                     </span>
                                 </div><!-- /.accordion-title -->
                                 <div class="accordion-content">
                                     <div class="inner">
-                                        <p>There are many variations of passages Lorem Ipsum but the majority have suffered alteration in some form, by injected humour.</p>
+                                        <p>The Digital Industry demands creative minds. We help bring out the hidden creator within you.</p>
                                     </div><!-- /.inner -->
                                 </div><!-- /.accordion-content -->
                             </div><!-- /.accordion-item -->
                             <div class="accordion wow fadeInUp" data-wow-duration="1500ms">
                                 <div class="accordion-title">
-                                    <h4>What type of company is measured?</h4>
+                                    <h4>Industry Projects</h4>
                                     <span class="accordion-title__icon">
                                         <i class="icon-double-arrow"></i>
                                     </span>
                                 </div><!-- /.accordion-title -->
                                 <div class="accordion-content">
                                     <div class="inner">
-                                        <p>Prior to joining company, she spent 20+ years at Inmosys, where he held a wide range of global leadership roles, from services to products.</p>
+                                        <p>Industries look for real-world work experience. We put you on industry projects that set you apart.</p>
+                                    </div><!-- /.inner -->
+                                </div><!-- /.accordion-content -->
+                            </div><!-- /.accordion-item -->
+                            <div class="accordion wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="accordion-title">
+                                    <h4>Earn While You Learn</h4>
+                                    <span class="accordion-title__icon">
+                                        <i class="icon-double-arrow"></i>
+                                    </span>
+                                </div><!-- /.accordion-title -->
+                                <div class="accordion-content">
+                                    <div class="inner">
+                                        <p>Enjoy hands-on experience and start earning as you master new skills with our paid internship.</p>
                                     </div><!-- /.inner -->
                                 </div><!-- /.accordion-content -->
                             </div><!-- /.accordion-item -->
@@ -481,370 +486,26 @@
     <img src="assets/frontend/images/shapes/faq-shape-1-4.png" alt="shape" class="faq-one__shape-two">
 </section><!-- /.faq-one section-space -->
 
-<section class="instructors-one section-space2" id="instructors">
+<section class="cta-one">
     <div class="container">
-        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
-            <h3 class="sec-title__title">Our <span class="sec-title__title__text">expert</span> <span class="sec-title__title__shape">instructor</span></h3><!-- /.sec-title__title -->
-        </div><!-- /.sec-title -->
-        <div class="instructors-one__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-                "items": 1,
-                "margin": 10,
-                "loop": true,
-                "smartSpeed": 700,
-                "nav": false,
-                "dots": true,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                "autoplay": true,
-                "responsive": {
-                    "0": {
-                        "items": 1,
-                        "nav": true,
-                        "dots": false,
-                        "margin": 10
-                    },
-                    "576": {
-                        "items": 2,
-                        "margin": 30
-                    },
-                    "992": {
-                        "items": 3,
-                        "margin": 30
-                    },
-                    "1200": {
-                        "items": 4,
-                        "dots": false,
-                        "margin": 30
-                    }
-                }
-            }'>
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-1.jpg" alt="Mike Hardson">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">Mike Hardson</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">data scientist</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-2.jpg" alt="aleesha brown">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">aleesha brown</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">Web Developer</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-3.jpg" alt="david cooper">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">david cooper</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">software engineer</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-4.jpg" alt="sarah albert">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">sarah albert</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">UI/UX Designer</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-5.jpg" alt="kevin martin">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">kevin martin</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">App Developer</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-6.jpg" alt="christine eve">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">christine eve</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">SEO Expert</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-7.jpg" alt="Adlof Carone">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">Adlof Carone</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">UI/UX Designer</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-8.jpg" alt="Sabrina Melton">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">Sabrina Melton</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">Graphics Designer</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-        </div><!-- /.instructors-one__carousel -->
+        <div class="cta-one__content wow fadeInUp" data-wow-duration="1500ms">
+            <h2 class="cta-one__title">Become a confident digital marketer<br />
+                 Grab A job or be a freelancer </h2><!-- /.cta-one__title -->
+            <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
+                <span>get started now</span>
+                <span class="eduhive-btn__icon">
+                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                </span>
+            </a><!-- /.eduhive-btn -->
+        </div><!-- /.cta-one__conten -->
     </div><!-- /.container -->
-    <img src="assets/frontend/images/shapes/instructors-shape-1-1.png" alt="shape" class="instructors-one__shape-one">
-    <img src="assets/frontend/images/shapes/instructors-shape-1-2.png" alt="shape" class="instructors-one__shape-two">
-    <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
-    <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
-</section><!-- /.instructors-one section-space2 -->
+    <img src="assets/frontend/images/resources/cta-1-1.png" alt="shape" class="cta-one__image-one">
+    <img src="assets/frontend/images/resources/cta-1-2.png" alt="shape" class="cta-one__image-two">
+    <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-one">
+    <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-two">
+    <div class="cta-one__shape-box-one"></div><!-- /.cta-one__shape-box-one -->
+    <div class="cta-one__shape-box-two wow fadeInRight" data-wow-duration="1500ms"></div><!-- /.cta-one__shape-box-two -->
+</section><!-- /.cta-one -->
 
 <section class="testimonials-one section-space" id="testimonials">
     <div class="container">
@@ -949,26 +610,119 @@
     <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
 </section><!-- /.testimonials-one section-space -->
 
-<section class="cta-one">
+<section class="instructors-one section-space2" id="instructors">
     <div class="container">
-        <div class="cta-one__content wow fadeInUp" data-wow-duration="1500ms">
-            <h2 class="cta-one__title">Get Your Quality Skills Certificate <br>
-                Through Eduhive</h2><!-- /.cta-one__title -->
-            <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
-                <span>get started now</span>
-                <span class="eduhive-btn__icon">
-                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                </span>
-            </a><!-- /.eduhive-btn -->
-        </div><!-- /.cta-one__conten -->
+        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+            <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
+            <h3 class="sec-title__title">Our <span class="sec-title__title__text">expert</span> <span class="sec-title__title__shape">instructor</span></h3><!-- /.sec-title__title -->
+        </div><!-- /.sec-title -->
+        <div class="instructors-one__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+                "items": 1,
+                "margin": 10,
+                "loop": true,
+                "smartSpeed": 700,
+                "nav": false,
+                "dots": true,
+                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                "autoplay": false,
+                "responsive": {
+                    "0": {
+                        "items": 1,
+                        "nav": true,
+                        "dots": false,
+                        "margin": 10
+                    },
+                    "576": {
+                        "items": 2,
+                        "margin": 30
+                    },
+                    "992": {
+                        "items": 3,
+                        "margin": 30
+                    },
+                    "1200": {
+                        "items": 4,
+                        "dots": false,
+                        "margin": 30
+                    }
+                }
+            }'>
+            <div class="item">
+                <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                    <div class="alumni-intro-card__video" onclick="playVideo(this)">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/swastika.png') }}" alt="Video Thumbnail">
+                        <a href="{{ url('assets/frontend/videos/IDCM_Swastika.mp4') }}" class="video-one__video-btn video-btn video-popup">
+                            <i class="icon-play"></i>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <div class="alumni-intro-card__hover">
+                            
+                        </div><!-- /.alumni-intro-card__hover -->
+                    </div><!-- /.alumni-intro-card__image -->
+                </div><!-- /.alumni-intro-card -->
+            </div><!-- /.item -->
+            <div class="item">
+                <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                    <div class="alumni-intro-card__video">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/sumana.png') }}" alt="Video Thumbnail">
+                        <a href="{{ url('assets/frontend/videos/IDCM_Sumana.mp4') }}" class="video-one__video-btn video-btn video-popup">
+                            <i class="icon-play"></i>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <div class="alumni-intro-card__hover">
+                            
+                        </div><!-- /.alumni-intro-card__hover -->
+                    </div><!-- /.alumni-intro-card__image -->
+                </div><!-- /.alumni-intro-card -->
+            </div>
+            <div class="item">
+                <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                    <div class="alumni-intro-card__video">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/amit.png') }}" alt="Video Thumbnail">
+                        <a href="{{ url('assets/frontend/videos/IDCM_Amit.mp4') }}" class="video-one__video-btn video-btn video-popup">
+                            <i class="icon-play"></i>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <div class="alumni-intro-card__hover">
+                            
+                        </div><!-- /.alumni-intro-card__hover -->
+                    </div><!-- /.alumni-intro-card__image -->
+                </div><!-- /.alumni-intro-card -->
+            </div>
+            <div class="item">
+                <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                    <div class="alumni-intro-card__video">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/ashish.png') }}" alt="Video Thumbnail">
+                        <a href="{{ url('assets/frontend/videos/IDCM_Ashish.mp4') }}" class="video-one__video-btn video-btn video-popup">
+                            <i class="icon-play"></i>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <div class="alumni-intro-card__hover">
+                            
+                        </div><!-- /.alumni-intro-card__hover -->
+                    </div><!-- /.alumni-intro-card__image -->
+                </div><!-- /.alumni-intro-card -->
+            </div>
+        </div><!-- /.instructors-one__carousel -->
     </div><!-- /.container -->
-    <img src="assets/frontend/images/resources/cta-1-1.png" alt="shape" class="cta-one__image-one">
-    <img src="assets/frontend/images/resources/cta-1-2.png" alt="shape" class="cta-one__image-two">
-    <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-one">
-    <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-two">
-    <div class="cta-one__shape-box-one"></div><!-- /.cta-one__shape-box-one -->
-    <div class="cta-one__shape-box-two wow fadeInRight" data-wow-duration="1500ms"></div><!-- /.cta-one__shape-box-two -->
-</section><!-- /.cta-one -->
+    <img src="assets/frontend/images/shapes/instructors-shape-1-1.png" alt="shape" class="instructors-one__shape-one">
+    <img src="assets/frontend/images/shapes/instructors-shape-1-2.png" alt="shape" class="instructors-one__shape-two">
+    <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
+    <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
+</section><!-- /.instructors-one section-space2 -->
+
 
 <section class="blog-one section-space" id="blog">
     <div class="container">

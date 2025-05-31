@@ -185,26 +185,26 @@ if (! function_exists('getCitiesByStateName')) {
     }
 }
 
-if (! function_exists('getCenters')) {
-    function getCenters($course_id=null, $center_id=null){    
-        $centers = Cache::rememberForever('centers', function () use ($course_id,$center_id){
-            $centers = DB::table('centers');
+if (! function_exists('getInstitutes')) {
+    function getInstitutes($course_id=null, $institute_id=null){    
+        $institutes = Cache::rememberForever('institutes', function () use ($course_id,$institute_id){
+            $institutes = DB::table('institutes');
             if($course_id){
-                $centers->where('courses','like', '%"' . $course_id . '"%');
+                $institutes->where('courses','like', '%"' . $course_id . '"%');
             } 
-            if($center_id){
-                $centers->where('id',$center_id);
+            if($institute_id){
+                $institutes->where('id',$institute_id);
             } 
             
             if(isset($_COOKIE['lng']) && isset($_COOKIE['lat'])){
-                $centers->orderBy(DB::raw('POW((lng-'.$_COOKIE['lng'].'),2) + POW((lat-'.$_COOKIE['lat'].'),2)'));
+                $institutes->orderBy(DB::raw('POW((lng-'.$_COOKIE['lng'].'),2) + POW((lat-'.$_COOKIE['lat'].'),2)'));
             } else {
-                $centers->orderBy("name","asc");
+                $institutes->orderBy("name","asc");
             }
-            $centers = $centers->where('status',"1");
-            return $centers->get();     
+            $institutes = $institutes->where('status',"1");
+            return $institutes->get();     
         });
-        return $centers;
+        return $institutes;
     }
 }
 

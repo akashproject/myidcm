@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Administrator;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Adspage;
-use App\Models\CourseType;
-use App\Models\Center;
+use App\Models\Adpage;
+use App\Models\Institute;
 use App\Models\Course;
 use Illuminate\Support\Facades\DB;
 
@@ -15,7 +14,7 @@ class AdPageController extends Controller
     public function index()
     {
         try {
-            $adPages = Adspage::all();
+            $adPages = Adpage::all();
             
             return view('administrator.adPages.index',compact('adPages'));
 
@@ -26,10 +25,9 @@ class AdPageController extends Controller
 
     public function add() {
         try {
-            $courseCategories = CourseType::all();
             $courses = Course::all();
-            $centers = Center::all();
-            return view('administrator.adPages.add',compact('courseCategories','centers','courses'));
+            $institutes = Institute::all();
+            return view('administrator.adPages.add',compact('institutes','courses'));
         } catch(\Illuminate\Database\QueryException $e){
             //throw $th;
         }
@@ -38,11 +36,10 @@ class AdPageController extends Controller
     public function show($id)
     {
         try {
-            $courseCategories = CourseType::all();
             $courses = Course::all();
-            $centers = Center::all();
-            $adPage = Adspage::findorFail($id);
-            return view('administrator.adPages.show',compact('adPage','courseCategories','centers','courses'));
+            $institutes = Institute::all();
+            $adPage = Adpage::findorFail($id);
+            return view('administrator.adPages.show',compact('adPage','institutes','courses'));
         } catch(\Illuminate\Database\QueryException $e){
         }        
     }
@@ -54,29 +51,18 @@ class AdPageController extends Controller
                 'title' => 'required',
                 'slug' => 'required',
             ]);
-
-            // if (isset($data['course_type_id']) && $data['course_type_id']!='') {
-            //     $data['course_type_id'] = json_encode($data['course_type_id']);
-            // }
-
-            if($data['adPage_id'] <= 0){
-                $adPage = Adspage::create($data);
-            } else {
-                $adPage = Adspage::findOrFail($data['adPage_id']);
-                $adPage->update($data);
+            
+            if (isset($data['course_id']) && $data['course_id']!='') {
+                $data['course_id'] = json_encode($data['course_id']);
             }
-
-            // Update Faq Meta
-            if (isset($data['faq']) && $data['faq']!='' ) {
-
-                $data['faq'] = json_encode($data['faq']);
-                $faq = DB::table('faq_meta')->select('id')->where('model','AdPage')->where('model_id',$adPage->id)->first();
-                if($faq === null){
-                    DB::table('faq_meta')->insert(['model'=>'AdPage','model_id'=>$adPage->id,'faqs'=>$data['faq']]);
-                } else {
-                    DB::table('faq_meta')->where('id', $faq->id)->update(['faqs'=>$data['faq']]);
-                }
-                
+            if (isset($data['faqs']) && $data['faqs']!='') {
+                $data['faqs'] = json_encode($data['faqs']);
+            }
+            if($data['adPage_id'] <= 0){
+                $adPage = Adpage::create($data);
+            } else {
+                $adPage = Adpage::findOrFail($data['adPage_id']);
+                $adPage->update($data);
             }
 
             return redirect()->back()->with('message', 'Ad Page updated successfully!');
@@ -86,7 +72,7 @@ class AdPageController extends Controller
     }
 
     public function delete($id) {
-        $course = Adspage::findOrFail($id);
+        $course = Adpage::findOrFail($id);
         $course->delete();
         return redirect('/administrator/ad-pages');
     }

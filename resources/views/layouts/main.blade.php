@@ -3,45 +3,36 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>{{ isset($contentMain->title)?$contentMain->title:'Accounts | Finance | Taxation | Courses | Training Institute' }}</title>
-    <meta name="DC.title" content="{{ isset($contentMain->title)?$contentMain->title:'Accounts | Finance | Taxation | Courses | Training Institute' }}" />
-    <meta name="geo.region" content="{{ isset($state->region)?$state->region:'' }}" />
-    <meta name="geo.placename" content="{{ isset($contentMain->district)?$contentMain->district:'' }}" />
-    <meta name="geo.position" content="{{ isset($contentMain->lat)?$contentMain->lat.';'.$contentMain->lng:'' }}" />
-    <meta name="ICBM" content="{{ isset($contentMain->lat)?$contentMain->lat.','.$contentMain->lng:'' }}" />
-    <meta name="description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'Accounts | GST | Tally | SAP | Learn accounts, finance, taxation, and banking job guarantee courses. Enroll with India&#039;s No.1 Educational Training Institute.' }}" />
-    <meta name="facebook-domain-verification" content="he9zy5upymc72288m3qpcwda5dygul" />
-    <link rel="canonical" href="{{url()->current()}}"/>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="{{ isset($contentMain->title)?$contentMain->title:'' }}">
-    <meta name="robots" content="{{ isset($contentMain->robots)?$contentMain->robots:'' }}" />
-    <meta name="google-site-verification" content="_Is7-guFC312LQs0E9yYfc90B7NW6Dx--HQZrLtBeLs" />
+    <title>{{ isset($contentMain->title)?$contentMain->title:'IDCM: Institute of Digital & Content Marketing' }}</title>
+    <meta name="description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'IDCM, best digital marketing Institute in Delhi & Kolkata. Get 100% job assurance at affordable fees and 100% Industry Training. Book Your Free Demo Class Now.' }}" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="{{url()->current()}}"/>
+    <meta name="author" content="MyIdcm">
     <meta property="og:locale" content="en_IN" />
-    <meta property="og:site_name" content="ICA Edu Skills" />
+	<meta name="p:domain_verify" content="2757c24fbba370f3d146a24c9c17d66a"/>
+	<meta name="google-site-verification" content="37KdQ39QcywGtqdFHMds0Q9LCbypRJICjnGKONQbLqU" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="title" content="IDCM: Institute of Digital & Content Marketing">
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Institute of Digital & Content Marketing" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ isset($contentMain->title)?$contentMain->title:'Accounts | Finance | Taxation | Courses | Training Institute | Computerized Accounts Training Institute' }}" />
-    <meta property="og:description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'Accounts | GST | Tally | SAP | Learn accounts, finance, taxation, and banking job guarantee courses. Enroll with India&#039;s No.1 Educational Training Institute.' }}" />
+    <meta property="og:title" content="{{ isset($contentMain->title)?$contentMain->title:'IDCM: Institute of Digital & Content Marketing' }}" />
+    <meta property="og:description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'IDCM, best digital marketing Institute in Delhi & Kolkata. Get 100% job assurance at affordable fees and 100% Industry Training. Book Your Free Demo Class Now.' }}" />
     <meta property="og:url" content="{{url()->current()}}" />
-    <meta property="og:image" content="https://www.facebook.com/ICAJobguarantee" />
-    <meta property="og:image:secure_url" content="https://www.facebook.com/ICAJobguarantee" />
-    <meta property="og:video" content="https://www.youtube.com/channel/UC6WWqdZzUMAsZqTQHRyEj_A" />
-    <meta property="og:video:secure_url" content="https://www.youtube.com/channel/UC6WWqdZzUMAsZqTQHRyEj_A" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@IcaSkills" />
-    <meta name="twitter:title" content="{{ isset($contentMain->title)?$contentMain->title:'Accounts | Finance | Taxation | Courses | Training Institute | Computerized Accounts Training Institute' }}" />
-    <meta name="twitter:description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'Accounts | GST | Tally | SAP | Learn accounts, finance, taxation, and banking job guarantee courses. Enroll with India&#039;s No.1 Educational Training Institute.' }}" />
-    <meta name="twitter:creator" content="@IcaSkills" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@IDCM_dmtraining" />
+    <meta name="twitter:title" content="{{ isset($contentMain->title)?$contentMain->title:'IDCM: Institute of Digital & Content Marketing' }}" />
+    <meta name="twitter:description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'IDCM, best digital marketing Institute in Delhi & Kolkata. Get 100% job assurance at affordable fees and 100% Industry Training. Book Your Free Demo Class Now.' }}" />
+    <meta name="twitter:creator" content="@IDCM_dmtraining" />
     <meta name="twitter:image" content="" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="ica-admin" />
+    <meta name="twitter:data1" content="admin" />
     <meta name="twitter:label2" content="Est. reading time" />
-    <meta name="twitter:data2" content="1 minute" />
-    <!-- Css -->
+    <meta name="twitter:data2" content="2 minute" />
+    <!-- Favicon -->
     <link rel="icon" href="{{ asset('assets/frontend/images/favicon.ico') }}">
-
-
-    <!-- fonts -->
+    <!-- Fonts and Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Alex+Brush&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -59,7 +50,6 @@
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/owl-carousel/css/owl.carousel.min.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/owl-carousel/css/owl.theme.default.min.css')}}" />
     <link  rel="stylesheet" href="{{ url('assets/frontend/css/eduhive.css') }}">
-
     @yield('style')    
     <script>
         let popUp = 1

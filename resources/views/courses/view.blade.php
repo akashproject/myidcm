@@ -89,8 +89,12 @@
                                                 @foreach(getSubjectsByCourseId($contentMain->subjects) as $key => $subject)
                                                 <div class="accordion {{ ($key == 0 )?'active':'' }}">
                                                     <div class="accordion-title">
-                                                        <h4>{{ $subject->name }} </h4>
-                                                        <span class="accordion-time__duration"> {{ $subject->duration }} </span>
+                                                        <div class="heading">
+                                                            <h4>{{ $subject->name }} </h4>
+                                                            <span class="accordion-time__duration"> {{ $subject->duration }} </span>
+                                                        </div>
+                                                        
+                                                       
                                                         <span class="accordion-title__icon"></span>
                                                     </div><!-- /.accordion-title -->
                                                     <div class="accordion-content">

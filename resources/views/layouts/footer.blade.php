@@ -4,7 +4,7 @@
             <div class="col-xl-3 col-lg-4 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                 <div class="footer-widget footer-widget--about">
                     <div class="mb-3">
-                        <a href="index.html" class="main-footer__logo">
+                        <a href="{{ url('/') }}" class="main-footer__logo">
                             <img src="{{ url('assets/logo/logo.gif') }}" width="209" alt="Eduhive HTML Template">
                         </a><!-- /.main-footer__logo -->
                     </div>
@@ -73,23 +73,23 @@
                         <div class="mc-form__response"></div><!-- /.mc-form__response -->
                     </div><!-- /.main-footer__newsletter -->
                     <div class="main-footer__social social-links text-center">
-                        <a href="https://facebook.com">
+                        <a href="{{ get_theme_setting('facebook') }}">
                             <i class="fab fa-facebook-f" aria-hidden="true"></i>
                             <span class="sr-only">Facebook</span>
                         </a>
-                        <a href="https://twitter.com">
+                        <a href="{{ get_theme_setting('twitter') }}">
                             <i class="icon-twitter" aria-hidden="true"></i>
                             <span class="sr-only">Twitter</span>
                         </a>
-                        <a href="https://linkedin.com">
+                        <a href="{{ get_theme_setting('linkedin') }}">
                             <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                             <span class="sr-only">Linkedin</span>
                         </a>
-                        <a href="https://youtube.com">
+                        <a href="{{ get_theme_setting('youtube') }}">
                             <i class="fab fa-youtube" aria-hidden="true"></i>
                             <span class="sr-only">Youtube</span>
                         </a>
-                        <a href="https://youtube.com">
+                        <a href="{{ get_theme_setting('instagram') }}">
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                             <span class="sr-only">instagram</span>
                         </a>
@@ -103,7 +103,7 @@
         <div class="container">
             <div class="main-footer__bottom__inner">
                 <p class="main-footer__copyright">
-                    &copy; Copyright <span class="dynamic-year"></span> by Eduhive HTML Template.
+                    &copy; Copyright <span class="dynamic-year"></span> by MYDICM
                 </p>
             </div><!-- /.main-footer__inner -->
         </div><!-- /.container -->
@@ -122,8 +122,8 @@
     <div class="mobile-nav__content">
         <span class="mobile-nav__close mobile-nav__toggler"><i class="icon-close"></i></span>
         <div class="logo-box logo-retina">
-            <a href="index.html" aria-label="logo image">
-                <img src="{{ url('/assets/frontend/images/logo-light.png') }}" width="209" alt="" />
+            <a href="{{ url('/') }}" aria-label="logo image">
+                <img src="{{ url('assets/logo/logo.gif') }}" width="209" alt="" />
             </a>
         </div><!-- /.logo-box -->
         <div class="mobile-nav__container"></div><!-- /.mobile-nav__container -->

@@ -139,7 +139,6 @@
             <div class="container">
                 <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
                     <div class="video-one__bg" style="background-image: url(assets/frontend/images/resources/video-1-1.jpg);">
-                        <img src="assets/frontend/images/resources/video-1-2.jpg" alt="video">
                         <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>
@@ -194,8 +193,8 @@
                 <div class="row gutter-y-60">
                     <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms">
                         <div class="offer-one__image">
-                            <img src="assets/frontend/images/resources/offer-1-1.jpg" alt="offer image" class="offer-one__image__one">
-                            <img src="assets/frontend/images/resources/offer-1-2.jpg" alt="offer image" class="offer-one__image__two">
+                            <img src="assets/frontend/images/resources/offer-1-1.png" alt="offer image" class="offer-one__image__one">
+                            <img src="assets/frontend/images/resources/offer-1-2.png" alt="offer image" class="offer-one__image__two">
                             <img src="assets/frontend/images/shapes/offer-shape-1-1.png" alt="offer shape" class="offer-one__image__shape">
                         </div><!-- /.offer-one__image -->
                     </div><!-- /.col-lg-6 -->

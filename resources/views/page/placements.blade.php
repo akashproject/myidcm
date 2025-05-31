@@ -20,7 +20,7 @@
     <img src="assets/frontend/images/shapes/page-header-shape-2.png" alt="shape" class="page-header__shape-two">
     <div class="page-header__shape-three"></div><!-- /.page-header__shape-three -->
     <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
-</section><!-- /.page-header -->
+</section>
 
 <section class="testimonials-three section-space2" id="testimonials">
     <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.png);">
@@ -49,7 +49,7 @@
     <img src="assets/frontend/images/shapes/testimonial-shape-3-1.png" alt="shape" class="testimonials-three__shape-one">
     <img src="assets/frontend/images/shapes/testimonial-shape-3-2.png" alt="shape" class="testimonials-three__shape-two">
     <img src="assets/frontend/images/shapes/testimonial-shape-3-3.png" alt="shape" class="testimonials-three__shape-three">
-</section><!-- /.testimonials-three section-space2 -->
+</section>
 
 <section class="all-placed-student my-5">
     <div class="container">
@@ -142,7 +142,7 @@
         <img src="{{ url('/assets/frontend/images/faq/faq-2-1.jpg') }}" alt="faq">
     </div><!-- /.faq-one__image-inner -->
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-5.png') }}" alt="shape" class="faq-one__shape-three">
-</section><!-- /.faq-one section-space -->
+</section>
 
 <section class="testimonials-one my-5" id="testimonials">
     <div class="container">
@@ -162,46 +162,46 @@
             <div class="col-xl-8">
                 <div class="eduhive-stretch-element-inside-column">
                     <div class="testimonials-one__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
-                "items": 1,
-                "margin": 30,
-                "smartSpeed": 700,
-                "loop": true,
-                "autoplay": 600,
-                "nav": true,
-                "navContainer": ".testimonials-one__custome-navs",
-                "dots": false,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                "responsive":{
-                    "0":{
                         "items": 1,
-                        "margin": 10
-                    },
-                    "576":{
-                        "items": 1.5
-                    },
-                    "768":{
-                        "items": 1.8
-                    },
-                    "992":{
-                        "items": 2.6
-                    },
-                    "1200":{
-                        "items": 2.3
-                    },
-                    "1360":{
-                        "items": 2.3
-                    },
-                    "1536":{
-                        "items": 2.5
-                    },
-                    "1600":{
-                        "items": 2.7
-                    },
-                    "1800":{
-                        "items": 2.94
-                    }
-                }
-                }'>
+                        "margin": 30,
+                        "smartSpeed": 700,
+                        "loop": true,
+                        "autoplay": 600,
+                        "nav": true,
+                        "navContainer": ".testimonials-one__custome-navs",
+                        "dots": false,
+                        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                        "responsive":{
+                            "0":{
+                                "items": 1,
+                                "margin": 10
+                            },
+                            "576":{
+                                "items": 1.5
+                            },
+                            "768":{
+                                "items": 1.8
+                            },
+                            "992":{
+                                "items": 2.6
+                            },
+                            "1200":{
+                                "items": 2.3
+                            },
+                            "1360":{
+                                "items": 2.3
+                            },
+                            "1536":{
+                                "items": 2.5
+                            },
+                            "1600":{
+                                "items": 2.7
+                            },
+                            "1800":{
+                                "items": 2.94
+                            }
+                        }
+                        }'>
                         @foreach(getTestimonials() as $testimonial)
                             <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                                 <div class="testimonial-card">
@@ -245,7 +245,7 @@
     </div><!-- /.container -->
     <img src="assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
     <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
-</section><!-- /.testimonials-one section-space -->
+</section>
 
 <section class="all-placed-student my-5">
     <div class="container">
@@ -258,7 +258,7 @@
                 <div class="testimonials-two__image">
                     <div class="testimonials-two__image__shape"></div><!-- /.testimonials-two__image__shape -->
                     <div class="testimonials-two__image__inner">
-                        <img src="assets/frontend/images/testimonials/testimonial-2-1.jpg" alt="testimonial">
+                        <img src="{{ url('assets/frontend/images/placements/placement-1.jpg') }}" alt="testimonial">
                     </div><!-- /.testimonials-two__image__inner -->
                 </div>
             </div>
@@ -348,7 +348,7 @@
                 <div class="testimonials-two__image mirror">
                     <div class="testimonials-two__image__shape"></div><!-- /.testimonials-two__image__shape -->
                     <div class="testimonials-two__image__inner">
-                        <img src="assets/frontend/images/testimonials/testimonial-2-1.jpg" alt="testimonial">
+                        <img src="{{ url('assets/frontend/images/placements/placement-2.jpg') }}" alt="testimonial">
                     </div><!-- /.testimonials-two__image__inner -->
                 </div>
             </div>      
@@ -358,7 +358,7 @@
                 <div class="testimonials-two__image">
                     <div class="testimonials-two__image__shape"></div><!-- /.testimonials-two__image__shape -->
                     <div class="testimonials-two__image__inner">
-                        <img src="assets/frontend/images/testimonials/testimonial-2-1.jpg" alt="testimonial">
+                        <img src="{{ url('assets/frontend/images/placements/placement-3.jpg') }}" alt="testimonial">
                     </div><!-- /.testimonials-two__image__inner -->
                 </div>
             </div>
@@ -448,13 +448,14 @@
                 <div class="testimonials-two__image mirror">
                     <div class="testimonials-two__image__shape"></div><!-- /.testimonials-two__image__shape -->
                     <div class="testimonials-two__image__inner">
-                        <img src="assets/frontend/images/testimonials/testimonial-2-1.jpg" alt="testimonial">
+                        <img src="{{ url('assets/frontend/images/placements/placement-4.jpg') }}" alt="testimonial">
                     </div><!-- /.testimonials-two__image__inner -->
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 @if($contentMain->faqs != null)
 <section class="faq-one my-5">
     <div class="container">
@@ -490,7 +491,6 @@
     </div><!-- /.container -->
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-1.png')}}" alt="shape" class="faq-one__shape-one">
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-4.png')}}" alt="shape" class="faq-one__shape-two">
-</section><!-- /.faq-one section-space -->
+</section>
 @endif
-
 @endsection

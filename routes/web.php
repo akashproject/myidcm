@@ -95,6 +95,7 @@ Route::group(['prefix' => 'administrator'], function () {
 });
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('website');
 Route::get('/{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page-view')->where('slug', '([A-Za-z0-9\-]+)');
+Route::get('/ads/{slug}', [App\Http\Controllers\AdPageController::class, 'index'])->name('ad-page-view')->where('slug', '([A-Za-z0-9\-]+)');
 Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'view'])->name('view-courses');
 Route::get('/institute/{slug}', [App\Http\Controllers\InstituteController::class, 'view'])->name('view-institute');
 

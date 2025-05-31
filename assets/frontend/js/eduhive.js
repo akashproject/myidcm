@@ -208,7 +208,6 @@ let leadSubmitStatus = false;
       mainClass: "mfp-fade",
       removalDelay: 160,
       preloader: true,
-
       fixedContentPos: false
     });
   }
@@ -1081,3 +1080,8 @@ function countDown(){
   }, 1000);
 }
 
+function playVideo(wrapper) {
+  wrapper.classList.add('playing');
+  const video = wrapper.querySelector('video');
+  video.play();
+}
