@@ -21,7 +21,7 @@
                             <span class="course-details__review__icon">
                                 <i class="icon-star"></i>
                             </span><!-- /.course-details__review__icon -->
-                            <p class="course-details__review__text"><span>3.4</span> <span>(1{{ $contentMain->no_of_rating }} Review)</span></p><!-- /.course-details__review__text -->
+                            <p class="course-details__review__text"><span>4.7</span> <span>({{ $contentMain->number_of_rating }} Review)</span></p><!-- /.course-details__review__text -->
                         </div><!-- /.course-details__review -->
                     </div>
                     <div class="row">

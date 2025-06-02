@@ -6,13 +6,13 @@
                 <input type="text" name="lead_full_name" class="td_form_field_2 td_mb_16" placeholder="Enter Full name" required>
             </div>
             <div class="col-md-6 mb-2">
-                <input type="text" name="lead_email" class="td_form_field_2 td_mb_16" placeholder="Enter Email Address" required>
+                <input type="email" name="lead_email" class="td_form_field_2 td_mb_16" placeholder="Enter Email Address" required>
             </div>
             <div class="col-md-6 mb-2">
                 <input type="hidden" name="lead_mobile_number[0]" value="+91"><input type="tel" id="lead_mobile_info" name="lead_mobile_number[1]" class="td_form_field_2 td_mb_16" placeholder="Enter Mobile Number" required>
             </div>
             <div class="col-md-6 mb-2">
-                <input type="tel" name="lead_pincode" min="000000" min="999999" class="td_form_field_2 td_mb_16" placeholder="Enter Pincode" required>
+                <input type="number" name="lead_pincode" min="000000" max="999999" class="td_form_field_2 td_mb_16" placeholder="Enter Pincode" required>
             </div>
         </div>
         <p class="td_fs_14 td_mb_20 mt-3">By entering the OTP and clicking continue I confirm that I have read, understood and agree with the <a href="{{ url('/term-condition') }}" >Terms and Conditions</a> and <a href="{{ url('/privacy-policy') }}" >Privacy Policy</a>.</p>

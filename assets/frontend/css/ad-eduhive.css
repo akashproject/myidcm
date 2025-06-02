@@ -5251,7 +5251,8 @@ body.megamenu-popup-active .mobile-nav__content {
 .form-one input[type=text],
 .form-one input[type=email],
 .form-one input[type=password],
-.form-one input[type=tel] {
+.form-one input[type=tel],
+.form-one input[type=number] {
   display: block;
   width: 100%;
   font-family: var(--eduhive-font, "Plus Jakarta Sans", sans-serif);
@@ -5269,7 +5270,7 @@ body.megamenu-popup-active .mobile-nav__content {
 .form-one input[type=text]:focus,
 .form-one input[type=email]:focus,
 .form-one input[type=password]:focus,
-.form-one input[type=tel]:focus {
+.form-one input[type=tel]:focus,.form-one input[type=number]:focus {
   color: var(--eduhive-black, #20104B);
   border-color: var(--eduhive-base, #674CEF);
 }
@@ -6306,7 +6307,7 @@ li:hover .contact-page__info__icon__inner {
 .form-one input[type=text],
 .form-one input[type=email],
 .form-one input[type=password],
-.form-one input[type=tel]{
+.form-one input[type=tel],.form-one input[type=number]{
   height: 47px;
   padding-left: 26px;
   padding-inline-end: 26px;
@@ -6316,14 +6317,14 @@ li:hover .contact-page__info__icon__inner {
 .form-one input[type=text]:focus,
 .form-one input[type=email]:focus,
 .form-one input[type=password]:focus,
-.form-one input[type=tel]:focus{
+.form-one input[type=tel]:focus,.form-one input[type=number]:focus{
   border-color: var(--eduhive-base, #674CEF);
 }
 @media (max-width: 430px) {
   .form-one input[type=text],
   .form-one input[type=email],
   .form-one input[type=password],
-  .form-one input[type=tel]{
+  .form-one input[type=tel],.form-one input[type=number]{
     padding-left: 20px;
     padding-right: 20px;
   }

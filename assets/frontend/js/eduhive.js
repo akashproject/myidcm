@@ -954,6 +954,10 @@ let otp_value = null;
             maxlength: 10,
             minlength: 10,
         },
+        lead_pincode:{
+          maxlength: 6,
+          minlength: 6,
+        }
     },
     messages: {
       'lead_mobile_number[1]': "Please type valid mobile number.",
@@ -964,7 +968,9 @@ let otp_value = null;
         'required':"Enter Valid Email Address"
       },
       lead_pincode:{
-        'required':"Enter Valid Address Pincode"
+        'required':"Enter Valid Address Pincode",
+        'maxlength':"Enter Valid Address Pincode",
+        'minlength':"Enter Valid Address Pincode",
       }
     },
     submitHandler: function(form) {

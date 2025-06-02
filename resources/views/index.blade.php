@@ -25,7 +25,7 @@
                             <div class="main-slider-one__description">
                                 <p class="main-slider-one__text">Your career in AI-powered Digital & Content Marketing starts here with 100% Placement Assurance and Paid Internships.</p><!-- /.text -->
                             </div><!-- /.description -->
-                                <h6> Our Partner </h6>
+                                <h6> Our Partners </h6>
                                 <div class="partner-certification">
                                     <a href="https://www.google.com/partners/agency?id=4439042709" target="_blank">
                                         <img src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg"/>
@@ -351,13 +351,13 @@
                             <span class="course-details__class__icon">
                                 <i class="icon-video"></i>
                             </span><!-- /.course-details__class__icon -->
-                            <p class="course-details__class__text">2196 Enrolled</p><!-- /.course-details__class__text -->
+                            <p class="course-details__class__text">{{ $featuredCourse->number_of_enrolled }} Enrolled</p><!-- /.course-details__class__text -->
                         </div><!-- /.course-details__class -->
                         <div class="course-details__review">
                             <span class="course-details__review__icon">
                                 <i class="icon-star"></i>
                             </span><!-- /.course-details__review__icon -->
-                            <p class="course-details__review__text"><span>5</span> <span>(941 Reviews)</span></p><!-- /.course-details__review__text -->
+                            <p class="course-details__review__text"><span>5</span> <span>( {{ $featuredCourse->number_of_rating }} Reviews)</span></p><!-- /.course-details__review__text -->
                         </div><!-- /.course-details__review -->
                     </div>
                     <div class="row">

@@ -227,13 +227,13 @@
                             <span class="course-details__class__icon">
                                 <i class="icon-video"></i>
                             </span><!-- /.course-details__class__icon -->
-                            <p class="course-details__class__text">5649 Enrolled</p><!-- /.course-details__class__text -->
+                            <p class="course-details__class__text">{{ $featuredCourse->number_of_enrolled }} Enrolled</p><!-- /.course-details__class__text -->
                         </div><!-- /.course-details__class -->
                         <div class="course-details__review">
                             <span class="course-details__review__icon">
                                 <i class="icon-star"></i>
                             </span><!-- /.course-details__review__icon -->
-                            <p class="course-details__review__text"><span>3.4</span> <span>(36 Review)</span></p><!-- /.course-details__review__text -->
+                            <p class="course-details__review__text"><span>5.0</span> <span>( {{ $featuredCourse->number_of_rating }} Review)</span></p><!-- /.course-details__review__text -->
                         </div><!-- /.course-details__review -->
                     </div>
                     <div class="row">

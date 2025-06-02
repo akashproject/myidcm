@@ -267,9 +267,9 @@ if (! function_exists('getPlacements')) {
 }
 
 if (! function_exists('getAllBlogs')) {
-    function getAllBlogs($limit = 1000){
+    function getAllBlogs($limit = "100"){
         // Get Post
-        $url = "https://demo.myidcm.com/blog/wp-json/wp/v2/posts?filter[orderby]=date&order=desc&per_page=".$limit."&_fields=id,title,date";
+        $url = env("APP_URL")."/blog/wp-json/wp/v2/posts?filter[orderby]=date&order=desc&per_page=".$limit."&_fields=id,title,date";
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -280,7 +280,6 @@ if (! function_exists('getAllBlogs')) {
 
         $resp = curl_exec($curl);
         curl_close($curl);
-
         $post = json_decode($resp);
         return $post;
     }
@@ -298,7 +297,7 @@ if (! function_exists('getBlogs')) {
             
             $ids = implode(",",json_decode($ids,true));
             $includes = "include=".$ids;
-            $url = "https://demo.myidcm.com/blog/wp-json/wp/v2/posts?".$includes."&_fields=id,title,excerpt,featured_media,date,link&date";
+            $url = env("APP_URL")."/blog/wp-json/wp/v2/posts?".$includes."&_fields=id,title,excerpt,featured_media,date,link&date";
             $curl = curl_init($url);
             curl_setopt($curl, CURLOPT_URL, $url);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -313,7 +312,7 @@ if (! function_exists('getBlogs')) {
 
             foreach ($post as $key => $value) {
                
-                $url = "https://demo.myidcm.com/blog/wp-json/wp/v2/media/".$value->featured_media;
+                $url = env("APP_URL")."/blog/wp-json/wp/v2/media/".$value->featured_media;
 
                 $curl = curl_init($url);
                 curl_setopt($curl, CURLOPT_URL, $url);
