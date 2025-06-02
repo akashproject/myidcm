@@ -19,10 +19,8 @@
                     <div class="main-slider-one__col-content">
                         <div class="main-slider-one__content">
                             <img src="assets/frontend/images/shapes/main-slider-shape-1-1.png" alt="shape" class="main-slider-one__content__shape slider-image">
-                            <p class="main-slider-one__sub-title">The Pathway to Education</p><!-- /.sub-title -->
-                            <h2 style="font-size: 42px!important;" class="main-slider-one__title">
-                                Shaping the Next Generation <br>
-                                of <span class="main-slider-one__title__text">Digital Leaders</span>
+                            <p class="main-slider-one__sub-title">No More Boring Lectures.</p><!-- /.sub-title -->
+                            <h2 style="font-size: 42px!important;" class="main-slider-one__title">Just Digital Marketing Skills<br />That <span class="main-slider-one__title__text">Get You Hired.</span>
                             </h2><!-- /.title -->
                             <div class="main-slider-one__description">
                                 <p class="main-slider-one__text">Your career in AI-powered Digital & Content Marketing starts here with 100% Placement Assurance and Paid Internships.</p><!-- /.text -->
@@ -32,9 +30,9 @@
                                     <a href="https://www.google.com/partners/agency?id=4439042709" target="_blank">
                                         <img src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg"/>
                                     </a>
-                                    <!--a href="javascript:void(0);"> 
-                                        <img src="https://dummyimage.com/150x100" >
-                                    </a-->
+                                    <a href="javascript:void(0);"> 
+                                        <img src="{{ url('assets/frontend/images/resources/meta-pertner.jpg') }}" >
+                                    </a>
                                 </div>
                             <div class="main-slider-one__button">
                                 <a href="courses.html" class="main-slider-one__btn-1 eduhive-btn">
@@ -290,11 +288,11 @@
                             </li>
                             <li>
                                 <span class="about-one__info__icon"><i class="icon-right-up"></i></span>
-                                30+ Live Projects
+                                36+ Live Projects
                             </li>
                             <li>
                                 <span class="about-one__info__icon"><i class="icon-right-up"></i></span>
-                                12+ Certifications
+                                21 Certifications
                             </li>
                             <li>
                                 <span class="about-one__info__icon"><i class="icon-right-up"></i></span>
@@ -389,7 +387,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">Top </span> <span class="sec-title__title__shape">Recruiters</span></h3><!-- /.sec-title__title -->
+                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">Top <span class="sec-title__title__shape">Recruiters</span></span></h3><!-- /.sec-title__title -->
                     <p>We connect you with top companies, and our dedicated placement assistance helps you land your dream job in the digital marketing industry. Our strong ties with leading recruiters ensure IDCM Alumni are highly sought after for cutting-edge job roles.</p>
                 </div><!-- /.sec-title -->
             </div>
@@ -417,7 +415,7 @@
             <div class="col-lg-6">
                 <div class="faq-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h3 class="sec-title__title">Why you choose <span class="sec-title__title__text"><span class="sec-title__title__shape">IDCM</span></span></h3><!-- /.sec-title__title -->
+                        <h3 class="sec-title__title">Why choose <span class="sec-title__title__text"><span class="sec-title__title__shape">IDCM</span></span></h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
                     <div class="faq-one__accordion">
                         <div class="eduhive-accordion" data-grp-name="eduhive-accordion">
@@ -513,11 +511,11 @@
             <div class="col-xl-4">
                 <div class="testimonials-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">what students <span class="sec-title__title__shape">say about</span> <span class="sec-title__title__text">idcm</span></h3><!-- /.sec-title__title -->
+                        <h6 class="sec-title__tagline">Students' Experiences</h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">Pick <span class="sec-title__title__text"><span class="sec-title__title__shape">on IDCM</span></span></h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
                     <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
-                        <p class="testimonials-one__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue.</p><!-- /.testimonials-one__text -->
+                        <p class="testimonials-one__text">Our students don't just learn, they celebrate about their experience!</p><!-- /.testimonials-one__text -->
                     </div><!-- /.testimonial-one__description -->
                     <div class="testimonials-one__custome-navs"></div><!-- /.testimonials-one__custome-navs -->
                 </div><!-- /.testimonials-one__content -->
@@ -580,23 +578,23 @@
                                     </div><!-- /.testimonial-card__top -->
                                     <div class="testimonial-card__content">
                                         <p class="testimonial-card__quote">{!! $testimonial->comment !!}</p><!-- /.testimonial-card__quote -->
-                                        <div class="eduhive-ratings">
+                                        <!--div class="eduhive-ratings">
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
-                                        </div><!-- /.product-ratings -->
+                                            </span>
+                                        </div--><!-- /.product-ratings -->
                                     </div><!-- /.testimonial-card__content -->
                                 </div><!-- /.testimonial-card -->
                             </div><!-- /.owl-slide-item-->
@@ -613,8 +611,8 @@
 <section class="instructors-one section-space2" id="instructors">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
-            <h3 class="sec-title__title">Our <span class="sec-title__title__text">expert</span> <span class="sec-title__title__shape">instructor</span></h3><!-- /.sec-title__title -->
+            <h6 class="sec-title__tagline">Success Stories</h6><!-- /.sec-title__tagline -->
+            <h3 class="sec-title__title">Our <span class="sec-title__title__text"><span class="sec-title__title__shape">students</span></span> say it best!</h3><!-- /.sec-title__title -->
         </div><!-- /.sec-title -->
         <div class="instructors-one__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
                 "items": 1,
@@ -722,414 +720,5 @@
     <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
     <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
 </section><!-- /.instructors-one section-space2 -->
-
-
-<section class="blog-one section-space" id="blog">
-    <div class="container">
-        <div class="blog-one__top">
-            <div class="row gutter-y-50 align-items-center">
-                <div class="col-xl-9 col-lg-8">
-                    <div class="blog-one__content">
-                        <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                            <h6 class="sec-title__tagline">latest blog</h6><!-- /.sec-title__tagline -->
-                            <h3 class="sec-title__title"><span class="sec-title__title__shape">our latest</span> <span class="sec-title__title__text">blog news</span></h3><!-- /.sec-title__title -->
-                        </div><!-- /.sec-title -->
-                    </div><!-- /.blog-one__content -->
-                </div><!-- /.col-xl-9 col-lg-8 -->
-                <div class="col-xl-3 col-lg-4">
-                    <div class="blog-one__custome-navs"></div><!-- /.blog-one__custome-navs -->
-                </div><!-- /.col-xl-3 col-lg-4 -->
-            </div><!-- /.row gutter-y-50 align-items-center -->
-        </div><!-- /.blog-one__top -->
-        <div class="blog-one__carousel eduhive-owl__carousel owl-carousel owl-theme" data-owl-options='{
-            "items": 1,
-            "margin": 10,
-            "loop": true,
-            "smartSpeed": 700,
-            "nav": true,
-            "dots": false,
-            "navContainer": ".blog-one__custome-navs",
-            "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-            "autoplay": true,
-            "responsive": {
-                "0": {
-                    "items": 1,
-                    "margin": 10
-                },
-                "768": {
-                    "items": 2,
-                    "margin": 30
-                },
-                "992": {
-                    "items": 3,
-                    "margin": 30
-                }
-            }
-        }'>
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-1.jpg" alt="Talk About the Three Major Types of Floor Tiles">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Talk About the Three Major Types of Floor Tiles</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">29</span>
-                            <span class="blog-card__date__month">jan</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">Talk About the Three Major Types of Floor Tiles</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-2.jpg" alt="Big Data. Are There Any Leftovers In The Kitchen">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Big Data. Are There Any Leftovers In The Kitchen</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">25</span>
-                            <span class="blog-card__date__month">june</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">Big Data. Are There Any Leftovers In The Kitchen</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-3.jpg" alt="A Simple Lift And Shift Job Going Forward Price">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">A Simple Lift And Shift Job Going Forward Price</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">20</span>
-                            <span class="blog-card__date__month">jan</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">A Simple Lift And Shift Job Going Forward Price</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-4.jpg" alt="My Capacity Is Full We're Building The Plane">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">My Capacity Is Full We're Building The Plane</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">15</span>
-                            <span class="blog-card__date__month">jul</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">My Capacity Is Full We're Building The Plane</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-5.jpg" alt="Ny Leftovers In The Kitchen Touch Base">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Ny Leftovers In The Kitchen Touch Base</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">5</span>
-                            <span class="blog-card__date__month">june</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">Ny Leftovers In The Kitchen Touch Base</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-6.jpg" alt="Circle Back, If You Want To Motivate These">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Circle Back, If You Want To Motivate These</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">28</span>
-                            <span class="blog-card__date__month">jul</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">Circle Back, If You Want To Motivate These</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-7.jpg" alt="Nail Jelly To The Hothouse Wall Pixel Pushing">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Nail Jelly To The Hothouse Wall Pixel Pushing</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">10</span>
-                            <span class="blog-card__date__month">june</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">Nail Jelly To The Hothouse Wall Pixel Pushing</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-8.jpg" alt="Copy And Paste From Stack Overflow Can You">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Copy And Paste From Stack Overflow Can You</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">2</span>
-                            <span class="blog-card__date__month">jan</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">Copy And Paste From Stack Overflow Can You</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="blog-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                    <div class="blog-card__image">
-                        <img src="assets/frontend/images/blog/blog-1-9.jpg" alt="Catching And Not Too Giant, Yet Drink From The">
-                        <a href="blog-details-right.html" class="blog-card__image__link"><span class="sr-only">Catching And Not Too Giant, Yet Drink From The</span>
-                            <!-- /.sr-only --></a>
-                        <div class="blog-card__date">
-                            <span class="blog-card__date__day">26</span>
-                            <span class="blog-card__date__month">june</span>
-                        </div><!-- /.blog-card__date -->
-                    </div><!-- /.blog-card__image -->
-                    <div class="blog-card__content">
-                        <ul class="list-unstyled blog-card__meta">
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    by Admin
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="blog-card__meta__icon">
-                                        <i class="icon-comments"></i>
-                                    </span>
-                                    2 Comments
-                                </a>
-                            </li>
-                        </ul><!-- /.list-unstyled blog-card__meta -->
-                        <h3 class="blog-card__title"><a href="blog-details-right.html">Catching And Not Too Giant, Yet Drink From The</a></h3><!-- /.blog-card__title -->
-                        <a href="blog-details-right.html" class="blog-card__link">
-                            read More
-                            <span class="blog-card__link__icon">
-                                <span class="blog-card__link__icon__inner"><i class="icon-arrow-right"></i></span>
-                            </span>
-                        </a><!-- /.blog-card__link -->
-                    </div><!-- /.blog-card__content -->
-                </div><!-- /.blog-card -->
-            </div><!-- /.item -->
-        </div><!-- /.blog-one__carousel -->
-    </div><!-- /.container -->
-    <img src="assets/frontend/images/shapes/blog-shape-1-1.png" alt="shape" class="blog-one__shape-one">
-    <img src="assets/frontend/images/shapes/blog-shape-1-2.png" alt="shape" class="blog-one__shape-two">
-</section><!-- /.blog-one section-space -->
 
 @endsection

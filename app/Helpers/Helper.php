@@ -187,23 +187,7 @@ if (! function_exists('getCitiesByStateName')) {
 
 if (! function_exists('getInstitutes')) {
     function getInstitutes($course_id=null, $institute_id=null){    
-        $institutes = Cache::rememberForever('institutes', function () use ($course_id,$institute_id){
-            $institutes = DB::table('institutes');
-            if($course_id){
-                $institutes->where('courses','like', '%"' . $course_id . '"%');
-            } 
-            if($institute_id){
-                $institutes->where('id',$institute_id);
-            } 
-            
-            if(isset($_COOKIE['lng']) && isset($_COOKIE['lat'])){
-                $institutes->orderBy(DB::raw('POW((lng-'.$_COOKIE['lng'].'),2) + POW((lat-'.$_COOKIE['lat'].'),2)'));
-            } else {
-                $institutes->orderBy("name","asc");
-            }
-            $institutes = $institutes->where('status',"1");
-            return $institutes->get();     
-        });
+        $institutes = DB::table('institutes')->orderBy("name","asc")->where('status',"1")->get();
         return $institutes;
     }
 }
@@ -279,6 +263,76 @@ if (! function_exists('getPlacements')) {
     function getPlacements($limit = 1000){
         $placements = DB::table('placements')->limit($limit)->inRandomOrder()->get();
         return $placements;
+    }
+}
+
+if (! function_exists('getAllBlogs')) {
+    function getAllBlogs($limit = 1000){
+        // Get Post
+        $url = "https://demo.myidcm.com/blog/wp-json/wp/v2/posts?filter[orderby]=date&order=desc&per_page=".$limit."&_fields=id,title,date";
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        //for debug only!
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+        $resp = curl_exec($curl);
+        curl_close($curl);
+
+        $post = json_decode($resp);
+        return $post;
+    }
+}
+
+if (! function_exists('getBlogs')) {
+    function getBlogs($ids = null){
+        try {
+            
+            $post = array();
+            $includes = '';
+            if ($ids == null) {
+                return $post = [];
+            }
+            
+            $ids = implode(",",json_decode($ids,true));
+            $includes = "include=".$ids;
+            $url = "https://demo.myidcm.com/blog/wp-json/wp/v2/posts?".$includes."&_fields=id,title,excerpt,featured_media,date,link&date";
+            $curl = curl_init($url);
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+            //for debug only!
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+            $resp = curl_exec($curl);
+            curl_close($curl);
+            $post = json_decode($resp);
+
+            foreach ($post as $key => $value) {
+               
+                $url = "https://demo.myidcm.com/blog/wp-json/wp/v2/media/".$value->featured_media;
+
+                $curl = curl_init($url);
+                curl_setopt($curl, CURLOPT_URL, $url);
+                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+                
+                //for debug only!
+                curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+                curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+                
+                $resp = curl_exec($curl);
+                curl_close($curl);
+                $media = json_decode($resp);
+                $post[$key]->source_url = ($media->source_url)?$media->source_url:"";
+            }
+            
+            return $post;
+        } catch (\Throwable $th) {
+            var_dump($th);
+        }
     }
 }
 

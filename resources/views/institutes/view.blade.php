@@ -26,29 +26,29 @@
                                 <span class="main-slider-two__title__inner">Learn <span class="main-slider-two__title__text">new skills.</span> Prove <br> your potential.</span>
                             </h2><!-- /.title -->
                             <div class="main-slider-two__description">
-                                <p class="main-slider-two__text">There Are Many Variations Of Passages Of Lorem Ipsum Available, But The Majority Have Suffered Alteration In Some.</p><!-- /.text -->
+                                <p class="main-slider-two__text" style="color: #333;line-height: 1.5rem;">{{ substr(strip_tags($contentMain->excerpt), 0, 100); }}</p><!-- /.text -->
                             </div><!-- /.description -->
                             <h6> Our Partners </h6>
                             <div class="partner-certification">
-                                <a href="javascript:void(0);"> 
-                                    <img src="https://dummyimage.com/150x100" >
+                                <a href="https://www.google.com/partners/agency?id=4439042709" target="_blank">
+                                    <img src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg"/>
                                 </a>
                                 <a href="javascript:void(0);"> 
-                                    <img src="https://dummyimage.com/150x100" >
+                                    <img src="{{ url('assets/frontend/images/resources/meta-pertner.jpg') }}" >
                                 </a>
                             </div>
                             <div class="main-slider-two__button">
                                 <div class="main-slider-two__button__inner">
-                                    <a href="courses.html" class="main-slider-two__btn-1 eduhive-btn">
-                                        <span>find course</span>
+                                    <a href="#lead-generate-popup" class="main-slider-two__btn-1 eduhive-btn open-popup-link">
+                                        <span>Find course</span>
                                         <span class="eduhive-btn__icon">
                                             <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                         </span>
                                     </a><!-- /.eduhive-btn -->
                                 </div><!-- /.main-slider-two__button__inner -->
                                 <div class="main-slider-two__button__inner">
-                                    <a href="about.html" class="main-slider-two__btn-2 eduhive-btn eduhive-btn--border">
-                                        <span>About us</span>
+                                    <a href="#lead-generate-popup" class="main-slider-two__btn-2 eduhive-btn eduhive-btn--border open-popup-link">
+                                        <span>Download Brochure</span>
                                         <span class="eduhive-btn__icon">
                                             <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                         </span>
@@ -138,7 +138,7 @@
             <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
                 <div class="about-one__image">
                     <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="video-one__bg course-video" style="background-image: url(https://dummyimage.com/600x400);">
+                        <div class="video-one__bg course-video" style="background-image: url(/assets/frontend/images/courses/featured-course.jpg);">
                             <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-one__video-btn video-btn video-popup">
                                 <i class="icon-play"></i>
                                 <span></span>
@@ -191,76 +191,6 @@
         </div>
     </div>
 </section>
-
-<section class="about-two section-space" id="about">
-    <div class="container">
-        <div class="row gutter-y-60">
-            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                <div class="about-two__image">
-                    <img src="{{ url('/assets/frontend/images/about/about-2-1.jpg') }}" alt="about image" class="about-two__image__one">
-                    <img src="{{ url('/assets/frontend/images/about/about-2-2.jpg') }}" alt="about image" class="about-two__image__two">
-                    <img src="{{ url('/assets/frontend/images/shapes/about-shape-2-1.png') }}" alt="shape" class="about-two__image__shape-one">
-                    <div class="about-two__image__shape-box"></div><!-- /.about-two__image__shape-box -->
-                </div><!-- /.about-two__image -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <div class="about-two__content">
-                    <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h6 class="sec-title__tagline">ABOUT US</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">Learn New Skills <span class="sec-title__title__shape">To Go Ahead For</span> <br> Your <span class="sec-title__title__text">Career</span></h3><!-- /.sec-title__title -->
-                    </div><!-- /.sec-title -->
-                    <div class="about-two__description wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <p class="about-two__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue velit in cursus leo sodales the turpis euismod quis sapien euismod quis sapien the.</p><!-- /.about-two__text -->
-                    </div><!-- /.about-two__description -->
-                    <div class="about-two__row row">
-                        <div class="col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                            <div class="about-two__info">
-                                <span class="about-two__info__icon">
-                                    <i class="icon-check-2"></i>
-                                </span><!-- /.about-two__info__icon -->
-                                <h4 class="about-two__info__title">Flexible Course Plan</h4><!-- /.about-two__info__title -->
-                            </div><!-- /.about-two__info -->
-                        </div><!-- /.col-sm-6 -->
-                        <div class="col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <div class="about-two__info">
-                                <span class="about-two__info__icon">
-                                    <i class="icon-check-2"></i>
-                                </span><!-- /.about-two__info__icon -->
-                                <h4 class="about-two__info__title">Educator Support</h4><!-- /.about-two__info__title -->
-                            </div><!-- /.about-two__info -->
-                        </div><!-- /.col-sm-6 -->
-                        <div class="col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                            <div class="about-two__info">
-                                <span class="about-two__info__icon">
-                                    <i class="icon-check-2"></i>
-                                </span><!-- /.about-two__info__icon -->
-                                <h4 class="about-two__info__title">Expert mentors</h4><!-- /.about-two__info__title -->
-                            </div><!-- /.about-two__info -->
-                        </div><!-- /.col-sm-6 -->
-                        <div class="col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <div class="about-two__info">
-                                <span class="about-two__info__icon">
-                                    <i class="icon-check-2"></i>
-                                </span><!-- /.about-two__info__icon -->
-                                <h4 class="about-two__info__title">Lifetime Access</h4><!-- /.about-two__info__title -->
-                            </div><!-- /.about-two__info -->
-                        </div><!-- /.col-sm-6 -->
-                    </div><!-- /.about-two__row row -->
-                    <div class="about-two__button wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <a href="about.html" class="eduhive-btn">
-                            <span>About us</span>
-                            <span class="eduhive-btn__icon">
-                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                            </span>
-                        </a><!-- /.eduhive-btn -->
-                    </div><!-- /.about-two__button -->
-                </div><!-- /.about-two__content -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row gutter-y-60 -->
-    </div><!-- /.container -->
-    <img src="{{ url('/assets/frontend/images/shapes/about-shape-2-2.png') }}" alt="shape" class="about-two__shape-one">
-    <img src="{{ url('/assets/frontend/images/shapes/about-shape-2-3.png') }}" alt="shape" class="about-two__shape-two">
-</section><!-- /.about-two section-space -->
 
 <section class="courses-two section-space-bottom" id="courses">
     <div class="courses-two__bg" style="background-image: url({{ url('/assets/frontend/images/shapes/courses-bg-2-1.png') }});"></div>
@@ -449,44 +379,44 @@
                     <div class="funfact-one__grid">
                         <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                             <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-connectibity"></i></span>
+                                <span class="funfact-one__icon__inner"><i class="icon-instructors"></i></span>
                             </div><!-- /.funfact-one__icon -->
                             <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="30" data-speed="1500">0</span>
-                                <span>k+</span>
-                            </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Satisfied Student</p><!-- /.funfact-one__text -->
-                        </div><!-- /.funfact-one__item -->
-                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-batch-assign"></i></span>
-                            </div><!-- /.funfact-one__icon -->
-                            <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="6500" data-speed="1500">0</span>
+                                <span class="count-text" data-stop="8000" data-speed="1500">0</span>
                                 <span>+</span>
                             </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Class Completed</p><!-- /.funfact-one__text -->
+                            <p class="funfact-one__text">Satisfied Students</p><!-- /.funfact-one__text -->
                         </div><!-- /.funfact-one__item -->
-                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                             <div class="funfact-one__icon">
                                 <span class="funfact-one__icon__inner"><i class="icon-students"></i></span>
                             </div><!-- /.funfact-one__icon -->
                             <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="6561" data-speed="1500">0</span>
+                                <span class="count-text" data-stop="720" data-speed="1500">0</span>
                                 <span>+</span>
                             </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Active Students</p><!-- /.funfact-one__text -->
+                            <p class="funfact-one__text">Classes Completed</p><!-- /.funfact-one__text -->
                         </div><!-- /.funfact-one__item -->
-                        <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                             <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-instructors"></i></span>
+                                <span class="funfact-one__icon__inner"><i class="icon-batch-assign"></i></span>
                             </div><!-- /.funfact-one__icon -->
                             <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="400" data-speed="1500">0</span>
+                                <span class="count-text" data-stop="30" data-speed="30">0</span>
                                 <span>+</span>
-                            </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Experts Instructors</p><!-- /.funfact-one__text -->
-                        </div><!-- /.funfact-one__item -->
+                            </h3>
+                            <p class="funfact-one__text">Placement Offices</p>
+                        </div>
+                        <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                            <div class="funfact-one__icon">
+                                <span class="funfact-one__icon__inner"><i class=icon-connectibity"></i></span>
+                            </div><!-- /.funfact-one__icon -->
+                            <h3 class="funfact-one__title count-box">
+                                <span class="count-text" data-stop="70" data-speed="1500">0</span>
+                                <span>K+</span>
+                            </h3>
+                            <p class="funfact-one__text">Registered Employers</p>
+                        </div>
                     </div><!-- /.rfunfact-one__grid -->
                 </div><!-- /.funfact-one -->
             </div><!-- /.col-lg-6 -->
@@ -540,7 +470,7 @@
     <div class="container">
         <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
             <div class="video-one__bg" style="background-image: url({{ url('/assets/frontend/images/resources/video-1-1.jpg') }});">
-                <img src="{{ url('/assets/frontend/images/resources/video-1-2.jpg') }}" alt="video">
+                <!-- <img src="{{ url('/assets/frontend/images/resources/video-1-2.jpg') }}" alt="video"> -->
                 <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-one__video-btn video-btn video-popup">
                     <i class="icon-play"></i>
                     <span></span>

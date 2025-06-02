@@ -21,8 +21,8 @@
                 <div class="row gutter-y-60">
                     <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <div class="about-two__image">
-                            <img src="assets/frontend/images/about/about-2-1.jpg" alt="about image" class="about-two__image__one">
-                            <img src="assets/frontend/images/about/about-2-2.jpg" alt="about image" class="about-two__image__two">
+                            <img src="assets/frontend/images/about/head.png" alt="about image" class="about-two__image__one">
+                            <img src="assets/frontend/images/about/speaker.webp" alt="about image" class="about-two__image__two">
                             <img src="assets/frontend/images/shapes/about-shape-2-1.png" alt="shape" class="about-two__image__shape-one">
                             <div class="about-two__image__shape-box"></div><!-- /.about-two__image__shape-box -->
                         </div><!-- /.about-two__image -->
@@ -240,331 +240,189 @@
             <div class="offer-one__shape-box"></div><!-- /.offer-one__shape -->
         </section><!-- /.offer-one section-space-top -->
 
-        <section class="testimonials-three section-space2" id="testimonials">
-            <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.png);">
-            </div><!-- /.testimonials-three__bg -->
+        <section class="instructors-one section-space2" id="instructors">
             <div class="container">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
-                    <h3 class="sec-title__title">people <span class="sec-title__title__text">say about</span> <span class="sec-title__title__shape">eduhive</span></h3><!-- /.sec-title__title -->
+                    <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
+                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">management</span> <span class="sec-title__title__shape">Teams</span></h3><!-- /.sec-title__title -->
                 </div><!-- /.sec-title -->
-                <div class="testimonials-three__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav eduhive-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
-                    "items": 3,
-                    "margin": 30,
-                    "smartSpeed": 700,
-                    "loop":true,
-                    "autoplay": 6000,
-                    "nav":true,
-                    "dots":false,
-                    "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                    "responsive":{
-                        "0":{
-                            "items": 1,
-                            "margin": 10
-                        },
-                        "768":{
-                            "items": 2,
-                            "margin": 30
-                        },
-                        "1200":{
-                            "items": 3,
-                            "margin": 30
-                        }
-                    }
-                    }'>
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <div class="testimonial-card-three">
-                            <div class="testimonial-card-three__image">
-                                <img src="assets/frontend/images/testimonials/testimonial-3-1.jpg" alt="Michael G. Ware">
-                            </div>
-                            <div class="testimonial-card-three__content">
-                                <div class="testimonial-card-three__icon">
-                                    <span class="icon-quote"></span>
-                                </div><!-- /.testimonial-card-three__icon -->
-                                <div class="testimonial-card-three__identity">
-                                    <h5 class="testimonial-card-three__name">Michael G. Ware</h5>
-                                    <p class="testimonial-card-three__designation">managing director</p>
-                                </div><!-- /.testimonial-card-three__identity -->
-                                <p class="testimonial-card-three__quote">Eduhive Agency Company Also Impressed Us With Their Transpa Regarding Costs. The Initial Quote Was</p><!-- /.testimonial-card-three__quote -->
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                            </div><!-- /.testimonial-card-three__content -->
-                        </div><!-- /.testimonial-card-three -->
-                    </div><!-- /.owl-slide-item-->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <div class="testimonial-card-three">
-                            <div class="testimonial-card-three__image">
-                                <img src="assets/frontend/images/testimonials/testimonial-3-2.jpg" alt="Sarah Albert">
-                            </div>
-                            <div class="testimonial-card-three__content">
-                                <div class="testimonial-card-three__icon">
-                                    <span class="icon-quote"></span>
-                                </div><!-- /.testimonial-card-three__icon -->
-                                <div class="testimonial-card-three__identity">
-                                    <h5 class="testimonial-card-three__name">Sarah Albert</h5>
-                                    <p class="testimonial-card-three__designation">managing director</p>
-                                </div><!-- /.testimonial-card-three__identity -->
-                                <p class="testimonial-card-three__quote">Flexible Classes Refers To The Process Of Acquiring Is Knowledge Free Or Skills Through The Use</p><!-- /.testimonial-card-three__quote -->
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                            </div><!-- /.testimonial-card-three__content -->
-                        </div><!-- /.testimonial-card-three -->
-                    </div><!-- /.owl-slide-item-->
-                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                        <div class="testimonial-card-three">
-                            <div class="testimonial-card-three__image">
-                                <img src="assets/frontend/images/testimonials/testimonial-3-3.jpg" alt="Kevin Martin">
-                            </div>
-                            <div class="testimonial-card-three__content">
-                                <div class="testimonial-card-three__icon">
-                                    <span class="icon-quote"></span>
-                                </div><!-- /.testimonial-card-three__icon -->
-                                <div class="testimonial-card-three__identity">
-                                    <h5 class="testimonial-card-three__name">Kevin Martin</h5>
-                                    <p class="testimonial-card-three__designation">managing director</p>
-                                </div><!-- /.testimonial-card-three__identity -->
-                                <p class="testimonial-card-three__quote">There Are Many Variations Of Passages, But The Majority Have Suffered Alteradution In Some Form</p><!-- /.testimonial-card-three__quote -->
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                            </div><!-- /.testimonial-card-three__content -->
-                        </div><!-- /.testimonial-card-three -->
-                    </div><!-- /.owl-slide-item-->
-                </div><!-- /.thm-owl__slider -->
-            </div><!-- /.container -->
-            <img src="assets/frontend/images/shapes/testimonial-shape-3-1.png" alt="shape" class="testimonials-three__shape-one">
-            <img src="assets/frontend/images/shapes/testimonial-shape-3-2.png" alt="shape" class="testimonials-three__shape-two">
-            <img src="assets/frontend/images/shapes/testimonial-shape-3-3.png" alt="shape" class="testimonials-three__shape-three">
-            <div class="testimonials-three__shape-box"></div><!-- /.testimonials-three__shape-box -->
-        </section><!-- /.testimonials-three section-space2 -->
-
-       <section class="instructors-one section-space2" id="instructors">
-    <div class="container">
-        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h6 class="sec-title__tagline">our expert team</h6><!-- /.sec-title__tagline -->
-            <h3 class="sec-title__title">Our <span class="sec-title__title__text">management</span> <span class="sec-title__title__shape">Teams</span></h3><!-- /.sec-title__title -->
-        </div><!-- /.sec-title -->
-        <div class="instructors-one__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-                "items": 1,
-                "margin": 10,
-                "loop": true,
-                "smartSpeed": 700,
-                "nav": false,
-                "dots": true,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                "autoplay": true,
-                "responsive": {
-                    "0": {
+                <div class="instructors-one__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
                         "items": 1,
-                        "nav": true,
-                        "dots": false,
-                        "margin": 10
-                    },
-                    "576": {
-                        "items": 2,
-                        "margin": 30
-                    },
-                    "992": {
-                        "items": 3,
-                        "margin": 30
-                    },
-                    "1200": {
-                        "items": 4,
-                        "dots": false,
-                        "margin": 30
-                    }
-                }
-            }'>
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/teams/nks.webp" alt="Dr.Narendra Shyamsukha">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://www.facebook.com/narendra.shyamsukha">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/narendrashyamsukha/">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">Dr.Narendra Shyamsukha</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">Chairman</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/teams/ankit.webp" alt="Ankit Shyamsukha">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://www.facebook.com/ankitshyamsukha">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/ankitshyamsukha/">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">Ankit Shyamsukha</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">CEO</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/teams/kanhaiya.webp" alt="david cooper">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://www.facebook.com/kanhaiya.poddar.75">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://www.linkedin.com/in/kanhaiya-poddar-0a094a23/">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">Kanhaiya Poddar</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">CFO</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
-                    <div class="instructor-card__image">
-                        <img src="assets/frontend/images/instructors/instructor-1-4.jpg" alt="sarah albert">
-                        <div class="instructor-card__hover">
-                            <div class="instructor-card__info">
-                                <div class="instructor-card__social">
-                                    <span class="instructor-card__social__share">
-                                        <i class="icon-share"></i>
-                                    </span><!-- /.instructor-card__social__share -->
-                                    <div class="instructor-card__social__list">
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://facebook.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Linkedin</span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span class="instructor-card__social__list__icon">
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </span>
-                                            <span class="sr-only">Instagram</span>
-                                        </a>
-                                    </div><!-- /.instructor-card__social__list -->
-                                </div><!-- /.instructor-card__social -->
-                                <h3 class="instructor-card__name">
-                                    <a href="instructor-details.html">sarah albert</a>
-                                </h3><!-- /.instructor-card__name -->
-                                <h6 class="instructor-card__designation">UI/UX Designer</h6><!-- /.instructor-card__designation -->
-                            </div><!-- /.instructor-card__info -->
-                        </div><!-- /.instructor-card__hover -->
-                    </div><!-- /.instructor-card__image -->
-                </div><!-- /.instructor-card -->
-            </div><!-- /.item -->
-        </div><!-- /.instructors-one__carousel -->
-    </div><!-- /.container -->
-    <img src="assets/frontend/images/shapes/instructors-shape-1-1.png" alt="shape" class="instructors-one__shape-one">
-    <img src="assets/frontend/images/shapes/instructors-shape-1-2.png" alt="shape" class="instructors-one__shape-two">
-    <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
-    <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
-</section><!-- /.instructors-one section-space2 -->
+                        "margin": 10,
+                        "loop": true,
+                        "smartSpeed": 700,
+                        "nav": false,
+                        "dots": true,
+                        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                        "autoplay": true,
+                        "responsive": {
+                            "0": {
+                                "items": 1,
+                                "nav": true,
+                                "dots": false,
+                                "margin": 10
+                            },
+                            "576": {
+                                "items": 2,
+                                "margin": 30
+                            },
+                            "992": {
+                                "items": 3,
+                                "margin": 30
+                            },
+                            "1200": {
+                                "items": 4,
+                                "dots": false,
+                                "margin": 30
+                            }
+                        }
+                    }'>
+                    <div class="item">
+                        <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
+                            <div class="instructor-card__image">
+                                <img src="assets/frontend/images/teams/nks.webp" alt="Dr.Narendra Shyamsukha">
+                                <div class="instructor-card__hover">
+                                    <div class="instructor-card__info">
+                                        <div class="instructor-card__social">
+                                            <span class="instructor-card__social__share">
+                                                <i class="icon-share"></i>
+                                            </span><!-- /.instructor-card__social__share -->
+                                            <div class="instructor-card__social__list">
+                                                <a href="https://www.facebook.com/narendra.shyamsukha">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/narendrashyamsukha/">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Linkedin</span>
+                                                </a>
+                                            </div><!-- /.instructor-card__social__list -->
+                                        </div><!-- /.instructor-card__social -->
+                                        <h3 class="instructor-card__name">
+                                            <a href="instructor-details.html">Dr.Narendra Shyamsukha</a>
+                                        </h3><!-- /.instructor-card__name -->
+                                        <h6 class="instructor-card__designation">Chairman</h6><!-- /.instructor-card__designation -->
+                                    </div><!-- /.instructor-card__info -->
+                                </div><!-- /.instructor-card__hover -->
+                            </div><!-- /.instructor-card__image -->
+                        </div><!-- /.instructor-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                            <div class="instructor-card__image">
+                                <img src="assets/frontend/images/teams/ankit.webp" alt="Ankit Shyamsukha">
+                                <div class="instructor-card__hover">
+                                    <div class="instructor-card__info">
+                                        <div class="instructor-card__social">
+                                            <span class="instructor-card__social__share">
+                                                <i class="icon-share"></i>
+                                            </span><!-- /.instructor-card__social__share -->
+                                            <div class="instructor-card__social__list">
+                                                <a href="https://www.facebook.com/ankitshyamsukha">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/ankitshyamsukha/">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Linkedin</span>
+                                                </a>
+                                            </div><!-- /.instructor-card__social__list -->
+                                        </div><!-- /.instructor-card__social -->
+                                        <h3 class="instructor-card__name">
+                                            <a href="instructor-details.html">Ankit Shyamsukha</a>
+                                        </h3><!-- /.instructor-card__name -->
+                                        <h6 class="instructor-card__designation">CEO</h6><!-- /.instructor-card__designation -->
+                                    </div><!-- /.instructor-card__info -->
+                                </div><!-- /.instructor-card__hover -->
+                            </div><!-- /.instructor-card__image -->
+                        </div><!-- /.instructor-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+                            <div class="instructor-card__image">
+                                <img src="assets/frontend/images/teams/kanhaiya.webp" alt="david cooper">
+                                <div class="instructor-card__hover">
+                                    <div class="instructor-card__info">
+                                        <div class="instructor-card__social">
+                                            <span class="instructor-card__social__share">
+                                                <i class="icon-share"></i>
+                                            </span><!-- /.instructor-card__social__share -->
+                                            <div class="instructor-card__social__list">
+                                                <a href="https://www.facebook.com/kanhaiya.poddar.75">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://www.linkedin.com/in/kanhaiya-poddar-0a094a23/">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Linkedin</span>
+                                            </div><!-- /.instructor-card__social__list -->
+                                        </div><!-- /.instructor-card__social -->
+                                        <h3 class="instructor-card__name">
+                                            <a href="instructor-details.html">Kanhaiya Poddar</a>
+                                        </h3><!-- /.instructor-card__name -->
+                                        <h6 class="instructor-card__designation">CFO</h6><!-- /.instructor-card__designation -->
+                                    </div><!-- /.instructor-card__info -->
+                                </div><!-- /.instructor-card__hover -->
+                            </div><!-- /.instructor-card__image -->
+                        </div><!-- /.instructor-card -->
+                    </div><!-- /.item -->
+                    <div class="item">
+                        <div class="instructor-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                            <div class="instructor-card__image">
+                                <img src="assets/frontend/images/teams/palak.webp" alt="sarah albert">
+                                <div class="instructor-card__hover">
+                                    <div class="instructor-card__info">
+                                        <div class="instructor-card__social">
+                                            <span class="instructor-card__social__share">
+                                                <i class="icon-share"></i>
+                                            </span><!-- /.instructor-card__social__share -->
+                                            <div class="instructor-card__social__list">
+                                                <a href="https://facebook.com">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Facebook</span>
+                                                </a>
+                                                <a href="https://facebook.com">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Linkedin</span>
+                                                </a>
+                                                <a href="https://instagram.com">
+                                                    <span class="instructor-card__social__list__icon">
+                                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="sr-only">Instagram</span>
+                                                </a>
+                                            </div><!-- /.instructor-card__social__list -->
+                                        </div><!-- /.instructor-card__social -->
+                                        <h3 class="instructor-card__name">
+                                            <a href="instructor-details.html">Palak Shyamsukha</a>
+                                        </h3><!-- /.instructor-card__name -->
+                                        <h6 class="instructor-card__designation">Team Leader</h6><!-- /.instructor-card__designation -->
+                                    </div><!-- /.instructor-card__info -->
+                                </div><!-- /.instructor-card__hover -->
+                            </div><!-- /.instructor-card__image -->
+                        </div><!-- /.instructor-card -->
+                    </div><!-- /.item -->
+                </div><!-- /.instructors-one__carousel -->
+            </div><!-- /.container -->
+            <img src="assets/frontend/images/shapes/instructors-shape-1-1.png" alt="shape" class="instructors-one__shape-one">
+            <img src="assets/frontend/images/shapes/instructors-shape-1-2.png" alt="shape" class="instructors-one__shape-two">
+            <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
+            <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
+        </section><!-- /.instructors-one section-space2 -->
 @endsection

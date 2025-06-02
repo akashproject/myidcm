@@ -9992,6 +9992,11 @@ li:hover .contact-page__info__icon__inner {
     position: absolute;
     left: -24px;
 }
+.institute-container {
+    border: 1px solid #283b8f;
+    border-radius: 20px;
+    overflow: hidden;
+}
 @media (max-width: 991px) {
   .course-instructor-details__inner {
     grid-template-columns: auto;
@@ -16638,7 +16643,7 @@ body.boxed-wrapper .main-footer__shape-five {
     display: block;
 }
 .modelSideBanner {
-  background: url('https://www.skillvarsity.in/assets/frontend/img/modelBanner.png');
+  /* background: url('https://www.skillvarsity.in/assets/frontend/img/modelBanner.png'); */
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16649,4 +16654,13 @@ div#otp_target {
 }
 .otp-content .message {
     font-size: 13px;
+}
+.fa-map-marker {
+    color: #ab1313;
+}
+.institute-container .institute-content p{
+  color: #333;
+}
+.institute-container .institute-content .content {
+    color: #333;
 }

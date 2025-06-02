@@ -20,7 +20,7 @@
     <img src="assets/frontend/images/shapes/page-header-shape-2.png" alt="shape" class="page-header__shape-two">
     <div class="page-header__shape-three"></div><!-- /.page-header__shape-three -->
     <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
-</section>
+</section><!-- /.page-header -->
 
 <section class="testimonials-three section-space2" id="testimonials">
     <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.png);">
@@ -29,8 +29,8 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h3 class="sec-title__title">List <span class="sec-title__title__text">of Top </span> <span class="sec-title__title__shape">Companies</span></h3><!-- /.sec-title__title -->
-                    <p>Experience a journey of learning, growth, and career success. With hands-on training, expert guidance, and real-world exposure, we prepare you for a future full of opportunities.</p>
+                    <h3 class="sec-title__title">Our </span> <span class="sec-title__title__text"><span class="sec-title__title__shape">Top Recruiters</span></span></h3><!-- /.sec-title__title -->
+                    <p>We connect you with top companies, and our dedicated placement assistance helps you land your dream job in the digital marketing industry. Our strong ties with leading recruiters ensure IDCM Alumni are highly sought after for cutting-edge job roles.</p>
                 </div><!-- /.sec-title -->
             </div>
             <div class="col-md-8">
@@ -49,7 +49,7 @@
     <img src="assets/frontend/images/shapes/testimonial-shape-3-1.png" alt="shape" class="testimonials-three__shape-one">
     <img src="assets/frontend/images/shapes/testimonial-shape-3-2.png" alt="shape" class="testimonials-three__shape-two">
     <img src="assets/frontend/images/shapes/testimonial-shape-3-3.png" alt="shape" class="testimonials-three__shape-three">
-</section>
+</section><!-- /.testimonials-three section-space2 -->
 
 <section class="all-placed-student my-5">
     <div class="container">
@@ -77,7 +77,7 @@
         <div class="row mt-3">
             <div class="col-12 text-center">
                 <a href="{{ route('page-view','all-placement-students') }}" class="eduhive-btn">
-                    <span>Explore All</span>
+                    <span>View More Placements</span>
                     <span class="eduhive-btn__icon">
                         <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                     </span>
@@ -95,43 +95,43 @@
                     <div class="funfact-one__grid">
                         <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                             <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-connectibity"></i></span>
+                                <span class="funfact-one__icon__inner"><i class="icon-instructors"></i></span>
                             </div><!-- /.funfact-one__icon -->
                             <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="30" data-speed="1500">0</span>
-                                <span>k+</span>
-                            </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Satisfied Student</p><!-- /.funfact-one__text -->
-                        </div><!-- /.funfact-one__item -->
-                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-batch-assign"></i></span>
-                            </div><!-- /.funfact-one__icon -->
-                            <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="6500" data-speed="1500">0</span>
+                                <span class="count-text" data-stop="8000" data-speed="1500">0</span>
                                 <span>+</span>
                             </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Class Completed</p><!-- /.funfact-one__text -->
+                            <p class="funfact-one__text">Satisfied Students</p><!-- /.funfact-one__text -->
                         </div><!-- /.funfact-one__item -->
-                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                             <div class="funfact-one__icon">
                                 <span class="funfact-one__icon__inner"><i class="icon-students"></i></span>
                             </div><!-- /.funfact-one__icon -->
                             <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="6561" data-speed="1500">0</span>
+                                <span class="count-text" data-stop="720" data-speed="1500">0</span>
                                 <span>+</span>
                             </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Active Students</p><!-- /.funfact-one__text -->
+                            <p class="funfact-one__text">Classes Completed</p><!-- /.funfact-one__text -->
+                        </div><!-- /.funfact-one__item -->
+                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                            <div class="funfact-one__icon">
+                                <span class="funfact-one__icon__inner"><i class="icon-batch-assign "></i></span>
+                            </div><!-- /.funfact-one__icon -->
+                            <h3 class="funfact-one__title count-box">
+                                <span class="count-text" data-stop="30" data-speed="1500">0</span>
+                                <span>+</span>
+                            </h3><!-- /.funfact-one__title -->
+                            <p class="funfact-one__text">Placement Offices</p><!-- /.funfact-one__text -->
                         </div><!-- /.funfact-one__item -->
                         <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                             <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-instructors"></i></span>
+                                <span class="funfact-one__icon__inner"><i class="icon-connectibity"></i></span>
                             </div><!-- /.funfact-one__icon -->
                             <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="400" data-speed="1500">0</span>
-                                <span>+</span>
+                                <span class="count-text" data-stop="70" data-speed="1500">0</span>
+                                <span>K+</span>
                             </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Experts Instructors</p><!-- /.funfact-one__text -->
+                            <p class="funfact-one__text">Registered Employers</p><!-- /.funfact-one__text -->
                         </div><!-- /.funfact-one__item -->
                     </div><!-- /.rfunfact-one__grid -->
                 </div><!-- /.funfact-one -->
@@ -142,7 +142,7 @@
         <img src="{{ url('/assets/frontend/images/faq/faq-2-1.jpg') }}" alt="faq">
     </div><!-- /.faq-one__image-inner -->
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-5.png') }}" alt="shape" class="faq-one__shape-three">
-</section>
+</section><!-- /.faq-one section-space -->
 
 <section class="testimonials-one my-5" id="testimonials">
     <div class="container">
@@ -150,11 +150,11 @@
             <div class="col-xl-4">
                 <div class="testimonials-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">what students <span class="sec-title__title__shape">say about</span> <span class="sec-title__title__text">idcm</span></h3><!-- /.sec-title__title -->
+                        <h6 class="sec-title__tagline">Students' Experiences</h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">Pick <span class="sec-title__title__text"><span class="sec-title__title__shape">On Idcm</span></span></h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
                     <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
-                        <p class="testimonials-one__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue.</p><!-- /.testimonials-one__text -->
+                        <p class="testimonials-one__text">Our students don't just learn, they celebrate about their experience!</p><!-- /.testimonials-one__text -->
                     </div><!-- /.testimonial-one__description -->
                     <div class="testimonials-one__custome-navs"></div><!-- /.testimonials-one__custome-navs -->
                 </div><!-- /.testimonials-one__content -->
@@ -162,46 +162,46 @@
             <div class="col-xl-8">
                 <div class="eduhive-stretch-element-inside-column">
                     <div class="testimonials-one__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
+                "items": 1,
+                "margin": 30,
+                "smartSpeed": 700,
+                "loop": true,
+                "autoplay": 600,
+                "nav": true,
+                "navContainer": ".testimonials-one__custome-navs",
+                "dots": false,
+                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                "responsive":{
+                    "0":{
                         "items": 1,
-                        "margin": 30,
-                        "smartSpeed": 700,
-                        "loop": true,
-                        "autoplay": 600,
-                        "nav": true,
-                        "navContainer": ".testimonials-one__custome-navs",
-                        "dots": false,
-                        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                        "responsive":{
-                            "0":{
-                                "items": 1,
-                                "margin": 10
-                            },
-                            "576":{
-                                "items": 1.5
-                            },
-                            "768":{
-                                "items": 1.8
-                            },
-                            "992":{
-                                "items": 2.6
-                            },
-                            "1200":{
-                                "items": 2.3
-                            },
-                            "1360":{
-                                "items": 2.3
-                            },
-                            "1536":{
-                                "items": 2.5
-                            },
-                            "1600":{
-                                "items": 2.7
-                            },
-                            "1800":{
-                                "items": 2.94
-                            }
-                        }
-                        }'>
+                        "margin": 10
+                    },
+                    "576":{
+                        "items": 1.5
+                    },
+                    "768":{
+                        "items": 1.8
+                    },
+                    "992":{
+                        "items": 2.6
+                    },
+                    "1200":{
+                        "items": 2.3
+                    },
+                    "1360":{
+                        "items": 2.3
+                    },
+                    "1536":{
+                        "items": 2.5
+                    },
+                    "1600":{
+                        "items": 2.7
+                    },
+                    "1800":{
+                        "items": 2.94
+                    }
+                }
+                }'>
                         @foreach(getTestimonials() as $testimonial)
                             <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                                 <div class="testimonial-card">
@@ -217,22 +217,22 @@
                                     </div><!-- /.testimonial-card__top -->
                                     <div class="testimonial-card__content">
                                         <p class="testimonial-card__quote">{!! $testimonial->comment !!}</p><!-- /.testimonial-card__quote -->
-                                        <div class="eduhive-ratings">
+                                        <!--div class="eduhive-ratings">
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
-                                            </span><!-- /.eduhive-ratings__icon -->
+                                            </span>
                                         </div><!-- /.product-ratings -->
                                     </div><!-- /.testimonial-card__content -->
                                 </div><!-- /.testimonial-card -->
@@ -245,13 +245,13 @@
     </div><!-- /.container -->
     <img src="assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
     <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
-</section>
+</section><!-- /.testimonials-one section-space -->
 
 <section class="all-placed-student my-5">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title"><span>Meet Our</span> <span class="sec-title__title__shape sec-title__title__text"> Stars</span></h3><!-- /.sec-title__title -->
-            <h5> From Dreaming to Achieving </h5>
+            <h3 class="sec-title__title"><span>Students'</span> <span class="sec-title__title__shape sec-title__title__text"> Career Launchpad</span></h3><!-- /.sec-title__title -->
+            <h5> How IDCM Students are always well ahead of the competitions </h5>
         </div><!-- /.sec-title -->
         <div class="row my-5">
             <div class="col-md-5">
@@ -455,7 +455,6 @@
         </div>
     </div>
 </section>
-
 @if($contentMain->faqs != null)
 <section class="faq-one my-5">
     <div class="container">
@@ -491,6 +490,7 @@
     </div><!-- /.container -->
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-1.png')}}" alt="shape" class="faq-one__shape-one">
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-4.png')}}" alt="shape" class="faq-one__shape-two">
-</section>
+</section><!-- /.faq-one section-space -->
 @endif
+
 @endsection

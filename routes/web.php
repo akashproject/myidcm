@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 Auth::routes();
 
+Route::get('/index/clear-cache', function() {
+    echo $exitCode = Artisan::call('cache:clear');
+    // return what you want
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['prefix' => 'administrator'], function () {
 

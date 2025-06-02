@@ -142,7 +142,21 @@
 						</div>
 					</div>
 				</div>
-
+				<h4 class="card-title"> Blog Options </h4>
+					<div class="row">
+						<div class="col-md-12" >
+							<div class="form-group row">
+								<label for="title" class="col-sm-2 text-left control-label col-form-label">Select Blogs</label>
+								<div class="col-sm-6">
+									<select name="blog[]" class="form-control" multiple style="height:300px" >
+										@foreach(getAllBlogs() as $key => $value)
+										<option value="{{ $value->id }}" {{ (isset($course->blog)  && in_array($value->id,  json_decode($course->blog)))?'selected' : '' }} >{{$key+1}}. {{ $value->title->rendered }} </option>
+										@endforeach
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
 				<h4 class="card-title"> Search Engine Options </h4>
 				<div class="row">
 					<div class="col-md-8" >
@@ -201,23 +215,10 @@
 				</div>
 			</div>
 		</form>
-
-
-
 	</div>
-
 </div>              
-
-
-
 @endsection
-
-
-
 @section('script')
-
-
-
 <!-- ============================================================== -->
 
 

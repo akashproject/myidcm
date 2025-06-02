@@ -20,20 +20,40 @@
         <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
     </section><!-- /.page-header -->
 
-    <section>
+    <section class="section-space">
         <div class="container">
-            <div class="row">
+            <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                <h5> offline institutes </h5>
+                <h3 class="sec-title__title"><span>Visit Our Offline</span> <span class="sec-title__title__shape sec-title__title__text"> Centers</span></h3><!-- /.sec-title__title -->
+            </div><!-- /.sec-title -->
+           
+            <div class="row justified-content-center">
                 @foreach(getInstitutes() as $value)
                 <div class="col-md-4">
                     <div class="institute-container">
-                        <div class="institute-image">
-                            <img src="https://dummyimage.com/350x200">
+                        <div class="institute-image {{ $value->featured_image }}">
+                            <img src="{{ url('/assets/frontend/images/institutes/'.$value->slug.'.jpg') }}" class="width-100">
                         </div>
-                        <div class="institute-content">
-                            <h3> {{ $value->name }} </h3>
+                        <div class="institute-content p-3">
+                            <h4> {{ $value->name }} </h4>
+                            <p>  {{ substr(strip_tags($value->excerpt), 0, 100); }}...</p>
                             <div class="content">
-                                {{ $value->state_id }}, {{ $value->city_id }}
+                                <i class="fas fa-map-marker mr-3" ></i><span class="mx-2"> {{ getStateById($value->state_id)->name }}, {{ getCityById($value->city_id)->name }}</span>
                             </div>
+                            <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
+                                    <span>Book Now</span>
+                                    <span class="eduhive-btn__icon">
+                                        <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                    </span>
+                                </a><!-- /.eduhive-btn -->
+                                <a href="{{ route('view-institute',$value->slug) }}" class="eduhive-btn">
+                                    <span>Know More</span>
+                                    <span class="eduhive-btn__icon">
+                                        <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                    </span>
+                                </a><!-- /.eduhive-btn -->
+                            </div><!-- /.about-two__button -->
                         </div>
                     </div>
                 </div>

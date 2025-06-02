@@ -40,7 +40,7 @@
                                         </div><!-- /.contact-page__info__icon -->
                                         <div class="contact-page__info__content">
                                             <h3 class="contact-page__info__title">call now</h3>
-                                            <a href="tel:+9156980036420" class="contact-page__info__text">+91 5698 0036 420</a>
+                                            <a href="tel:{{ get_theme_setting('mobile') }}" class="contact-page__info__text">+91 {{ get_theme_setting('mobile') }}</a>
                                         </div><!-- /.contact-page__info__content -->
                                     </li>
                                     <li>
@@ -51,7 +51,7 @@
                                         </div><!-- /.contact-page__info__icon -->
                                         <div class="contact-page__info__content">
                                             <h3 class="contact-page__info__title">Email</h3>
-                                            <a href="mailto:needhelp@company.com" class="contact-page__info__text contact-page__info__text--email">needhelp@company.com</a>
+                                            <a href="mailto:{{ get_theme_setting('email') }}" class="contact-page__info__text contact-page__info__text--email">{{ get_theme_setting('email') }}</a>
                                         </div><!-- /.contact-page__info__content -->
                                     </li>
                                     <li>
@@ -62,28 +62,16 @@
                                         </div><!-- /.contact-page__info__icon -->
                                         <div class="contact-page__info__content">
                                             <h3 class="contact-page__info__title">address</h3>
-                                            <a href="https://www.google.com/maps" class="contact-page__info__text">26 Manor St,
-                                                Braintree UK</a>
+                                            <a href="https://www.google.com/maps" class="contact-page__info__text">{{ get_theme_setting('address') }}</a>
                                         </div><!-- /.contact-page__info__content -->
                                     </li>
                                 </ul><!-- /.list-unstyled -->
-                                <div class="contact-page__student">
-                                    <div class="contact-page__student__inner">
-                                        <div class="contact-page__student__image">
-                                            <img src="assets/frontend/images/resources/contact-student-1-1.png" alt="student">
-                                            <img src="assets/frontend/images/resources/contact-student-1-2.png" alt="student">
-                                            <img src="assets/frontend/images/resources/contact-student-1-3.png" alt="student">
-                                            <img src="assets/frontend/images/resources/contact-student-1-4.png" alt="student">
-                                        </div><!-- /.contact-page__student__image -->
-                                        <p class="contact-page__student__text">1.5k Happy student’s</p>
-                                        <!-- /.contact-page__student__text -->
-                                    </div><!-- /.contact-page__student__inner -->
-                                </div><!-- /.contact-page__student -->
+                                
                             </div><!-- /.contact-page__content__inner -->
                         </div><!-- /.contact-page__content -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <form class="contact-page__form contact-form-validated form-one" action="inc/sendemail.php">
+                        <form class="contact-page__form contact-form-validated form-one" action="inc/sendemail.php" style="height: 528px;">
                             <div class="form-one__group">
                                 <div class="form-one__control form-one__control--full">
                                     <input type="text" name="name" placeholder="Full Name">
@@ -95,7 +83,7 @@
                                     <input type="tel" name="tel" placeholder="Phone Number">
                                 </div><!-- /.form-one__control form-one__control--full -->
                                 <div class="form-one__control form-one__control--full">
-                                    <textarea name="message" placeholder="Write Messge. . ."></textarea><!-- /# -->
+                                    <textarea name="message" placeholder="Write Messge. . ." style="height: 132px;width: 100%;padding: 9px;border-radius: 9px;color: #666565;"></textarea><!-- /# -->
                                 </div><!-- /.form-one__control -->
                                 <div class="form-one__control form-one__control--full">
                                     <button type="submit" class="eduhive-btn">
@@ -104,7 +92,7 @@
                                     </button>
                                 </div><!-- /.form-one__control -->
                             </div><!-- /.form-one__group -->
-                            <div class="contact-page__form__image">
+                            <div class="contact-page__form__image" style="width:180px">
                                 <img src="assets/frontend/images/resources/contact-1-2.png" alt="contact">
                             </div><!-- /.contact-page__form__image -->
                         </form><!-- /.contact-page__form -->
@@ -116,7 +104,7 @@
         <section class="contact-map">
             <div class="container-fluid">
                 <div class="google-map google-map__contact">
-                    <iframe title="template google map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="map__contact" allowfullscreen></iframe>
+                    {!! get_theme_setting('gmap') !!}
                 </div>
                 <!-- /.google-map -->
             </div><!-- /.container-fluid -->
