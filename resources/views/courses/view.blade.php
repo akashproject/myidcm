@@ -264,11 +264,11 @@
                             <div class="col-lg-6">
                                 <div class="about-three__content">
                                     <div class="sec-title wow fadeInUp animated" data-wow-duration="1500ms" data-wow-delay="00ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                                        <h6 class="sec-title__tagline">global certifiate</h6><!-- /.sec-title__tagline -->
-                                        <h3 class="sec-title__title">Our <span class="sec-title__title__text">Certificate</span> Google <span class="sec-title__title__shape">Verified</span></h3><!-- /.sec-title__title -->
+                                        <h6 class="sec-title__tagline">Certification</h6><!-- /.sec-title__tagline -->
+                                        <h3 class="sec-title__title">Certificate of</span> <span class="sec-title__title__text"><span class="sec-title__title__shape">Completion</span></span></h3><!-- /.sec-title__title -->
                                     </div><!-- /.sec-title -->
                                     <div class="about-three__description wow fadeInUp animated" data-wow-duration="1500ms" data-wow-delay="00ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                                        <p class="about-three__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue velit in cursus leo sodales the turpis euismod quis sapien euismod quis sapien the.</p><!-- /.about-three__text -->
+                                        <p class="about-three__text">You can gain this certificate after the completion of this advanced diploma in a digital marketing course. Thus, it can boost your career to the next big level.</p><!-- /.about-three__text -->
                                     </div><!-- /.about-three__description -->
                                     
                                     <div class="about-three__bottom wow fadeInUp animated" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInUp;">
@@ -285,7 +285,7 @@
                                             <div class="about-three__call__content">
                                                 <p class="about-three__call__title">Know More</p><!-- /.call__title -->
                                                 <h4 class="about-three__call__number">
-                                                    <a href="tel:+208-555-0112">+208-555-0112</a>
+                                                    <a href="tel:+918335011110">+918335011110</a>
                                                 </h4><!-- /.about-three__call__number -->
                                             </div><!-- /.about-three__call__content -->
                                         </div><!-- /.about-three__call -->
@@ -306,8 +306,8 @@
         <section class="course-category section-space">
             <div class="container">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h6 class="sec-title__tagline">benefits</h6><!-- /.sec-title__tagline -->
-                    <h3 class="sec-title__title"><span class="sec-title__title__text">Digital Marketing Roles</span> <span class="sec-title__title__shape">Placed</span></h3><!-- /.sec-title__title -->
+                    <h6 class="sec-title__tagline">Job Opportunities</h6><!-- /.sec-title__tagline -->
+                    <h3 class="sec-title__title">Different <span class="sec-title__title__text"><span class="sec-title__title__shape">Digital Marketing Job Roles</span></span></h3><!-- /.sec-title__title -->
                 </div><!-- /.sec-title -->
                 <div class="row gutter-y-30">
                     <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
@@ -439,7 +439,7 @@
         <section class="all-placed-student mt-5">
             <div class="container">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h3 class="sec-title__title"><span>Placed </span> <span class="sec-title__title__shape">Students</span><span class="sec-title__title__text"> Story</span></h3><!-- /.sec-title__title -->
+                    <h3 class="sec-title__title">Students' <span class="sec-title__title__text"><span class="sec-title__title__shape">Placement Stories</span></span></h3><!-- /.sec-title__title -->
                 </div><!-- /.sec-title -->
                 <div class="row">
                     @foreach(getPlacements(6) as $placement)
@@ -461,7 +461,7 @@
                 <div class="row mt-3">
                     <div class="col-12 text-center">
                         <a href="{{ route('page-view','all-placement-students') }}" class="eduhive-btn">
-                            <span>Explore All</span>
+                            <span>View More Placements</span>
                             <span class="eduhive-btn__icon">
                                 <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                             </span>
@@ -477,8 +477,8 @@
                     <div class="row gutter-y-50 align-items-center">
                         <div class="col-xl-9 col-lg-8">
                             <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                                <h6 class="sec-title__tagline">our courses</h6><!-- /.sec-title__tagline -->
-                                <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Most</span> <span>Popular</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
+                                <h6 class="sec-title__tagline">Courses</h6><!-- /.sec-title__tagline -->
+                                <h3 class="sec-title__title"><span>Explore Our</span> <span class="sec-title__title__text"><span class="sec-title__title__shape">Top-Rated Courses</span></span></h3><!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
                         </div><!-- /.col-xl-9 col-lg-8 -->
                         <div class="col-xl-3 col-lg-4">
@@ -613,11 +613,11 @@
                     <div class="col-xl-4">
                         <div class="testimonials-one__content">
                             <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                                <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
-                                <h3 class="sec-title__title">what students <span class="sec-title__title__shape">say about</span> <span class="sec-title__title__text">idcm</span></h3><!-- /.sec-title__title -->
+                                <h6 class="sec-title__tagline">Students' Experiences</h6><!-- /.sec-title__tagline -->
+                                <h3 class="sec-title__title">Pick <span class="sec-title__title__text"><span class="sec-title__title__shape">on IDCM</span></span></h3><!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
                             <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
-                                <p class="testimonials-one__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue.</p><!-- /.testimonials-one__text -->
+                                <p class="testimonials-one__text">Our students don't just learn, they celebrate about their experience!</p><!-- /.testimonials-one__text -->
                             </div><!-- /.testimonial-one__description -->
                             <div class="testimonials-one__custome-navs"></div><!-- /.testimonials-one__custome-navs -->
                         </div><!-- /.testimonials-one__content -->
@@ -811,8 +811,8 @@
                     <div class="col-lg-12">
                         <div class="faq-one__content">
                             <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                                <h6 class="sec-title__tagline">faq’s</h6><!-- /.sec-title__tagline -->
-                                <h3 class="sec-title__title">We Are Always Ensure <span class="sec-title__title__text">Best <br> Course</span> For <span class="sec-title__title__shape">Your Learning</span></h3><!-- /.sec-title__title -->
+                                <h6 class="sec-title__tagline">Frequently Asked Questions</h6><!-- /.sec-title__tagline -->
+                                <!--h3 class="sec-title__title">We Are Always Ensure <span class="sec-title__title__text">Best <br> Course</span> For <span class="sec-title__title__shape">Your Learning</span></h3><!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
                             <div class="faq-one__accordion">
                                 <div class="eduhive-accordion" data-grp-name="eduhive-accordion">

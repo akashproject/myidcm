@@ -1,4 +1,5 @@
 let leadSubmitStatus = false;
+let otp_value = null;
 (function ($) {
   "use strict";
 
@@ -978,9 +979,45 @@ let leadSubmitStatus = false;
     }
   });
 
+  jQuery('#bannerLeadCaptureForm').validate({
+    rules: {
+        'lead_mobile_number[0]': {
+            required: true,
+        },
+        'lead_mobile_number[1]': {
+            required: true,
+            number: true,
+            maxlength: 10,
+            minlength: 10,
+        },
+    },
+    messages: {
+      'lead_mobile_number[1]': "Please type valid mobile number.",
+      lead_name:{
+        'required':"Enter Valid Full Name"
+      },
+      lead_email:{
+        'required':"Enter Valid Email Address"
+      },
+      lead_pincode:{
+        'required':"Enter Valid Address Pincode"
+      }
+    },
+    submitHandler: function(form) {
+      jQuery(".checkout_loader").show()
+      let formId = $(form).attr('id');      
+      if (leadSubmitStatus) {
+        form.submit();
+      } else {
+        insertLeadRecord(form,formId)
+        sendMobileOtp(formId);
+        countDown();
+      }
+    }
+  });
+
   jQuery('#otp_target').otpdesigner({
-    typingDone: function (code) {
-      let otp_value = jQuery("#leadCaptureForm .formFieldOtpResponse").val();      
+    typingDone: function (code) {      
       console.log('Entered OTP code: ' + otp_value+' '+code);
       if(otp_value != code){
         jQuery("#otp_target-error").show();
@@ -1045,10 +1082,12 @@ function sendMobileOtp(formId) {
     },
     success: function(result) {
       if (result) {        
+        otp_value = result.otp_value;
         jQuery("#" + formId + " .formFieldOtpResponse").val(result.otp_value);
         jQuery("#" + formId + " .submitted_lead_mobile_no").text(mobileNo);
         jQuery("#" + formId + " .lead_steps").removeClass("active");
         jQuery("#" + formId + " .lead_steps.step_2").addClass("active");
+        jQuery(".checkout_loader").hide()
         return true;
       } else {
         

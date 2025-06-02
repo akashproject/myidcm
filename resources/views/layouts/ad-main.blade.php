@@ -4,8 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/frontend/images/favicon.ico') }}">
     <title>{{ isset($contentMain->title)?$contentMain->title:'IDCM: Institute of Digital & Content Marketing' }}</title>
     <meta name="description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'IDCM, best digital marketing Institute in Delhi & Kolkata. Get 100% job assurance at affordable fees and 100% Industry Training. Book Your Free Demo Class Now.' }}" />
     <meta name="robots" content="index, follow" />
@@ -32,7 +30,8 @@
     <meta name="twitter:data1" content="admin" />
     <meta name="twitter:label2" content="Est. reading time" />
     <meta name="twitter:data2" content="2 minute" />
-    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('assets/frontend/images/favicon.ico') }}">
     <!-- Fonts and Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +49,7 @@
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/eduhive-icons/style.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/owl-carousel/css/owl.carousel.min.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/owl-carousel/css/owl.theme.default.min.css')}}" />
-    <link  rel="stylesheet" href="{{ url('assets/frontend/css/eduhive.css') }}">
+    <link  rel="stylesheet" href="{{ url('assets/frontend/css/ad-eduhive.css') }}">
     @yield('style')    
     <script>
         let popUp = 1
@@ -69,51 +68,65 @@
     <noscript><iframe src="https://web.archive.org/web/20250514003503if_/https://www.googletagmanager.com/ns.html?id=GTM-TR496XN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) --> 
     <div class="custom-cursor__cursor"></div>
-        <div class="custom-cursor__cursor-two"></div>
-
-        <div class="preloader">
-            <div class="preloader__image" style="background-image: url(/assets/frontend/images/idcm-loader.gif);"></div>
-        </div>
+    <div class="custom-cursor__cursor-two"></div>
+    <div class="preloader">
+        <div class="preloader__image" style="background-image: url(/assets/frontend/images/idcm-loader.gif);"></div>
+    </div>
         <!-- /.preloader -->
         <div class="page-wrapper">
-            @include('layouts.header')
             @yield('content')
-            @include('layouts.footer')
-            <div id="lead-generate-popup" class="white-popup mfp-hide">
-                @include('common.leadCaptureForm')
-            </div>
-            <script>
-                let globalUrl = "{{ env("APP_URL") }}"
-                let isEnableOtp = {{ (get_theme_setting('enable_otp') == "1")?get_theme_setting('enable_otp'):$contentMain->enable_otp }}
-                let isAjaxSubmit = "{{ get_theme_setting('ajax_submit') }}"
-            </script>
+            <footer class="main-footer section-space-top">
+                <div class="main-footer__bottom">
+                    <div class="container">
+                        <div class="main-footer__bottom__inner">
+                            <p class="main-footer__copyright">
+                                &copy; Copyright <span class="dynamic-year"></span> by MYDICM
+                            </p>
+                        </div><!-- /.main-footer__inner -->
+                    </div><!-- /.container -->
+                </div><!-- /.main-footer__bottom -->
+                <img src="{{ url('/assets/frontend/images/shapes/footer-shape-1.png') }}" alt="shape" class="main-footer__shape-one">
+                <img src="{{ url('/assets/frontend/images/shapes/footer-shape-2.png') }}" alt="shape" class="main-footer__shape-two">
+                <img src="{{ url('/assets/frontend/images/shapes/footer-shape-3.png') }}" alt="shape" class="main-footer__shape-three">
+                <img src="{{ url('/assets/frontend/images/shapes/footer-shape-4.png') }}" alt="shape" class="main-footer__shape-four">
+                <img src="{{ url('/assets/frontend/images/shapes/footer-shape-5.png') }}" alt="shape" class="main-footer__shape-five">
+            </footer><!-- /.main-footer section-space-top -->
 
-            <script src="{{ url('/assets/frontend/vendors/jquery/jquery-3.7.0.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/bootstrap-select/bootstrap-select.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jarallax/jarallax.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-ui/jquery-ui.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-appear/jquery.appear.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-circle-progress/jquery.circle-progress.min.js') }}"></script>
-            <script src="{{ url('assets/frontend/js/jquery.magnific-popup.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/nouislider/nouislider.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/tiny-slider/tiny-slider.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/wnumb/wNumb.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owl.carousel.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owlcarousel2-filter.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owlcarousel2-progressbar.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/wow/wow.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/imagesloaded/imagesloaded.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/isotope/isotope.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/countdown/countdown.min.js') }}"></script>
-            <script src="{{ url('assets/frontend/vendors/jquery-circleType/jquery.circleType.js')}}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js')}}"></script>
-            <script src="https://cdn.jsdelivr.net/gh/HichemTab-tech/OTP-designer-jquery@2.0.1/dist/otpdesigner.min.js"></script>
-            <!-- template js -->
-            <script src="{{ url('/assets/frontend/js/eduhive.js')}}"></script>
+        </div><!-- /.page-wrapper -->
+        <div id="lead-generate-popup" class="white-popup mfp-hide">
+            @include('common.leadCaptureForm')
         </div>
+    <script>
+        let globalUrl = "{{ env("APP_URL") }}"
+        let isEnableOtp = {{ (get_theme_setting('enable_otp') == "1")?get_theme_setting('enable_otp'):$contentMain->enable_otp }}
+        let isAjaxSubmit = "{{ get_theme_setting('ajax_submit') }}"
+    </script>
+
+    <script src="{{ url('/assets/frontend/vendors/jquery/jquery-3.7.0.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/bootstrap-select/bootstrap-select.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/jarallax/jarallax.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/jquery-ui/jquery-ui.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/jquery-appear/jquery.appear.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/jquery-circle-progress/jquery.circle-progress.min.js') }}"></script>
+    <script src="{{ url('assets/frontend/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/nouislider/nouislider.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/tiny-slider/tiny-slider.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/wnumb/wNumb.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owlcarousel2-filter.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owlcarousel2-progressbar.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/wow/wow.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/imagesloaded/imagesloaded.min.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/isotope/isotope.js') }}"></script>
+    <script src="{{ url('/assets/frontend/vendors/countdown/countdown.min.js') }}"></script>
+    <script src="{{ url('assets/frontend/vendors/jquery-circleType/jquery.circleType.js')}}"></script>
+    <script src="{{ url('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/HichemTab-tech/OTP-designer-jquery@2.0.1/dist/otpdesigner.min.js"></script>
+    <!-- template js -->
+    <script src="{{ url('/assets/frontend/js/eduhive.js')}}"></script>
 </body>
 
 </html>

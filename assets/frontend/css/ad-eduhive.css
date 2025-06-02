@@ -1,47 +1,4 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Utility
-# Common
-# Cards
-# Topbar
-# Navigation
-# Home Showcase
-# Mobile Nav
-# Search Popup
-# Forms
-# Custom Cursor
-# Page Header
-# Google Map
-# Client Carousel
-# Footer
-# Contact
-# Animations
-# Main Slider
-# About
-# Course Details
-# Course Category
-# Funfact
-# Testimonials
-# Online Class
-# CTA
-# Become Instructor
-# Instructor Details
-# Event Details
-# Gallery
-# Sidebar
-# Blog Details
-# Comments
-# Shop
-# Shop Details
-# Cart
-# Checkout
-# Login
-# FAQ
-# Pricing
-# Offer
-# Error 404
-# Boxed Home
+
 --------------------------------------------------------------*/
 :root {
   --eduhive-font: "Plus Jakarta Sans", sans-serif;
@@ -331,6 +288,9 @@
   transform: scaleX(-1);
 }
 
+.color-primary {
+  color: #283b8f;
+}
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
@@ -423,6 +383,9 @@ h6 {
   }
   .placement-redious-grid{
     width: 98px !important;
+  }
+  .banner-logo {
+    width: 100% !important;
   }
 }
 @media (max-width: 575px) {
@@ -6802,7 +6765,7 @@ li:hover .contact-page__info__icon__inner {
 }
 .main-slider-one__item {
   position: relative;
-  padding-top: 130px;
+  padding-top: 70px;
   padding-bottom: 75px;
   background: linear-gradient(104.23deg, #FFF3E7 1.55%, #EFFFFF 99.04%);
 }
@@ -16666,4 +16629,8 @@ div#otp_target {
 }
 .institute-container .institute-content .content {
     color: #333;
+}
+.banner-logo {
+    width: 30%;
+    margin-bottom: 30px;
 }

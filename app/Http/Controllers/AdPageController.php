@@ -12,7 +12,7 @@ class AdPageController extends Controller
     public function index($slug,Request $request)
     {
         try {
-            $center = ($request->has("center"))?$request->input('center'):null;
+            $institute = ($request->has("center"))?$request->input('center'):null;
             $contentMain = Adspage::where('slug', $slug)->firstOrFail();
             $courseType = null;
             $courses = null;
@@ -40,10 +40,8 @@ class AdPageController extends Controller
                 ->get();
             }
            
-            // $contentMain = Adspage::all();
-            // $contentMain = $contentMain->firstOrFail();
-            //print_r($contentMain->template); exit;
-            return view("adPage.".$contentMain->template,compact('center','contentMain','courseType','courses'));
+            
+            return view("adPage.".$contentMain->template,compact('institute','contentMain','courseType','courses'));
 
         } catch(\Illuminate\Database\QueryException $e){
             //throw $th;

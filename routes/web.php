@@ -102,7 +102,7 @@ Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('w
 Route::get('/{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page-view')->where('slug', '([A-Za-z0-9\-]+)');
 Route::get('/ads/{slug}', [App\Http\Controllers\AdPageController::class, 'index'])->name('ad-page-view')->where('slug', '([A-Za-z0-9\-]+)');
 Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'view'])->name('view-courses');
-Route::get('/institute/{slug}', [App\Http\Controllers\InstituteController::class, 'view'])->name('view-institute');
+Route::get('/institutes/{slug}', [App\Http\Controllers\InstituteController::class, 'view'])->name('view-institute');
 
 Route::post('/submit-mobile-otp', [App\Http\Controllers\IndexController::class, 'submitMobileOtp'])->name('submit-mobile-otp');
 Route::post('/insert-lead-records', [App\Http\Controllers\IndexController::class, 'insertLeadRecord'])->name('insert-lead-records');
@@ -114,3 +114,7 @@ Route::get('/api/primary-menu', [App\Http\Controllers\ApiController::class, 'pri
 Route::get('/api/footer-menu', [App\Http\Controllers\ApiController::class, 'footerMenu'])->name('api-footer-menu');
 Route::get('/api/courses', [App\Http\Controllers\ApiController::class, 'courses'])->name('api-courses');
 Route::get('/api/institutes', [App\Http\Controllers\ApiController::class, 'institutes'])->name('api-institutes');
+
+Route::fallback(function () {
+    abort(404);
+});

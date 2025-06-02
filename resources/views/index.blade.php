@@ -35,13 +35,13 @@
                                     </a>
                                 </div>
                             <div class="main-slider-one__button">
-                                <a href="courses.html" class="main-slider-one__btn-1 eduhive-btn">
+                                <a href="#lead-generate-popup" class="main-slider-one__btn-1 eduhive-btn open-popup-link">
                                     <span>find course</span>
                                     <span class="eduhive-btn__icon">
                                         <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                     </span>
                                 </a><!-- /.eduhive-btn -->
-                                <a href="about.html" class="main-slider-one__btn-2 eduhive-btn eduhive-btn--border">
+                                <a href="{{ url('/about-us') }}" class="main-slider-one__btn-2 eduhive-btn eduhive-btn--border">
                                     <span>About us</span>
                                     <span class="eduhive-btn__icon">
                                         <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
@@ -95,7 +95,7 @@
     </div><!-- /.main-slider-one__carousel -->
 </section><!-- /.main-slider-one -->
 
-<section class="courses-one pt-5" id="courses">
+<section class="courses-one pt-5" id="digital-marketing-courses">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
             <h3 class="sec-title__title"><span>Explore Our</span> <span class="sec-title__title__shape">Top-Rated</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->

@@ -14,9 +14,9 @@ class AppServiceProvider extends ServiceProvider
 {
 
     private $footerMenu = array(
-        '/events' => 'Events',
+        'javascript:void(0)' => 'Events',
         '/blog' => 'Blogs',
-        '/awards-recognitions' => "Awards & Recognitions",
+        'javascript:void(0)' => "Awards & Recognitions",
         '/about-us' => 'About Us',
         '/contact-us' => "Contact Us",
     );
@@ -31,12 +31,12 @@ class AppServiceProvider extends ServiceProvider
         $this->institutes = DB::table('institutes')->where("status","1")->get();
         $instituteArray = array();
         foreach ($this->institutes as $key => $value) {
-            $instituteArray['/institute/'.$value->slug] = $value->name;
+            $instituteArray['/institutes/'.$value->slug] = $value->name;
         }
         $this->primaryMenu = array(
             array(
-                'url'=>'/institute',
-                'name' => "Institute",
+                'url'=>'/institutes',
+                'name' => "Institutes",
                 'menu' => $instituteArray,
             ),
             array(
