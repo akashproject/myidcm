@@ -550,6 +550,10 @@ h6 {
 .position-relative {
   position: relative !important;
 }
+.text-left {
+  text-align: left;
+}
+
 .logo-retina img {
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
@@ -2180,7 +2184,7 @@ a:hover .instructor-card-two__social__icon {
   box-shadow: 0px 4px 60px rgba(30, 21, 75, 0.1);
 }
 .course-card__content {
-  padding: 30px 30px 0;
+  padding: 18px 18px 0;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -2305,7 +2309,9 @@ a:hover .instructor-card-two__social__icon {
   text-transform: capitalize;
 }
 .course-card__title--hover {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  height: 48px;
+  line-height: 1.6rem;
 }
 .course-card__title:hover {
   color: var(--eduhive-base, #674CEF);
@@ -2325,8 +2331,6 @@ a:hover .instructor-card-two__social__icon {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px 30px;
-  border-top: 1px solid var(--eduhive-border-color, #DBD8E6);
-  border-bottom: 1px solid var(--eduhive-border-color, #DBD8E6);
 }
 .course-card__lessons, .course-card__students {
   display: flex;
@@ -2366,7 +2370,7 @@ a:hover .instructor-card-two__social__icon {
   position: absolute;
   top: 0;
   left: 0;
-  transform: scaleY(0);
+  transform: scaleY(1);
   transform-origin: bottom;
   transform-style: preserve-3d;
   border-radius: 20px;
@@ -2384,6 +2388,10 @@ a:hover .instructor-card-two__social__icon {
 }
 .course-card__hover::-webkit-scrollbar {
   display: none;
+}
+.course-card__btn_wrap {
+    gap: 15px;
+    justify-content: center;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .course-card__hover {
