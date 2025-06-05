@@ -45,7 +45,7 @@
                               {{ $value->duration }} Months
                           </div><!-- /.course-card__duration -->
                       </div><!-- /.course-card__content__top -->
-                      <h3 class="course-card__title"><a href="data-science.html">{{ $value->name }}</a></h3><!-- /.course-card__title -->
+                      <h3 class="course-card__title"><a href="{{ route('view-courses',$value->slug) }}">{{ $value->name }}</a></h3><!-- /.course-card__title -->
                       <div class="course-card__info">
                           <div class="course-card__lessons">
                               <span class="course-card__lessons__icon">       
@@ -72,7 +72,7 @@
                                   {{ $value->duration }} Months
                               </div><!-- /.course-card__duration -->
                           </div><!-- /.course-card__content__top -->
-                          <h3 class="course-card__title course-card__title--hover"><a href="data-science.html">{{ $value->name }}</a></h3><!-- /.course-card__title -->
+                          <h3 class="course-card__title course-card__title--hover"><a href="{{ route('view-courses',$value->slug) }}">{{ $value->name }}</a></h3><!-- /.course-card__title -->
                           <p class="course-card__text">{{ substr($value->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
                           <div class="course-card__ratings course-card__ratings--hover">
                               <div class="eduhive-ratings">
@@ -92,7 +92,7 @@
                                       <i class="fa fa-star"></i>
                                   </span><!-- /.eduhive-ratings__icon -->
                               </div><!-- /.product-ratings -->
-                              <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
+                              <p class="course-card__ratings__text">( {{$value->number_of_rating}} ) Ratings</p><!-- /.course-card__ratings__text -->
                           </div><!-- /.course-card__ratings -->
                           <a href="#lead-generate-popup" class="course-card__btn eduhive-btn eduhive-btn--border open-popup-link">
                               <span>enroll now</span>

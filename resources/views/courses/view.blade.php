@@ -52,15 +52,14 @@
                         </div>
                         <div class="col-md-4">
                             <div class="course-details__image">
-                                <img src="{{ url('/assets/frontend/images/courses/course-d-1-2.jpg')}}" alt="The Complete Data Science Course">
-                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="course-details__video-btn video-btn video-popup">
+                                <img src="{{ url('assets/frontend/images/courses/videos/'.$contentMain->slug.'.jpg')}}" alt="The Complete Data Science Course">
+                                <a href="{{ $contentMain->course_video_link }}" class="course-details__video-btn video-btn video-popup">
                                     <i class="icon-play"></i>
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                 </a><!-- /.course-details__video-btn -->
-                                <span class="course-details__category">Technology</span><!-- /.course-details__category -->
                             </div><!-- /.course-details__image -->
                         </div>
                     </div>
@@ -529,7 +528,7 @@
                                 {{ $course->duration }} Months
                             </div><!-- /.course-card__duration -->
                         </div><!-- /.course-card__content__top -->
-                        <h3 class="course-card__title"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
+                        <h3 class="course-card__title"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                         <div class="course-card__info">
                             <div class="course-card__lessons">
                                 <span class="course-card__lessons__icon">       
@@ -556,7 +555,7 @@
                                     {{ $course->duration }} Months
                                 </div><!-- /.course-card__duration -->
                             </div><!-- /.course-card__content__top -->
-                            <h3 class="course-card__title course-card__title--hover"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
+                            <h3 class="course-card__title course-card__title--hover"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                             <p class="course-card__text">{{ substr($course->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
                             <div class="course-card__ratings course-card__ratings--hover">
                                 <div class="eduhive-ratings">

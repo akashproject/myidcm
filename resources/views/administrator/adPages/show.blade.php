@@ -98,6 +98,17 @@
 						</div>
 
 						<div class="form-group row mb-2">
+							<label for="store_area" class="col-sm-3 text-right control-label col-form-label">Capture to CRM</label>
+							<div class="col-sm-9">
+								<select name="store_area" id="store_area" class="select2 form-control custom-select" style="width: 100%; height:36px;" required>	
+									<option value="">Select One</option>
+									<option value="1" {{ ( $adPage->store_area ==  '1' )? 'selected' : '' }}> Yes</option>
+									<option value="0" {{ ( $adPage->store_area ==  '0' )? 'selected' : '' }}> No </option>
+								<select>
+							</div>
+						</div>
+
+						<div class="form-group row mb-2">
 							<label for="state" class="col-sm-3 text-right control-label col-form-label">Status</label>
 							<div class="col-sm-9">
 								<select name="status" id="status" class="select2 form-control custom-select" style="width: 100%; height:36px;">	

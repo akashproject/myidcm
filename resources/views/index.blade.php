@@ -36,13 +36,13 @@
                                 </div>
                             <div class="main-slider-one__button">
                                 <a href="#lead-generate-popup" class="main-slider-one__btn-1 eduhive-btn open-popup-link">
-                                    <span>find course</span>
+                                    <span>Book A Demo Class</span>
                                     <span class="eduhive-btn__icon">
                                         <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                     </span>
                                 </a><!-- /.eduhive-btn -->
-                                <a href="{{ url('/about-us') }}" class="main-slider-one__btn-2 eduhive-btn eduhive-btn--border">
-                                    <span>About us</span>
+                                <a href="{{ url('/courses') }}" target="_blank" class="main-slider-one__btn-2 eduhive-btn eduhive-btn--border">
+                                    <span>Explore courses</span>
                                     <span class="eduhive-btn__icon">
                                         <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                     </span>
@@ -95,153 +95,7 @@
     </div><!-- /.main-slider-one__carousel -->
 </section><!-- /.main-slider-one -->
 
-<section class="courses-one pt-5" id="digital-marketing-courses">
-    <div class="container">
-        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title"><span>Explore Our</span> <span class="sec-title__title__shape">Top-Rated</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
-        </div><!-- /.sec-title -->
-    </div><!-- /.container -->
-    <div class="courses-one__container container">
-        <div class="courses-one__carousel eduhive-owl__carousel--with-shadow eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-                "items": 1,
-                "margin": 10,
-                "loop": true,
-                "smartSpeed": 700,
-                "rtl": true,
-                "nav": true,
-                "dots": false,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                "autoplay": true,
-                "responsive": {
-                    "0": {
-                        "items": 1,
-                        "margin": 10
-                    },
-                    "768": {
-                        "items": 2,
-                        "margin": 30
-                    },
-                    "992": {
-                        "items": 3,
-                        "margin": 30
-                    },
-                    "1200": {
-                        "items": 3.3,
-                        "margin": 30
-                    },
-                    "1400": {
-                        "items": 3.4,
-                        "margin": 30
-                    },
-                    "1536": {
-                        "items": 3.5,
-                        "margin": 30
-                    },
-                    "1600": {
-                        "items": 3.7,
-                        "margin": 30
-                    },
-                    "1800": {
-                        "items": 3.94,
-                        "margin": 30
-                    }
-                }
-            }'>
-            @foreach(get_courses() as $course)
-            <div class="item">
-                <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="course-card__image">
-                        <img src="{{ url('assets/frontend/images/courses/'.$course->slug.'.gif')}}" alt="The Data Science Revolution: Upgrading Your Skills">
-                        
-                    </div><!-- /.course-card__image -->
-                    <div class="course-card__content">
-                        <div class="course-card__content__top">
-                            <div class="course-card__category">{{ $course->no_of_module }} lessons</div><!-- /.course-card__category -->
-                            <div class="course-card__duration">
-                                <span class="course-card__duration__icon">
-                                    <i class="icon-clock"></i>
-                                </span><!-- /.course-card__duration__icon -->
-                                {{ $course->duration }} Months
-                            </div><!-- /.course-card__duration -->
-                        </div><!-- /.course-card__content__top -->
-                        <h3 class="course-card__title"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
-                        <div class="course-card__info">
-                            <div class="course-card__lessons">
-                                <span class="course-card__lessons__icon">       
-                                    <i class="icon-open-book"></i>
-                                </span><!-- /.course-card__lessons__icon -->
-                                {{ $course->no_of_module }} lessons
-                            </div><!-- /.course-card__lessons -->
-                            <div class="course-card__students">
-                                <span class="course-card__students__icon">
-                                    <i class="icon-multiple-users-silhouette"></i>
-                                </span><!-- /.course-card__lessons__icon -->
-                                {{ $course->number_of_enrolled }} Students
-                            </div><!-- /.course-card__students -->
-                        </div><!-- /.course-card__info -->
-                    </div><!-- /.course-card__content -->
-                    <div class="course-card__hover" style="background-image: url(assets/frontend/images/shapes/course-card-bg-1-1.png);">
-                        <div class="course-card__hover__content">
-                            <div class="course-card__content__top course-card__content__top--hover">
-                                <div class="course-card__category">Experts</div><!-- /.course-card__category -->
-                                <div class="course-card__duration">
-                                    <span class="course-card__duration__icon">
-                                        <i class="icon-clock"></i>
-                                    </span><!-- /.course-card__duration__icon -->
-                                    {{ $course->duration }} Months
-                                </div><!-- /.course-card__duration -->
-                            </div><!-- /.course-card__content__top -->
-                            <h3 class="course-card__title course-card__title--hover"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
-                            <p class="course-card__text">{{ substr($course->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
-                            <div class="course-card__ratings course-card__ratings--hover">
-                                <div class="eduhive-ratings">
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                    <span class="eduhive-ratings__icon">
-                                        <i class="fa fa-star"></i>
-                                    </span><!-- /.eduhive-ratings__icon -->
-                                </div><!-- /.product-ratings -->
-                                <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
-                            </div><!-- /.course-card__ratings -->
-                            <a href="#lead-generate-popup" class="course-card__btn eduhive-btn eduhive-btn--border open-popup-link">
-                                <span>enroll now</span>
-                                <span class="eduhive-btn__icon">
-                                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                </span>
-                            </a><!-- /.course-card__btn eduhive-btn -->
-                            <div class="course-card__info course-card__info--hover">
-                                <div class="course-card__lessons">
-                                    <span class="course-card__lessons__icon">
-                                        <i class="icon-open-book"></i>
-                                    </span><!-- /.course-card__lessons__icon -->
-                                    20 lessons
-                                </div><!-- /.course-card__lessons -->
-                                <div class="course-card__students">
-                                    <span class="course-card__students__icon">
-                                        <i class="icon-multiple-users-silhouette"></i>
-                                    </span><!-- /.course-card__lessons__icon -->
-                                    {{ $course->number_of_enrolled }} Students
-                                </div><!-- /.course-card__students -->
-                            </div><!-- /.course-card__info -->
-                        </div><!-- /.course-card__hover__content -->
-                    </div><!-- /.course-card__hover -->
-                </div><!-- /.course-card -->
-            </div><!-- /.item -->
-            @endforeach
-        </div><!-- /.courses-one__carousel -->
-    </div><!-- /.courses-one__container container -->
-    <img src="assets/frontend/images/shapes/courses-shape-1-1.png" alt="shape" class="courses-one__shape">
-</section><!-- /.courses-one section-space-top2 -->
+@include('common.courses')
 
 <section class="about-one section-space" id="about">
     <div class="about-one__bg" style="background-image: url(assets/frontend/images/shapes/about-bg-1-1.png);"></div>
@@ -252,7 +106,7 @@
                     <div class="about-one__image__one">
                         <img src="assets/frontend/images/about/about-1-1.jpg" alt="about">
                         <div class="about-one__video">
-                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="about-one__video__btn video-btn video-popup">
+                            <a href="javascript:void(0)" class="about-one__video__btn video-btn video-popup">
                                 <i class="icon-play"></i>
                                 <span></span>
                                 <span></span>
@@ -317,7 +171,7 @@
 @php
     $featuredCourse = getCourseById(1);
 @endphp
-<section class="featured_course mt-5" id="featured_course">
+<section class="featured_course my-5" id="featured_course">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
             <h3 class="sec-title__title">Most Demanding <span class="sec-title__title__shape">Course</span></h3>
@@ -327,7 +181,7 @@
                 <div class="about-one__image">
                     <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
                         <div class="video-one__bg course-video" style="background-image: url(assets/frontend/images/courses/featured-course.jpg);">
-                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-one__video-btn video-btn video-popup">
+                            <a href="{{ $featuredCourse->course_video_link }}" class="video-one__video-btn video-btn video-popup">
                                 <i class="icon-play"></i>
                                 <span></span>
                                 <span></span>
@@ -368,7 +222,7 @@
                    
                     <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
-                            <span>Register Now</span>
+                            <span>Book Free Demo Class</span>
                             <span class="eduhive-btn__icon">
                                 <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                             </span>

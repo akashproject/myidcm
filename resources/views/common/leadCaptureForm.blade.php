@@ -26,7 +26,7 @@
                 </div><!-- /.sec-title -->
                 <div class="row justified-content-center">
                     @foreach(getPlacements(1) as $placement)
-                        <div class="col-12"> 
+                        <div class="col-10"> 
                             <div class="placed-student-container placement-featured my-2">
                                 <div class="placed-student-content text-white margin-20px-right">
                                     <h6 class="margin-10px-bottom"> <strong>{{$placement->name }}</strong> </h6>

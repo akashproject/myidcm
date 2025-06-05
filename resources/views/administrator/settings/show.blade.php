@@ -276,7 +276,7 @@
 						<div class="card-body">
 							<div class="row">
 								<div class="mb-3 col-md-6">
-									<label for="firstName" class="form-label">Facebook</label>
+									<label for="facebook" class="form-label">Facebook</label>
 									<input
 										class="form-control"
 										type="text"
@@ -285,7 +285,7 @@
 									/>
 								</div>		
 								<div class="mb-3 col-md-6">
-									<label for="firstName" class="form-label">Twitter</label>
+									<label for="twitter" class="form-label">Twitter</label>
 									<input
 										class="form-control"
 										type="text"
@@ -294,7 +294,7 @@
 									/>
 								</div>		
 								<div class="mb-3 col-md-6">
-									<label for="firstName" class="form-label">LinkedIn</label>
+									<label for="linkedin" class="form-label">LinkedIn</label>
 									<input
 										class="form-control"
 										type="text"
@@ -303,11 +303,20 @@
 									/>
 								</div>	
 								<div class="mb-3 col-md-6">
-									<label for="firstName" class="form-label">Youtube</label>
+									<label for="youtube" class="form-label">Youtube</label>
 									<input
 										class="form-control"
 										type="text"
 										name="youtube" id="youtube" placeholder="Enter YouTube Link Here" value="{{ (isset($settings['youtube']))?$settings['youtube']:'' }}"
+										autofocus
+									/>
+								</div>
+								<div class="mb-3 col-md-6">
+									<label for="instagram" class="form-label">Instagram</label>
+									<input
+										class="form-control"
+										type="text"
+										name="instagram" id="instagram" placeholder="Enter instagram Link Here" value="{{ (isset($settings['instagram']))?$settings['instagram']:'' }}"
 										autofocus
 									/>
 								</div>

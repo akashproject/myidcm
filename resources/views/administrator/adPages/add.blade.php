@@ -25,13 +25,13 @@
 						<div class="form-group row mb-2">
 							<label for="name" class="col-sm-3 text-right control-label col-form-label">Name</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="name" id="name" placeholder="Enter Name Here" >
+								<input type="text" class="form-control" name="name" id="name" placeholder="Enter Name Here" required>
 							</div>
 						</div>
 						<div class="form-group row mb-2">
 							<label for="slug" class="col-sm-3 text-right control-label col-form-label">Slug</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="slug" id="slug" placeholder="Slug Here" >
+								<input type="text" class="form-control" name="slug" id="slug" placeholder="Slug Here" required>
 							</div>
 						</div>
 
@@ -44,14 +44,14 @@
 						<div class="form-group row mb-2">
 							<label for="email" class="col-sm-3 text-right control-label col-form-label">Email</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="email" id="email" placeholder="Enter Email Here" >
+								<input type="text" class="form-control" name="email" id="email" placeholder="Enter Email Here" required>
 							</div>
 						</div>
 
 						<div class="form-group row mb-2">
 							<label for="mobile" class="col-sm-3 text-right control-label col-form-label">Mobile</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="mobile" id="mobile" placeholder="Enter Mobile Here" >
+								<input type="text" class="form-control" name="mobile" id="mobile" placeholder="Enter Mobile Here" required>
 							</div>
 						</div>
 					</div>
@@ -82,15 +82,26 @@
 						<div class="form-group row mb-2">
 							<label for="template" class="col-sm-3 text-right control-label col-form-label">Template</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="template" id="template" placeholder="Template Here" >
+								<input type="text" class="form-control" name="template" id="template" placeholder="Template Here" required>
 							</div>
 						</div>								
 
 						<div class="form-group row mb-2">
 							<label for="enable_otp" class="col-sm-3 text-right control-label col-form-label">Enable OTP</label>
 							<div class="col-sm-9">
-								<select name="enable_otp" id="enable_otp" class="select2 form-control custom-select" style="width: 100%; height:36px;">	
+								<select name="enable_otp" id="enable_otp" class="select2 form-control custom-select" style="width: 100%; height:36px;" required>	
 									<option value="">Enable Otp</option>
+									<option value="1" > Yes</option>
+									<option value="0" > No </option>
+								<select>
+							</div>
+						</div>
+
+						<div class="form-group row mb-2">
+							<label for="store_area" class="col-sm-3 text-right control-label col-form-label">Capture to CRM</label>
+							<div class="col-sm-9">
+								<select name="store_area" id="store_area" class="select2 form-control custom-select" style="width: 100%; height:36px;" required>	
+									<option value="">Select One</option>
 									<option value="1" > Yes</option>
 									<option value="0" > No </option>
 								<select>

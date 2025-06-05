@@ -30,7 +30,7 @@
             <div class="row justified-content-center">
                 @foreach(getInstitutes() as $value)
                 <div class="col-md-4">
-                    <div class="institute-container">
+                    <div class="institute-container my-2">
                         <div class="institute-image {{ $value->featured_image }}">
                             <img src="{{ url('/assets/frontend/images/institutes/'.$value->slug.'.jpg') }}" class="width-100">
                         </div>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
                                 <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
-                                    <span>Book Now</span>
+                                    <span>Book Visit</span>
                                     <span class="eduhive-btn__icon">
                                         <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                     </span>

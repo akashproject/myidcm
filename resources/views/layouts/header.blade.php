@@ -62,7 +62,7 @@
                             </div><!-- /.main-header__courses__text -->
                             <ul class="main-header__courses__list">
 								@foreach($courses as $course)
-                                <li><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></li>
+                                <li><a target="_blank" href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></li>
 								@endforeach
                             </ul><!-- /.main-header__courses__list -->
                         </div>
@@ -77,7 +77,7 @@
 									@if(isset($menuItem['menu']))
 										<ul>
 											@foreach($menuItem['menu'] as $key => $subMenu)
-											<li><a href="{{ $key }}"> {{ $subMenu }}</a></li>
+											<li><a target="_blank" href="{{ $key }}"> {{ $subMenu }}</a></li>
 											@endforeach
 										</ul>
 									@endif

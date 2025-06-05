@@ -589,6 +589,11 @@ h6 {
   letter-spacing: var(--eduhive-letter-space, -0.03em);
   text-transform: capitalize;
 }
+.whatsapp-sticky-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
 @media (max-width: 575px) {
   .sec-title__title {
     font-size: 34px;
@@ -1142,7 +1147,7 @@ h6 {
 }
 
 /* post paginations */
-.post-pagination {
+.page-numbers {
   list-style: none;
   padding: 0;
   margin: 30px 0 0;
@@ -1151,7 +1156,7 @@ h6 {
   flex-wrap: wrap;
   gap: 7px;
 }
-.post-pagination a {
+.page-numbers li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1168,7 +1173,7 @@ h6 {
   border: 1px solid transparent;
   transition: all 400ms ease;
 }
-.post-pagination a .post-pagination__icon {
+.page-numbers li .page-numbers__icon {
   position: relative;
   top: 1.5px;
   display: inline-flex;
@@ -1176,25 +1181,25 @@ h6 {
   color: var(--eduhive-text, #7B7980);
   transition: all 400ms ease;
 }
-.post-pagination a .post-pagination__icon svg {
+.page-numbers li .page-numbers__icon svg {
   width: 1em;
   height: 1em;
   fill: currentColor;
 }
-.post-pagination a:hover {
+.page-numbers li:hover {
   border-color: var(--eduhive-base, #674CEF);
   color: var(--eduhive-base, #674CEF);
   background-color: transparent;
   text-shadow: 0px 0px 0.5px currentColor;
 }
-.post-pagination a:hover .post-pagination__icon {
+.page-numbers li:hover .page-numbers__icon {
   color: var(--eduhive-base, #674CEF);
 }
-.post-pagination li.active a {
+.page-numbers li.active a {
   background-color: var(--eduhive-base, #674CEF);
   color: var(--eduhive-black, #20104B);
 }
-.post-pagination li.active a .post-pagination__icon {
+.page-numbers li.active a .page-numbers__icon {
   color: var(--eduhive-white, #FFFFFF);
 }
 
@@ -2296,6 +2301,7 @@ a:hover .instructor-card-two__social__icon {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.666;
+  height: 55px;
   text-transform: capitalize;
 }
 .course-card__title--hover {
@@ -2986,11 +2992,11 @@ a:hover .instructor-card-two__social__icon {
 .courses-page--carousel .owl-carousel .owl-nav button {
   background-color: var(--eduhive-white, #FFFFFF);
 }
-.courses-page .post-pagination {
+.courses-page .page-numbers {
   justify-content: center;
 }
 @media (max-width: 991px) {
-  .courses-page .post-pagination {
+  .courses-page .page-numbers {
     margin-top: 20px;
   }
 }
@@ -3907,37 +3913,40 @@ a:hover .instructor-card-two__social__icon {
 .blog-page {
   background-color: var(--eduhive-white, #FFFFFF);
 }
-.blog-page .post-pagination {
+.blog-page .page-numbers {
   justify-content: center;
 }
 @media (max-width: 991px) {
-  .blog-page .post-pagination {
+  .blog-page .page-numbers {
     margin-top: 20px;
   }
 }
-.blog-page--list .post-pagination, .blog-page--sidebar .post-pagination {
-  margin-top: 20px;
+.blog-page--list .page-numbers, .blog-page--sidebar .page-numbers {
+  margin-top: 0;
 }
 @media (max-width: 991px) {
-  .blog-page--list .post-pagination, .blog-page--sidebar .post-pagination {
-    margin-top: 10px;
+  .blog-page--list .page-numbers, .blog-page--sidebar .page-numbers {
+    margin-top: 0;
   }
 }
-.blog-page--sidebar .post-pagination {
+.blog-page--sidebar .page-numbers {
   justify-content: flex-start;
 }
 @media (max-width: 991px) {
-  .blog-page--sidebar .post-pagination {
+  .blog-page--sidebar .page-numbers {
     justify-content: center;
   }
 }
-.blog-page--grid .post-pagination {
+.blog-page--grid .page-numbers {
   margin-top: 30px;
 }
 @media (max-width: 991px) {
-  .blog-page--grid .post-pagination {
+  .blog-page--grid .page-numbers {
     margin-top: 20px;
   }
+}
+nav.navigation.pagination {
+    justify-content: center;
 }
 .blog-page--carousel {
   background: linear-gradient(180deg, rgba(237, 234, 244, 0) 0%, #EDEAF4 100%);
@@ -5569,7 +5578,7 @@ body.megamenu-popup-active .mobile-nav__content {
   display: inline-flex;
 }
 .eduhive-breadcrumb li:not(:first-child) span {
-  color: var(--eduhive-primary, #EF802E);
+  color: #0f756d;
 }
 .eduhive-breadcrumb li a {
   color: inherit;
@@ -9298,6 +9307,7 @@ li:hover .contact-page__info__icon__inner {
   position: absolute;
   margin-bottom: 7px;
   top: -200px;
+  z-index: 2;
 }
 .course-details__image img {
   width: 100%;
@@ -9558,7 +9568,7 @@ li:hover .contact-page__info__icon__inner {
     margin-top: 30px;
   }
   .practical_tools a {
-    width: 109px;
+    width: 92px;
   }
 }
 .course-details__accordion .accordion-time__duration {
@@ -13330,6 +13340,32 @@ li:hover .sidebar__comments__icon {
   line-height: 28px;
   margin: 15px 0;
 }
+
+.post_navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.post_navigation li {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    max-width: 340px;
+}
+.post_navigation li .image {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+.post_navigation li .text {
+    width: calc(100% - 90px);
+}
+.post_navigation li .text h6 {
+    font-size: 16px;
+}
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
@@ -13937,11 +13973,11 @@ li:hover .sidebar__comments__icon {
     padding-top: 80px;
   }
 }
-.product-page .post-pagination {
+.product-page .page-numbers {
   justify-content: center;
 }
 @media (max-width: 991px) {
-  .product-page .post-pagination {
+  .product-page .page-numbers {
     margin-top: 20px;
   }
 }

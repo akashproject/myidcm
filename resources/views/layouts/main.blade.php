@@ -82,6 +82,9 @@
             <div id="lead-generate-popup" class="white-popup mfp-hide">
                 @include('common.leadCaptureForm')
             </div>
+            <a href="https://api.whatsapp.com/send?phone={{ get_theme_setting('whatsapp') }}" target="_blank" class="whatsapp-sticky-btn">
+                <img src="{{ url('/assets/frontend/images/resources/whatsapp.png') }}" alt="" class="src">
+            </a>
             <script>
                 let globalUrl = "{{ env("APP_URL") }}"
                 let isEnableOtp = {{ (get_theme_setting('enable_otp') == "1")?get_theme_setting('enable_otp'):$contentMain->enable_otp }}
@@ -97,7 +100,6 @@
             <script src="{{ url('/assets/frontend/vendors/jquery-appear/jquery.appear.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-circle-progress/jquery.circle-progress.min.js') }}"></script>
             <script src="{{ url('assets/frontend/js/jquery.magnific-popup.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/nouislider/nouislider.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/tiny-slider/tiny-slider.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/wnumb/wNumb.min.js') }}"></script>
@@ -111,6 +113,7 @@
             <script src="{{ url('assets/frontend/vendors/jquery-circleType/jquery.circleType.js')}}"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js')}}"></script>
             <script src="https://cdn.jsdelivr.net/gh/HichemTab-tech/OTP-designer-jquery@2.0.1/dist/otpdesigner.min.js"></script>
+            <script src="{{ url('/assets/frontend/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
             <!-- template js -->
             <script src="{{ url('/assets/frontend/js/eduhive.js')}}"></script>
         </div>

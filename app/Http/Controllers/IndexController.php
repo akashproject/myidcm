@@ -96,7 +96,7 @@ class IndexController extends Controller
                     ->join("cities","pincodes.city_id","=","cities.id")
                     ->join("states","cities.state_id","=","states.id")
                     ->select("cities.name as city","pincodes.name as pincode","states.name as state","states.id as state_id")
-                    ->where("pincodes.name", $postData["lead_pincode"])
+                    ->where("pincodes.name", $postData["pincode"])
                     ->first();
                 if($pincode && $pincode->state_id == "10"){
                     $postData["city"] = $pincode->state;
@@ -121,19 +121,21 @@ class IndexController extends Controller
             if ($postData['lead_id']) {
                 $lead = Lead::find($postData['lead_id']);
             }
-            $postData['city'] = $lead['city'];
-            $postData['first_name'] = $lead['first_name'];
-            $postData['last_name'] = $lead['last_name'];
+            $updateData['otp_status'] = "1";
+            $ee = $this->b2cLeadCaptureLeadToExtraage($lead);
+            $updateData['crm_status'] = ($ee['result'] == "Success")?'1':'0';
+            $updateData['crm_response'] = $ee;
+            
+            $cogno = $this->cognoai_api_calling($lead);
+            $updateData['whatsapp_status'] = ($cogno['status'] == "200")?'1':'0';
 
-            $ee = $this->b2cLeadCaptureLeadToExtraage($postData);
-            $cogno = $this->cognoai_api_calling($postData);
-            $thankYou = $this->thankyouNotication($postData);
-            $brevo = $this->sendEmailBrochureByBrevo($postData);
-            $insert_lead_to_db = $this->captureLeadToDB($postData);
+            $thankYou = $this->thankyouNotication($lead);
+            $updateData['message_status'] = ($thankYou['statusCode'] == "200")?'1':'0';
 
-            $postData['crm_status'] = $ee->original;
-            $postData['whatsapp_status'] = $cogno->original;
-
+            $brevo = $this->sendEmailBrochureByBrevo($lead);
+            $updateData['mail_status'] = (isset($brevo['messageId']))?'1':'0';
+            
+            $lead->update($updateData);
             return redirect('/thank-you');
 
         } catch (\Illuminate\Database\QueryException $e) {

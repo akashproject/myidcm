@@ -954,7 +954,7 @@ let otp_value = null;
             maxlength: 10,
             minlength: 10,
         },
-        lead_pincode:{
+        pincode:{
           maxlength: 6,
           minlength: 6,
         }
@@ -967,13 +967,14 @@ let otp_value = null;
       lead_email:{
         'required':"Enter Valid Email Address"
       },
-      lead_pincode:{
+      pincode:{
         'required':"Enter Valid Address Pincode",
         'maxlength':"Enter Valid Address Pincode",
         'minlength':"Enter Valid Address Pincode",
       }
     },
     submitHandler: function(form) {
+      jQuery(".checkout_loader").show()
       let formId = $(form).attr('id');      
       if (leadSubmitStatus) {
         form.submit();
@@ -988,14 +989,18 @@ let otp_value = null;
   jQuery('#bannerLeadCaptureForm').validate({
     rules: {
         'lead_mobile_number[0]': {
-            required: true,
+          required: true,
         },
         'lead_mobile_number[1]': {
-            required: true,
-            number: true,
-            maxlength: 10,
-            minlength: 10,
+          required: true,
+          number: true,
+          maxlength: 10,
+          minlength: 10,
         },
+        pincode:{
+          maxlength: 6,
+          minlength: 6,
+        }
     },
     messages: {
       'lead_mobile_number[1]': "Please type valid mobile number.",
@@ -1005,8 +1010,10 @@ let otp_value = null;
       lead_email:{
         'required':"Enter Valid Email Address"
       },
-      lead_pincode:{
-        'required':"Enter Valid Address Pincode"
+      pincode:{
+        'required':"Enter Valid Address Pincode",
+        'maxlength':"Enter Valid Address Pincode",
+        'minlength':"Enter Valid Address Pincode",
       }
     },
     submitHandler: function(form) {

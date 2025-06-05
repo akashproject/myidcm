@@ -35,5 +35,10 @@ class ApiController extends Controller
         return response()->json($institutes, $this->_statusOK);
     }
 
+    public function setting($key)
+    {
+        $setting = get_theme_setting($key);
+        return response()->json($setting, $this->_statusOK);
+    }
 
 }
