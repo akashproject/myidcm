@@ -66,26 +66,7 @@
                             </div><!-- /.course-card__duration -->
                         </div><!-- /.course-card__content__top -->
                         <h3 class="course-card__title"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
-                        <div class="course-card__ratings course-card__ratings--hover">
-                            <div class="eduhive-ratings">
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                            </div><!-- /.product-ratings -->
-                            <p class="course-card__ratings__text">{{$course->number_of_rating}} Ratings</p><!-- /.course-card__ratings__text -->
-                        </div><!-- /.course-card__ratings -->
+                        
                     </div><!-- /.course-card__content -->
                     <div class="course-card__hover" style="background-image: url(assets/frontend/images/shapes/course-card-bg-1-1.png);">
                             <div class="course-card__hover__content">
@@ -105,7 +86,26 @@
                             </div><!-- /.course-card__info -->
                             <h3 class="course-card__title course-card__title--hover"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                             <p class="course-card__text">{{ substr($course->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
-                            
+                            <div class="course-card__ratings course-card__ratings--hover">
+                            <div class="eduhive-ratings">
+                                <span class="eduhive-ratings__icon">
+                                    <i class="fa fa-star"></i>
+                                </span><!-- /.eduhive-ratings__icon -->
+                                <span class="eduhive-ratings__icon">
+                                    <i class="fa fa-star"></i>
+                                </span><!-- /.eduhive-ratings__icon -->
+                                <span class="eduhive-ratings__icon">
+                                    <i class="fa fa-star"></i>
+                                </span><!-- /.eduhive-ratings__icon -->
+                                <span class="eduhive-ratings__icon">
+                                    <i class="fa fa-star"></i>
+                                </span><!-- /.eduhive-ratings__icon -->
+                                <span class="eduhive-ratings__icon">
+                                    <i class="fa fa-star"></i>
+                                </span><!-- /.eduhive-ratings__icon -->
+                            </div><!-- /.product-ratings -->
+                            <p class="course-card__ratings__text">{{$course->number_of_rating}} Ratings</p><!-- /.course-card__ratings__text -->
+                        </div><!-- /.course-card__ratings -->
                             <a href="#lead-generate-popup" class="course-card__btn eduhive-btn eduhive-btn--border open-popup-link">
                                 <span>Book A Demo Class</span>
                                 <span class="eduhive-btn__icon">

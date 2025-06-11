@@ -44,8 +44,8 @@
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/jquery-ui/jquery-ui.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/jarallax/jarallax.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ url('assets/frontend/vendors/nouislider/nouislider.min.css')}}" />
-    <link rel="stylesheet" href="{{ url('assets/frontend/vendors/nouislider/nouislider.pips.css')}}" />
+    <!-- <link rel="stylesheet" href="{{ url('assets/frontend/vendors/nouislider/nouislider.min.css')}}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url('assets/frontend/vendors/nouislider/nouislider.pips.css')}}" /> -->
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/tiny-slider/tiny-slider.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/eduhive-icons/style.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/owl-carousel/css/owl.carousel.min.css')}}" />
@@ -96,13 +96,13 @@
             <script src="{{ url('/assets/frontend/vendors/bootstrap-select/bootstrap-select.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/jarallax/jarallax.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-ui/jquery-ui.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js') }}"></script>
+            <!-- <script src="{{ url('/assets/frontend/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js') }}"></script> -->
             <script src="{{ url('/assets/frontend/vendors/jquery-appear/jquery.appear.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-circle-progress/jquery.circle-progress.min.js') }}"></script>
             <script src="{{ url('assets/frontend/js/jquery.magnific-popup.min.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/nouislider/nouislider.min.js') }}"></script>
+            <!-- <script src="{{ url('/assets/frontend/vendors/nouislider/nouislider.min.js') }}"></script> -->
             <script src="{{ url('/assets/frontend/vendors/tiny-slider/tiny-slider.js') }}"></script>
-            <script src="{{ url('/assets/frontend/vendors/wnumb/wNumb.min.js') }}"></script>
+            <!-- <script src="{{ url('/assets/frontend/vendors/wnumb/wNumb.min.js') }}"></script> -->
             <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owl.carousel.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owlcarousel2-filter.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/owl-carousel/js/owlcarousel2-progressbar.js') }}"></script>
@@ -110,8 +110,8 @@
             <script src="{{ url('/assets/frontend/vendors/imagesloaded/imagesloaded.min.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/isotope/isotope.js') }}"></script>
             <script src="{{ url('/assets/frontend/vendors/countdown/countdown.min.js') }}"></script>
-            <script src="{{ url('assets/frontend/vendors/jquery-circleType/jquery.circleType.js')}}"></script>
-            <script src="{{ url('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js')}}"></script>
+            <!-- <script src="{{ url('assets/frontend/vendors/jquery-circleType/jquery.circleType.js')}}"></script>
+            <script src="{{ url('/assets/frontend/vendors/jquery-lettering/jquery.lettering.min.js')}}"></script> -->
             <script src="https://cdn.jsdelivr.net/gh/HichemTab-tech/OTP-designer-jquery@2.0.1/dist/otpdesigner.min.js"></script>
             <script src="{{ url('/assets/frontend/vendors/jquery-validate/jquery.validate.min.js') }}"></script>
             <!-- template js -->

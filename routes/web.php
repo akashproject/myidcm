@@ -14,6 +14,19 @@ Route::group(['prefix' => 'administrator'], function () {
     Route::group(['middleware' => ['auth','role:super-admin|admin']], function () {
         Route::get('/', [App\Http\Controllers\Administrator\IndexController::class, 'dashboard'])->name('admin-dashboard');
         
+        //Users
+        Route::get('/users', [App\Http\Controllers\Administrator\UserController::class, 'index'])->name('admin-students');
+
+        //Student
+        Route::get('/admin-students', [App\Http\Controllers\Administrator\StudentController::class, 'students'])->name('admin-students');       
+        Route::get('/student/{id}', [App\Http\Controllers\Administrator\StudentController::class, 'show'])->name('admin-student');
+        Route::get('/add-student', [App\Http\Controllers\Administrator\StudentController::class, 'add'])->name('admin-add-student');
+        Route::post('/save-student', [App\Http\Controllers\Administrator\StudentController::class, 'save'])->name('admin-save-student');
+        Route::get('/delete-student/{id}', [App\Http\Controllers\Administrator\StudentController::class, 'delete'])->name('admin-delete-student');
+        Route::post('/insert-student', [App\Http\Controllers\Administrator\StudentController::class, 'insert'])->name('admin-insert-student');
+        Route::get('/upload-students', [App\Http\Controllers\Administrator\StudentController::class, 'bulkUpload'])->name('admin-upload-students');
+        Route::post('/import', [App\Http\Controllers\Administrator\StudentController::class, 'import'])->name('admin-import-student');
+
         //Page
         Route::get('/pages', [App\Http\Controllers\Administrator\PageController::class, 'index'])->name('admin-pages');
         Route::get('/add-page', [App\Http\Controllers\Administrator\PageController::class, 'Add'])->name('admin-add-page');
@@ -93,6 +106,9 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::post('/save-file', [App\Http\Controllers\Administrator\MediaController::class, 'updateFile'])->name('admin-save-file');
         Route::get('/delete-file/{id}', [App\Http\Controllers\Administrator\MediaController::class, 'delete'])->name('admin-delete-file');
         Route::post('/search-media', [App\Http\Controllers\Administrator\MediaController::class, 'search'])->name('admin-search-media');
+
+        Route::get('/generate-certificate/{id}', [App\Http\Controllers\Administrator\CertificateController::class, 'generate'])->name('admin-generate-certificate');
+        Route::get('/certificate/{id}', [App\Http\Controllers\Administrator\CertificateController::class, 'print'])->name('admin-certificate');
     
         Route::get('/settings', [App\Http\Controllers\Administrator\SettingController::class, 'show'])->name('admin-settings');
         Route::post('/save-settings', [App\Http\Controllers\Administrator\SettingController::class, 'save'])->name('admin-save-settings');

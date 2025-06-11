@@ -168,40 +168,40 @@ let otp_value = null;
     });
   }
 
-  // mailchimp form
-  if ($(".mc-form").length) {
-    $(".mc-form").each(function () {
-      var Self = $(this);
-      var mcURL = Self.data("url");
-      var mcResp = Self.parent().find(".mc-form__response");
+  // // mailchimp form
+  // if ($(".mc-form").length) {
+  //   $(".mc-form").each(function () {
+  //     var Self = $(this);
+  //     var mcURL = Self.data("url");
+  //     var mcResp = Self.parent().find(".mc-form__response");
 
-      Self.ajaxChimp({
-        url: mcURL,
-        callback: function (resp) {
-          // appending response
-          mcResp.append(function () {
-            return '<p class="mc-message">' + resp.msg + "</p>";
-          });
-          // making things based on response
-          if (resp.result === "success") {
-            // Do stuff
-            Self.removeClass("errored").addClass("successed");
-            mcResp.removeClass("errored").addClass("successed");
-            Self.find("input").val("");
+  //     Self.ajaxChimp({
+  //       url: mcURL,
+  //       callback: function (resp) {
+  //         // appending response
+  //         mcResp.append(function () {
+  //           return '<p class="mc-message">' + resp.msg + "</p>";
+  //         });
+  //         // making things based on response
+  //         if (resp.result === "success") {
+  //           // Do stuff
+  //           Self.removeClass("errored").addClass("successed");
+  //           mcResp.removeClass("errored").addClass("successed");
+  //           Self.find("input").val("");
 
-            mcResp.find("p").fadeOut(10000);
-          }
-          if (resp.result === "error") {
-            Self.removeClass("successed").addClass("errored");
-            mcResp.removeClass("successed").addClass("errored");
-            Self.find("input").val("");
+  //           mcResp.find("p").fadeOut(10000);
+  //         }
+  //         if (resp.result === "error") {
+  //           Self.removeClass("successed").addClass("errored");
+  //           mcResp.removeClass("successed").addClass("errored");
+  //           Self.find("input").val("");
 
-            mcResp.find("p").fadeOut(10000);
-          }
-        }
-      });
-    });
-  }
+  //           mcResp.find("p").fadeOut(10000);
+  //         }
+  //       }
+  //     });
+  //   });
+  // }
 
   if ($(".video-popup").length) {
     $(".video-popup").magnificPopup({
@@ -451,6 +451,7 @@ let otp_value = null;
     });
   }
 
+  /*
   if ($(".range-slider-price").length) {
     var priceRange = document.getElementById("range-slider-price");
 
@@ -471,7 +472,7 @@ let otp_value = null;
     priceRange.noUiSlider.on("update", function (values, handle) {
       (handle ? $(limitFieldMax) : $(limitFieldMin)).text(values[handle]);
     });
-  }
+  }*/
 
   function thmOwlInit() {
     // owl slider

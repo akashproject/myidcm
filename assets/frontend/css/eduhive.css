@@ -2185,6 +2185,7 @@ a:hover .instructor-card-two__social__icon {
 }
 .course-card__content {
   padding: 18px 18px 0;
+  height: 130px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -2370,7 +2371,7 @@ a:hover .instructor-card-two__social__icon {
   position: absolute;
   top: 0;
   left: 0;
-  transform: scaleY(1);
+  transform: scaleY(0);
   transform-origin: bottom;
   transform-style: preserve-3d;
   border-radius: 20px;

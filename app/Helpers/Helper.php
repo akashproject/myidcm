@@ -10,6 +10,8 @@ use App\Models\Subject;
 use App\Models\Topic;
 use App\Models\State;
 use App\Models\City;
+use App\Models\StudentMeta;
+
 
 if (! function_exists('check_device')) {
     function check_device($param = null){
@@ -359,5 +361,25 @@ if (! function_exists('getCommunicationMedium')) {
             return request()->get('lead_type');
         }
         return ($params)?$params:get_theme_setting('lead_type');
+    }
+}
+
+if (! function_exists('get_student_meta')) {
+    function get_student_meta($student_id,$value){
+        $student_meta = StudentMeta::where('student_id',$student_id)->where('key',$value)->first();
+        return (isset($student_meta->value))?$student_meta->value:null;
+    }
+}
+
+if (! function_exists('random_strings')) {
+    function random_strings($length_of_string) {
+    
+        // String of all alphanumeric character
+        $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    
+        // Shuffle the $str_result and returns substring
+        // of specified length
+        return substr(str_shuffle($str_result),
+                        0, $length_of_string);
     }
 }

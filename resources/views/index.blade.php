@@ -235,7 +235,7 @@
 </section>
 
 <section class="testimonials-three section-space2" id="testimonials">
-    <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.png);">
+    <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.webp);">
     </div><!-- /.testimonials-three__bg -->
     <div class="container-fluid">
         <div class="row">
@@ -351,7 +351,7 @@
             </a><!-- /.eduhive-btn -->
         </div><!-- /.cta-one__conten -->
     </div><!-- /.container -->
-    <img src="assets/frontend/images/resources/cta-1-1.png" alt="shape" class="cta-one__image-one">
+    <img src="assets/frontend/images/resources/cta-1-1.webp" alt="shape" class="cta-one__image-one">
     <img src="assets/frontend/images/resources/cta-1-2.png" alt="shape" class="cta-one__image-two">
     <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-one">
     <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-two">
@@ -502,7 +502,7 @@
             <div class="item">
                 <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="alumni-intro-card__video" onclick="playVideo(this)">
-                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/swastika.png') }}" alt="Video Thumbnail">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/swastika.webp') }}" alt="Video Thumbnail">
                         <a href="{{ url('assets/frontend/videos/IDCM_Swastika.mp4') }}" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>
@@ -519,7 +519,7 @@
             <div class="item">
                 <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="alumni-intro-card__video">
-                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/sumana.png') }}" alt="Video Thumbnail">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/sumana.webp') }}" alt="Video Thumbnail">
                         <a href="{{ url('assets/frontend/videos/IDCM_Sumana.mp4') }}" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>
@@ -536,7 +536,7 @@
             <div class="item">
                 <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="alumni-intro-card__video">
-                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/amit.png') }}" alt="Video Thumbnail">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/amit.webp') }}" alt="Video Thumbnail">
                         <a href="{{ url('assets/frontend/videos/IDCM_Amit.mp4') }}" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>
@@ -553,7 +553,7 @@
             <div class="item">
                 <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="alumni-intro-card__video">
-                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/ashish.png') }}" alt="Video Thumbnail">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/ashish.webp') }}" alt="Video Thumbnail">
                         <a href="{{ url('assets/frontend/videos/IDCM_Ashish.mp4') }}" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>

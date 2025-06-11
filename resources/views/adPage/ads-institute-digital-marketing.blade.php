@@ -487,7 +487,7 @@
 </section><!-- /.courses-two section-space-bottom -->
 
 <section class="testimonials-three section-space2" id="testimonials">
-    <div class="testimonials-three__bg" style="background-image: url(/assets/frontend/images/shapes/testimonials-bg-3-1.png);"></div>
+    <div class="testimonials-three__bg" style="background-image: url(/assets/frontend/images/shapes/testimonials-bg-3-1.webp);"></div>
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
             <h6 class="sec-title__tagline">our Recruiters</h6><!-- /.sec-title__tagline -->
@@ -826,7 +826,7 @@
             <div class="item">
                 <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="alumni-intro-card__video" onclick="playVideo(this)">
-                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/swastika.png') }}" alt="Video Thumbnail">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/swastika.webp') }}" alt="Video Thumbnail">
                         <a href="{{ url('assets/frontend/videos/IDCM_Swastika.mp4') }}" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>
@@ -843,7 +843,7 @@
             <div class="item">
                 <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="alumni-intro-card__video">
-                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/sumana.png') }}" alt="Video Thumbnail">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/sumana.webp') }}" alt="Video Thumbnail">
                         <a href="{{ url('assets/frontend/videos/IDCM_Sumana.mp4') }}" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>
@@ -860,7 +860,7 @@
             <div class="item">
                 <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="alumni-intro-card__video">
-                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/amit.png') }}" alt="Video Thumbnail">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/amit.webp') }}" alt="Video Thumbnail">
                         <a href="{{ url('assets/frontend/videos/IDCM_Amit.mp4') }}" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>
@@ -877,7 +877,7 @@
             <div class="item">
                 <div class="alumni-intro-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                     <div class="alumni-intro-card__video">
-                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/ashish.png') }}" alt="Video Thumbnail">
+                        <img class="video-thumbnail" src="{{ url('assets/frontend/videos/ashish.webp') }}" alt="Video Thumbnail">
                         <a href="{{ url('assets/frontend/videos/IDCM_Ashish.mp4') }}" class="video-one__video-btn video-btn video-popup">
                             <i class="icon-play"></i>
                             <span></span>

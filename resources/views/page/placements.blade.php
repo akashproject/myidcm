@@ -23,7 +23,7 @@
 </section><!-- /.page-header -->
 
 <section class="testimonials-three section-space2" id="testimonials">
-    <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.png);">
+    <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.webp);">
     </div><!-- /.testimonials-three__bg -->
     <div class="container-fluid">
         <div class="row">

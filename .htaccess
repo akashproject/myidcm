@@ -9,10 +9,6 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    # Handle X-XSRF-Token Header
-    RewriteCond %{HTTP:x-xsrf-token} .
-    RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
-
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
@@ -22,4 +18,181 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    RewriteEngine On
+    ### WWW & HTTPS
+
+    # ensure www.
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # ensure https
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    ### WWW & HTTPS
 </IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType text/x-javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set Cache-Control "public"
+  # Prevent indexing for dev/staging
+  Header always set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/x-font-woff .woff
+  AddType application/x-font-woff2 .woff2
+  AddType application/font-woff2 .woff2
+  AddType font/woff2 .woff2
+</IfModule>
+
+# Gzip fallback
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file \.html?$
+  mod_gzip_item_include file \.css$
+  mod_gzip_item_include file \.js$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+# Remove ETags
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+
+
+# Redirection of Laravel pages
+Redirect 301 /contact /contact-us
+
+# Redirection of Laravel pages
+
+# Redirection of Wordpress pages
+Redirect 301 /blogs /blog/
+Redirect 301 /author/pinaki /blog/author/pinaki
+Redirect 301 /author/arnab /blog/author/arnab
+Redirect 301 /author/debrup /blog/author/debrup
+Redirect 301 /author/proloy-ghosh /blog/author/proloy-ghosh
+Redirect 301 /author/sayani-mukherjee /blog/author/sayani-mukherjee
+Redirect 301 /author/priyanka-kumari /blog/author/priyanka-kumari
+Redirect 301 /best-seo-tools /blog/best-seo-tools
+Redirect 301 /best-digital-marketing-course-explained /blog/best-digital-marketing-course-explained
+Redirect 301 /latent-semantic-indexing /blog/latent-semantic-indexing
+Redirect 301 /content-marketing-strategies /blog/content-marketing-strategies
+Redirect 301 /digital-marketing-strategies-for-small-business /blog/digital-marketing-strategies-for-small-business
+Redirect 301 /best-ways-to-learn-digital-marketing /blog/best-ways-to-learn-digital-marketing
+Redirect 301 /key-components-of-digital-marketing /blog/key-components-of-digital-marketing
+Redirect 301 /career-options-after-digital-marketing /blog/career-options-after-digital-marketing
+Redirect 301 /digital-marketing-modules /blog/digital-marketing-modules
+Redirect 301 /top-20-ai-tools-for-digital-marketing /blog/top-20-ai-tools-for-digital-marketing
+Redirect 301 /best-digital-marketing-institutes-in-kolkata-with-placement-opportunities /blog/best-digital-marketing-institutes-in-kolkata-with-placement-opportunities
+Redirect 301 /types-of-facebook-ads /blog/types-of-facebook-ads
+Redirect 301 /top-seo-interview-questions-and-answers /blog/top-seo-interview-questions-and-answers
+Redirect 301 /importance-of-ppc-marketing /blog/importance-of-ppc-marketing
+Redirect 301 /top-social-media-marketing-interview-questions /blog/top-social-media-marketing-interview-questions
+Redirect 301 /strategies-for-facebook-ads /blog/strategies-for-facebook-ads
+Redirect 301 /link-building-strategies-of-2025 /blog/link-building-strategies-of-2025
+Redirect 301 /senior-digital-marketing-executive-job-description /blog/senior-digital-marketing-executive-job-description
+Redirect 301 /interview-questions-answers-on-email-marketing /blog/interview-questions-answers-on-email-marketing
+Redirect 301 /interview-questions-answers-on-smo /blog/interview-questions-answers-on-smo
+Redirect 301 /bid-strategies-in-google-ads /blog/bid-strategies-in-google-ads
+Redirect 301 /category/social-media-marketing /blog/category/social-media-marketing
+Redirect 301 /category/case-studies /blog/category/case-studies
+Redirect 301 /category/content-marketing /blog/category/content-marketing
+Redirect 301 /category/digital-marketing /blog/category/digital-marketing
+Redirect 301 /category/email-marketing /blog/category/email-marketing
+Redirect 301 /youtube-marketing-ultimate-guidance-2022 /blog/youtube-marketing-ultimate-guidance
+Redirect 301 /best-social-media-courses-2022 /blog/best-social-media-courses
+Redirect 301 /category/influencer-marketing /blog/category/influencer-marketing
+Redirect 301 /category/ppc /blog/category/pay-per-click
+Redirect 301 /category/pay-per-click /blog/category/pay-per-click
+Redirect 301 /category/seo /blog/category/search-engine-optimization
+Redirect 301 /category/search-engine-optimization /blog/category/search-engine-optimization
+Redirect 301 /category/social-media-optimization /blog/category/social-media-optimization
+Redirect 301 /category/youtube-marketing /blog/category/youtube-marketing
+Redirect 301 /best-digital-marketing-institutes-2022 /blog/best-digital-marketing-institutes-2022
+Redirect 301 /best-seo-training-institutes /blog/best-seo-training-institutes
+Redirect 301 /fundamentals-of-internet-marketing /blog/fundamentals-of-internet-marketing
+Redirect 301 /google-ads-click-fraud-prevention /blog/google-ads-click-fraud-prevention
+Redirect 301 /interview-questions-answers-on-influencer-marketing /blog/interview-questions-answers-on-influencer-marketing
+Redirect 301 /interview-questions-answers-on-facebook-ads /blog/interview-questions-answers-on-facebook-ads
+Redirect 301 /interview-questions-answers-on-google-ads /blog/interview-questions-answers-on-google-ads
+Redirect 301 /content-marketing-funnel /blog/content-marketing-funnel
+Redirect 301 /seo-trends-in-2025 /blog/seo-trends-in-2025
+Redirect 301 /50-important-ppc-interview-questions-answers /blog/50-important-ppc-interview-questions-answers
+Redirect 301 /how-to-make-personal-branding /blog/how-to-make-personal-branding
+Redirect 301 /how-to-use-google-analytics-for-seo-step-by-step-guide-for-beginners /blog/how-to-use-google-analytics-for-seo-step-by-step-guide-for-beginners
+Redirect 301 /best-ppc-courses /blog/best-ppc-courses
+Redirect 301 /how-to-do-keyword-research-for-seo /blog/how-to-do-keyword-research-for-seo
+Redirect 301 /types-of-content-creation /blog/types-of-content-creation
+Redirect 301 /best-digital-marketing-certification /blog/best-digital-marketing-certification
+Redirect 301 /youtube-marketing-ultimate-guidance-2022 /blog/youtube-marketing-ultimate-guidance-2022
+Redirect 301 /seo-training-digital-marketers /blog/seo-training-digital-marketers
+Redirect 301 /influencer-marketing-tips /blog/influencer-marketing-tips
+Redirect 301 /is-lsi-graph-best-tool /blog/is-lsi-graph-best-tool
+Redirect 301 /why-is-seo-important-for-marketing /blog/why-is-seo-important-for-marketing
+Redirect 301 /email-marketing-campaign /blog/email-marketing-campaign
+Redirect 301 /email-marketing-plan /blog/email-marketing-plan
+Redirect 301 /top-5-podcasting-techniques-for-podcast-marketing /blog/top-5-podcasting-techniques-for-podcast-marketing
+Redirect 301 /local-seo-tips /blog/local-seo-tips
+Redirect 301 /top-ai-tools-for-seo-the-ultimate-guide /blog/top-ai-tools-for-seo-the-ultimate-guide
+Redirect 301 /zomato-marketing-strategy /blog/zomato-marketing-strategy
+Redirect 301 /best-digital-marketing-courses-after-12th /blog/best-digital-marketing-courses-after-12th
+Redirect 301 /social-media-marketing-strategy-of-oyo-rooms /blog/social-media-marketing-strategy-of-oyo-rooms
+Redirect 301 /content-writer-salary /blog/content-writer-salary
+Redirect 301 /digital-marketing-courses-in-kolkata-with-placement /blog/digital-marketing-courses-in-kolkata-with-placement
+Redirect 301 /copyblogger-content-marketing /blog/copyblogger-content-marketing
+Redirect 301 /wordstream-free-keyword-tool /blog/wordstream-free-keyword-tool
+Redirect 301 /smo-services /blog/smo-services
+Redirect 301 /7-types-of-email-marketing-campaigns /blog/7-types-of-email-marketing-campaigns
+Redirect 301 /7ps-of-marketing /blog/7ps-of-marketing
+Redirect 301 /types-of-digital-marketing-channels /blog/types-of-digital-marketing-channels
+Redirect 301 /digital-vs-traditional-marketing /blog/digital-vs-traditional-marketing
+Redirect 301 /benefits-of-learning-web-development-courses /blog/benefits-of-learning-web-development-courses
+Redirect 301 /a-complete-guide-to-canva-courses /blog/a-complete-guide-to-canva-courses
+Redirect 301 /a-complete-guide-to-brand-positioning /blog/a-complete-guide-to-brand-positioning
+Redirect 301 /meta-launched-its-new-ai-chatbot /blog/meta-launched-its-new-ai-chatbot
+Redirect 301 /digital-marketing-strategy-of-dream-11 /blog/digital-marketing-strategy-of-dream-11
+Redirect 301 /top-3-brands-that-set-an-seo-example /blog/top-3-brands-that-set-an-seo-example
+Redirect 301 /local-guide-program /blog/local-guide-program
+Redirect 301 /top-ai-tools-for-image-generation /blog/top-ai-tools-for-image-generation
+Redirect 301 /online-digital-marketing-course /blog/online-digital-marketing-course
+Redirect 301 /digital-marketing-jobs /blog/digital-marketing-jobs
+Redirect 301 /digital-marketing-diploma /blog/digital-marketing-diploma
+# Redirection of Wordpress pages

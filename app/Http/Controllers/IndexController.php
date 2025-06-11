@@ -103,7 +103,7 @@ class IndexController extends Controller
                     $postData["institute"] = "IDCM Pitampura";
                 } else {
                     $postData["city"] = "Kolkata";
-                    $postData["institute"] = "IDCM Chowringhee-Exide";
+                    $postData["institute"] = "IDCM-Chowringhee-Exide";
                 }
             }
             $lead = $this->captureLeadToDB($postData);

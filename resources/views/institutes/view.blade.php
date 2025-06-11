@@ -18,15 +18,20 @@
             <div class="container">
                 <div class="row gutter-y-60 align-items-center">
                     <div class="main-slider-two__col-content">
+                    <ul class="eduhive-breadcrumb list-unstyled">
+                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="https://www.myidcm.com">Home</a></li>
+                        <li><span><a href="https://www.myidcm.com/institutes">Institutes</a></span></li>
+                        <li><span>{{$contentMain->name}}</span></li>
+                    </ul>
                         <div class="main-slider-two__content">
                             <div class="main-slider-two__top">
-                                <p class="main-slider-two__sub-title">The Pathway to Education</p><!-- /.sub-title -->
+                                <p class="main-slider-two__sub-title">No more boring lectures.</p><!-- /.sub-title -->
                             </div><!-- /.main-slider-two__top -->
-                            <h2 class="main-slider-two__title">
-                                <span class="main-slider-two__title__inner">Learn <span class="main-slider-two__title__text">new skills.</span> Prove <br> your potential.</span>
+                            <h2 class="main-slider-two__title" style="font-size: 42px!important;">
+                                <span class="main-slider-two__title__inner"><span class="main-slider-two__title__text">Digital Marketing Institute</span> <br> {{$contentMain->name}} </span>
                             </h2><!-- /.title -->
                             <div class="main-slider-two__description">
-                                <p class="main-slider-two__text" style="color: #333;line-height: 1.5rem;">{{ substr(strip_tags($contentMain->excerpt), 0, 100); }}</p><!-- /.text -->
+                                <p class="main-slider-two__text" style="color: #333;line-height: 1.5rem;">{{ substr(strip_tags($contentMain->excerpt), 0, 400); }}</p><!-- /.text -->
                             </div><!-- /.description -->
                             <h6> Our Partners </h6>
                             <div class="partner-certification">
@@ -40,7 +45,7 @@
                             <div class="main-slider-two__button">
                                 <div class="main-slider-two__button__inner">
                                     <a href="#lead-generate-popup" class="main-slider-two__btn-1 eduhive-btn open-popup-link">
-                                        <span>Find course</span>
+                                        <span>Explore Courses</span>
                                         <span class="eduhive-btn__icon">
                                             <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                         </span>
@@ -48,7 +53,7 @@
                                 </div><!-- /.main-slider-two__button__inner -->
                                 <div class="main-slider-two__button__inner">
                                     <a href="#lead-generate-popup" class="main-slider-two__btn-2 eduhive-btn eduhive-btn--border open-popup-link">
-                                        <span>Download Brochure</span>
+                                        <span>Book An Appointment</span>
                                         <span class="eduhive-btn__icon">
                                             <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                         </span>
@@ -67,7 +72,7 @@
                                 </div><!-- /.main-slider-two__image__mask -->
                                 <div class="main-slider-two__image__one">
                                     <img src="{{ url('/assets/frontend/images/main-slider/main-slider-2-2.jpg') }}" alt="slider image" class="slider-image">
-                                    <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video-btn video-btn video-popup">
+                                    <a href="https://www.youtube.com/watch?v=XkL141uDM1A" class="main-slider-two__video-btn video-btn video-popup">
                                         <i class="icon-play"></i>
                                         <span></span>
                                         <span></span>
@@ -85,7 +90,7 @@
                                         <img src="{{ url('/assets/frontend/images/main-slider/main-slider-student-2-3.png') }}" alt="student">
                                         <img src="{{ url('/assets/frontend/images/main-slider/main-slider-student-2-4.png') }}" alt="student">
                                         <h4 class="main-slider-two__student__count count-box">
-                                            <span class="count-text" data-stop="2" data-speed="1500">0</span><span>k+</span>
+                                            <span class="count-text" data-stop="8" data-speed="8000">0</span><span>K+</span>
                                         </h4><!-- /.main-slider-two__student__count -->
                                     </div><!-- /.main-slider-two__student__image -->
                                     <div class="main-slider-two__student__content">
@@ -139,7 +144,7 @@
                 <div class="about-one__image">
                     <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
                         <div class="video-one__bg course-video" style="background-image: url(/assets/frontend/images/courses/featured-course.jpg);">
-                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-one__video-btn video-btn video-popup">
+                            <a href="https://www.youtube.com/watch?v=XkL141uDM1A" class="video-one__video-btn video-btn video-popup">
                                 <i class="icon-play"></i>
                                 <span></span>
                                 <span></span>
@@ -179,8 +184,8 @@
                     </div>
                 
                     <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <a href="about.html" class="eduhive-btn">
-                            <span>Register Now</span>
+                        <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
+                            <span>Book Free Demo Class</span>
                             <span class="eduhive-btn__icon">
                                 <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                             </span>
@@ -286,7 +291,7 @@
                                 {{ $course->duration }} Months
                             </div><!-- /.course-card__duration -->
                         </div><!-- /.course-card__content__top -->
-                        <h3 class="course-card__title"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
+                        <h3 class="course-card__title"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                         <div class="course-card__info">
                             <div class="course-card__lessons">
                                 <span class="course-card__lessons__icon">       
@@ -313,7 +318,7 @@
                                     {{ $course->duration }} Months
                                 </div><!-- /.course-card__duration -->
                             </div><!-- /.course-card__content__top -->
-                            <h3 class="course-card__title course-card__title--hover"><a href="data-science.html">{{ $course->name }}</a></h3><!-- /.course-card__title -->
+                            <h3 class="course-card__title course-card__title--hover"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                             <p class="course-card__text">{{ substr($course->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
                             <div class="course-card__ratings course-card__ratings--hover">
                                 <div class="eduhive-ratings">
@@ -335,7 +340,7 @@
                                 </div><!-- /.product-ratings -->
                                 <p class="course-card__ratings__text">5 Ratings</p><!-- /.course-card__ratings__text -->
                             </div><!-- /.course-card__ratings -->
-                            <a href="data-science.html" class="course-card__btn eduhive-btn eduhive-btn--border">
+                            <a href="#lead-generate-popup" class="course-card__btn eduhive-btn eduhive-btn--border open-popup-link">
                                 <span>enroll now</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
@@ -432,7 +437,7 @@
 <section class="gallery-page my-5">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title"><span>Our</span> <span class="sec-title__title__shape">Institute</span> <span>Story</span> <span class="sec-title__title__text">Activities</span></h3><!-- /.sec-title__title -->
+            <h3 class="sec-title__title"><span class="sec-title__title__shape"><span class="sec-title__title__text">Events</span> <span>and</span> <span class="sec-title__title__text">Activities</span></span></h3><!-- /.sec-title__title -->
         </div><!-- /.sec-title -->
         <div class="gallery-page__filter">
             <ul class="list-unstyled post-filter gallery-page__filter__list">
@@ -468,25 +473,13 @@
         </div><!-- /.online-class__inner__bg -->
     </div><!-- /.online-class__inner -->
     <div class="container">
-        <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
-            <div class="video-one__bg" style="background-image: url({{ url('/assets/frontend/images/resources/video-1-1.jpg') }});">
-                <!-- <img src="{{ url('/assets/frontend/images/resources/video-1-2.jpg') }}" alt="video"> -->
-                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="video-one__video-btn video-btn video-popup">
-                    <i class="icon-play"></i>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a><!-- /.video-one__video-btn -->
-            </div><!-- /.video-one__bg -->
-        </div><!-- /.video-one -->
         <div class="online-class__content">
             <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                <h6 class="sec-title__tagline">online class</h6><!-- /.sec-title__tagline -->
-                <h3 class="sec-title__title"><span>lockdown</span> <span class="sec-title__title__shape">can’t</span> <span>stop your</span> <span class="sec-title__title__text">learning</span></h3><!-- /.sec-title__title -->
+                <h6 class="sec-title__tagline">Class Modes</h6><!-- /.sec-title__tagline -->
+                <h3 class="sec-title__title"><span>Your learning</span> <span class="sec-title__title__shape"> <span class="sec-title__title__text">Your choice</span></span></h3><!-- /.sec-title__title -->
             </div><!-- /.sec-title -->
             <div class="online-class__description wow fadeInUp" data-wow-duration="1500ms">
-                <p class="online-class__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue velit in cursus leo sodales the turpis euismod quis sapien euismod quis sapien the.</p><!-- /.online-class__text -->
+                <p class="online-class__text">Traditional in-person classes in campus with face to face interaction and real-time virtual classes using video conferencing tool are offered to you as per your convenience.</p><!-- /.online-class__text -->
             </div><!-- /.online-class__description -->
             <div class="online-class__class-wrapper">
                 <div class="online-class__class wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
@@ -495,7 +488,7 @@
                             <i class="icon-speaker-filled-audio-tool"></i>
                         </span>
                     </div><!-- /.online-class__class__icon -->
-                    <h4 class="online-class__class__title">Audio classes</h4><!-- /.online-class__class__title -->
+                    <h4 class="online-class__class__title">Offline Classes</h4><!-- /.online-class__class__title -->
                 </div><!-- /.online-class__class -->
                 <div class="online-class__class wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                     <div class="online-class__class__icon online-class__class__icon--live">
@@ -503,15 +496,7 @@
                             <i class="icon-live-streaming"></i>
                         </span>
                     </div><!-- /.online-class__class__icon -->
-                    <h4 class="online-class__class__title">live classes</h4><!-- /.online-class__class__title -->
-                </div><!-- /.online-class__class -->
-                <div class="online-class__class wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                    <div class="online-class__class__icon online-class__class__icon--recorded">
-                        <span class="online-class__class__icon__inner">
-                            <i class="icon-clapperboard"></i>
-                        </span>
-                    </div><!-- /.online-class__class__icon -->
-                    <h4 class="online-class__class__title">recorded classes</h4><!-- /.online-class__class__title -->
+                    <h4 class="online-class__class__title">Online Classes</h4><!-- /.online-class__class__title -->
                 </div><!-- /.online-class__class -->
             </div><!-- /.online-class__class-wrapper -->
         </div><!-- /.online-class__content -->
@@ -526,11 +511,11 @@
             <div class="col-xl-4">
                 <div class="testimonials-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">what students <span class="sec-title__title__shape">say about</span> <span class="sec-title__title__text">idcm</span></h3><!-- /.sec-title__title -->
+                        <h6 class="sec-title__tagline">Students' Experiences</h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">Pick <span class="sec-title__title__shape"><span class="sec-title__title__text">On IDCM</span></span></h3><!-- /.sec-title__title -->
                     </div><!-- /.sec-title -->
                     <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
-                        <p class="testimonials-one__text">Aonsectetur adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue.</p><!-- /.testimonials-one__text -->
+                        <p class="testimonials-one__text">Our students don't just learn, they celebrate about their experience!</p><!-- /.testimonials-one__text -->
                     </div><!-- /.testimonial-one__description -->
                     <div class="testimonials-one__custome-navs"></div><!-- /.testimonials-one__custome-navs -->
                 </div><!-- /.testimonials-one__content -->
@@ -626,7 +611,7 @@
 <section class="all-placed-student mt-5">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title"><span>Placed </span> <span class="sec-title__title__shape">Students</span><span class="sec-title__title__text"> Story</span></h3><!-- /.sec-title__title -->
+            <h3 class="sec-title__title"><span>Students'</span> <span class="sec-title__title__shape"><span class="sec-title__title__text">Placement Stories</span></span></h3><!-- /.sec-title__title -->
         </div><!-- /.sec-title -->
         <div class="row">
             @foreach(getPlacements(6) as $placement)
@@ -648,7 +633,7 @@
         <div class="row mt-3">
             <div class="col-12 text-center">
                 <a href="{{ route('page-view','all-placement-students') }}" class="eduhive-btn">
-                    <span>Explore All</span>
+                    <span>View More Placements</span>
                     <span class="eduhive-btn__icon">
                         <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                     </span>
@@ -665,8 +650,7 @@
             <div class="col-lg-12">
                 <div class="faq-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h6 class="sec-title__tagline">faq’s</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">We Are Always Ensure <span class="sec-title__title__text">Best <br> Course</span> For <span class="sec-title__title__shape">Your Learning</span></h3><!-- /.sec-title__title -->
+                        <h6 class="sec-title__tagline">Frequently Asked Questions</h6><!-- /.sec-title__tagline -->
                     </div><!-- /.sec-title -->
                     <div class="faq-one__accordion">
                         <div class="eduhive-accordion" data-grp-name="eduhive-accordion">
