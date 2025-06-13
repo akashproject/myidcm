@@ -1,18 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <section class="main-slider-one" id="home">
-    <div class="main-slider-one__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-        "items": 1,
-        "margin": 0,
-        "animateIn": "fadeIn",
-        "animateOut": "fadeOut",
-        "loop": false,
-        "smartSpeed": 100000,
-        "nav": false,
-        "dots": false,
-        "autoplay": false,
-        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"]
-    }'>
+    <div class="active">
         <div class="main-slider-one__item">
             <div class="container">
                 <div class="row gutter-y-60 align-items-center">
@@ -91,7 +80,6 @@
             <div class="main-slider-one__shape-three"></div><!-- /.main-slider-one__shape-three -->
             <img src="assets/frontend/images/shapes/main-slider-shape-1-2.png" alt="shape" class="main-slider-one__shape-four slider-image">
         </div><!-- /.main-slider-one__item -->
-    
     </div><!-- /.main-slider-one__carousel -->
 </section><!-- /.main-slider-one -->
 
@@ -104,7 +92,7 @@
             <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
                 <div class="about-one__image">
                     <div class="about-one__image__one">
-                        <img src="assets/frontend/images/about/about-1-1.jpg" alt="about">
+                        <img src="{{ url('assets/frontend/images/about/about-1-1.webp')}}" alt="about">
                         <div class="about-one__video">
                             <a href="javascript:void(0)" class="about-one__video__btn video-btn video-popup">
                                 <i class="icon-play"></i>
@@ -117,7 +105,7 @@
                         </div><!-- /.about-one__video -->
                     </div><!-- /.about-one__image__one -->
                     <div class="about-one__image__two">
-                        <img src="assets/frontend/images/about/about-1-2.jpg" alt="about">
+                        <img src="{{ url('assets/frontend/images/about/about-1-2.webp')}}" alt="about">
                     </div><!-- /.about-one__image__two -->
                     <img src="assets/frontend/images/shapes/about-shape-1-1.png" alt="about" class="about-one__image__shape">
                     <div class="about-one__image__circle">
@@ -168,71 +156,8 @@
         </div><!-- /.row gutter-y-50 -->
     </div><!-- /.container -->
 </section><!-- /.about-one section-space -->
-@php
-    $featuredCourse = getCourseById(1);
-@endphp
-<section class="featured_course my-5" id="featured_course">
-    <div class="container">
-        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title">Most Demanding <span class="sec-title__title__shape">Course</span></h3>
-        </div><!-- /.sec-title -->
-        <div class="row gutter-y-50 align-items-center">
-            <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
-                <div class="about-one__image">
-                    <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="video-one__bg course-video" style="background-image: url(assets/frontend/images/courses/featured-course.jpg);">
-                            <a href="{{ $featuredCourse->course_video_link }}" class="video-one__video-btn video-btn video-popup">
-                                <i class="icon-play"></i>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a><!-- /.video-one__video-btn -->
-                        </div><!-- /.video-one__bg -->
-                    </div><!-- /.video-one -->
-                </div><!-- /.about-one__image -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <div class="about-two__content">
-                    <div class=" wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h3 class="sec-title__title">{{ $featuredCourse->name }}</h3><!-- /.sec-title__title -->
-                    </div><!-- /.sec-title -->
-                    <div class="about-two__description wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        {{ $featuredCourse->excerpt }}
-                    </div><!-- /.about-two__description -->
-                    <div class="course-details__info-wrapper">
-                        <div class="course-details__class">
-                            <span class="course-details__class__icon">
-                                <i class="icon-video"></i>
-                            </span><!-- /.course-details__class__icon -->
-                            <p class="course-details__class__text">{{ $featuredCourse->number_of_enrolled }} Enrolled</p><!-- /.course-details__class__text -->
-                        </div><!-- /.course-details__class -->
-                        <div class="course-details__review">
-                            <span class="course-details__review__icon">
-                                <i class="icon-star"></i>
-                            </span><!-- /.course-details__review__icon -->
-                            <p class="course-details__review__text"><span>5</span> <span>( {{ $featuredCourse->number_of_rating }} Reviews)</span></p><!-- /.course-details__review__text -->
-                        </div><!-- /.course-details__review -->
-                    </div>
-                    <div class="row">
-                        <div class="course_highlights">
-                            {!! $featuredCourse->highlights !!}
-                        </div>
-                    </div>
-                   
-                    <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
-                            <span>Book Free Demo Class</span>
-                            <span class="eduhive-btn__icon">
-                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                            </span>
-                        </a><!-- /.eduhive-btn -->
-                    </div><!-- /.about-two__button -->
-                </div><!-- /.about-two__content -->
-            </div>
-        </div>
-    </div>
-</section>
+
+@include('common.featuredCourse')
 
 <section class="testimonials-three section-space2" id="testimonials">
     <div class="testimonials-three__bg" style="background-image: url(assets/frontend/images/shapes/testimonials-bg-3-1.webp);">
@@ -249,9 +174,9 @@
                 <ul class="recruiters ">
                     @foreach(getRecruiters() as $key => $recruiter)
                     <div class="placement-redious-grid">
-                        <a href="javascript:void(0)" class="placement-grid-img">
-                            <img src="{{ getSizedImage($recruiter->featured_image) }}" alt="" class="width-100">
-                        </a>
+                        <span class="placement-grid-img">
+                            <img src="{{ getSizedImage($recruiter->featured_image) }}" alt="{{ $recruiter->name }}" class="width-100">
+                        </span>
                     </div>
                     @endforeach
                 </ul>

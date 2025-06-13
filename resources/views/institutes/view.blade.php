@@ -1,28 +1,17 @@
 @extends('layouts.main')
 @section('content')
 <section class="main-slider-two" id="home">
-    <div class="main-slider-two__carousel eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-                "items": 1,
-                "margin": 0,
-                "animateIn": "fadeIn",
-                "animateOut": "fadeOut",
-                "loop": false,
-                "smartSpeed": 700000,
-                "nav": false,
-                "dots": false,
-                "autoplay": false,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"]
-            }'>
+    <div class="active">
         <div class="main-slider-two__item">
             <div class="main-slider-two__bg" style="background-image: url({{ url('/assets/frontend/images/shapes/main-slider-bg-2-1.png') }});"></div><!-- /.main-slider-two__bg -->
             <div class="container">
                 <div class="row gutter-y-60 align-items-center">
                     <div class="main-slider-two__col-content">
-                    <ul class="eduhive-breadcrumb list-unstyled">
-                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="https://www.myidcm.com">Home</a></li>
-                        <li><span><a href="https://www.myidcm.com/institutes">Institutes</a></span></li>
-                        <li><span>{{$contentMain->name}}</span></li>
-                    </ul>
+                        <ul class="eduhive-breadcrumb list-unstyled">
+                            <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="https://www.myidcm.com">Home</a></li>
+                            <li><span><a href="https://www.myidcm.com/institutes">Institutes</a></span></li>
+                            <li><span>{{$contentMain->name}}</span></li>
+                        </ul>
                         <div class="main-slider-two__content">
                             <div class="main-slider-two__top">
                                 <p class="main-slider-two__sub-title">No more boring lectures.</p><!-- /.sub-title -->
@@ -43,19 +32,21 @@
                                 </a>
                             </div>
                             <div class="main-slider-two__button">
-                                <div class="main-slider-two__button__inner">
-                                    <a href="#lead-generate-popup" class="main-slider-two__btn-1 eduhive-btn open-popup-link">
-                                        <span>Explore Courses</span>
-                                        <span class="eduhive-btn__icon">
-                                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                        </span>
-                                    </a><!-- /.eduhive-btn -->
-                                </div><!-- /.main-slider-two__button__inner -->
+                                
                                 <div class="main-slider-two__button__inner">
                                     <a href="#lead-generate-popup" class="main-slider-two__btn-2 eduhive-btn eduhive-btn--border open-popup-link">
                                         <span>Book An Appointment</span>
                                         <span class="eduhive-btn__icon">
                                             <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                                        </span>
+                                    </a><!-- /.eduhive-btn -->
+                                </div><!-- /.main-slider-two__button__inner -->
+
+                                <div class="main-slider-two__button__inner">
+                                    <a href="#institute-location" class="main-slider-two__btn-1 eduhive-btn">
+                                        <span>Our Location</span>
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner"><i class="icon-location"></i></span>
                                         </span>
                                     </a><!-- /.eduhive-btn -->
                                 </div><!-- /.main-slider-two__button__inner -->
@@ -90,7 +81,7 @@
                                         <img src="{{ url('/assets/frontend/images/main-slider/main-slider-student-2-3.png') }}" alt="student">
                                         <img src="{{ url('/assets/frontend/images/main-slider/main-slider-student-2-4.png') }}" alt="student">
                                         <h4 class="main-slider-two__student__count count-box">
-                                            <span class="count-text" data-stop="8" data-speed="8000">0</span><span>K+</span>
+                                            <span class="count-text" data-stop="8" data-speed="8">0</span><span>K+</span>
                                         </h4><!-- /.main-slider-two__student__count -->
                                     </div><!-- /.main-slider-two__student__image -->
                                     <div class="main-slider-two__student__content">
@@ -131,71 +122,7 @@
     </div><!-- /.main-slider-two__carousel -->
 </section><!-- /.main-slider-two -->
 
-@php
-    $featuredCourse = getCourseById(1);
-@endphp
-<section class="featured_course mt-5" id="featured_course">
-    <div class="container">
-        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title">Most Demanding <span class="sec-title__title__shape">Course</span></h3>
-        </div><!-- /.sec-title -->
-        <div class="row gutter-y-50 align-items-center">
-            <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
-                <div class="about-one__image">
-                    <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="video-one__bg course-video" style="background-image: url(/assets/frontend/images/courses/featured-course.jpg);">
-                            <a href="https://www.youtube.com/watch?v=XkL141uDM1A" class="video-one__video-btn video-btn video-popup">
-                                <i class="icon-play"></i>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a><!-- /.video-one__video-btn -->
-                        </div><!-- /.video-one__bg -->
-                    </div><!-- /.video-one -->
-                </div><!-- /.about-one__image -->
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-6">
-                <div class="about-two__content">
-                    <div class=" wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h3 class="sec-title__title">{{ $featuredCourse->name }}</h3><!-- /.sec-title__title -->
-                    </div><!-- /.sec-title -->
-                    <div class="about-two__description wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        {{ $featuredCourse->excerpt }}
-                    </div><!-- /.about-two__description -->
-                    <div class="course-details__info-wrapper">
-                        <div class="course-details__class">
-                            <span class="course-details__class__icon">
-                                <i class="icon-video"></i>
-                            </span><!-- /.course-details__class__icon -->
-                            <p class="course-details__class__text">5649 Enrolled</p><!-- /.course-details__class__text -->
-                        </div><!-- /.course-details__class -->
-                        <div class="course-details__review">
-                            <span class="course-details__review__icon">
-                                <i class="icon-star"></i>
-                            </span><!-- /.course-details__review__icon -->
-                            <p class="course-details__review__text"><span>3.4</span> <span>(36 Review)</span></p><!-- /.course-details__review__text -->
-                        </div><!-- /.course-details__review -->
-                    </div>
-                    <div class="row">
-                        <div class="course_highlights">
-                            {!! $featuredCourse->highlights !!}
-                        </div>
-                    </div>
-                
-                    <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
-                            <span>Book Free Demo Class</span>
-                            <span class="eduhive-btn__icon">
-                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                            </span>
-                        </a><!-- /.eduhive-btn -->
-                    </div><!-- /.about-two__button -->
-                </div><!-- /.about-two__content -->
-            </div>
-        </div>
-    </div>
-</section>
+@include('common.featuredCourse')
 
 <section class="courses-two section-space-bottom" id="courses">
     <div class="courses-two__bg" style="background-image: url({{ url('/assets/frontend/images/shapes/courses-bg-2-1.png') }});"></div>
@@ -307,7 +234,7 @@
                             </div><!-- /.course-card__students -->
                         </div><!-- /.course-card__info -->
                     </div><!-- /.course-card__content -->
-                    <div class="course-card__hover" style="background-image: url(assets/frontend/images/shapes/course-card-bg-1-1.png);">
+                    <div class="course-card__hover" style="background-image: url(/assets/frontend/images/shapes/course-card-bg-1-1.png);">
                         <div class="course-card__hover__content">
                             <div class="course-card__content__top course-card__content__top--hover">
                                 <div class="course-card__category">Experts</div><!-- /.course-card__category -->
@@ -433,43 +360,9 @@
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-5.png') }}" alt="shape" class="faq-one__shape-three">
 </section><!-- /.faq-one section-space -->
 
-@if(!empty($galleryImg))
-<section class="gallery-page my-5">
-    <div class="container">
-        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title"><span class="sec-title__title__shape"><span class="sec-title__title__text">Events</span> <span>and</span> <span class="sec-title__title__text">Activities</span></span></h3><!-- /.sec-title__title -->
-        </div><!-- /.sec-title -->
-        <div class="gallery-page__filter">
-            <ul class="list-unstyled post-filter gallery-page__filter__list">
-                @foreach($galleryImg as $key => $gallery)
-                <li class="eduhive-btn" data-filter=".{{ $key }}"><span>{{ $gallery['name'] }}</span></li>
-                @endforeach
-                
-            </ul><!-- /.list-unstyledf -->
-        </div><!-- /.gallery-page__filter -->
-        <div class="row masonry-layout filter-layout">
-            @foreach($galleryImg as $key => $gallery)
-                @foreach($gallery['images'] as $img)
-                <div class="col-lg-3 col-md-6 filter-item {{ $key }}">
-                    <div class="gallery-page__card">
-                        <img src="{{url('/public/gallery/'.$img)}}" alt="">
-                        <div class="gallery-page__card__hover">
-                            <a href="{{url('/public/gallery/'.$img)}}" class="img-popup">
-                                <span class="gallery-page__card__icon"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            @endforeach
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-</section><!-- /.gallery-page section-space -->
-@endif
-
 <section class="online-class section-space-bottom">
     <div class="online-class__inner">
-        <div class="online-class__inner__bg" style="background-image: url({{ url('/assets/frontend/images/shapes/online-class-bg-1-1.png') }});">
+        <div class="online-class__inner__bg" style="background-image: url(/assets/frontend/images/shapes/online-class-bg-1-1.png);">
         </div><!-- /.online-class__inner__bg -->
     </div><!-- /.online-class__inner -->
     <div class="container">
@@ -504,6 +397,240 @@
     <div class="online-class__shape"></div><!-- /.online-class__shape -->
     <div class="online-class__box"></div><!-- /.online-class__box -->
 </section><!-- /.online-class section-space-bottom -->
+
+@if(!empty($galleryImg))
+<section class="gallery-page my-5">
+    <div class="container">
+        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+            <h3 class="sec-title__title"><span class="sec-title__title__shape"><span class="sec-title__title__text">Events</span> <span>and</span> <span class="sec-title__title__text">Activities</span></span></h3><!-- /.sec-title__title -->
+        </div><!-- /.sec-title -->
+        <div class="gallery-page__filter">
+            <ul class="list-unstyled post-filter gallery-page__filter__list">
+                @foreach($galleryImg as $key => $gallery)
+                <li class="eduhive-btn" data-filter=".{{ $key }}"><span>{{ $gallery['name'] }}</span></li>
+                @endforeach
+                
+            </ul><!-- /.list-unstyledf -->
+        </div><!-- /.gallery-page__filter -->
+        <div class="row masonry-layout filter-layout">
+            @foreach($galleryImg as $key => $gallery)
+                @foreach($gallery['images'] as $img)
+                <div class="col-lg-3 col-md-6 filter-item {{ $key }}">
+                    <div class="gallery-page__card">
+                        <img src="{{url('/public/gallery/'.$img)}}" alt="">
+                        <div class="gallery-page__card__hover">
+                            <a href="{{url('/public/gallery/'.$img)}}" class="img-popup">
+                                <span class="gallery-page__card__icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            @endforeach
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.gallery-page section-space -->
+@endif
+<section class="course-category ">
+    <div class="container">
+        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+            <h6 class="sec-title__tagline">benefits</h6><!-- /.sec-title__tagline -->
+            <h3 class="sec-title__title"><span class="sec-title__title__text">Digital Marketing Roles</span> <span class="sec-title__title__shape">Placed</span></h3><!-- /.sec-title__title -->
+        </div><!-- /.sec-title -->
+        <div class="row gutter-y-30">
+            <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                <div class="course-category__card">
+                    <div class="course-category__card__inner">
+                        <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-1.jpg);"></div>
+                    </div><!-- /.course-category__card__inner -->
+                    <div class="course-category__card__content">
+                        <div class="course-category__card__icon-box">
+                            <span class="course-category__card__icon">
+                                <i class="icon-briefcase"></i>
+                            </span>
+                        </div><!-- /.course-category__card__icon-box -->
+                        <h4 class="course-category__card__title">Performance Marketing Analyst</h4><!-- /.course-category__card__title -->
+                    </div><!-- /.course-category__card__content -->
+                </div><!-- /.course-category__card -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+            <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                <div class="course-category__card">
+                    <div class="course-category__card__inner">
+                        <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-2.jpg);"></div>
+                    </div><!-- /.course-category__card__inner -->
+                    <div class="course-category__card__content">
+                        <div class="course-category__card__icon-box">
+                            <span class="course-category__card__icon">
+                                <i class="icon-art-studies"></i>
+                            </span>
+                        </div><!-- /.course-category__card__icon-box -->
+                        <h4 class="course-category__card__title">Social Media Specialist</h4><!-- /.course-category__card__title -->
+                    </div><!-- /.course-category__card__content -->
+                </div><!-- /.course-category__card -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+            <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                <div class="course-category__card">
+                    <div class="course-category__card__inner">
+                        <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-3.jpg);"></div>
+                    </div><!-- /.course-category__card__inner -->
+                    <div class="course-category__card__content">
+                        <div class="course-category__card__icon-box">
+                            <span class="course-category__card__icon">
+                                <i class="icon-self-confidence"></i>
+                            </span>
+                        </div><!-- /.course-category__card__icon-box -->
+                        <h4 class="course-category__card__title">Digital Marketing Analyst</h4><!-- /.course-category__card__title -->
+                    </div><!-- /.course-category__card__content -->
+                </div><!-- /.course-category__card -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+            <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                <div class="course-category__card">
+                    <div class="course-category__card__inner">
+                        <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-4.jpg);"></div>
+                    </div><!-- /.course-category__card__inner -->
+                    <div class="course-category__card__content">
+                        <div class="course-category__card__icon-box">
+                            <span class="course-category__card__icon">
+                                <i class="icon-setting"></i>
+                            </span>
+                        </div><!-- /.course-category__card__icon-box -->
+                        <h4 class="course-category__card__title">Creative Writing & Content Marketing</h4><!-- /.course-category__card__title -->
+                    </div><!-- /.course-category__card__content -->
+                </div><!-- /.course-category__card -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+            <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                <div class="course-category__card">
+                    <div class="course-category__card__inner">
+                        <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-5.jpg);"></div>
+                    </div><!-- /.course-category__card__inner -->
+                    <div class="course-category__card__content">
+                        <div class="course-category__card__icon-box">
+                            <span class="course-category__card__icon">
+                                <i class="icon-healthcare"></i>
+                            </span>
+                        </div><!-- /.course-category__card__icon-box -->
+                        <h4 class="course-category__card__title">Influencer Marketing Specialist</h4><!-- /.course-category__card__title -->
+                    </div><!-- /.course-category__card__content -->
+                </div><!-- /.course-category__card -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+            <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                <div class="course-category__card">
+                    <div class="course-category__card__inner">
+                        <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-6.jpg);"></div>
+                    </div><!-- /.course-category__card__inner -->
+                    <div class="course-category__card__content">
+                        <div class="course-category__card__icon-box">
+                            <span class="course-category__card__icon">
+                                <i class="icon-coding-1"></i>
+                            </span>
+                        </div><!-- /.course-category__card__icon-box -->
+                        <h4 class="course-category__card__title">Category Management</h4><!-- /.course-category__card__title -->
+                    </div><!-- /.course-category__card__content -->
+                </div><!-- /.course-category__card -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+            <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                <div class="course-category__card">
+                    <div class="course-category__card__inner">
+                        <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-7.jpg);"></div>
+                    </div><!-- /.course-category__card__inner -->
+                    <div class="course-category__card__content">
+                        <div class="course-category__card__icon-box">
+                            <span class="course-category__card__icon">
+                                <i class="icon-clapperboard"></i>
+                            </span>
+                        </div><!-- /.course-category__card__icon-box -->
+                        <h4 class="course-category__card__title">Brand Associate</h4><!-- /.course-category__card__title -->
+                    </div><!-- /.course-category__card__content -->
+                </div><!-- /.course-category__card -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+            <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                <div class="course-category__card">
+                    <div class="course-category__card__inner">
+                        <div class="course-category__card__bg" style="background-image: url(/assets/frontend/images/course-category/course-category-card-bg-1-8.jpg);"></div>
+                    </div><!-- /.course-category__card__inner -->
+                    <div class="course-category__card__content">
+                        <div class="course-category__card__icon-box">
+                            <span class="course-category__card__icon">
+                                <i class="icon-megaphone"></i>
+                            </span>
+                        </div><!-- /.course-category__card__icon-box -->
+                        <h4 class="course-category__card__title">SEO Analyst</h4><!-- /.course-category__card__title -->
+                    </div><!-- /.course-category__card__content -->
+                </div><!-- /.course-category__card -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+        </div><!-- /.row gutter-y-30 -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
+                        <span>Select Your Designation</span>
+                        <span class="eduhive-btn__icon">
+                            <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                        </span>
+                    </a><!-- /.eduhive-btn -->
+                </div><!-- /.about-two__button -->
+            </div>
+        </div>
+    </div><!-- /.container -->
+    <div class="course-category__shape-one"></div><!-- /.course-category__shape-one -->
+    <div class="course-category__shape-two"></div><!-- /.course-category__shape-two -->
+</section><!-- /.course-category section-space -->
+
+<section class="all-placed-student section-space">
+    <div class="container">
+        <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+            <h3 class="sec-title__title"><span>Students'</span> <span class="sec-title__title__shape"><span class="sec-title__title__text">Placement Stories</span></span></h3><!-- /.sec-title__title -->
+        </div><!-- /.sec-title -->
+        <div class="row">
+            @foreach(getPlacements(6) as $placement)
+                <div class="col-md-4"> 
+                    <div class="placed-student-container my-2">
+                        <div class="placed-student-content text-white margin-20px-right">
+                            <h6 class="margin-10px-bottom"> <strong>{{$placement->name }}</strong> </h6>
+                            <p> Designation: <strong>{{ $placement->dasignation}}</strong></p>
+                            <p> Placed At: <strong>{{ $placement->placed_at}}</strong></p>
+                            <p> Joining Salary : <strong>{{ $placement->joining_salary}}</strong></p>
+                        </div>
+                        <div class="student-image">                     
+                            <img src="{{ getSizedImage($placement->featured_image) }}" alt="{{$placement->name }}" data-no-retina="">
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <a href="{{ route('page-view','all-placement-students') }}" class="eduhive-btn">
+                    <span>View More Placements</span>
+                    <span class="eduhive-btn__icon">
+                        <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-one section-space">
+    <div class="container">
+        <div class="cta-one__content wow fadeInUp" data-wow-duration="1500ms">
+            <h2 class="cta-one__title">Become a confident digital marketer<br />
+                 Grab A job or be a freelancer </h2><!-- /.cta-one__title -->
+            <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
+                <span>get started now</span>
+                <span class="eduhive-btn__icon">
+                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                </span>
+            </a><!-- /.eduhive-btn -->
+        </div><!-- /.cta-one__conten -->
+    </div><!-- /.container -->
+    <img src="/assets/frontend/images/resources/cta-1-1.webp" alt="shape" class="cta-one__image-one">
+    <img src="/assets/frontend/images/resources/cta-1-2.png" alt="shape" class="cta-one__image-two">
+    <img src="/assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-one">
+    <img src="/assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-two">
+    <div class="cta-one__shape-box-one"></div><!-- /.cta-one__shape-box-one -->
+    <div class="cta-one__shape-box-two wow fadeInRight" data-wow-duration="1500ms"></div><!-- /.cta-one__shape-box-two -->
+</section><!-- /.cta-one -->
 
 <section class="testimonials-one my-5" id="testimonials">
     <div class="container">
@@ -608,40 +735,81 @@
     <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
 </section><!-- /.testimonials-one section-space -->
 
-<section class="all-placed-student mt-5">
+<section class="section-space" id="institute-location">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title"><span>Students'</span> <span class="sec-title__title__shape"><span class="sec-title__title__text">Placement Stories</span></span></h3><!-- /.sec-title__title -->
+            <h3 class="sec-title__title"><span>Our Institute's</span> <span class="sec-title__title__shape"> <span class="sec-title__title__text">Location</span></span></h3><!-- /.sec-title__title -->
         </div><!-- /.sec-title -->
-        <div class="row">
-            @foreach(getPlacements(6) as $placement)
-                <div class="col-md-4"> 
-                    <div class="placed-student-container my-2">
-                        <div class="placed-student-content text-white margin-20px-right">
-                            <h6 class="margin-10px-bottom"> <strong>{{$placement->name }}</strong> </h6>
-                            <p> Designation: <strong>{{ $placement->dasignation}}</strong></p>
-                            <p> Placed At: <strong>{{ $placement->placed_at}}</strong></p>
-                            <p> Joining Salary : <strong>{{ $placement->joining_salary}}</strong></p>
-                        </div>
-                        <div class="student-image">                     
-                            <img src="{{ getSizedImage($placement->featured_image) }}" alt="{{$placement->name }}" data-no-retina="">
-                        </div>
+        <div class="row gutter-y-40">
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                <div class="contact-page__content">
+                    <div class="contact-page__content__bg" style="background-image: url(/assets/frontend/images/shapes/contact-form-bg-1-1.png);"></div>
+                    <!-- /.contact-page__content__bg -->
+                    <div class="contact-page__content__image">
+                        <img src="{{ url('assets/frontend/images/resources/contact-1-1.png')}}" alt="contact">
+                    </div><!-- /.contact-page__content__image -->
+                    <div class="contact-page__content__inner">
+                        <div class="sec-title">
+                            <h6 class="sec-title__tagline">get in touch</h6><!-- /.sec-title__tagline -->
+                            <h3 class="sec-title__title">just say <span>hello!</span></h3><!-- /.sec-title__title -->
+                        </div><!-- /.sec-title -->
+                        <ul class="list-unstyled contact-page__info">
+                            <li>
+                                <div class="contact-page__info__icon">
+                                    <span class="contact-page__info__icon__inner">
+                                        <i class="icon-telephone"></i>
+                                    </span><!-- /.contact-page__info__icon__inner -->
+                                </div><!-- /.contact-page__info__icon -->
+                                <div class="contact-page__info__content">
+                                    <h3 class="contact-page__info__title">call now</h3>
+                                    <a href="tel:{{ $contentMain->mobile }}" class="contact-page__info__text">+91 {{ $contentMain->mobile }}</a>
+                                </div><!-- /.contact-page__info__content -->
+                            </li>
+                            <li>
+                                <div class="contact-page__info__icon">
+                                    <span class="contact-page__info__icon__inner">
+                                        <i class="icon-paper-plane"></i>
+                                    </span><!-- /.contact-page__info__icon__inner -->
+                                </div><!-- /.contact-page__info__icon -->
+                                <div class="contact-page__info__content">
+                                    <h3 class="contact-page__info__title">Email</h3>
+                                    <a href="mailto:{{ $contentMain->email }}" class="contact-page__info__text contact-page__info__text--email">{{ $contentMain->email }}</a>
+                                </div><!-- /.contact-page__info__content -->
+                            </li>
+                            <li>
+                                <div class="contact-page__info__icon">
+                                    <span class="contact-page__info__icon__inner">
+                                        <i class="icon-location"></i>
+                                    </span><!-- /.contact-page__info__icon__inner -->
+                                </div><!-- /.contact-page__info__icon -->
+                                <div class="contact-page__info__content">
+                                    <h3 class="contact-page__info__title">address</h3>
+                                    <a href="https://www.google.com/maps" class="contact-page__info__text">{{ $contentMain->address }}</a>
+                                </div><!-- /.contact-page__info__content -->
+                            </li>
+                        </ul><!-- /.list-unstyled -->
+                        
+                    </div><!-- /.contact-page__content__inner -->
+                </div><!-- /.contact-page__content -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                <div>
+                    {!! $contentMain->gmap_location !!}
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
+                            <span class="eduhive-btn__icon">
+                                <span class="eduhive-btn__icon__inner" style="font-size:24px"><i class="icon-date"></i></span>
+                            </span>
+                            <span>Book A Visit</span>
+                        </a>
                     </div>
                 </div>
-            @endforeach
-        </div>
-        <div class="row mt-3">
-            <div class="col-12 text-center">
-                <a href="{{ route('page-view','all-placement-students') }}" class="eduhive-btn">
-                    <span>View More Placements</span>
-                    <span class="eduhive-btn__icon">
-                        <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row gutter-y-40 -->
+    </div><!-- /.container -->
+</section><!-- /.contact-page section-space -->
 
 @if($contentMain->faqs != null)
 <section class="faq-one my-5">

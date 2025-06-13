@@ -65,7 +65,7 @@
                             <h6 class="margin-10px-bottom"> <strong>{{$placement->name }}</strong> </h6>
                             <p> Designation: <strong>{{ $placement->dasignation}}</strong></p>
                             <p> Placed At: <strong>{{ $placement->placed_at}}</strong></p>
-                            <p> Joining Salary : <strong>{{ $placement->joining_salary}}</strong></p>
+                            <!-- <p> Joining Salary : <strong>{{ $placement->joining_salary}}</strong></p> -->
                         </div>
                         <div class="student-image">                     
                             <img src="{{ getSizedImage($placement->featured_image) }}" alt="{{$placement->name }}" data-no-retina="">

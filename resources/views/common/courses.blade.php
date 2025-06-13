@@ -68,7 +68,7 @@
                         <h3 class="course-card__title"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
                         
                     </div><!-- /.course-card__content -->
-                    <div class="course-card__hover" style="background-image: url(assets/frontend/images/shapes/course-card-bg-1-1.png);">
+                    <div class="course-card__hover" style="background-image: url(/assets/frontend/images/shapes/course-card-bg-1-1.png);">
                             <div class="course-card__hover__content">
                                 <div class="course-card__info">
                                 <div class="course-card__lessons">
@@ -119,5 +119,5 @@
             @endforeach
         </div><!-- /.courses-one__carousel -->
     </div><!-- /.courses-one__container container -->
-    <img src="assets/frontend/images/shapes/courses-shape-1-1.png" alt="shape" class="courses-one__shape">
+    <img src="{{ url('/assets/frontend/images/shapes/courses-shape-1-1.png')}}" alt="shape" class="courses-one__shape">
 </section><!-- /.courses-one section-space-top2 -->

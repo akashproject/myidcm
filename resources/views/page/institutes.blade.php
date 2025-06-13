@@ -36,9 +36,11 @@
                         </div>
                         <div class="institute-content p-3">
                             <h4> {{ $value->name }} </h4>
-                            <p>  {{ substr(strip_tags($value->excerpt), 0, 100); }}...</p>
                             <div class="content">
-                                <i class="fas fa-map-marker mr-3" ></i><span class="mx-2"> {{ getStateById($value->state_id)->name }}, {{ getCityById($value->city_id)->name }}</span>
+                                <i class="fas fa-map-marker mr-3" ></i><span class="mx-2"> {{ $value->address }} </span>
+                            </div>
+                            <div class="content">
+                                <i class="fas icon-telephone mr-3" ></i><span class="mx-2"> {{ $value->mobile }} </span>
                             </div>
                             <div class="about-two__button wow fadeInUp mt-3" data-wow-duration="1500ms" data-wow-delay="00ms">
                                 <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
