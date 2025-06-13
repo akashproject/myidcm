@@ -1920,6 +1920,7 @@ a:hover .instructor-card-two__social__icon {
   top: 0;
   left: -37px;
 }
+
 @media (min-width: 576px) and (max-width: 767px) {
   .instructors-one .instructor-card__social {
     left: -30px;
@@ -6132,6 +6133,34 @@ body.megamenu-popup-active .mobile-nav__content {
   background-color: var(--eduhive-white2, #EDEAF4);
   border-radius: 20px;
 }
+.content-institute {
+  background: #f7f4ff;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.institutes-content {
+  position: relative;
+}
+.institutes-content .container {
+  position: relative;
+  z-index: 1;
+}
+.institutes-content .instructor-card__social {
+  margin-bottom: 19px;
+  position: relative;
+  top: 0;
+  left: -37px;
+}
+
+
+.institute-page__info {
+    margin-top: 25px;
+}
+.contact-data .institue-title {
+    font-weight: 800;
+}
+
 @media (max-width: 1199px) {
   .contact-page__content {
     padding-left: 30px;
@@ -6209,8 +6238,8 @@ body.megamenu-popup-active .mobile-nav__content {
   }
 }
 .contact-page__info__icon {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   background-color: var(--eduhive-base, #674CEF);
   display: flex;
   justify-content: center;
@@ -6237,7 +6266,7 @@ li:hover .contact-page__info__icon__inner {
   animation: slideTop 0.4s;
 }
 .contact-page__info__title {
-  margin-bottom: 6px;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;

@@ -1,13 +1,13 @@
 @extends('layouts.main')
     @section('content')
-    <section class="page-header">
+        <section class="page-header">
             <div class="container">
                 <div class="page-header__content">
                     <ul class="eduhive-breadcrumb list-unstyled">
                         <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
                         <li><span>Contact Us</span></li>
                     </ul><!-- /.eduhive-breadcrumb list-unstyled -->
-                    <h2 class="page-header__title">Contact Us</h2>
+                    <h2 class="page-header__title">Contact Uss</h2>
                 </div><!-- /.page-header__content -->
             </div><!-- /.container -->
             <img src="assets/frontend/images/shapes/page-header-shape-1.png" alt="shape" class="page-header__shape-one">
@@ -16,6 +16,81 @@
             <div class="page-header__shape-four"></div><!-- /.page-header__shape-four -->
         </section><!-- /.page-header -->
 
+        <section class="institutes-content section-space">
+            <div class="container">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h3 class="sec-title__title">Our <span class="sec-title__title__text" > Institute's </span><span class="sec-title__title__shape">Location</span></h3>
+                </div><!-- /.sec-title -->
+                <div class="content-institute-one row">
+                    @foreach(getInstitutes() as $value)
+                        <div class="col-md-6">
+                            <div class="content-institute">
+                                <div class="contact-data p-4">
+                                    <h4 class="institue-title">{{ $value->name }}'s Location</h4>
+                                    <div class="institute-page__info">
+                                        <div class="row">
+                                            <div class="col-md-6 my-2">
+                                                <div class="d-flex" style="gap: 10px;">
+                                                    <div class="contact-page__info__icon">
+                                                        <span class="contact-page__info__icon__inner">
+                                                            <i class="icon-telephone"></i>
+                                                        </span><!-- /.contact-page__info__icon__inner -->
+                                                    </div><!-- /.contact-page__info__icon -->
+                                                    <div class="contact-page__info__content">
+                                                        <h3 class="contact-page__info__title">call now</h3>
+                                                        <a href="tel:{{ $value->mobile }}" class="contact-page__info__text">+91 {{ $value->mobile }}</a>
+                                                    </div><!-- /.contact-page__info__content -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 my-2">
+                                                <div class="d-flex" style="gap: 10px;">
+                                                    <div class="contact-page__info__icon">
+                                                        <span class="contact-page__info__icon__inner">
+                                                            <i class="icon-paper-plane"></i>
+                                                        </span><!-- /.contact-page__info__icon__inner -->
+                                                    </div><!-- /.contact-page__info__icon -->
+                                                    <div class="contact-page__info__content">
+                                                        <h3 class="contact-page__info__title">Email</h3>
+                                                        <a href="mailto:{{ $value->email }}" class="contact-page__info__text contact-page__info__text--email">{{ $value->email }}</a>
+                                                    </div><!-- /.contact-page__info__content -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.list-unstyled -->
+                                </div>
+                                <div class="contact-map">
+                                    {!! $value->gmap_location !!}
+                                </div>
+                                <div class="d-flex p-4" style="gap: 14px">
+                                    <div class="contact-page__info__icon">
+                                        <span class="contact-page__info__icon__inner">
+                                            <i class="icon-location"></i>
+                                        </span><!-- /.contact-page__info__icon__inner -->
+                                    </div><!-- /.contact-page__info__icon -->
+                                    <div class="contact-page__info__content">
+                                        <h3 class="contact-page__info__title">address</h3>
+                                        <a href="https://www.google.com/maps" class="contact-page__info__text">{{ get_theme_setting('address') }}</a>
+                                    </div><!-- /.contact-page__info__content -->
+                                </div>
+                                <div class="text-center mb-5">
+                                    <a href="#lead-generate-popup" class="eduhive-btn open-popup-link">
+                                        <span class="eduhive-btn__icon">
+                                            <span class="eduhive-btn__icon__inner" style="font-size:24px"><i class="icon-date"></i></span>
+                                        </span>
+                                        <span>Book an Appointment</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>   
+            </div>   
+            <img src="/assets/frontend/images/shapes/instructors-shape-1-1.png" alt="shape" class="instructors-one__shape-one">
+            <img src="/assets/frontend/images/shapes/instructors-shape-1-2.png" alt="shape" class="instructors-one__shape-two">
+            <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
+            <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
+        </section>
+        
         <section class="contact-page section-space">
             <div class="container">
                 <div class="row gutter-y-40">
@@ -100,13 +175,4 @@
                 </div><!-- /.row gutter-y-40 -->
             </div><!-- /.container -->
         </section><!-- /.contact-page section-space -->
-
-        <section class="contact-map">
-            <div class="container-fluid">
-                <div class="google-map google-map__contact">
-                    {!! get_theme_setting('gmap') !!}
-                </div>
-                <!-- /.google-map -->
-            </div><!-- /.container-fluid -->
-        </section><!-- /.contact-map -->
     @endsection

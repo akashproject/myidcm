@@ -52,6 +52,11 @@
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/owl-carousel/css/owl.theme.default.min.css')}}" />
     <link  rel="stylesheet" href="{{ url('assets/frontend/css/eduhive.css') }}">
     @yield('style')    
+    @if(isset($contentMain->schema))
+    {!! $contentMain->schema !!}
+    @else
+    {!! get_theme_setting('schema') !!}
+    @endif
     <script>
         let popUp = 1
 	</script>

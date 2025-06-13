@@ -17,11 +17,11 @@
                                 <h6> Our Partners </h6>
                                 <div class="partner-certification">
                                     <a href="https://www.google.com/partners/agency?id=4439042709" target="_blank">
-                                        <img src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg"/>
+                                        <img src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg" alt="Google Partner" />
                                     </a>
-                                    <a href="javascript:void(0);"> 
-                                        <img src="{{ url('assets/frontend/images/resources/meta-pertner.jpg') }}" >
-                                    </a>
+                                    <a href="" target="_blank"> 
+                                        <img src="{{ url('assets/frontend/images/resources/meta-pertner.jpg') }}" alt="Meta Partner" />
+                                    </a>    
                                 </div>
                             <div class="main-slider-one__button">
                                 <a href="#lead-generate-popup" class="main-slider-one__btn-1 eduhive-btn open-popup-link">
@@ -53,7 +53,7 @@
                                                 <img src="assets/frontend/images/main-slider/main-slider-student-1-2.png" alt="student" class="slider-image">
                                             </div><!-- /.total-student__image -->
                                             <h4 class="total-student__text count-box">
-                                                <span class="count-text" data-stop="200" data-speed="1500">0</span><span>k+ <br> Students</span>
+                                                <span class="count-text" data-stop="8" data-speed="1500">0</span><span>K+ <br> Students</span>
                                             </h4><!-- /.total-student__text -->
                                         </div><!-- /.total-student__inner -->
                                     </div><!-- /.total-student -->
@@ -94,7 +94,7 @@
                     <div class="about-one__image__one">
                         <img src="{{ url('assets/frontend/images/about/about-1-1.webp')}}" alt="about">
                         <div class="about-one__video">
-                            <a href="javascript:void(0)" class="about-one__video__btn video-btn video-popup">
+                            <a href="" class="about-one__video__btn video-btn video-popup">
                                 <i class="icon-play"></i>
                                 <span></span>
                                 <span></span>
@@ -494,10 +494,7 @@
             </div>
         </div><!-- /.instructors-one__carousel -->
     </div><!-- /.container -->
-    <img src="assets/frontend/images/shapes/instructors-shape-1-1.png" alt="shape" class="instructors-one__shape-one">
-    <img src="assets/frontend/images/shapes/instructors-shape-1-2.png" alt="shape" class="instructors-one__shape-two">
-    <div class="instructors-one__box-one"></div><!-- /.instructors-one__box-one -->
-    <div class="instructors-one__box-two"></div><!-- /.instructors-one__box-two -->
+                                   
 </section><!-- /.instructors-one section-space2 -->
 
 @endsection
