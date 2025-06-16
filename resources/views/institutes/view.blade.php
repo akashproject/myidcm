@@ -8,7 +8,8 @@
                 <div class="row gutter-y-60 align-items-center">
                     <div class="main-slider-two__col-content">
                         <ul class="eduhive-breadcrumb list-unstyled">
-                            <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="https://www.myidcm.com">Home</a></li>
+                            <li><span class="eduhive-breadcrumb__icon">
+                                <i class="icon-home"></i></span><a href="https://www.myidcm.com">Home</a></li>
                             <li><span><a href="https://www.myidcm.com/institutes">Institutes</a></span></li>
                             <li><span>{{$contentMain->name}}</span></li>
                         </ul>

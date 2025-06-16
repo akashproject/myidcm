@@ -356,7 +356,9 @@
                                         </div><!-- /.testimonial-card__identity -->
                                     </div><!-- /.testimonial-card__top -->
                                     <div class="testimonial-card__content">
-                                        <p class="testimonial-card__quote">{!! $testimonial->comment !!}</p><!-- /.testimonial-card__quote -->
+                                        <div class="testimonial-card__quote">
+                                            {!! $testimonial->comment !!}
+                                        </div><!-- /.testimonial-card__quote -->
                                         <div class="eduhive-ratings">
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
