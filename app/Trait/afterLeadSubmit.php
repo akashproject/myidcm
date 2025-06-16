@@ -15,15 +15,15 @@ trait afterLeadSubmit
 			'FirstName' => $postData['first_name'],
 			'LastName' => $postData['last_name'],
 			'Email' => $postData['lead_email'],
-			'MobileNumber' => $postData['lead_mobile_number'][1],
+			'MobileNumber' => $postData['mobile'],
 			'State' => (isset($postData['state']))?$postData['state']:'',
 			'Center' => (isset($postData['city']))?$postData['city']:'',
 			'Location' => (isset($postData['institute']))?$postData['institute']:'',
-			'Pincode' => $postData['lead_pincode'],
-			'LeadType' => $postData['LeadType'],
+			'Pincode' => $postData['pincode'],
+			'LeadType' => $postData['lead_type'],
 			'LeadSource' => $postData['utm_source'],
 			'LeadName' => $postData['utm_campaign'],
-			'EducationalQualification' => $postData['utm_url'],
+			'EducationalQualification' => $postData['source_url'],
 			'Textb1' => $postData['utm_term'],
 			'Field3' => $postData['utm_device'],
 			'Textb2' => $postData['utm_adgroup'],
@@ -47,26 +47,25 @@ trait afterLeadSubmit
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
         $resp = curl_exec($curl);
         curl_close($curl);
-        return response()->json($resp, $this->_statusOK);
+        $resp = json_decode($resp,true);
+        return $resp;
     }
 
     function cognoai_api_calling($postData){
         $whatsappArray = (object) array(
             "authorization" => "0043ed81-7067-487c-9ea4-51c1e5bfbc9f", 
-            "campaign_id" => "147229", 
+            "campaign_id" => "265595", 
             "whatsapp_bsp" => "1", 
             "client_data" => array(
-                "phone_number" => "+91".$postData['lead_mobile_number'][1], 
+                "phone_number" => "+91".$postData['mobile'], 
                 "name" => $postData['first_name'].' '.$postData['last_name'], 
                 "dynamic_data" => array(
                     "1"=> $postData['first_name'].' '.$postData['last_name']
                 )
             ) 
         );
-        
         $curl = curl_init();
     
         curl_setopt_array($curl, array(
@@ -86,25 +85,14 @@ trait afterLeadSubmit
     
         $resp = curl_exec($curl);
         curl_close($curl);
-        return response()->json($resp, $this->_statusOK);
+        $resp = json_decode($resp,true);
+        return $resp;
     }
 
     public function captureLeadToDB($leadData){
         try {
-           
-            $data = array(
-                'first_name' => $leadData['first_name'],
-                'last_name' => $leadData['last_name'],
-                'email' => $leadData['lead_email'],
-                'mobile' => $leadData['lead_mobile_number'][1],
-                'city' => (isset($leadData['city']))?$leadData['city']:'',
-                'institute' => (isset($leadData['institute']))?$leadData['institute']:'',
-                'pincode' => (isset($leadData['lead_pincode']))?$leadData['lead_pincode']:'',
-                'utm_source' => $leadData['utm_source'],
-                'utm_campaign' => $leadData['utm_campaign'],
-            );
-
-            $lead = Lead::create($data);
+            $leadData['mobile'] = $leadData['lead_mobile_number'][1];
+            $lead = Lead::create($leadData);
             return $lead;
         } catch(\Illuminate\Database\QueryException $e){
             //throw $th;
@@ -117,7 +105,7 @@ trait afterLeadSubmit
 
             $name = $postData['first_name'];
 
-            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=true&from=MYIDCM&to=".$postData['lead_mobile_number'][1]."&text=Hi+".$name."%2C+Thank+you+for+your+interest+in+our+digital+marketing+programs.+We+have+received+your+details+and+will+be+in+touch+soon.+Thanks%2C+IDCM&dltContentId=1207173168686082071&dltPrincipalEntityId=1201159245568554682";
+            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=true&from=MYIDCM&to=".$postData['mobile']."&text=Hi+".$name."%2C+Thank+you+for+your+interest+in+our+digital+marketing+programs.+We+have+received+your+details+and+will+be+in+touch+soon.+Thanks%2C+IDCM&dltContentId=1207173168686082071&dltPrincipalEntityId=1201159245568554682";
 
             $curl = curl_init($url);
             curl_setopt($curl, CURLOPT_URL, $url);
@@ -130,7 +118,8 @@ trait afterLeadSubmit
             $resp = curl_exec($curl);
             curl_close($curl);
 
-            return true;
+            $resp = json_decode($resp,true);
+            return $resp;
         } catch (\Illuminate\Database\QueryException $e) {
             //throw $th;
         }
@@ -164,6 +153,10 @@ trait afterLeadSubmit
             curl_setopt($curl, CURLOPT_URL, $url);
             curl_setopt($curl, CURLOPT_POST, true);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            $headers = [
+                "Content-Type: application/json",'accept: application/json',
+                
+            ];
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
             curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
             curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
@@ -171,7 +164,8 @@ trait afterLeadSubmit
             $resp = curl_exec($curl);
             curl_close($curl);
                
-            return true;
+            $resp = json_decode($resp,true);
+            return $resp;
         } catch (\Illuminate\Database\QueryException $e) {
             //throw $th;
 
