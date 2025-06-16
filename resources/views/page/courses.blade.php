@@ -45,32 +45,25 @@
                           </div><!-- /.course-card__duration -->
                       </div><!-- /.course-card__content__top -->
                       <h3 class="course-card__title"><a href="{{ route('view-courses',$value->slug) }}">{{ $value->name }}</a></h3><!-- /.course-card__title -->
-                      <div class="course-card__info">
-                          <div class="course-card__lessons">
-                              <span class="course-card__lessons__icon">       
-                                  <i class="icon-open-book"></i>
-                              </span><!-- /.course-card__lessons__icon -->
-                              {{ $value->no_of_module }} lessons
-                          </div><!-- /.course-card__lessons -->
-                          <div class="course-card__students">
-                              <span class="course-card__students__icon">
-                                  <i class="icon-multiple-users-silhouette"></i>
-                              </span><!-- /.course-card__lessons__icon -->
-                              {{ $value->number_of_enrolled }} Students
-                          </div><!-- /.course-card__students -->
-                      </div><!-- /.course-card__info -->
+                    
                   </div><!-- /.course-card__content -->
                   <div class="course-card__hover" style="background-image: url(/assets/frontend/images/shapes/course-card-bg-1-1.png);">
                       <div class="course-card__hover__content">
-                          <div class="course-card__content__top course-card__content__top--hover">
-                              <div class="course-card__category">Experts</div><!-- /.course-card__category -->
-                              <div class="course-card__duration">
-                                  <span class="course-card__duration__icon">
-                                      <i class="icon-clock"></i>
-                                  </span><!-- /.course-card__duration__icon -->
-                                  {{ $value->duration }} Months
-                              </div><!-- /.course-card__duration -->
-                          </div><!-- /.course-card__content__top -->
+                            <div class="course-card__info course-card__info--hover">
+                              <div class="course-card__lessons">
+                                  <span class="course-card__lessons__icon">
+                                      <i class="icon-open-book"></i>
+                                  </span><!-- /.course-card__lessons__icon -->
+                                  {{ $value->no_of_module }} lessons
+                              </div><!-- /.course-card__lessons -->
+                              <div class="course-card__students">
+                                  <span class="course-card__students__icon">
+                                      <i class="icon-multiple-users-silhouette"></i>
+                                  </span><!-- /.course-card__lessons__icon -->
+                                  {{ $value->number_of_enrolled }} Students
+                              </div><!-- /.course-card__students -->
+                            </div><!-- /.course-card__info -->
+
                           <h3 class="course-card__title course-card__title--hover"><a href="{{ route('view-courses',$value->slug) }}">{{ $value->name }}</a></h3><!-- /.course-card__title -->
                           <p class="course-card__text">{{ substr($value->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
                           <div class="course-card__ratings course-card__ratings--hover">
@@ -99,20 +92,7 @@
                                   <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                               </span>
                           </a><!-- /.course-card__btn eduhive-btn -->
-                          <div class="course-card__info course-card__info--hover">
-                              <div class="course-card__lessons">
-                                  <span class="course-card__lessons__icon">
-                                      <i class="icon-open-book"></i>
-                                  </span><!-- /.course-card__lessons__icon -->
-                                  20 lessons
-                              </div><!-- /.course-card__lessons -->
-                              <div class="course-card__students">
-                                  <span class="course-card__students__icon">
-                                      <i class="icon-multiple-users-silhouette"></i>
-                                  </span><!-- /.course-card__lessons__icon -->
-                                  {{ $value->number_of_enrolled }} Students
-                              </div><!-- /.course-card__students -->
-                          </div><!-- /.course-card__info -->
+                            
                       </div><!-- /.course-card__hover__content -->
                   </div><!-- /.course-card__hover -->
               </div><!-- /.course-card -->

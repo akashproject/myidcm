@@ -4,10 +4,10 @@
             <div class="container">
                 <div class="page-header__content">
                     <ul class="eduhive-breadcrumb list-unstyled">
-                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
+                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="/">Home</a></li>
                         <li><span>Contact Us</span></li>
                     </ul><!-- /.eduhive-breadcrumb list-unstyled -->
-                    <h2 class="page-header__title">Contact Uss</h2>
+                    <h1 class="page-header__title">Contact Us</h1>
                 </div><!-- /.page-header__content -->
             </div><!-- /.container -->
             <img src="assets/frontend/images/shapes/page-header-shape-1.png" alt="shape" class="page-header__shape-one">
@@ -19,14 +19,14 @@
         <section class="institutes-content section-space">
             <div class="container">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h3 class="sec-title__title">Our <span class="sec-title__title__text" > Institute's </span><span class="sec-title__title__shape">Location</span></h3>
+                    <h3 class="sec-title__title">Our <span class="sec-title__title__text sec-title__title__shape"> Institutes </span></span></h3>
                 </div><!-- /.sec-title -->
                 <div class="content-institute-one row">
                     @foreach(getInstitutes() as $value)
                         <div class="col-md-6">
                             <div class="content-institute">
                                 <div class="contact-data p-4">
-                                    <h4 class="institue-title">{{ $value->name }}'s Location</h4>
+                                    <h4 class="institue-title">{{ $value->name }}</h4>
                                     <div class="institute-page__info">
                                         <div class="row">
                                             <div class="col-md-6 my-2">

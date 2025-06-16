@@ -61,10 +61,10 @@
                             </div><!-- /.main-slider-one__image__left -->
                             <div class="main-slider-one__image__right">
                                 <div class="main-slider-one__image__two">
-                                    <img src="assets/frontend/images/main-slider/main-slider-1-2.png" alt="slider image" class="slider-image">
+                                    <img src="assets/frontend/images/main-slider/main-slider-1-2.webp" alt="slider image" class="slider-image">
                                 </div><!-- /.main-slider-one__image__two -->
                                 <div class="main-slider-one__image__three">
-                                    <img src="assets/frontend/images/main-slider/main-slider-1-3.png" alt="slider image" class="slider-image">
+                                    <img src="assets/frontend/images/main-slider/main-slider-1-3.webp" alt="slider image" class="slider-image">
                                 </div><!-- /.main-slider-one__image__three -->
                             </div><!-- /.main-slider-one__image__right -->
                             <img src="assets/frontend/images/shapes/main-slider-shape-1-3.png" alt="shape" class="main-slider-one__image__shape-one slider-image">
@@ -86,7 +86,7 @@
 @include('common.courses')
 
 <section class="about-one section-space" id="about">
-    <div class="about-one__bg" style="background-image: url(assets/frontend/images/shapes/about-bg-1-1.png);"></div>
+    <div class="about-one__bg" style="background-image: url(assets/frontend/images/shapes/about-bg-1-1.webp);"></div>
     <div class="container">
         <div class="row gutter-y-50 align-items-center">
             <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
@@ -245,7 +245,7 @@
                 <div class="faq-one__image">
                     <div class="faq-one__image__one">
                         <div class="faq-one__image__one__inner">
-                            <img src="assets/frontend/images/faq/faq-1-1.png" alt="faq">
+                            <img src="assets/frontend/images/faq/faq-1-1.webp" alt="faq 1">
                         </div><!-- /.faq-one__image__one__inner -->
                         <img src="assets/frontend/images/shapes/faq-shape-1-2.png" alt="shape" class="faq-one__image__shape-one">
                         <img src="assets/frontend/images/shapes/faq-shape-1-3.png" alt="shape" class="faq-one__image__shape-two">
@@ -253,7 +253,7 @@
                         <div class="faq-one__image__shape-box"></div><!-- /.faq-one__image__shape-box -->
                     </div><!-- /.faq-one__image__one -->
                     <div class="faq-one__image__two">
-                        <img src="assets/frontend/images/faq/faq-1-2.png" alt="faq">
+                        <img src="assets/frontend/images/faq/faq-1-2.webp" alt="faq 2">
                     </div><!-- /.faq-one__image__two -->
                 </div><!-- /.faq-one__image -->
             </div><!-- /.col-lg-6 -->
@@ -277,7 +277,7 @@
         </div><!-- /.cta-one__conten -->
     </div><!-- /.container -->
     <img src="assets/frontend/images/resources/cta-1-1.webp" alt="shape" class="cta-one__image-one">
-    <img src="assets/frontend/images/resources/cta-1-2.png" alt="shape" class="cta-one__image-two">
+    <img src="assets/frontend/images/resources/cta-1-2.webp" alt="shape" class="cta-one__image-two">
     <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-one">
     <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-two">
     <div class="cta-one__shape-box-one"></div><!-- /.cta-one__shape-box-one -->
@@ -357,7 +357,7 @@
                                     </div><!-- /.testimonial-card__top -->
                                     <div class="testimonial-card__content">
                                         <p class="testimonial-card__quote">{!! $testimonial->comment !!}</p><!-- /.testimonial-card__quote -->
-                                        <!--div class="eduhive-ratings">
+                                        <div class="eduhive-ratings">
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
                                             </span>
@@ -373,7 +373,7 @@
                                             <span class="eduhive-ratings__icon">
                                                 <i class="fa fa-star"></i>
                                             </span>
-                                        </div--><!-- /.product-ratings -->
+                                        </div><!-- /.product-ratings -->
                                     </div><!-- /.testimonial-card__content -->
                                 </div><!-- /.testimonial-card -->
                             </div><!-- /.owl-slide-item-->

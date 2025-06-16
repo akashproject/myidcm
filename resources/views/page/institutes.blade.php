@@ -4,10 +4,10 @@
         <div class="container">
             <div class="page-header__content">
                 <ul class="eduhive-breadcrumb list-unstyled">
-                    <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
+                    <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="/">Home</a></li>
                     <li><span>{{ $contentMain->name}}</span></li>
                 </ul><!-- /.eduhive-breadcrumb list-unstyled -->
-                <h2 class="page-header__title mb-3">{{ $contentMain->name}}</h2>
+                <h1 class="page-header__title mb-3">{{ $contentMain->name}}</h1>
                 <p class="excerpt">
                     {{ $contentMain->excerpt}}
                 </p>
@@ -23,8 +23,8 @@
     <section class="section-space">
         <div class="container">
             <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                <h5> offline institutes </h5>
-                <h3 class="sec-title__title"><span>Visit Our Offline</span> <span class="sec-title__title__shape sec-title__title__text"> Centers</span></h3><!-- /.sec-title__title -->
+                <h5> Institute Details </h5>
+                <h3 class="sec-title__title"><span>Visit Our </span> <span class="sec-title__title__shape sec-title__title__text"> Institutes</span></h3><!-- /.sec-title__title -->
             </div><!-- /.sec-title -->
            
             <div class="row justified-content-center">

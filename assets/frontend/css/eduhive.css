@@ -107,7 +107,7 @@
   --eduhive-border-color-rgb: 219, 216, 230;
   --eduhive-letter-space: -0.03em;
   --eduhive-letter-space-xl: 0.2em;
-  --section-space: 150px;
+  --section-space: 80px;
   --section-space2: 116px;
 }
 
@@ -5378,7 +5378,7 @@ body.megamenu-popup-active .mobile-nav__content {
 --------------------------------------------------------------*/
 .page-header {
   position: relative;
-  padding-top: var(--section-space, 120px);
+  padding-top: 120px;
   padding-bottom: 40px;
   background-color: var(--eduhive-white2, #EDEAF4);
   overflow: hidden;
@@ -5467,6 +5467,9 @@ body.megamenu-popup-active .mobile-nav__content {
   }
   .course_highlights li {
     width: 100%;
+  }
+  .funfact-one__title {
+    font-size: 26px !important;
   }
 }
 @media (max-width: 575px) {
@@ -6161,6 +6164,36 @@ body.megamenu-popup-active .mobile-nav__content {
     font-weight: 800;
 }
 
+
+.institute_highlights li {
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3b2a66;
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+  position: relative;
+}
+.institute_highlights li::before {
+  content: "\e92f";
+  font-family: 'icomoon' !important;
+  color: #20104b;
+  position: absolute;
+  left: -24px;
+}
+
+.institute_highlights li::after {
+    content: " ";
+    position: absolute;
+    left: -29px;
+    top: 1px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--eduhive-base, #674CEF);
+    border-radius: 50%;
+}
 @media (max-width: 1199px) {
   .contact-page__content {
     padding-left: 30px;
@@ -10960,17 +10993,16 @@ li:hover .contact-page__info__icon__inner {
   line-height: 1.375;
 }
 .testimonial-card__quote {
-  margin-bottom: 25px;
-  font-weight: 400;
+    margin-bottom: 25px;
+    font-weight: 400;
+    height: 80px;
+    overflow: hidden;
 }
 .testimonial-card .eduhive-ratings {
   gap: 6px;
 }
 .testimonial-card .eduhive-ratings__icon {
   color: var(--eduhive-primary, #EF802E);
-}
-.testimonial-card .eduhive-ratings__icon:last-child {
-  color: RGBA(var(--eduhive-text-rgb, 123, 121, 128), 0.4);
 }
 
 .testimonial-card-three {
@@ -13220,6 +13252,11 @@ li:hover .sidebar__comments__icon {
   padding: 0;
   border: 0;
   margin-bottom: 67px;
+}
+ul.category-widget li {
+    display: inline-flex;
+    margin: 0 20px;
+    width: 20%;
 }
 @media (max-width: 1399px) {
   .blog-details .blog-card {
@@ -15865,6 +15902,11 @@ li:hover .sidebar__comments__icon {
   border-radius: 20px;
   backdrop-filter: blur(17.5px);
 }
+
+.all-placed-student {
+    position: relative;
+}
+
 @media (max-width: 1199px) {
   .pricing-one__inner {
     padding-left: 40px;

@@ -6,10 +6,10 @@
             <div class="row">
                 <div class="col-md-8">
                     <ul class="eduhive-breadcrumb list-unstyled">
-                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
+                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="/">Home</a></li>
                         <li><span>{{ $contentMain->name }}</span></li>
                     </ul><!-- /.eduhive-breadcrumb list-unstyled -->
-                    <h2 class="page-header__title mb-3">{{ $contentMain->name }}</h2>
+                    <h1 class="page-header__title mb-3">{{ $contentMain->name }}</h1>
                     <h6>{!! $contentMain->description !!}</h2>
                 </div>
             </div>

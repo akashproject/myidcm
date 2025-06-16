@@ -107,7 +107,7 @@
                             <p class="course-card__ratings__text">{{$course->number_of_rating}} Ratings</p><!-- /.course-card__ratings__text -->
                         </div><!-- /.course-card__ratings -->
                             <a href="#lead-generate-popup" class="course-card__btn eduhive-btn eduhive-btn--border open-popup-link">
-                                <span>Book A Demo Class</span>
+                                <span>Enquire Now</span>
                                 <span class="eduhive-btn__icon">
                                     <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                                 </span>

@@ -7,7 +7,7 @@
                     <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="/">Home</a></li>
                     <li><span>About us</span></li>
                 </ul><!-- /.eduhive-breadcrumb list-unstyled -->
-                <h2 class="page-header__title">About us</h2>
+                <h1 class="page-header__title">About us</h1>
             </div><!-- /.page-header__content -->
         </div><!-- /.container -->
         <img src="assets/frontend/images/shapes/page-header-shape-1.png" alt="shape" class="page-header__shape-one">

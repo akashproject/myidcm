@@ -10,7 +10,7 @@
             <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
                 <div class="about-one__image">
                     <div class="video-one wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="video-one__bg course-video" style="background-image: url(/assets/frontend/images/courses/featured-course.jpg);">
+                        <div class="video-one__bg course-video" style="background-image: url(/assets/frontend/images/courses/featured-course.webp);">
                             <a href="{{ $featuredCourse->course_video_link }}" class="video-one__video-btn video-btn video-popup">
                                 <i class="icon-play"></i>
                                 <span></span>
