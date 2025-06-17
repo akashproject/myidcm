@@ -132,6 +132,7 @@ Route::get('/api/courses', [App\Http\Controllers\ApiController::class, 'courses'
 Route::get('/api/institutes', [App\Http\Controllers\ApiController::class, 'institutes'])->name('api-institutes');
 Route::get('/api/setting/{key}', [App\Http\Controllers\ApiController::class, 'setting'])->name('api-setting');
 
+Route::get('/certificate/{code}', [App\Http\Controllers\CertificateController::class, 'show'])->name('certificate');
 Route::fallback(function () {
     abort(404);
 });

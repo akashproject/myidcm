@@ -288,18 +288,16 @@ if (! function_exists('getAllBlogs')) {
 }
 
 if (! function_exists('getBlogs')) {
-    function getBlogs($ids = null){
+    function getBlogs($ids = null,$limit=100,$offset=0){
         try {
             
             $post = array();
             $includes = '';
-            if ($ids == null) {
-                return $post = [];
+            if($ids != null){
+                $ids = implode(",",json_decode($ids,true));
+                $includes = "include=".$ids;
             }
-            
-            $ids = implode(",",json_decode($ids,true));
-            $includes = "include=".$ids;
-            $url = env("APP_URL")."/blog/wp-json/wp/v2/posts?".$includes."&_fields=id,title,excerpt,featured_media,date,link&date";
+            $url = env("APP_URL")."/blog/wp-json/wp/v2/posts?".$includes."&per_page=".$limit."&offset=".$offset."&_fields=&_fields=id,title,excerpt,featured_media,date,link,author,categories&date";
             $curl = curl_init($url);
             curl_setopt($curl, CURLOPT_URL, $url);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -313,23 +311,18 @@ if (! function_exists('getBlogs')) {
             $post = json_decode($resp);
 
             foreach ($post as $key => $value) {
-               
-                $url = env("APP_URL")."/blog/wp-json/wp/v2/media/".$value->featured_media;
+                $image_url = env("APP_URL")."/blog/wp-json/wp/v2/media/".$value->featured_media;
+                $post[$key]->source_url = (curl_function($image_url)->source_url)?curl_function($image_url)->source_url:"";
+                
+                $author_url = env("APP_URL")."/blog/wp-json/wp/v2/users/".$value->author."?&_fields=id,name,avatar_urls,link";
+                $post[$key]->author = (curl_function($author_url))?curl_function($author_url):[];
 
-                $curl = curl_init($url);
-                curl_setopt($curl, CURLOPT_URL, $url);
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                
-                //for debug only!
-                curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-                curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-                
-                $resp = curl_exec($curl);
-                curl_close($curl);
-                $media = json_decode($resp);
-                $post[$key]->source_url = ($media->source_url)?$media->source_url:"";
+                if($value->categories){
+                    $categories = implode(',',$value->categories);
+                    $category_url = env("APP_URL")."/blog/wp-json/wp/v2/categories?include=".$categories."&_fields=name,link";
+                    $post[$key]->category = (curl_function($category_url))?curl_function($category_url):[];
+                }
             }
-            
             return $post;
         } catch (\Throwable $th) {
             var_dump($th);
@@ -381,5 +374,21 @@ if (! function_exists('random_strings')) {
         // of specified length
         return substr(str_shuffle($str_result),
                         0, $length_of_string);
+    }
+}
+
+if (! function_exists('curl_function')) {
+    function curl_function($url,$data=null) {
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        
+        //for debug only!
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        
+        $resp = curl_exec($curl);
+        curl_close($curl);
+        return json_decode($resp);
     }
 }

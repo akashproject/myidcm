@@ -53,7 +53,7 @@ class CertificateController extends Controller
             $user->center_code = get_student_meta($user->id,'center_code');
             $user->duration = get_student_meta($user->id,'duration');
             $user->grade = get_student_meta($user->id,'grade');
-            QrCode::merge('/assets/images/fab.png')
+            QrCode::merge('/assets/frontend/images/fab.png')
             ->size(256)
             ->margin(1)
             ->generate(route('certificate',utf8_encode($user->id)), public_path('images/qrcode_'.$user->id.'.svg'));

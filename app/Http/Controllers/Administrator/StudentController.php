@@ -139,12 +139,7 @@ class StudentController extends Controller
                         'name' => $students['name'],
                         'email' => $students['email'],
                         'mobile' => $students['mobile'],
-                        'password' => Hash::make("12345678"),
-                        'is_approved' => "0",
-                        'status' => "1",
-                        'email_verified_at' => date('Y-m-d h:i:s'),
                     ]);
-                    $student->assignRole('Student');
                     unset($students['name']);
                     unset($students['email']);
                     unset($students['mobile']);

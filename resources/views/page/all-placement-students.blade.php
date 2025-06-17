@@ -4,7 +4,7 @@
         <div class="container">
             <div class="page-header__content">
                 <ul class="eduhive-breadcrumb list-unstyled">
-                    <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
+                    <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="{{ url('/') }}">Home</a></li>
                     <li><span>About us</span></li>
                 </ul><!-- /.eduhive-breadcrumb list-unstyled -->
                 <h2 class="page-header__title">{{ $contentMain->name }}</h2>

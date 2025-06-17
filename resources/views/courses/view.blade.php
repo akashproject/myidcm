@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="page-header__content">
                     <ul class="eduhive-breadcrumb list-unstyled">
-                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="index.html">Home</a></li>
+                        <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="{{ url('/') }}">Home</a></li>
                         <li><span>Our Courses</span></li>
                         <li><span>{{ $contentMain->name }}</span></li>
                     </ul>
@@ -435,7 +435,7 @@
             <div class="course-category__shape-two"></div><!-- /.course-category__shape-two -->
         </section><!-- /.course-category section-space -->
         
-        @include('common.courses')
+        @include('common.courses-inner')
 
         <section class="all-placed-student section-space">
             <div class="container">
@@ -493,7 +493,7 @@
             <div class="cta-one__shape-box-two wow fadeInRight" data-wow-duration="1500ms"></div><!-- /.cta-one__shape-box-two -->
         </section><!-- /.cta-one -->
 
-        <section class="testimonials-one my-5" id="testimonials">
+        <section class="testimonials-one section-space" id="testimonials">
             <div class="container">
                 <div class="row gutter-y-50">
                     <div class="col-xl-4">
@@ -571,19 +571,19 @@
                                                 <div class="eduhive-ratings">
                                                     <span class="eduhive-ratings__icon">
                                                         <i class="fa fa-star"></i>
-                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    </span>
                                                     <span class="eduhive-ratings__icon">
                                                         <i class="fa fa-star"></i>
-                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    </span>
                                                     <span class="eduhive-ratings__icon">
                                                         <i class="fa fa-star"></i>
-                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    </span>
                                                     <span class="eduhive-ratings__icon">
                                                         <i class="fa fa-star"></i>
-                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    </span>
                                                     <span class="eduhive-ratings__icon">
                                                         <i class="fa fa-star"></i>
-                                                    </span><!-- /.eduhive-ratings__icon -->
+                                                    </span>
                                                 </div><!-- /.product-ratings -->
                                             </div><!-- /.testimonial-card__content -->
                                         </div><!-- /.testimonial-card -->
@@ -593,7 +593,7 @@
                         </div><!-- /.eduhive-stretch-element-inside-column -->
                     </div><!-- /.col-xl-8 -->
                 </div><!-- /.row gutter-y-50 -->
-            </div><!-- /.container -->
+            </div>
             <img src="/assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
             <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
         </section><!-- /.testimonials-one section-space -->
@@ -659,19 +659,19 @@
                             <div class="blog-card__content">
                                 <ul class="list-unstyled blog-card__meta">
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ $value->author->link }}">
                                             <span class="blog-card__meta__icon">
                                                 <i class="far fa-user"></i>
                                             </span>
-                                            by Admin
+                                            by {{ $value->author->name }}
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
                                             <span class="blog-card__meta__icon">
-                                                <i class="icon-comments"></i>
+                                                <i class="icon-date"></i>
                                             </span>
-                                            2 Comments
+                                            {{ date('M d, Y',strtotime($value->date)) }}
                                         </a>
                                     </li>
                                 </ul><!-- /.list-unstyled blog-card__meta -->

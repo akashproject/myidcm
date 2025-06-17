@@ -3230,6 +3230,7 @@ a:hover .instructor-card-two__social__icon {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  width: 100%;
 }
 .blog-card__image__link {
   display: flex;
@@ -3329,6 +3330,7 @@ a:hover .instructor-card-two__social__icon {
   font-weight: 500;
   text-transform: capitalize;
   line-height: 1.571;
+  gap: 10px;
 }
 .blog-card__meta li a {
   display: flex;
@@ -3431,11 +3433,15 @@ a:hover .instructor-card-two__social__icon {
   padding: 19px 20px;
 }
 .blog-card--two .blog-card__image {
-  margin-bottom: 31px;
+  margin-bottom: 10px;
   flex-shrink: 0;
 }
 .blog-card--two .blog-card__content {
   padding: 0 10px 10px;
+}
+.blog-card_image_wrapper {
+    display: flex;
+    gap: 10px;
 }
 @media (max-width: 991px) {
   .blog-card--two .blog-card__content {
@@ -13275,8 +13281,7 @@ ul.category-widget li {
 .blog-details .blog-card__title {
   margin-bottom: 9px;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.85;
+  font-size: 26px;
 }
 .blog-details .blog-card__title:hover {
   color: var(--eduhive-black, #20104B);
@@ -13396,8 +13401,8 @@ ul.category-widget li {
   margin-right: 3px;
 }
 .blog-card__content__inner h2 {
-    font-weight: 800;
-    font-size: 28px;
+    font-weight: 700;
+    font-size: 24px;
 }
 .blog-card__content__inner h3 {
     font-size: 22px;

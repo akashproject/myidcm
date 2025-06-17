@@ -8,8 +8,7 @@
                 <div class="row gutter-y-60 align-items-center">
                     <div class="main-slider-two__col-content">
                         <ul class="eduhive-breadcrumb list-unstyled">
-                            <li><span class="eduhive-breadcrumb__icon">
-                                <i class="icon-home"></i></span><a href="https://www.myidcm.com">Home</a></li>
+                            <li><span class="eduhive-breadcrumb__icon"><i class="icon-home"></i></span><a href="https://www.myidcm.com">Home</a></li>
                             <li><span><a href="https://www.myidcm.com/institutes">Institutes</a></span></li>
                             <li><span>{{$contentMain->name}}</span></li>
                         </ul>
@@ -124,15 +123,71 @@
     </div><!-- /.main-slider-two__carousel -->
 </section><!-- /.main-slider-two -->
 
+<section class="faq-one faq-one--home section-space">
+    <div class="container">
+        <div class="row gutter-y-50 align-items-center">
+            <div class="col-lg-12">
+                <div class="funfact-one">
+                    <div class="funfact-one__grid">
+                        <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                            <div class="funfact-one__icon">
+                                <span class="funfact-one__icon__inner"><i class="icon-instructors"></i></span>
+                            </div><!-- /.funfact-one__icon -->
+                            <h3 class="funfact-one__title count-box">
+                                <span class="count-text" data-stop="8000" data-speed="1500">0</span>
+                                <span>+</span>
+                            </h3><!-- /.funfact-one__title -->
+                            <p class="funfact-one__text">Satisfied Students</p><!-- /.funfact-one__text -->
+                        </div><!-- /.funfact-one__item -->
+                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                            <div class="funfact-one__icon">
+                                <span class="funfact-one__icon__inner"><i class="icon-students"></i></span>
+                            </div><!-- /.funfact-one__icon -->
+                            <h3 class="funfact-one__title count-box">
+                                <span class="count-text" data-stop="720" data-speed="1500">0</span>
+                                <span>+</span>
+                            </h3><!-- /.funfact-one__title -->
+                            <p class="funfact-one__text">Classes Completed</p><!-- /.funfact-one__text -->
+                        </div><!-- /.funfact-one__item -->
+                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                            <div class="funfact-one__icon">
+                                <span class="funfact-one__icon__inner"><i class="icon-batch-assign"></i></span>
+                            </div><!-- /.funfact-one__icon -->
+                            <h3 class="funfact-one__title count-box">
+                                <span class="count-text" data-stop="30" data-speed="30">0</span>
+                                <span>+</span>
+                            </h3>
+                            <p class="funfact-one__text">Placement Offices</p>
+                        </div>
+                        <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                            <div class="funfact-one__icon">
+                                <span class="funfact-one__icon__inner"><i class=icon-connectibity"></i></span>
+                            </div><!-- /.funfact-one__icon -->
+                            <h3 class="funfact-one__title count-box">
+                                <span class="count-text" data-stop="70" data-speed="1500">0</span>
+                                <span>K+</span>
+                            </h3>
+                            <p class="funfact-one__text">Registered Employers</p>
+                        </div>
+                    </div><!-- /.rfunfact-one__grid -->
+                </div><!-- /.funfact-one -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row gutter-y-50 -->
+    </div><!-- /.container -->
+    
+</section>
+
+<section class="section-space" >
+    <div class="container">
+        {!! $contentMain->description !!}
+    </div>
+</section>
+
 @include('common.featuredCourse')
 
-@include('common.courses')
+@include('common.courses-inner')
 
 <section class="online-class section-space-bottom">
-    <div class="online-class__inner">
-        <div class="online-class__inner__bg" style="background-image: url(/assets/frontend/images/shapes/online-class-bg-1-1.png);">
-        </div><!-- /.online-class__inner__bg -->
-    </div><!-- /.online-class__inner -->
     <div class="container">
         <div class="online-class__content">
             <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
@@ -169,8 +224,8 @@
 <section class="section-space ">
     <div class="container">
         <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h6 class="sec-title__tagline">benefits</h6><!-- /.sec-title__tagline -->
-            <h3 class="sec-title__title"><span class="sec-title__title__text">Digital Marketing Roles</span> <span class="sec-title__title__shape">Placed</span></h3><!-- /.sec-title__title -->
+            <h6 class="sec-title__tagline">Job Opportunities</h6><!-- /.sec-title__tagline -->
+            <h3 class="sec-title__title">Different <span class="sec-title__title__text sec-title__title__shape">Digital Marketing Job Roles</span></h3><!-- /.sec-title__title -->
         </div><!-- /.sec-title -->
         <div class="row gutter-y-30">
             <div class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
@@ -345,64 +400,6 @@
     </div><!-- /.container -->
 </section><!-- /.gallery-page section-space -->
 @endif
-
-
-<section class="faq-one faq-one--home section-space">
-    <div class="container">
-        <div class="row gutter-y-50 align-items-center">
-            <div class="col-lg-12">
-                <div class="funfact-one">
-                    <div class="funfact-one__grid">
-                        <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                            <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-instructors"></i></span>
-                            </div><!-- /.funfact-one__icon -->
-                            <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="8000" data-speed="1500">0</span>
-                                <span>+</span>
-                            </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Satisfied Students</p><!-- /.funfact-one__text -->
-                        </div><!-- /.funfact-one__item -->
-                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-students"></i></span>
-                            </div><!-- /.funfact-one__icon -->
-                            <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="720" data-speed="1500">0</span>
-                                <span>+</span>
-                            </h3><!-- /.funfact-one__title -->
-                            <p class="funfact-one__text">Classes Completed</p><!-- /.funfact-one__text -->
-                        </div><!-- /.funfact-one__item -->
-                        <div class="funfact-one__item funfact-one__item--primary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                            <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class="icon-batch-assign"></i></span>
-                            </div><!-- /.funfact-one__icon -->
-                            <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="30" data-speed="30">0</span>
-                                <span>+</span>
-                            </h3>
-                            <p class="funfact-one__text">Placement Offices</p>
-                        </div>
-                        <div class="funfact-one__item funfact-one__item--secondary wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <div class="funfact-one__icon">
-                                <span class="funfact-one__icon__inner"><i class=icon-connectibity"></i></span>
-                            </div><!-- /.funfact-one__icon -->
-                            <h3 class="funfact-one__title count-box">
-                                <span class="count-text" data-stop="70" data-speed="1500">0</span>
-                                <span>K+</span>
-                            </h3>
-                            <p class="funfact-one__text">Registered Employers</p>
-                        </div>
-                    </div><!-- /.rfunfact-one__grid -->
-                </div><!-- /.funfact-one -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row gutter-y-50 -->
-    </div><!-- /.container -->
-    <div class="faq-one__image-inner">
-        <img src="{{ url('/assets/frontend/images/faq/faq-2-1.jpg') }}" alt="faq">
-    </div><!-- /.faq-one__image-inner -->
-    <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-5.png') }}" alt="shape" class="faq-one__shape-three">
-</section><!-- /.faq-one section-space -->
 
 
 <section class="all-placed-student section-space">

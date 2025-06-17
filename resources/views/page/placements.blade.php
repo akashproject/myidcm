@@ -144,108 +144,6 @@
     <img src="{{ url('/assets/frontend/images/shapes/faq-shape-1-5.png') }}" alt="shape" class="faq-one__shape-three">
 </section><!-- /.faq-one section-space -->
 
-<section class="testimonials-one my-5" id="testimonials">
-    <div class="container">
-        <div class="row gutter-y-50">
-            <div class="col-xl-4">
-                <div class="testimonials-one__content">
-                    <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                        <h6 class="sec-title__tagline">Students' Experiences</h6><!-- /.sec-title__tagline -->
-                        <h3 class="sec-title__title">Pick <span class="sec-title__title__text"><span class="sec-title__title__shape">On Idcm</span></span></h3><!-- /.sec-title__title -->
-                    </div><!-- /.sec-title -->
-                    <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
-                        <p class="testimonials-one__text">Our students don't just learn, they celebrate about their experience!</p><!-- /.testimonials-one__text -->
-                    </div><!-- /.testimonial-one__description -->
-                    <div class="testimonials-one__custome-navs"></div><!-- /.testimonials-one__custome-navs -->
-                </div><!-- /.testimonials-one__content -->
-            </div><!-- /.col-xl-4 -->
-            <div class="col-xl-8">
-                <div class="eduhive-stretch-element-inside-column">
-                    <div class="testimonials-one__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
-                "items": 1,
-                "margin": 30,
-                "smartSpeed": 700,
-                "loop": true,
-                "autoplay": 600,
-                "nav": true,
-                "navContainer": ".testimonials-one__custome-navs",
-                "dots": false,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                "responsive":{
-                    "0":{
-                        "items": 1,
-                        "margin": 10
-                    },
-                    "576":{
-                        "items": 1.5
-                    },
-                    "768":{
-                        "items": 1.8
-                    },
-                    "992":{
-                        "items": 2.6
-                    },
-                    "1200":{
-                        "items": 2.3
-                    },
-                    "1360":{
-                        "items": 2.3
-                    },
-                    "1536":{
-                        "items": 2.5
-                    },
-                    "1600":{
-                        "items": 2.7
-                    },
-                    "1800":{
-                        "items": 2.94
-                    }
-                }
-                }'>
-                        @foreach(getTestimonials() as $testimonial)
-                            <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-card__top">
-                                        <div class="testimonial-card__image">
-                                            <img src="{{ (isset($testimonial->featured_image))?getSizedImage($testimonial->featured_image):'https://dummyimage.com/150x150' }}" alt="{{ $testimonial->name }}">
-                                            <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
-                                        </div><!-- /.testimonial-card__image -->
-                                        <div class="testimonial-card__identity">
-                                            <h5 class="testimonial-card__name">{{ $testimonial->name }}</h5>
-                                            <p class="testimonial-card__designation">{{ $testimonial->dasignation }}</p>
-                                        </div><!-- /.testimonial-card__identity -->
-                                    </div><!-- /.testimonial-card__top -->
-                                    <div class="testimonial-card__content">
-                                        <p class="testimonial-card__quote">{!! $testimonial->comment !!}</p><!-- /.testimonial-card__quote -->
-                                        <!--div class="eduhive-ratings">
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <span class="eduhive-ratings__icon">
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </div><!-- /.product-ratings -->
-                                    </div><!-- /.testimonial-card__content -->
-                                </div><!-- /.testimonial-card -->
-                            </div><!-- /.owl-slide-item-->
-                        @endforeach
-                    </div><!-- /.testimonials-one__carousel -->
-                </div><!-- /.eduhive-stretch-element-inside-column -->
-            </div><!-- /.col-xl-8 -->
-        </div><!-- /.row gutter-y-50 -->
-    </div><!-- /.container -->
-    <img src="assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
-    <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
-</section><!-- /.testimonials-one section-space -->
 
 <section class="all-placed-student my-5">
     <div class="container">
@@ -455,6 +353,112 @@
         </div>
     </div>
 </section>
+
+<section class="testimonials-one section-space" id="testimonials">
+    <div class="container">
+        <div class="row gutter-y-50">
+            <div class="col-xl-4">
+                <div class="testimonials-one__content">
+                    <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <h6 class="sec-title__tagline">Students' Experiences</h6><!-- /.sec-title__tagline -->
+                        <h3 class="sec-title__title">Pick <span class="sec-title__title__shape"><span class="sec-title__title__text">On IDCM</span></span></h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="testimonials-one__description wow fadeInUp" data-wow-duration="1500ms">
+                        <p class="testimonials-one__text">Our students don't just learn, they celebrate about their experience!</p><!-- /.testimonials-one__text -->
+                    </div><!-- /.testimonial-one__description -->
+                    <div class="testimonials-one__custome-navs"></div><!-- /.testimonials-one__custome-navs -->
+                </div><!-- /.testimonials-one__content -->
+            </div><!-- /.col-xl-4 -->
+            <div class="col-xl-8">
+                <div class="eduhive-stretch-element-inside-column">
+                    <div class="testimonials-one__carousel eduhive-owl__carousel eduhive-owl__carousel--with-shadow owl-theme owl-carousel" data-owl-options='{
+                "items": 1,
+                "margin": 30,
+                "smartSpeed": 700,
+                "loop": true,
+                "autoplay": 600,
+                "nav": true,
+                "navContainer": ".testimonials-one__custome-navs",
+                "dots": false,
+                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
+                "responsive":{
+                    "0":{
+                        "items": 1,
+                        "margin": 10
+                    },
+                    "576":{
+                        "items": 1.5
+                    },
+                    "768":{
+                        "items": 1.8
+                    },
+                    "992":{
+                        "items": 2.6
+                    },
+                    "1200":{
+                        "items": 2.3
+                    },
+                    "1360":{
+                        "items": 2.3
+                    },
+                    "1536":{
+                        "items": 2.5
+                    },
+                    "1600":{
+                        "items": 2.7
+                    },
+                    "1800":{
+                        "items": 2.94
+                    }
+                }
+                }'>
+                        @foreach(getTestimonials() as $testimonial)
+                            <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-card__top">
+                                        <div class="testimonial-card__image">
+                                            <img src="{{ (isset($testimonial->featured_image))?getSizedImage($testimonial->featured_image):'https://dummyimage.com/150x150' }}" alt="{{ $testimonial->name }}">
+                                            <span class="testimonial-card__icon"><i class="icon-quote-2"></i></span><!-- /.testimonial-card__icon -->
+                                        </div><!-- /.testimonial-card__image -->
+                                        <div class="testimonial-card__identity">
+                                            <h5 class="testimonial-card__name">{{ $testimonial->name }}</h5>
+                                            <p class="testimonial-card__designation">{{ $testimonial->dasignation }}</p>
+                                        </div><!-- /.testimonial-card__identity -->
+                                    </div><!-- /.testimonial-card__top -->
+                                    <div class="testimonial-card__content">
+                                        <div class="testimonial-card__quote">
+                                            {!! $testimonial->comment !!}
+                                        </div><!-- /.testimonial-card__quote -->
+                                        <div class="eduhive-ratings">
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                            <span class="eduhive-ratings__icon">
+                                                <i class="fa fa-star"></i>
+                                            </span><!-- /.eduhive-ratings__icon -->
+                                        </div><!-- /.product-ratings -->
+                                    </div><!-- /.testimonial-card__content -->
+                                </div><!-- /.testimonial-card -->
+                            </div><!-- /.owl-slide-item-->
+                        @endforeach
+                    </div><!-- /.testimonials-one__carousel -->
+                </div><!-- /.eduhive-stretch-element-inside-column -->
+            </div><!-- /.col-xl-8 -->
+        </div><!-- /.row gutter-y-50 -->
+    </div><!-- /.container -->
+    <img src="/assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
+    <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
+</section><!-- /.testimonials-one section-space -->
+
 @if($contentMain->faqs != null)
 <section class="faq-one my-5">
     <div class="container">

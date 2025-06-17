@@ -74,7 +74,7 @@
                         </div><!-- /.main-slider-one__image -->
                     </div><!-- /.main-slider-one__col-image -->
                 </div><!-- /.row gutter-y-60 -->
-            </div><!-- /.container -->
+            </div>
             <div class="main-slider-one__shape-one"></div><!-- /.main-slider-one__shape-one -->
             <div class="main-slider-one__shape-two"></div><!-- /.main-slider-one__shape-two -->
             <div class="main-slider-one__shape-three"></div><!-- /.main-slider-one__shape-three -->
@@ -112,7 +112,7 @@
                         <div class="about-one__image__circle__inner"></div>
                     </div><!-- /.about-one__image__circle -->
                 </div><!-- /.about-one__image -->
-            </div><!-- /.col-lg-6 -->
+            </div>
             <div class="col-lg-6">
                 <div class="about-one__content">
                     <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
@@ -152,9 +152,9 @@
                         </div><!-- /.about-one__button -->
                     </div><!-- /.about-one__inner -->
                 </div><!-- /.about-one__content -->
-            </div><!-- /.col-lg-6 -->
+            </div>
         </div><!-- /.row gutter-y-50 -->
-    </div><!-- /.container -->
+    </div>
 </section><!-- /.about-one section-space -->
 
 @include('common.featuredCourse')
@@ -182,7 +182,7 @@
                 </ul>
             </div>
         </div>
-    </div><!-- /.container -->
+    </div>
     <img src="assets/frontend/images/shapes/testimonial-shape-3-1.png" alt="shape" class="testimonials-three__shape-one">
     <img src="assets/frontend/images/shapes/testimonial-shape-3-2.png" alt="shape" class="testimonials-three__shape-two">
     <img src="assets/frontend/images/shapes/testimonial-shape-3-3.png" alt="shape" class="testimonials-three__shape-three">
@@ -240,7 +240,7 @@
                         </div><!-- /.faq-accordion -->
                     </div><!-- /.faq-one__accordion -->
                 </div><!-- /.faq-one__content -->
-            </div><!-- /.col-lg-6 -->
+            </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-duration="1500ms">
                 <div class="faq-one__image">
                     <div class="faq-one__image__one">
@@ -256,9 +256,9 @@
                         <img src="assets/frontend/images/faq/faq-1-2.webp" alt="faq 2">
                     </div><!-- /.faq-one__image__two -->
                 </div><!-- /.faq-one__image -->
-            </div><!-- /.col-lg-6 -->
+            </div>
         </div><!-- /.row gutter-y-50 -->
-    </div><!-- /.container -->
+    </div>
     <img src="assets/frontend/images/shapes/faq-shape-1-1.png" alt="shape" class="faq-one__shape-one">
     <img src="assets/frontend/images/shapes/faq-shape-1-4.png" alt="shape" class="faq-one__shape-two">
 </section><!-- /.faq-one section-space -->
@@ -275,7 +275,7 @@
                 </span>
             </a><!-- /.eduhive-btn -->
         </div><!-- /.cta-one__conten -->
-    </div><!-- /.container -->
+    </div>
     <img src="assets/frontend/images/resources/cta-1-1.webp" alt="shape" class="cta-one__image-one">
     <img src="assets/frontend/images/resources/cta-1-2.webp" alt="shape" class="cta-one__image-two">
     <img src="assets/frontend/images/shapes/cta-shape-1-1.png" alt="shape" class="cta-one__shape-one">
@@ -384,7 +384,7 @@
                 </div><!-- /.eduhive-stretch-element-inside-column -->
             </div><!-- /.col-xl-8 -->
         </div><!-- /.row gutter-y-50 -->
-    </div><!-- /.container -->
+    </div>
     <img src="assets/frontend/images/shapes/testimonials-shape-1-1.png" alt="shape" class="testimonials-one__shape">
     <div class="testimonials-one__shape-box"></div><!-- /.testimonials-one__shape-box -->
 </section><!-- /.testimonials-one section-space -->
@@ -495,8 +495,131 @@
                 </div><!-- /.alumni-intro-card -->
             </div>
         </div><!-- /.instructors-one__carousel -->
-    </div><!-- /.container -->
+    </div>
                                    
 </section><!-- /.instructors-one section-space2 -->
 
+<section class="blog-two section-space" id="blog">
+    <div class="container">
+        <div class="blog-two__top">
+            <div class="row gutter-y-60 align-items-center">
+                <div class="col-xl-9 col-lg-8">
+                    <div class="blog-two__content">
+                        <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                            <h6 class="sec-title__tagline">latest blog</h6><!-- /.sec-title__tagline -->
+                            <h3 class="sec-title__title"><span class="sec-title__title__shape">our latest</span> <span class="sec-title__title__text">blog news</span></h3><!-- /.sec-title__title -->
+                        </div><!-- /.sec-title -->
+                    </div><!-- /.blog-two__content -->
+                </div><!-- /.col-xl-9 col-lg-8 -->
+                <div class="col-xl-3 col-lg-4">
+                    <div class="blog-two__button">
+                        <a href="{{ url('/blog') }}" class="eduhive-btn">
+                            <span>view all blog</span>
+                            <span class="eduhive-btn__icon">
+                                <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
+                            </span>
+                        </a><!-- /.eduhive-btn -->
+                    </div><!-- /.blog-two__button -->
+                </div><!-- /.col-xl-3 col-lg-4 -->
+            </div>
+        </div>
+        <div class="row gutter-y-30">
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                @foreach(getBlogs(null,1,0) as $value)
+                <div class="blog-card blog-card--two">
+                    <div class="blog-card__image">
+                        <img src="{{ $value->source_url }}" alt="{!! $value->title->rendered !!}">
+                        <a href="{{ $value->link }}" class="blog-card__image__link"><span class="sr-only">{!! $value->title->rendered !!}</span><!-- /.sr-only --></a>
+                    </div><!-- /.blog-card__image -->
+                    <div class="blog-card__content">
+                        <ul class="list-unstyled blog-card__meta">
+                            <li>
+                                @foreach($value->category as $category)
+                                <a href="{{ $category->link }}">
+                                    <span class="blog-card__meta__icon">
+                                        <i class="icon-comments"></i>
+                                    </span>
+                                    {{ $category->name }}
+                                </a>
+                                @endforeach
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="blog-card__meta__icon">
+                                        <i class="icon-date"></i>
+                                    </span>
+                                    {{ date('M d, Y',strtotime($value->date)) }}
+                                </a>
+                            </li>
+                        </ul><!-- /.list-unstyled blog-card__meta -->
+                        <h3 class="blog-card__title"><a href="{{ $value->link }}">{!! $value->title->rendered !!}</a></h3><!-- /.blog-card__title -->
+                        <p class="blog-card__text">{!! $value->excerpt->rendered !!}</p><!-- /.blog-card__text -->
+                        <div class="blog-card__bottom">
+                            <div class="blog-card__author">
+                                <img src="{{ $value->source_url }}" alt="{{ $value->author->name }}" class="blog-card__author__image">
+                                <div class="blog-card__author__identity">
+                                    <p class="blog-card__author__text">Author</p><!-- /.author-text -->
+                                    <h5 class="blog-card__author__name">
+                                        <a href="#">{{ $value->author->name }}</a>
+                                    </h5><!-- /.author-name -->
+                                </div><!-- /.blog-card__author__identity -->
+                            </div><!-- /.blog-card__author -->
+                            <a href="{{ $value->link }}" class="eduhive-btn">
+                                <span class="eduhive-btn__text">read More</span>
+                                <span class="eduhive-btn__icon">
+                                    <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
+                                </span>
+                            </a><!-- /.eduhive-btn -->
+                        </div><!-- /.blog-card__bottom -->
+                    </div><!-- /.blog-card__content -->
+                </div>
+                @endforeach
+            </div>
+            <div class="col-lg-6">
+                <div class="row gutter-y-30">
+                    @foreach(getBlogs(null,3,1) as $value)
+                    <div class="col-lg-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="blog-card blog-card--two">
+                            <div class="blog-card_image_wrapper">
+                                <div class="blog-card__image" style="width: 40%;">
+                                    <img src="{{ $value->source_url }}" alt="{!! $value->title->rendered !!}">
+                                    <a href="{{ $value->link }}" class="blog-card__image__link">
+                                        <span class="sr-only">{!! $value->title->rendered !!}</span></a>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="{{ $value->link }}">{!! $value->title->rendered !!}</a></h3>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <ul class="list-unstyled blog-card__meta">
+                                    <li>
+                                        <a href="#">
+                                            <span class="blog-card__meta__icon">
+                                                <i class="icon-date"></i>
+                                            </span>
+                                            {{ date('M d, Y',strtotime($value->date)) }}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        @foreach($value->category as $category)
+                                        <a href="{{ $category->link }}">
+                                            <span class="blog-card__meta__icon">
+                                                <i class="icon-comments"></i>
+                                            </span>
+                                            {{ $category->name }}
+                                        </a>
+                                        @endforeach
+                                    </li>
+                                </ul><!-- /.list-unstyled blog-card__meta -->
+                            </div>
+                        </div>
+
+                    </div>
+                    @endforeach
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

@@ -3,6 +3,11 @@
 <div class="col-12">
 	@if($students)
 		<div class="card">
+			@if(session()->has('message'))
+				<div class="alert alert-success">
+					{{ session()->get('message') }}
+				</div>
+			@endif
 			<div class="card-header d-flex flex-wrap justify-content-between gap-3">
 				<div class="card-title mb-0 me-1">
 					<h5 class="card-header"> {{ count($students) }} Records found</h5>
@@ -12,13 +17,13 @@
 						<a href="{{ route('admin-upload-students') }}" class="btn btn-secondary add-new btn-primary" tabindex="0">
 							<span>
 								<i class="bx bx-plus me-0 me-sm-1"></i>
-								<span class="d-none d-sm-inline-block">Import User</span>
+								<span class="d-none d-sm-inline-block">Import Student</span>
 							</span>
 						</a>
 						<a href="{{ route('admin-add-student') }}" class="btn btn-secondary add-new btn-primary" tabindex="0">
 							<span>
 								<i class="bx bx-plus me-0 me-sm-1"></i>
-								<span class="d-none d-sm-inline-block">Add User</span>
+								<span class="d-none d-sm-inline-block">Add Student</span>
 							</span>
 						</a>
 					</div>
