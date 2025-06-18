@@ -18,7 +18,7 @@ class LeadController extends Controller
                     $leads = $leads->where('crm_status',"1");
                     break;
                 case 'local':
-                    $leads = $leads->where('store_area',"1");
+                    $leads = $leads->where('store_area',"0");
                     break;
                 case 'backlog':
                     $leads = $leads->where('otp_status',"0");
@@ -28,7 +28,7 @@ class LeadController extends Controller
                     break;
             }
 
-            $leads = $leads->get();
+            $leads = $leads->orderBy("id","desc")->paginate(100);
             return view('administrator.leads.index',compact('leads'));
 
         } catch(\Illuminate\Database\QueryException $e){

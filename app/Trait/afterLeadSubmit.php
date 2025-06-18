@@ -155,7 +155,7 @@ trait afterLeadSubmit
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             $headers = [
                 "Content-Type: application/json",'accept: application/json',
-                
+                'api-key: '.get_theme_setting('brevo-api-key')
             ];
             curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
             curl_setopt($curl, CURLOPT_POSTFIELDS, $data);

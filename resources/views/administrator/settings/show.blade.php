@@ -168,6 +168,17 @@
 									/>
 								</div>
 								<div class="mb-3 col-12">
+									<label for="brevo_key" class="form-label">Brevo Api Key</label>
+									<input
+										class="form-control"
+										type="text"
+										name="brevo-api-key"
+										id="brevo-api-key" 
+										value="{{ (isset($settings['brevo-api-key']))?$settings['brevo-api-key']:'' }}"
+										autofocus
+									/>
+								</div>
+								<div class="mb-3 col-12">
 									<label for="firstName" class="form-label">Razorpay Key</label>
 									<input
 										class="form-control"

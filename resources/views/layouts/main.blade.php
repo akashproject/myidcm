@@ -51,6 +51,14 @@
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/owl-carousel/css/owl.carousel.min.css')}}" />
     <link rel="stylesheet" href="{{ url('assets/frontend/vendors/owl-carousel/css/owl.theme.default.min.css')}}" />
     <link  rel="stylesheet" href="{{ url('assets/frontend/css/eduhive.css') }}">
+    <style>
+        .sticky {
+            position: fixed;
+            right: 50px;
+            top: -180px;
+            width: 30%;
+        }
+    </style>
     @yield('style')    
     @if(isset($contentMain->schema))
     {!! $contentMain->schema !!}

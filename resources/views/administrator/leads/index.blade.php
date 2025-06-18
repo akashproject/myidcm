@@ -9,17 +9,15 @@
 				</div>
 				<div class="d-flex justify-content-md-end align-items-center gap-3 flex-wrap">
 					<div class="position-relative">
-						<a href="{{ route('admin-add-faq') }}" class="btn btn-secondary add-new btn-primary" tabindex="0">
-							<span>
-								<i class="bx bx-plus me-0 me-sm-1"></i>
-								<span class="d-none d-sm-inline-block">Add New Record</span>
-							</span>
-						</a>
+						<div class="dt-search mt-0 mt-md-6">
+							<label for="dt-search-0">Search:</label>
+							<input type="search" class="form-control ms-4" id="dt-search-0" placeholder="" aria-controls="DataTables_Table_0">
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="card-body">
-				<div class="table-responsive">
+				<div class="table-responsive mb-5">
 					<table id="" class="table">
 						<thead>
 							<tr>
@@ -32,10 +30,10 @@
 								<th>Campaign</th>
 								<th>Source</th>
 								<th>Url</th>
-								<th>Crm Status</th>
-								<th>Store Area</th>
 								<th>OTP Status</th>
+								<th>Crm Status</th>
 								<th>Whatsapp Status</th>
+								<th>Store Area</th>
 								<th>Created At</th>
 							</tr>
 						</thead>
@@ -52,16 +50,18 @@
 								<td>{{ $value->utm_campaign }}</td>
 								<td>{{ $value->utm_source }}</td>
 								<td>{{ $value->source_url }}</td>
-								<td>{{ $value->crm_status }}</td>
-								<td>{{ $value->store_area }}</td>
-								<td>{{ $value->whatsapp_status }}</td>
 								<td>{{ $value->otp_status }}</td>
+								<td>{{ $value->crm_status }}</td>
+								<td>{{ $value->whatsapp_status }}</td>
+								<td>{{ $value->store_area }}</td>
 								<td>{{ $value->created_at }}</td>
-								
 							</tr>
 							@endforeach							
 						</tbody>
 					</table>
+				</div>
+				<div class="pagination">
+					{{ $leads->links() }}
 				</div>
 			</div>
 
