@@ -17,6 +17,9 @@ Route::group(['prefix' => 'administrator'], function () {
         //Users
         Route::get('/users', [App\Http\Controllers\Administrator\UserController::class, 'index'])->name('admin-students');
 
+        // Leads
+        Route::get('/leads/{type}', [App\Http\Controllers\Administrator\LeadController::class, 'index'])->name('admin-leads');
+
         //Student
         Route::get('/admin-students', [App\Http\Controllers\Administrator\StudentController::class, 'students'])->name('admin-students');       
         Route::get('/student/{id}', [App\Http\Controllers\Administrator\StudentController::class, 'show'])->name('admin-student');

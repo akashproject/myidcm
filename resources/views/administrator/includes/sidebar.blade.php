@@ -28,18 +28,41 @@
                <div data-i18n="globe">Visit Site</div>
             </a>
          </li>
-         <li class="menu-item">
-            <a href="{{ route('admin-students') }}" class="menu-link">
-               <i class="menu-icon tf-icons bx bx-file"></i>
-               <div data-i18n="Page">Students</div>
-            </a>
-         </li>
          <li class="menu-header small text-uppercase"><span class="menu-header-text">Apparence</span></li>
          <li class="menu-item">
             <a href="{{ route('admin-media') }}" class="menu-link">
                <i class="menu-icon tf-icons bx bx-image"></i>
                <div data-i18n="Settings">Media Library</div>
             </a>
+         </li>
+         <li class="menu-item">
+            <a href="{{ route('admin-students') }}" class="menu-link">
+               <i class="menu-icon tf-icons bx bx-file"></i>
+               <div data-i18n="Page">Students</div>
+            </a>
+         </li>
+         <li class="menu-item">
+            <a href="javascript:void(0)" class="menu-link menu-toggle">
+               <i class="menu-icon tf-icons bx bx-book"></i>
+               <div data-i18n="Courses">Leads</div>
+            </a>
+            <ul class="menu-sub">
+               <li class="menu-item">
+                  <a href="{{ route('admin-leads',['crm']) }}" class="menu-link">
+                     <div data-i18n="Notifications">Leads</div>
+                  </a>
+               </li>
+               <li class="menu-item">
+                  <a href="{{ route('admin-leads',['local']) }}" class="menu-link">
+                     <div data-i18n="Notifications">Local Leads</div>
+                  </a>
+               </li>
+               <li class="menu-item">
+                  <a href="{{ route('admin-leads',['backlog']) }}" class="menu-link">
+                     <div data-i18n="Notifications">Backlog Leads</div>
+                  </a>
+               </li>
+            </ul>
          </li>
          <li class="menu-item">
             <a href="{{ route('admin-pages') }}" class="menu-link">
