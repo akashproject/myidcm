@@ -108,183 +108,183 @@
                             </div><!-- /.course-details__main-tab-box -->
                         </div><!-- /.course-details__inner -->
                     </div>
-                    <div class="col-xl-4 col-lg-5 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <div class="course-details__image">
-                                <img src="{{ url('assets/frontend/images/courses/videos/'.$contentMain->slug.'.jpg')}}" alt="The Complete Data Science Course">
-                                <a href="{{ $contentMain->course_video_link }}" class="course-details__video-btn video-btn video-popup">
-                                    <i class="icon-play"></i>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </a><!-- /.course-details__video-btn -->
-                            </div><!-- /.course-details__image -->
-                            <div class="course-details__info d-none d-lg-block" data-sticky>
-                                <h3 class="course-details__info__title">Course includes:</h3><!-- /.course-details__info__title -->
-                                <ul class="course-details__info__list list-unstyled">
-                                    <li>
-                                        <div class="course-details__info__text">
-                                            <div class="course-details__info__text__title">
-                                                <span class="course-details__info__icon"><i class="icon-ranking"></i></span>
-                                                Level:
-                                            </div>
-                                            <span>Expert</span>
+                    <div class="col-xl-4 col-lg-5 wow fadeInUp sticky-course" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="course-details__image">
+                            <img src="{{ url('assets/frontend/images/courses/videos/'.$contentMain->slug.'.jpg')}}" alt="The Complete Data Science Course">
+                            <a href="{{ $contentMain->course_video_link }}" class="course-details__video-btn video-btn video-popup">
+                                <i class="icon-play"></i>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a><!-- /.course-details__video-btn -->
+                        </div><!-- /.course-details__image -->
+                        <div class="course-details__info d-none d-lg-block" data-sticky>
+                            <h3 class="course-details__info__title">Course includes:</h3><!-- /.course-details__info__title -->
+                            <ul class="course-details__info__list list-unstyled">
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-ranking"></i></span>
+                                            Level:
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="course-details__info__text">
-                                            <div class="course-details__info__text__title">
-                                                <span class="course-details__info__icon"><i class="icon-clock-1"></i></span>
-                                                Duration:
-                                            </div>
-                                            <span>{{ $contentMain->duration }}</span>
+                                        <span>Expert</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="course-details__info__text">
+                                        <div class="course-details__info__text__title">
+                                            <span class="course-details__info__icon"><i class="icon-clock-1"></i></span>
+                                            Duration:
                                         </div>
-                                    </li>
-                                    <li>
+                                        <span>{{ $contentMain->duration }}</span>
+                                    </div>
+                                </li>
+                                <li>
 
-                                        <div class="course-details__info__text">
+                                    <div class="course-details__info__text">
 
-                                            <div class="course-details__info__text__title">
+                                        <div class="course-details__info__text__title">
 
-                                                <span class="course-details__info__icon"><i class="icon-graduation"></i></span>
+                                            <span class="course-details__info__icon"><i class="icon-graduation"></i></span>
 
-                                                Lessons:
-
-                                            </div>
-
-                                            <span>{{ $contentMain->no_of_module }}</span>
+                                            Lessons:
 
                                         </div>
 
-                                    </li>
+                                        <span>{{ $contentMain->no_of_module }}</span>
 
-                                    <li>
+                                    </div>
 
-                                        <div class="course-details__info__text">
+                                </li>
 
-                                            <div class="course-details__info__text__title">
+                                <li>
 
-                                                <span class="course-details__info__icon"><i class="icon-multiple-users"></i></span>
+                                    <div class="course-details__info__text">
 
-                                                Students:
+                                        <div class="course-details__info__text__title">
 
-                                            </div>
+                                            <span class="course-details__info__icon"><i class="icon-multiple-users"></i></span>
 
-                                            <span>{{ $contentMain->number_of_enrolled }}</span>
+                                            Students:
 
-                                        </div><!-- /.course-details__info__text -->
+                                        </div>
 
-                                    </li>
+                                        <span>{{ $contentMain->number_of_enrolled }}</span>
 
-                                    <li>
+                                    </div><!-- /.course-details__info__text -->
 
-                                        <div class="course-details__info__text">
+                                </li>
 
-                                            <div class="course-details__info__text__title">
+                                <li>
 
-                                                <span class="course-details__info__icon"><i class="icon-medal"></i></span>
+                                    <div class="course-details__info__text">
 
-                                                Certifications:
+                                        <div class="course-details__info__text__title">
 
-                                            </div>
+                                            <span class="course-details__info__icon"><i class="icon-medal"></i></span>
 
-                                            <span>Yes</span>
+                                            Certifications:
 
-                                        </div><!-- /.course-details__info__text -->
+                                        </div>
 
-                                    </li>
+                                        <span>Yes</span>
 
-                                    <li>
+                                    </div><!-- /.course-details__info__text -->
 
-                                        <div class="course-details__info__text">
+                                </li>
 
-                                            <div class="course-details__info__text__title">
+                                <li>
 
-                                                <span class="course-details__info__icon"><i class="icon-globe"></i></span>
+                                    <div class="course-details__info__text">
 
-                                                Language:
+                                        <div class="course-details__info__text__title">
 
-                                            </div>
+                                            <span class="course-details__info__icon"><i class="icon-globe"></i></span>
 
-                                            <span>English</span>
+                                            Language:
 
-                                        </div><!-- /.course-details__info__text -->
+                                        </div>
 
-                                    </li>
+                                        <span>English</span>
 
-                                </ul><!-- /.course-details__info__list -->
+                                    </div><!-- /.course-details__info__text -->
 
-                                <a href="#lead-generate-popup" class="course-details__info__btn eduhive-btn open-popup-link">
+                                </li>
 
-                                    <span class="eduhive-btn__text">Join This course</span>
+                            </ul><!-- /.course-details__info__list -->
 
-                                    <span class="eduhive-btn__icon">
+                            <a href="#lead-generate-popup" class="course-details__info__btn eduhive-btn open-popup-link">
 
-                                        <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
+                                <span class="eduhive-btn__text">Join This course</span>
 
-                                    </span>
+                                <span class="eduhive-btn__icon">
 
-                                </a><!-- /.eduhive-btn -->
+                                    <span class="eduhive-btn__icon__inner"><i class="icon-arrow-right"></i></span>
 
-                                <div class="course-details__social">
+                                </span>
 
-                                    <h3 class="course-details__social__title">Share:</h3><!-- /.course-details__social__title -->
+                            </a><!-- /.eduhive-btn -->
 
-                                    <div class="course-details__social__group social-links-two">
+                            <div class="course-details__social">
 
-                                        <a href="https://facebook.com">
+                                <h3 class="course-details__social__title">Share:</h3><!-- /.course-details__social__title -->
 
-                                            <span class="social-links-two__icon">
+                                <div class="course-details__social__group social-links-two">
 
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                    <a href="https://facebook.com">
 
-                                            </span><!-- /.social-links-two__icon -->
+                                        <span class="social-links-two__icon">
 
-                                            <span class="sr-only">Facebook</span>
+                                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
 
-                                        </a>
+                                        </span><!-- /.social-links-two__icon -->
 
-                                        <a href="https://twitter.com">
+                                        <span class="sr-only">Facebook</span>
 
-                                            <span class="social-links-two__icon">
+                                    </a>
 
-                                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    <a href="https://twitter.com">
 
-                                            </span><!-- /.social-links-two__icon -->
+                                        <span class="social-links-two__icon">
 
-                                            <span class="sr-only">Twitter</span>
+                                            <i class="fab fa-twitter" aria-hidden="true"></i>
 
-                                        </a>
+                                        </span><!-- /.social-links-two__icon -->
 
-                                        <a href="https://instagram.com">
+                                        <span class="sr-only">Twitter</span>
 
-                                            <span class="social-links-two__icon">
+                                    </a>
 
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                    <a href="https://instagram.com">
 
-                                            </span><!-- /.social-links-two__icon -->
+                                        <span class="social-links-two__icon">
 
-                                            <span class="sr-only">Instagram</span>
+                                            <i class="fab fa-instagram" aria-hidden="true"></i>
 
-                                        </a>
+                                        </span><!-- /.social-links-two__icon -->
 
-                                        <a href="https://youtube.com">
+                                        <span class="sr-only">Instagram</span>
 
-                                            <span class="social-links-two__icon">
+                                    </a>
 
-                                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                                    <a href="https://youtube.com">
 
-                                            </span><!-- /.social-links-two__icon -->
+                                        <span class="social-links-two__icon">
 
-                                            <span class="sr-only">Youtube</span>
+                                            <i class="fab fa-youtube" aria-hidden="true"></i>
 
-                                        </a>
+                                        </span><!-- /.social-links-two__icon -->
 
-                                    </div><!-- /.course-details__social__group -->
+                                        <span class="sr-only">Youtube</span>
 
-                                </div><!-- /.course-details__social -->
+                                    </a>
 
-                            </div><!-- /.course-details__info -->
+                                </div><!-- /.course-details__social__group -->
+
+                            </div><!-- /.course-details__social -->
+
+                        </div><!-- /.course-details__info -->
                     </div><!-- /.col-xl-4 col-lg-5 -->
 
                 </div><!-- /.row -->

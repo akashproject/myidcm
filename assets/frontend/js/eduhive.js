@@ -760,6 +760,7 @@ let otp_value = null;
   }
   stickyMenuUpScroll($(".sticky-header--normal"), "active");
 
+
   //Strech Column
   function eduhive_stretch() {
     var i = $(window).width();
@@ -830,6 +831,17 @@ let otp_value = null;
   }
 
   // window load event
+
+  $(window).on('scroll', function() {
+    var scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+    
+    if(scrollTop > 600 && scrollTop < 11000) {
+      $('.sticky-course').addClass('course-fixed');
+    } else {
+      $('.sticky-course').removeClass('course-fixed');
+    }
+  });
 
   $(window).on("load", function () {
     if ($(".preloader").length) {
