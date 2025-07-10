@@ -1090,7 +1090,7 @@ function insertLeadRecord(form,formId) {
 				return true;
 			}
 		});
-	}
+}
 
 function sendMobileOtp(formId) {
   var mobileNo = jQuery("#" + formId + " #lead_mobile_info").val();
@@ -1122,6 +1122,7 @@ function sendMobileOtp(formId) {
     }
   });
 }
+
 let interval;
 function countDown(){
   clearInterval(interval)
