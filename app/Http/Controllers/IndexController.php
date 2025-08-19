@@ -47,7 +47,7 @@ class IndexController extends Controller
 
             $curl = curl_init();
 
-            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=true&from=MYIDCM&to=".$_POST['mobile']."&text=".$otpvalue."+is+your+One+Time+Password+%28OTP%29+for+digital+marketing+course+enquiry+at+IDCM+for+the+mobile+number+xxxxxx".$lastdigit.".+Thank+you+for+your+enquiry.%0D%0A&dltContentId=1207173168142509871&dltPrincipalEntityId=1201159245568554682";
+            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=false&from=MYIDCM&to=".$_POST['mobile']."&text=".$otpvalue."+is+your+One+Time+Password+%28OTP%29+for+digital+marketing+course+enquiry+at+IDCM+for+the+mobile+number+xxxxxx".$lastdigit.".+Thank+you+for+your+enquiry.%0D%0A&dltContentId=1207173168142509871&dltPrincipalEntityId=1201159245568554682";
 
             curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
@@ -148,11 +148,10 @@ class IndexController extends Controller
         try {
             $postData = $request->all();
             $validatedData = $request->validate([
-                "contact_first_name" => "required",
-                "contact_last_name" => "required",
-                "contact_email" => "required",
-                "contact_subject" => "required",
-                "contact_message" => "required",
+                "name" => "required",
+                "email" => "required",
+                "mobile" => "required",
+                "message" => "required",
             ]);
 
             Contact::create($postData);

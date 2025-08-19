@@ -105,7 +105,7 @@ trait afterLeadSubmit
 
             $name = $postData['first_name'];
 
-            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=true&from=MYIDCM&to=".$postData['mobile']."&text=Hi+".$name."%2C+Thank+you+for+your+interest+in+our+digital+marketing+programs.+We+have+received+your+details+and+will+be+in+touch+soon.+Thanks%2C+IDCM&dltContentId=1207173168686082071&dltPrincipalEntityId=1201159245568554682";
+            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=false&from=MYIDCM&to=".$postData['mobile']."&text=Hi+".$name."%2C+Thank+you+for+your+interest+in+our+digital+marketing+programs.+We+have+received+your+details+and+will+be+in+touch+soon.+Thanks%2C+IDCM&dltContentId=1207173168686082071&dltPrincipalEntityId=1201159245568554682";
 
             $curl = curl_init($url);
             curl_setopt($curl, CURLOPT_URL, $url);

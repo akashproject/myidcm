@@ -146,7 +146,23 @@
                         </div><!-- /.contact-page__content -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <form class="contact-page__form contact-form-validated form-one" action="inc/sendemail.php" style="height: 528px;">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        @if(session()->has('message'))
+                            <div class="alert alert-success">
+                                {{ session()->get('message') }}
+                            </div>
+                        @endif
+                        <form method="post" class="contact-page__form contact-form-validated form-one" action="{{ route('save-contact') }}" style="height: 528px;">
+                            @csrf
                             <div class="form-one__group">
                                 <div class="form-one__control form-one__control--full">
                                     <input type="text" name="name" placeholder="Full Name">
@@ -155,7 +171,7 @@
                                     <input type="email" name="email" placeholder="Email Address">
                                 </div><!-- /.form-one__control form-one__control--full -->
                                 <div class="form-one__control form-one__control--full">
-                                    <input type="tel" name="tel" placeholder="Phone Number">
+                                    <input type="tel" name="mobile" placeholder="Phone Number">
                                 </div><!-- /.form-one__control form-one__control--full -->
                                 <div class="form-one__control form-one__control--full">
                                     <textarea name="message" placeholder="Write Messge. . ." style="height: 132px;width: 100%;padding: 9px;border-radius: 9px;color: #666565;"></textarea><!-- /# -->
