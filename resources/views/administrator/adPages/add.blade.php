@@ -71,7 +71,7 @@
 						<div class="form-group row mb-2">
 							<label for="institute_id" class="col-sm-3 text-right control-label col-form-label">Institute</label>
 							<div class="col-sm-9">
-								<select name="institute_id[]" id="institute_id" class="select2 form-control custom-select" >	
+								<select name="institute_id" id="institute_id" class="select2 form-control custom-select" >	
 									<option value="">Select Institute</option>
 									@foreach($institutes as $institute)
 									<option value="{{ $institute->id }}" >{{ $institute->name }}</option>
